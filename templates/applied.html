@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Applications — Submissions Dashboard</title>
+<link rel="stylesheet" href="/static/app.css">
+  <style>
+
+  .summary { display: flex; gap: 28px; margin-bottom: 20px; padding: 16px 20px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; }
+  .stat .n { font-size: 28px; font-weight: 600; color: var(--success); }
+  .stat .n.blue { color: var(--accent); }
+  .stat .n.gold { color: var(--gold); }
+  .stat .n.red { color: var(--red); }
+  .stat .n.muted { color: var(--muted); }
+  .stat .l { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  section { margin-bottom: 28px; }
+  section h2 { font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 12px; }
+
+  .chart-wrap { display: flex; }
+  .y-axis { width: 32px; height: 196px; position: relative; padding: 8px 0; flex-shrink: 0; }
+  .y-axis.right { border-left: 1px solid var(--border); }
+  .y-axis .ytick { position: absolute; font-size: 11px; color: var(--muted); line-height: 1; transform: translateY(50%); }
+  .y-axis.left .ytick { right: 6px; }
+  .y-axis.right .ytick { left: 6px; }
+  .chart-col { flex: 1; min-width: 0; position: relative; }
+  .chart { display: flex; align-items: flex-end; gap: 3px; height: 180px; padding: 8px 0; border-bottom: 1px solid var(--border); border-left: 1px solid var(--border); position: relative; }
+  .chart .ygrid { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--border); opacity: 0.35; pointer-events: none; }
+  .bar { flex: 1; min-width: 8px; background: var(--accent); border-radius: 2px 2px 0 0; position: relative; transition: background 0.15s; z-index: 1; }
+  .bar.zero { background: transparent; border-bottom: 1px dashed var(--border); height: 1px !important; }
+  .bar:hover { background: var(--gold); z-index: 5; }
+  .bar .tip { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; font-size: 11px; white-space: nowrap; display: none; margin-bottom: 4px; z-index: 2; }
+  .bar:hover .tip { display: block; }
+  .x-axis { display: flex; gap: 3px; margin-top: 4px; }
+  .x-axis .tick { flex: 1; min-width: 8px; text-align: center; font-size: 10px; color: var(--muted); }
+  .x-axis .tick.major { color: var(--text); }
+
+  .range-toggle { display: inline-flex; gap: 0; margin-left: 12px; vertical-align: middle; }
+  .range-toggle button { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 3px 10px; font-size: 11px; cursor: pointer; }
+  .range-toggle button:first-child { border-radius: 4px 0 0 4px; }
+  .range-toggle button:last-child { border-radius: 0 4px 4px 0; }
+  .range-toggle button + button { border-left: 0; }
+  .range-toggle button.active { background: var(--panel); color: var(--text); border-color: var(--accent); }
+  .range-toggle button:hover:not(.active) { color: var(--text); }
+
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .filter-bar button { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 4px 12px; font-size: 12px; border-radius: 14px; cursor: pointer; }
+  .filter-bar button.active { background: var(--panel); color: var(--text); border-color: var(--accent); }
+  .filter-bar button:hover:not(.active) { color: var(--text); }
+  .filter-bar .count { color: var(--muted); font-size: 11px; margin-left: 4px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  tr:hover td { background: var(--panel); }
+  .day-hdr td { background: var(--panel); color: var(--gold); font-weight: 600; padding: 10px; }
+  .empty { color: var(--muted); padding: 40px; text-align: center; font-style: italic; }
+  .badge-manual { display: inline-block; margin-left: 6px; padding: 1px 6px; border-radius: 4px;
+                  font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase;
+                  background: #2a3142; color: var(--muted); border: 1px solid var(--border); vertical-align: 1px; }
+
+  select.stage { background: var(--bg); color: var(--text); border: 1px solid var(--border);
+                 border-radius: 6px; padding: 3px 6px; font-size: 12px; cursor: pointer; }
+  select.stage.st-interview { border-color: var(--accent); color: var(--accent); }
+  select.stage.st-offer { border-color: var(--success); color: var(--success); }
+  select.stage.st-closed { border-color: var(--border); color: var(--muted); }
+  select.stage.st-rejected { border-color: var(--red); color: var(--red); }
+
+  .iv-btn { background: transparent; border: 1px solid var(--border); color: var(--text);
+            border-radius: 12px; padding: 2px 10px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  .iv-btn:hover { border-color: var(--accent); }
+  .iv-btn .n { color: var(--accent); font-weight: 600; }
+  .iv-btn.none .n { color: var(--muted); font-weight: 400; }
+
+  tr.iv-detail td { background: var(--panel); padding: 10px 10px 12px 32px; }
+  tr.iv-detail:hover td { background: var(--panel); }
+  .iv-list { margin: 0 0 10px; padding: 0; list-style: none; }
+  .iv-list li { display: flex; gap: 12px; align-items: baseline; padding: 3px 0; font-size: 13px; }
+  .iv-list .d { color: var(--muted); min-width: 86px; }
+  .iv-list .s { color: var(--accent); min-width: 130px; }
+  .iv-list .no { color: var(--muted); flex: 1; }
+  .iv-list .del { color: var(--red); cursor: pointer; font-size: 12px; opacity: 0.5; background: none; border: none; }
+  .iv-list .del:hover { opacity: 1; }
+  .iv-add { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .iv-add input, .iv-add select { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; font-size: 12px; }
+  .iv-add input[type=text] { width: 260px; }
+  .iv-add button { background: var(--accent); color: #0f1117; border: none; border-radius: 6px; padding: 5px 14px; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .iv-add button:hover { filter: brightness(1.1); }
+</style>
+</head>
+<body class="page">
+
+<header>
+  <div>
+    <h1>Applications Submitted</h1>
+    <div class="meta" id="meta">loading…</div>
+  </div>
+  <div class="nav">
+    {% for p in profiles %}
+      <a href="/dashboard/{{ p.key }}">{{ p.short }}</a>
+    {% endfor %}
+  </div>
+</header>
+
+<div class="summary" id="summary"></div>
+
+<section>
+  <h2 id="chart-heading" style="display:flex; align-items:center;">
+    <span id="chart-heading-text">Last 30 days</span>
+    <span class="range-toggle" id="range-toggle">
+      <button data-days="30">30d</button>
+      <button data-days="60">60d</button>
+      <button data-days="90">90d</button>
+      <button data-days="all">All</button>
+    </span>
+  </h2>
+  <div class="chart-wrap">
+    <div class="y-axis left" id="y-axis"></div>
+    <div class="chart-col">
+      <div class="chart" id="chart"></div>
+      <div class="x-axis" id="x-axis"></div>
+    </div>
+    <div class="y-axis right" id="y-axis-right"></div>
+  </div>
+</section>
+
+<section>
+  <h2>All applications</h2>
+  <div class="filter-bar" id="filter-bar"></div>
+  <table id="apps-table">
+    <thead>
+      <tr><th>Date</th><th>Company</th><th>Title</th><th>Stage</th><th>Interviews</th><th>Notes</th><th></th></tr>
+    </thead>
+    <tbody id="apps-body"></tbody>
+  </table>
+</section>
+
+<script>
+const STAGE_LABELS = {
+  applied: "Applied",
+  recruiter_screen: "Recruiter screen",
+  hiring_manager: "Hiring manager",
+  technical: "Technical",
+  panel: "Panel / onsite",
+  offer: "Offer",
+  rejected: "Rejected",
+  withdrawn: "Withdrawn",
+  ghosted: "Ghosted",
+};
+const CLOSED = new Set(["rejected", "withdrawn", "ghosted"]);
+const INTERVIEW_STAGES = new Set(["recruiter_screen", "hiring_manager", "technical", "panel"]);
+
+function localDate(iso) {
+  const d = new Date(iso);
+  if (isNaN(d)) return null;
+  const y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,"0"), day = String(d.getDate()).padStart(2,"0");
+  return `${y}-${m}-${day}`;
+}
+
+function dateLabel(yyyy_mm_dd) {
+  const [y,m,d] = yyyy_mm_dd.split("-").map(Number);
+  return new Date(y, m-1, d).toLocaleDateString(undefined, {weekday: "short", month: "short", day: "numeric"});
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+function stageClass(stage) {
+  if (stage === "offer") return "st-offer";
+  if (stage === "rejected") return "st-rejected";
+  if (CLOSED.has(stage)) return "st-closed";
+  if (INTERVIEW_STAGES.has(stage)) return "st-interview";
+  return "";
+}
+
+let jobs = [];
+let stages = Object.keys(STAGE_LABELS);
+let byDay = {};
+let days = [];
+let activeFilter = localStorage.getItem("appliedStageFilter") || "all";
+const openUrls = new Set();
+
+function isInterviewing(j) {
+  return !CLOSED.has(j.stage) && j.stage !== "offer"
+    && (j.interview_count > 0 || INTERVIEW_STAGES.has(j.stage));
+}
+
+function matchesFilter(j) {
+  switch (activeFilter) {
+    case "active":       return !CLOSED.has(j.stage);
+    case "interviewing": return isInterviewing(j);
+    case "offer":        return j.stage === "offer";
+    case "closed":       return CLOSED.has(j.stage);
+    default:             return true;
+  }
+}
+
+function renderSummary() {
+  const total = jobs.length;
+  const today = localDate(new Date().toISOString());
+  const todayCount = jobs.filter(j => localDate(j.updated_at) === today).length;
+  const weekAgo = new Date(); weekAgo.setDate(weekAgo.getDate() - 7);
+  const weekStart = localDate(weekAgo.toISOString());
+  const weekCount = jobs.filter(j => localDate(j.updated_at) > weekStart).length;
+  const interviewing = jobs.filter(isInterviewing).length;
+  const totalIvs = jobs.reduce((n, j) => n + j.interview_count, 0);
+  const offers = jobs.filter(j => j.stage === "offer").length;
+  const closed = jobs.filter(j => CLOSED.has(j.stage)).length;
+
+  document.getElementById("summary").innerHTML = `
+    <div class="stat"><span class="n">${total}</span><span class="l">Total</span></div>
+    <div class="stat"><span class="n">${todayCount}</span><span class="l">Today</span></div>
+    <div class="stat"><span class="n">${weekCount}</span><span class="l">Last 7 days</span></div>
+    <div class="stat"><span class="n blue">${interviewing}</span><span class="l">Interviewing</span></div>
+    <div class="stat"><span class="n blue">${totalIvs}</span><span class="l">Interview rounds</span></div>
+    <div class="stat"><span class="n gold">${offers}</span><span class="l">Offers</span></div>
+    <div class="stat"><span class="n muted">${closed}</span><span class="l">Closed</span></div>
+  `;
+
+  document.getElementById("meta").textContent = total
+    ? `${total} applications since ${dateLabel(days[0])}`
+    : "No applications recorded yet";
+}
+
+function renderFilterBar() {
+  const counts = {
+    all: jobs.length,
+    active: jobs.filter(j => !CLOSED.has(j.stage)).length,
+    interviewing: jobs.filter(isInterviewing).length,
+    offer: jobs.filter(j => j.stage === "offer").length,
+    closed: jobs.filter(j => CLOSED.has(j.stage)).length,
+  };
+  const labels = {all: "All", active: "Active", interviewing: "Interviewing", offer: "Offers", closed: "Closed"};
+  document.getElementById("filter-bar").innerHTML = Object.keys(labels).map(k =>
+    `<button data-f="${k}" class="${activeFilter === k ? "active" : ""}">${labels[k]}<span class="count">${counts[k]}</span></button>`
+  ).join("");
+}
+
+function stageSelect(j, i) {
+  const opts = stages.map(s =>
+    `<option value="${s}" ${j.stage === s ? "selected" : ""}>${STAGE_LABELS[s] || s}</option>`
+  ).join("");
+  return `<select class="stage ${stageClass(j.stage)}" data-i="${i}">${opts}</select>`;
+}
+
+function ivDetailRow(j, i) {
+  const items = j.interviews.map(iv => `
+    <li>
+      <span class="d">${escapeHtml(iv.happened_at || "—")}</span>
+      <span class="s">${escapeHtml(STAGE_LABELS[iv.stage] || iv.stage || "—")}</span>
+      <span class="no">${escapeHtml(iv.notes)}</span>
+      <button class="del" data-del="${iv.id}" data-i="${i}" title="Delete this interview">✕</button>
+    </li>`).join("");
+  const today = localDate(new Date().toISOString());
+  const defStage = INTERVIEW_STAGES.has(j.stage) ? j.stage : "recruiter_screen";
+  const stageOpts = ["recruiter_screen","hiring_manager","technical","panel","offer"].map(s =>
+    `<option value="${s}" ${s === defStage ? "selected" : ""}>${STAGE_LABELS[s]}</option>`).join("");
+  return `<tr class="iv-detail" data-detail="${i}"><td colspan="7">
+    ${items ? `<ul class="iv-list">${items}</ul>` : `<div class="meta" style="margin-bottom:10px">No interviews logged yet.</div>`}
+    <div class="iv-add" data-i="${i}">
+      <input type="date" class="iv-date" value="${today}" />
+      <select class="iv-stage">${stageOpts}</select>
+      <input type="text" class="iv-notes" placeholder="notes (interviewer, round…)" />
+      <button class="iv-save" data-i="${i}">Add interview</button>
+    </div>
+  </td></tr>`;
+}
+
+function renderTable() {
+  const tbody = document.getElementById("apps-body");
+  const visible = jobs.filter(matchesFilter);
+  if (!visible.length) {
+    tbody.innerHTML = `<tr><td colspan="7" class="empty">${jobs.length ? "Nothing matches this filter." : "Click ✓ on any job in a dashboard to record an application."}</td></tr>`;
+    return;
+  }
+  const byDayF = {};
+  for (const j of visible) {
+    const day = localDate(j.updated_at);
+    if (!day) continue;
+    (byDayF[day] = byDayF[day] || []).push(j);
+  }
+  const html = [];
+  for (const day of Object.keys(byDayF).sort().reverse()) {
+    const items = byDayF[day];
+    html.push(`<tr class="day-hdr"><td colspan="7">${dateLabel(day)} · ${items.length} application${items.length===1?"":"s"}</td></tr>`);
+    for (const j of items) {
+      const i = jobs.indexOf(j);
+      const time = new Date(j.updated_at).toLocaleTimeString(undefined, {hour:"2-digit", minute:"2-digit"});
+      const isGmail = j.url && j.url.startsWith("gmail://msg/");
+      const linkUrl = isGmail
+        ? `https://mail.google.com/mail/u/0/#all/${j.url.slice("gmail://msg/".length)}`
+        : j.url;
+      const linkLabel = isGmail ? "gmail ↗" : "open ↗";
+      const n = j.interview_count;
+      html.push(`<tr>
+        <td style="color:var(--muted)">${time}</td>
+        <td>${escapeHtml(j.company || "—")}</td>
+        <td>${escapeHtml(j.title || "—")}</td>
+        <td>${stageSelect(j, i)}</td>
+        <td><button class="iv-btn ${n ? "" : "none"}" data-toggle="${i}"><span class="n">${n}</span> round${n===1?"":"s"} ${openUrls.has(j.url) ? "▴" : "▾"}</button></td>
+        <td style="color:var(--muted)">${escapeHtml(j.notes)}</td>
+        <td><a href="${escapeHtml(linkUrl)}" target="_blank" rel="noopener">${linkLabel}</a></td>
+      </tr>`);
+      if (openUrls.has(j.url)) html.push(ivDetailRow(j, i));
+    }
+  }
+  tbody.innerHTML = html.join("");
+}
+
+function renderAll() {
+  renderSummary();
+  renderFilterBar();
+  renderTable();
+}
+
+async function reload() {
+  const r = await fetch("/api/applied");
+  const data = await r.json();
+  jobs = data.jobs;
+  if (data.stages && data.stages.length) stages = data.stages;
+  byDay = {};
+  for (const j of jobs) {
+    const day = localDate(j.updated_at);
+    if (!day) continue;
+    (byDay[day] = byDay[day] || []).push(j);
+  }
+  days = Object.keys(byDay).sort();
+}
+
+// ---- chart (unchanged: charts submissions/day over all applications) ----
+function niceStep(maxVal) {
+  const target = 4;
+  const raw = maxVal / target;
+  const pow = Math.pow(10, Math.floor(Math.log10(raw)));
+  const norm = raw / pow;
+  const niced = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10;
+  return Math.max(1, niced * pow);
+}
+
+function renderChart(rangeKey) {
+  const chart = document.getElementById("chart");
+  const xAxis = document.getElementById("x-axis");
+  const yAxisEl = document.getElementById("y-axis");
+  const yAxisRightEl = document.getElementById("y-axis-right");
+  const headingText = document.getElementById("chart-heading-text");
+  let nDays;
+  if (rangeKey === "all") {
+    const earliest = days[0];
+    if (earliest) {
+      const ms = new Date().setHours(0,0,0,0) - new Date(earliest + "T00:00").getTime();
+      nDays = Math.max(1, Math.floor(ms / 86400000) + 1);
+    } else {
+      nDays = 30;
+    }
+  } else {
+    nDays = parseInt(rangeKey, 10) || 30;
+  }
+  headingText.textContent = rangeKey === "all" ? `All time (${nDays} days)` : `Last ${nDays} days`;
+
+  const chartDays = [];
+  const nowD = new Date();
+  for (let i = nDays - 1; i >= 0; i--) {
+    const d = new Date(nowD); d.setDate(d.getDate() - i);
+    chartDays.push(localDate(d.toISOString()));
+  }
+  const max = Math.max(1, ...chartDays.map(d => (byDay[d] || []).length));
+  const step = niceStep(max);
+  const yMax = Math.ceil(max / step) * step;
+  const yChartH = 180;
+
+  const yTicks = [];
+  for (let v = 0; v <= yMax; v += step) {
+    const bottomPx = 8 + (v / yMax) * yChartH;
+    yTicks.push(`<span class="ytick" style="bottom:${bottomPx}px">${v}</span>`);
+  }
+  yAxisEl.innerHTML = yTicks.join("");
+  yAxisRightEl.innerHTML = yTicks.join("");
+
+  const grids = [];
+  for (let v = step; v <= yMax; v += step) {
+    const bottomPx = 8 + (v / yMax) * yChartH;
+    grids.push(`<div class="ygrid" style="bottom:${bottomPx}px"></div>`);
+  }
+  const bars = chartDays.map(d => {
+    const count = (byDay[d] || []).length;
+    const h = count === 0 ? 0 : Math.max(4, (count / yMax) * 170);
+    return `<div class="bar ${count===0?'zero':''}" style="height:${h}px" title="${d}: ${count}">
+      <span class="tip">${dateLabel(d)} · ${count}</span>
+    </div>`;
+  }).join("");
+  chart.innerHTML = grids.join("") + bars;
+
+  xAxis.innerHTML = chartDays.map((d, i) => {
+    const dt = new Date(d + "T00:00");
+    const isMonthStart = dt.getDate() === 1;
+    const isWeekStart = dt.getDay() === 1;
+    const major = (i === 0 || i === chartDays.length - 1 || isMonthStart || (nDays <= 30 && isWeekStart));
+    return `<span class="tick ${major?'major':''}">${major ? (isMonthStart ? `${dt.toLocaleDateString(undefined,{month:'short'})} ${dt.getDate()}` : dt.getDate()) : ""}</span>`;
+  }).join("");
+}
+
+// ---- event wiring ----
+document.getElementById("filter-bar").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-f]");
+  if (!b) return;
+  activeFilter = b.dataset.f;
+  localStorage.setItem("appliedStageFilter", activeFilter);
+  renderFilterBar();
+  renderTable();
+});
+
+document.getElementById("apps-body").addEventListener("change", async (e) => {
+  const sel = e.target.closest("select.stage");
+  if (!sel) return;
+  const j = jobs[Number(sel.dataset.i)];
+  const stage = sel.value;
+  const r = await fetch("/api/app/stage", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({url: j.url, stage}),
+  });
+  if (r.ok) {
+    j.stage = stage;
+    renderAll();
+  } else {
+    alert("Failed to update stage: " + (await r.text()));
+  }
+});
+
+document.getElementById("apps-body").addEventListener("click", async (e) => {
+  const tog = e.target.closest("button[data-toggle]");
+  if (tog) {
+    const j = jobs[Number(tog.dataset.toggle)];
+    if (openUrls.has(j.url)) openUrls.delete(j.url); else openUrls.add(j.url);
+    renderTable();
+    return;
+  }
+  const del = e.target.closest("button.del[data-del]");
+  if (del) {
+    const j = jobs[Number(del.dataset.i)];
+    const id = Number(del.dataset.del);
+    const r = await fetch(`/api/interviews/${id}`, {method: "DELETE"});
+    if (r.ok) {
+      j.interviews = j.interviews.filter(iv => iv.id !== id);
+      j.interview_count = j.interviews.length;
+      renderAll();
+    }
+    return;
+  }
+  const save = e.target.closest("button.iv-save");
+  if (save) {
+    const j = jobs[Number(save.dataset.i)];
+    const wrap = save.closest(".iv-add");
+    const body = {
+      url: j.url,
+      date: wrap.querySelector(".iv-date").value,
+      stage: wrap.querySelector(".iv-stage").value,
+      notes: wrap.querySelector(".iv-notes").value.trim(),
+    };
+    const r = await fetch("/api/interviews", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(body),
+    });
+    if (r.ok) {
+      const res = await r.json();
+      j.interviews.push({id: res.id, stage: body.stage, happened_at: res.happened_at, notes: body.notes});
+      j.interviews.sort((a, b) => (a.happened_at || "").localeCompare(b.happened_at || ""));
+      j.interview_count = j.interviews.length;
+      // Mirror the server's auto-advance so the dropdown updates without a refetch.
+      const order = stages;
+      if (!CLOSED.has(j.stage) && j.stage !== "offer"
+          && order.indexOf(body.stage) > order.indexOf(j.stage)) {
+        j.stage = body.stage;
+      }
+      renderAll();
+    } else {
+      alert("Failed to log interview: " + (await r.text()));
+    }
+  }
+});
+
+(async () => {
+  await reload();
+  renderAll();
+
+  const savedRange = localStorage.getItem("appliedChartRange") || "30";
+  document.querySelectorAll("#range-toggle button").forEach(b => {
+    if (b.dataset.days === savedRange) b.classList.add("active");
+    b.addEventListener("click", () => {
+      document.querySelectorAll("#range-toggle button").forEach(x => x.classList.remove("active"));
+      b.classList.add("active");
+      localStorage.setItem("appliedChartRange", b.dataset.days);
+      renderChart(b.dataset.days);
+    });
+  });
+  renderChart(savedRange);
+})();
+</script>
+</body>
+</html>

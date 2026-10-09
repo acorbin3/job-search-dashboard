@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manage Tabs — job dashboard</title>
+<link rel="stylesheet" href="/static/app.css">
+  <style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background: var(--bg); color: var(--text); }
+  header { padding: 18px 24px; border-bottom: 1px solid var(--border); display: flex;
+           align-items: center; justify-content: space-between; }
+  header h1 { margin: 0; font-size: 18px; }
+  a { color: var(--accent); }
+  .btn { padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer;
+         color: var(--text); background: var(--panel-2); border: 1px solid var(--border); text-decoration: none; }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); color: #0b1020; border-color: var(--accent); font-weight: 600; }
+  .btn.danger { color: var(--danger); border-color: rgba(255,107,107,0.4); }
+  .btn.small { padding: 3px 9px; font-size: 12px; }
+  .btn[disabled] { opacity: .5; cursor: default; }
+  .page { max-width: 1000px; margin: 0 auto; padding: 24px; }
+  .wrap { display: grid; grid-template-columns: 260px 1fr; gap: 24px; }
+  .tablist { display: flex; flex-direction: column; gap: 6px; }
+  .tablist .row { display: flex; align-items: center; justify-content: space-between;
+                  padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); cursor: pointer; }
+  .tablist .row.active { border-color: var(--accent); background: rgba(122,162,255,0.12); }
+  .tablist .row small { color: var(--muted); display: block; }
+  .tablist .new { text-align: center; color: var(--accent); border-style: dashed; }
+  .tablist .row.hidden-tab { opacity: 0.55; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .panel h2 { margin: 0 0 4px; font-size: 16px; }
+  .panel .hint { color: var(--muted); font-size: 12px; margin: 0 0 16px; }
+  label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+          color: var(--muted); margin: 14px 0 4px; }
+  input[type=text], input[type=number], input[type=file], textarea, select {
+    width: 100%; padding: 8px 10px; border-radius: 6px; background: var(--bg);
+    border: 1px solid var(--border); color: var(--text); font-size: 13px; }
+  select { width: auto; }
+  textarea { min-height: 120px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; resize: vertical; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .flags { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; align-items: center; }
+  .flags label { display: flex; align-items: center; gap: 6px; text-transform: none;
+                 letter-spacing: 0; color: var(--text); font-size: 13px; margin: 0; }
+  .flags input { width: auto; }
+  .actions { margin-top: 20px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .msg { margin-left: auto; font-size: 13px; }
+  .msg.ok { color: #4ade80; } .msg.err { color: var(--danger); }
+  .keyrow { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
+
+  /* welcome */
+  .welcome { margin-bottom: 24px; border-color: var(--accent); }
+  .welcome h2 { font-size: 18px; }
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
+  .step { border: 1px solid var(--border); border-radius: 8px; padding: 14px; background: var(--bg); }
+  .step .n { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+             color: #0b1020; font-weight: 700; text-align: center; line-height: 22px; margin-right: 8px; font-size: 12px; }
+  .step h3 { margin: 0 0 6px; font-size: 14px; }
+  .step p { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin-top: 12px; }
+  .card { border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--bg);
+          display: flex; flex-direction: column; gap: 6px; }
+  .card b { font-size: 14px; }
+  .card p { margin: 0; color: var(--muted); font-size: 12px; flex: 1; }
+  .card .exists { color: #4ade80; font-size: 12px; }
+
+  /* resume / fit */
+  .fitlist { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .fitlist .row { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border: 1px solid var(--border);
+                  border-radius: 8px; background: var(--bg); }
+  .fitlist .row .lbl { flex: 1; }
+  .fitlist .row small { color: var(--muted); display: block; }
+  .fitlist .row .tag { font-size: 11px; padding: 1px 6px; border-radius: 10px; border: 1px solid var(--accent); color: var(--accent); }
+  .upload { display: grid; grid-template-columns: 1fr 220px 200px auto; gap: 12px; align-items: end; }
+  .upload label { margin-top: 0; }
+  .summary { margin-top: 14px; padding: 12px; border: 1px dashed var(--border); border-radius: 8px; font-size: 13px; }
+  .summary .groups { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .summary .g { background: var(--panel-2); border-radius: 6px; padding: 3px 8px; font-size: 12px; }
+  .summary .g small { color: var(--muted); }
+  .warn { color: #f5c26b; }
+  @media (max-width: 800px) { .wrap, .steps, .two, .keyrow, .upload { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Manage Tabs</h1>
+  <div style="display:flex;gap:8px;">
+    {% if profiles %}<a class="btn" href="/dashboard/{{ profiles[0].key }}">← Back to dashboard</a>{% endif %}
+    <a class="btn" href="#resume">📄 Resume &amp; fit</a>
+  </div>
+</header>
+
+<div class="page">
+
+  {% if welcome %}
+  <div class="panel welcome" id="welcome">
+    <h2>{% if has_profiles %}Add another tab{% else %}Welcome — let's set up your first search{% endif %}</h2>
+    <p class="hint">A <b>tab</b> is a saved search over ~{{ '12,000' }} company career pages: which job titles to keep, and what to exclude. The <b>Fit</b> column then scores every match 0–100 against your resume.</p>
+    <div class="steps">
+      <div class="step">
+        <h3><span class="n">1</span>Upload your resume <span style="color:var(--muted);font-weight:normal">(optional, recommended)</span></h3>
+        <p>PDF, DOCX, TXT or TEX. It stays on this machine unless you choose the Claude option. The Fit score is generic until you do this.</p>
+        <a class="btn" href="#resume">Upload resume ↓</a>
+      </div>
+      <div class="step">
+        <h3><span class="n">2</span>Pick a starter tab</h3>
+        <p>One click creates it. You can tweak the title rules afterwards, or build one from scratch below.</p>
+        <div class="cards" id="template-cards"><span style="color:var(--muted)">loading…</span></div>
+      </div>
+    </div>
+    <div class="actions"><span class="msg" id="welcome-msg"></span></div>
+  </div>
+  {% endif %}
+
+  <div class="wrap">
+    <div>
+      <div class="tablist" id="tablist"></div>
+    </div>
+
+    <div class="panel">
+      <h2 id="editor-title">New tab</h2>
+      <p class="hint">When you hit <b>↻ Refresh data</b> on a tab's dashboard, the scraper keeps a job only if its <b>title</b> matches a Level pattern <b>and</b> a Domain pattern, matches <b>no</b> Exclude pattern, and its description contains at least the given number of AI keywords. One regular expression per line, case-insensitive.</p>
+
+      <form id="tab-form">
+        <div id="template-pick" style="display:none;">
+          <label for="f-template">Start from a template</label>
+          <select id="f-template"><option value="">(blank)</option></select>
+        </div>
+        <div class="keyrow">
+          <div>
+            <label for="f-key">Key <span title="URL slug, e.g. staff_ai">(slug)</span></label>
+            <input type="text" id="f-key" placeholder="staff_ai" autocomplete="off" />
+          </div>
+          <div>
+            <label for="f-label">Label</label>
+            <input type="text" id="f-label" placeholder="Staff AI Engineer" />
+          </div>
+          <div>
+            <label for="f-short">Short</label>
+            <input type="text" id="f-short" placeholder="Staff-AI" />
+          </div>
+        </div>
+
+        <div class="two">
+          <div>
+            <label for="f-level">Level patterns <span>(title must match one)</span></label>
+            <textarea id="f-level" placeholder="\bstaff\s+engineer\b&#10;\bprincipal\s+engineer\b"></textarea>
+          </div>
+          <div>
+            <label for="f-domain">Domain patterns <span>(title must match one)</span></label>
+            <textarea id="f-domain" placeholder="\b(ai|ml)\b&#10;\bmachine\s+learning\b"></textarea>
+          </div>
+        </div>
+
+        <label for="f-exclude">Exclude patterns <span>(title must match none)</span></label>
+        <textarea id="f-exclude" placeholder="\bsales\b&#10;\bintern\b"></textarea>
+
+        <div class="flags">
+          <label><input type="checkbox" id="f-etl" /> Require ETL / data-infra signal</label>
+          <label><input type="checkbox" id="f-health" /> Healthtech sector only</label>
+          <label title="With 'Healthtech sector only': also keep roles at non-healthtech companies whose posting is healthcare-facing (HC column = adj)"><input type="checkbox" id="f-hcadj" /> Accept healthcare-adjacent postings</label>
+          <label><input type="checkbox" id="f-remote" /> Remote or local only</label>
+          <label title="Regex over the job's location, e.g. tampa|clearwater|\bfl\b. Blank = use the fit resume's home location."><span style="text-transform:none;letter-spacing:0;">local area</span>
+            <input type="text" id="f-local" placeholder="(from resume)" style="width:180px;margin-left:6px;" /></label>
+        </div>
+        <div class="flags">
+          <label>Fit resume
+            <select id="f-fit" style="margin-left:6px;"><option value="">(run default)</option></select></label>
+          <label title="Keep the tab (still scraped, still reachable at /dashboard/&lt;key&gt;) but drop it from the tab bar"><input type="checkbox" id="f-hidden" /> Hide from tab bar</label>
+          <label>Min AI keywords
+            <input type="number" id="f-minai" min="0" value="0" style="width:64px;margin-left:6px;" /></label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary" id="save-btn">Save tab</button>
+          <button type="button" class="btn danger" id="delete-btn" style="display:none;">Delete</button>
+          <button type="button" class="btn" id="new-btn">+ New tab</button>
+          <span class="msg" id="msg"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel" id="resume" style="margin-top:24px;">
+    <h2>Resume &amp; fit scoring</h2>
+    <p class="hint">Each uploaded resume becomes a <b>fit profile</b>: a table of title levels, skill keywords, and company sectors that scores every job 0–100. The <b>default</b> profile scores every tab unless a tab pins a different one (the "Fit resume" dropdown above). Nothing is sent anywhere unless you pick the Claude method.</p>
+
+    <div class="fitlist" id="fitlist"></div>
+
+    <form id="resume-form">
+      <div class="upload">
+        <div>
+          <label for="r-file">Resume file</label>
+          <input type="file" id="r-file" accept=".pdf,.docx,.txt,.md,.tex" required />
+        </div>
+        <div>
+          <label for="r-label">Label</label>
+          <input type="text" id="r-label" placeholder="My resume (2026)" />
+        </div>
+        <div>
+          <label for="r-method">Method</label>
+          <select id="r-method" style="width:100%">
+            <option value="auto">Auto</option>
+            <option value="heuristic">Keyword heuristic (local)</option>
+            <option value="claude">Claude</option>
+          </select>
+        </div>
+        <button type="submit" class="btn primary" id="r-derive">Analyze →</button>
+      </div>
+      <p class="hint" id="r-claude-note" style="margin-top:8px;"></p>
+    </form>
+
+    <div id="r-result" style="display:none;">
+      <div class="summary" id="r-summary"></div>
+      <div class="keyrow" style="margin-top:12px;">
+        <div>
+          <label for="r-key">Save as key</label>
+          <input type="text" id="r-key" placeholder="my_resume" />
+        </div>
+        <div class="flags" style="margin-top:28px;">
+          <label><input type="checkbox" id="r-default" checked /> Make default</label>
+          <label title="Re-derive every ATS tab from the cached scan so the Fit column updates (no network)"><input type="checkbox" id="r-rescore" checked /> Rescore tabs now</label>
+        </div>
+      </div>
+      <label for="r-spec">Scoring table <span>(editable JSON — level: [regex, points]; domains: [regex, per-hit, cap])</span></label>
+      <textarea id="r-spec" style="min-height:220px;"></textarea>
+      <div class="actions">
+        <button type="button" class="btn primary" id="r-save">Save fit profile</button>
+        <span class="msg" id="r-msg"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let PROFILES = {};
+let TEMPLATES = [];
+let FITS = {};          // key -> label (incl. built-in)
+let FIT_DEFAULT = "";
+let FIT_BUILTIN = "";
+let editingKey = null;   // null = creating new
+
+const $ = (id) => document.getElementById(id);
+const linesToVal = (t) => t.split("\n").map(s => s.trim()).filter(Boolean);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function loadProfiles() {
+  const r = await fetch("/api/profiles");
+  const data = await r.json();
+  PROFILES = data.profiles || {};
+  TEMPLATES = data.templates || [];
+  FITS = data.fit_profiles || {};
+  FIT_DEFAULT = data.default_fit || "";
+  FIT_BUILTIN = data.builtin_fit || "";
+  const sel = $("f-fit");
+  const cur = sel.value;
+  sel.innerHTML = `<option value="">(run default: ${esc(FITS[FIT_DEFAULT] || FIT_DEFAULT)})</option>`;
+  for (const [k, label] of Object.entries(FITS)) {
+    const o = document.createElement("option");
+    o.value = k; o.textContent = `${k} — ${label}`; sel.appendChild(o);
+  }
+  sel.value = cur;
+  const tsel = $("f-template");
+  tsel.innerHTML = `<option value="">(blank)</option>`;
+  for (const t of TEMPLATES) {
+    const o = document.createElement("option");
+    o.value = t.key; o.textContent = t.label; tsel.appendChild(o);
+  }
+  renderList();
+  renderTemplateCards();
+}
+
+function renderList() {
+  const el = $("tablist");
+  el.innerHTML = "";
+  for (const [key, cfg] of Object.entries(PROFILES)) {
+    const row = document.createElement("div");
+    row.className = "row" + (key === editingKey ? " active" : "") + (cfg.hidden ? " hidden-tab" : "");
+    row.innerHTML = `<span><b>${esc(cfg.short || key)}</b>${cfg.hidden ? ' <small style="display:inline;opacity:.7">(hidden)</small>' : ''}<small>${esc(cfg.label || key)}</small></span><span>${(cfg.level||[]).length}L·${(cfg.exclude||[]).length}X</span>`;
+    row.onclick = () => editTab(key);
+    el.appendChild(row);
+  }
+  if (!Object.keys(PROFILES).length) {
+    const empty = document.createElement("div");
+    empty.className = "row"; empty.style.cursor = "default";
+    empty.innerHTML = `<small>No tabs yet — pick a starter above or build one here.</small>`;
+    el.appendChild(empty);
+  }
+  const add = document.createElement("div");
+  add.className = "row new";
+  add.textContent = "+ New tab";
+  add.onclick = newTab;
+  el.appendChild(add);
+}
+
+function renderTemplateCards() {
+  const el = $("template-cards");
+  if (!el) return;
+  el.innerHTML = "";
+  for (const t of TEMPLATES) {
+    const exists = Object.hasOwn(PROFILES, t.key);
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<b>${esc(t.label)}</b><p>${esc(t.description || "")}</p>` +
+      (exists ? `<span class="exists">✓ added · <a href="/dashboard/${esc(t.key)}">open</a></span>`
+              : `<button class="btn small primary" data-tpl="${esc(t.key)}">Create tab</button>`);
+    el.appendChild(card);
+  }
+  el.querySelectorAll("button[data-tpl]").forEach(b => b.onclick = () => createFromTemplate(b.dataset.tpl, b));
+}
+
+async function createFromTemplate(key, btn) {
+  if (btn) { btn.disabled = true; btn.textContent = "Creating…"; }
+  const r = await fetch("/api/profiles/from_template", {
+    method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({template: key}),
+  });
+  const data = await r.json();
+  const m = $("welcome-msg");
+  if (!r.ok) { if (m) { m.textContent = data.error || "failed"; m.className = "msg err"; } if (btn) { btn.disabled = false; btn.textContent = "Create tab"; } return; }
+  if (m) { m.innerHTML = `Created <b>${esc(data.profile.label)}</b>. <a href="/dashboard/${esc(data.key)}">Open it</a> and hit <b>↻ Refresh data</b> to run the first scan (10–20 min).`; m.className = "msg ok"; }
+  await loadProfiles();
+  editTab(data.key);
+}
+
+function fill(cfg) {
+  $("f-label").value = cfg.label || "";
+  $("f-short").value = cfg.short || "";
+  $("f-level").value = (cfg.level || []).join("\n");
+  $("f-domain").value = (cfg.domain || []).join("\n");
+  $("f-exclude").value = (cfg.exclude || []).join("\n");
+  $("f-etl").checked = !!cfg.require_etl_signal;
+  $("f-health").checked = !!cfg.require_healthtech_sector;
+  $("f-remote").checked = !!cfg.require_remote_or_local;
+  $("f-local").value = cfg.local_re || "";
+  $("f-hidden").checked = !!cfg.hidden;
+  $("f-hcadj").checked = !!cfg.health_adjacent_ok;
+  $("f-fit").value = cfg.fit || "";
+  $("f-minai").value = cfg.min_ai_hits ?? 0;
+}
+
+function editTab(key) {
+  editingKey = key;
+  const cfg = PROFILES[key];
+  $("editor-title").textContent = "Edit: " + (cfg.label || key);
+  $("f-key").value = key;
+  $("f-key").disabled = true;
+  $("template-pick").style.display = "none";
+  $("delete-btn").style.display = "";
+  fill(cfg);
+  setMsg("");
+  renderList();
+}
+
+function newTab() {
+  editingKey = null;
+  $("editor-title").textContent = "New tab";
+  $("f-key").disabled = false;
+  $("f-key").value = "";
+  $("template-pick").style.display = "";
+  $("f-template").value = "";
+  $("delete-btn").style.display = "none";
+  fill({ min_ai_hits: 0 });
+  setMsg("");
+  renderList();
+}
+
+$("f-template").addEventListener("change", () => {
+  const t = TEMPLATES.find(t => t.key === $("f-template").value);
+  if (!t) { fill({min_ai_hits: 0}); $("f-key").value = ""; return; }
+  fill(t);
+  $("f-key").value = Object.hasOwn(PROFILES, t.key) ? t.key + "_2" : t.key;
+});
+
+function setMsg(text, ok, id = "msg") {
+  const m = $(id);
+  m.textContent = text;
+  m.className = "msg " + (text ? (ok ? "ok" : "err") : "");
+}
+
+$("new-btn").onclick = newTab;
+
+$("tab-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const key = (editingKey || $("f-key").value).trim().toLowerCase();
+  if (!/^[a-z0-9_]{1,32}$/.test(key)) { setMsg("Key must be lowercase letters, digits, or underscores", false); return; }
+  const body = {
+    label: $("f-label").value,
+    short: $("f-short").value,
+    level: linesToVal($("f-level").value),
+    domain: linesToVal($("f-domain").value),
+    exclude: linesToVal($("f-exclude").value),
+    require_etl_signal: $("f-etl").checked,
+    require_healthtech_sector: $("f-health").checked,
+    require_remote_or_local: $("f-remote").checked,
+    local_re: $("f-local").value,
+    hidden: $("f-hidden").checked,
+    health_adjacent_ok: $("f-hcadj").checked,
+    fit: $("f-fit").value,
+    min_ai_hits: parseInt($("f-minai").value || "0", 10),
+  };
+  const r = await fetch("/api/profiles/" + key, {
+    method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+  });
+  const data = await r.json();
+  if (!r.ok) { setMsg(data.error || "Save failed", false); return; }
+  setMsg("Saved. Open its dashboard and hit Refresh to scrape it.", true);
+  await loadProfiles();
+  editTab(key);
+});
+
+$("delete-btn").addEventListener("click", async () => {
+  if (!editingKey) return;
+  if (!confirm("Delete tab '" + editingKey + "'? This removes its saved search (not any tracked applications).")) return;
+  const r = await fetch("/api/profiles/" + editingKey, { method: "DELETE" });
+  const data = await r.json();
+  if (!r.ok) { setMsg(data.error || "Delete failed", false); return; }
+  editingKey = null;
+  await loadProfiles();
+  newTab();
+});
+
+// ---- Resume / fit profiles -------------------------------------------------
+let FIT_INFO = {};
+let DERIVED = null;
+
+async function loadFits() {
+  const r = await fetch("/api/fit_profiles");
+  FIT_INFO = await r.json();
+  const el = $("fitlist");
+  el.innerHTML = "";
+  const rows = Object.entries(FIT_INFO.profiles || {});
+  const builtinKey = Object.keys(FIT_INFO.builtin || {})[0];
+  if (builtinKey) rows.push([builtinKey, FIT_INFO.builtin[builtinKey]]);
+  for (const [key, spec] of rows) {
+    const isDefault = key === FIT_INFO.default;
+    const isBuiltin = key === builtinKey;
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `<span class="lbl"><b>${esc(spec.label)}</b> ${isDefault ? '<span class="tag">default</span>' : ''}` +
+      `<small>${esc(key)} · ${(spec.domains||[]).length} domains · ${(spec.level||[]).length} levels` +
+      `${spec.source ? ' · ' + esc(spec.source) : ''}${spec.created ? ' · ' + esc(spec.created.slice(0,10)) : ''}</small></span>` +
+      (isDefault ? '' : `<button class="btn small" data-def="${esc(key)}">Make default</button>`) +
+      (isBuiltin ? '' : `<button class="btn small" data-view="${esc(key)}">View</button><button class="btn small danger" data-del="${esc(key)}">Delete</button>`);
+    el.appendChild(row);
+  }
+  el.querySelectorAll("button[data-def]").forEach(b => b.onclick = async () => {
+    const r = await fetch("/api/fit_profiles/default", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({key: b.dataset.def})});
+    if (r.ok) { await loadFits(); await loadProfiles(); setMsg("Default fit profile changed. Hit ⟳ Re-parse on a dashboard to rescore.", true, "r-msg"); }
+  });
+  el.querySelectorAll("button[data-view]").forEach(b => b.onclick = () => {
+    const spec = FIT_INFO.profiles[b.dataset.view];
+    DERIVED = {spec, summary: null};
+    $("r-key").value = b.dataset.view;
+    $("r-default").checked = b.dataset.view === FIT_INFO.default;
+    $("r-summary").innerHTML = `<b>${esc(spec.label)}</b> — editing an existing fit profile. Save overwrites it.`;
+    $("r-spec").value = JSON.stringify(spec, null, 2);
+    $("r-result").style.display = "";
+    $("r-result").scrollIntoView({behavior: "smooth", block: "nearest"});
+  });
+  el.querySelectorAll("button[data-del]").forEach(b => b.onclick = async () => {
+    if (!confirm(`Delete fit profile '${b.dataset.del}'? Tabs pinned to it fall back to the default.`)) return;
+    const r = await fetch("/api/fit_profiles/" + b.dataset.del, {method: "DELETE"});
+    if (r.ok) { await loadFits(); await loadProfiles(); }
+  });
+  const note = $("r-claude-note");
+  if (FIT_INFO.claude_available) {
+    note.innerHTML = `<b>Auto</b> uses Claude (${esc(FIT_INFO.claude_model)}) — the resume text is sent to the Anthropic API. Choose <b>Keyword heuristic</b> to keep it local.`;
+  } else {
+    note.innerHTML = `<b>Auto</b> runs the local keyword heuristic. To let Claude build the table instead: <code>pip install anthropic</code> and set <code>ANTHROPIC_API_KEY</code>, then restart the server.`;
+    $("r-method").querySelector('option[value="claude"]').disabled = true;
+  }
+}
+
+$("resume-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const f = $("r-file").files[0];
+  if (!f) return;
+  const btn = $("r-derive");
+  btn.disabled = true; btn.textContent = "Analyzing…";
+  setMsg("", true, "r-msg");
+  const fd = new FormData();
+  fd.append("resume", f);
+  fd.append("label", $("r-label").value);
+  fd.append("method", $("r-method").value);
+  try {
+    const r = await fetch("/api/fit_profiles/derive", {method: "POST", body: fd});
+    const data = await r.json();
+    if (!r.ok) { setMsg(data.error || "Analysis failed", false, "r-msg"); return; }
+    DERIVED = data;
+    const s = data.summary || {};
+    let html = `<b>${esc(data.spec.label)}</b> · ${esc(s.method)}${s.model ? ' (' + esc(s.model) + ')' : ''} · ${data.chars} chars read` +
+      `<br>Track: <b>${esc(s.track)}</b> · Level: <b>${esc(s.level)}</b>` +
+      (s.location ? ` · Home: <b>${esc(s.location)}</b>` : ' · Home: <i>not found</i>') +
+      (s.remote ? ' · mentions remote' : '') +
+      (s.headline ? `<br><i>${esc(s.headline)}</i>` : '');
+    html += `<div class="groups">` + (s.groups || []).map(g =>
+      `<span class="g"><b>${esc(g.name)}</b> <small>${g.hits != null ? g.hits + ' hits' : 'w' + g.weight}: ${esc((g.terms||[]).slice(0,6).join(", "))}${(g.terms||[]).length > 6 ? '…' : ''}</small></span>`).join("") + `</div>`;
+    if (s.warning) html += `<div class="warn">⚠ ${esc(s.warning)}</div>`;
+    $("r-summary").innerHTML = html;
+    $("r-key").value = data.suggested_key;
+    $("r-spec").value = JSON.stringify(data.spec, null, 2);
+    $("r-default").checked = true;
+    $("r-rescore").checked = !!FIT_INFO.raw_scan;
+    $("r-result").style.display = "";
+    $("r-result").scrollIntoView({behavior: "smooth", block: "nearest"});
+  } catch (err) {
+    setMsg("Analysis failed: " + err, false, "r-msg");
+  } finally {
+    btn.disabled = false; btn.textContent = "Analyze →";
+  }
+});
+
+$("r-save").addEventListener("click", async () => {
+  const key = $("r-key").value.trim().toLowerCase();
+  if (!/^[a-z0-9_]{1,32}$/.test(key)) { setMsg("Key must be lowercase letters, digits, or underscores", false, "r-msg"); return; }
+  let spec;
+  try { spec = JSON.parse($("r-spec").value); } catch (e) { setMsg("Scoring table isn't valid JSON: " + e.message, false, "r-msg"); return; }
+  const r = await fetch("/api/fit_profiles/" + key, {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({spec, make_default: $("r-default").checked, rescore: $("r-rescore").checked}),
+  });
+  const data = await r.json();
+  if (!r.ok) { setMsg(data.error || "Save failed", false, "r-msg"); return; }
+  setMsg(data.rescore_started ? "Saved — rescoring every tab from the cached scan in the background."
+                              : "Saved. Hit ⟳ Re-parse (or ↻ Refresh data) on a dashboard to score with it.", true, "r-msg");
+  await loadFits();
+  await loadProfiles();
+});
+
+// ---- boot -------------------------------------------------------------------
+(async () => {
+  await loadProfiles();
+  await loadFits();
+  const params = new URLSearchParams(location.search);
+  const pre = params.get("edit");
+  if (pre && PROFILES[pre]) editTab(pre); else newTab();
+  if (location.hash === "#resume") $("resume").scrollIntoView();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Shared chrome for every page in the app.
+ *
+ * Each template used to carry its own copy of the design tokens, which is how
+ * /applied drifted onto a different palette (#0f1117 vs #0b1020) and a
+ * different nav style from the dashboards. Tokens and the common header /
+ * nav / button rules live here now; page-specific layout stays in the page.
+ *
+ * The dashboard's palette is canonical — it is the page seen most.
+ */
+
+:root {
+  --bg: #0b1020;
+  --panel: #131a30;
+  --panel-2: #1a2240;
+  --border: #2a3358;
+  --text: #e6ecff;
+  --muted: #9aa6c2;
+  --accent: #7aa2ff;
+  --accent-2: #b388ff;
+  --success: #4ade80;
+  --warn: #fbbf24;
+  --danger: #ef4444;
+  --gold: #facc15;
+  /* Alias: /applied and /queue grew up calling the danger colour --red. */
+  --red: #ef4444;
+
+  --page-pad-x: 24px;
+  --page-pad-y: 20px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Header ---------------------------------------------------------------
+ * The dashboard's header is full-bleed against a zero-padding body. Secondary
+ * pages pad the body instead, so `body.page` pulls the header back out to the
+ * edges with negative margins rather than each page hand-tuning it.
+ */
+header {
+  padding: 18px var(--page-pad-x);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(122, 162, 255, 0.08), transparent);
+}
+header h1 { margin: 0; font-size: 18px; font-weight: 600; }
+header .meta { color: var(--muted); font-size: 12px; }
+header .right { display: flex; align-items: center; gap: 12px; }
+
+body.page {
+  padding: var(--page-pad-y) var(--page-pad-x);
+}
+body.page > header {
+  margin: calc(var(--page-pad-y) * -1) calc(var(--page-pad-x) * -1) 24px;
+}
+
+/* --- Nav + buttons --------------------------------------------------------
+ * .profile-tabs (dashboard) and .nav (everywhere else) render the same pill.
+ */
+.profile-tabs, .nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.profile-tabs a, .nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--muted);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+.profile-tabs a:hover, .nav a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.profile-tabs a.active, .nav a.active {
+  color: var(--text);
+  background: var(--panel);
+  border-color: var(--accent);
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); text-decoration: none; }
+.btn.primary { background: var(--accent); color: #0b1020; border-color: var(--accent); font-weight: 600; }
+.btn:disabled { opacity: 0.5; cursor: default; }
+
+/* --- Surfaces ------------------------------------------------------------ */
+.panel, .card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}

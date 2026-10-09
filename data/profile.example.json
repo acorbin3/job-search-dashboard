@@ -1,0 +1,41 @@
+{
+  "_comment": "Greenhouse autofill profile. Copy to ../profile.json (next to server.py) and fill in. profile.json is gitignored.",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "preferredName": "Jane",
+  "email": "you@example.com",
+  "phone": "555-555-5555",
+  "linkedin": "https://www.linkedin.com/in/your-handle/",
+  "github": "https://github.com/your-handle",
+  "website": "",
+  "portfolio": "",
+  "location": {
+    "city": "Austin",
+    "state": "TX",
+    "country": "United States"
+  },
+  "workAuth": "Yes",
+  "sponsorship": "No",
+  "currentCompany": "Example Corp",
+  "currentTitle": "Senior Software Engineer",
+  "education": [
+    {
+      "school": "State University",
+      "degree": "Bachelor of Science (BS)",
+      "discipline": "Computer Science",
+      "startYear": "2012",
+      "endYear": "2016"
+    }
+  ],
+  "howHeard": "LinkedIn",
+  "aiFamiliarity": "Expert",
+  "salaryExpectation": "",
+  "noticePeriod": "2 weeks",
+  "eeo": {
+    "gender": "Decline to self-identify",
+    "race": "Decline to self-identify",
+    "veteran": "I am not a protected veteran",
+    "disability": "I do not want to answer"
+  },
+  "resumePath": "resumes/my_resume.pdf"
+}

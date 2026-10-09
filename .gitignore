@@ -1,0 +1,87 @@
+# OS / editor junk
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Local-only Claude state
+.claude/
+
+# healthtech-jobs runtime artifacts (regeneratable / mutable)
+state.db
+state.db-journal
+state.db-wal
+state.db-shm
+.latest*.json
+discovered.json
+
+# Output of the older static-HTML pipeline
+dashboard.html
+dashboard_*.html
+
+# Defensive: never commit OAuth client secrets that drift into the repo
+client_secret_*.json
+*credentials*.json
+*token*.json
+
+# Personal autofill profile (contains phone/email/EEO answers)
+profile.json
+
+# Personal Gmail digest fixtures (re-dump via _dump_samples.py)
+tests/fixtures/*_real.html
+_dump_samples.py
+
+# discovery probe outputs
+_enum_*.jsonl
+_enum_*.log
+.scrape_progress_*.json
+.linkedin_crawl.log
+.linkedin_crawl_progress.json
+.raw_scan.json
+
+# server.sh runtime files
+.server.pid
+.server.log
+
+# Per-user config written by the UI (your tabs, your resume's scoring tables)
+profiles.json
+profiles.json.bak*
+fit_profiles.json
+fit_profiles.json.tmp
+resumes/
+linkedin_searches.json
+linkedin_searches.json.bak*
+companies.json.bak*
+state.db.bak*
+.latest_*.json.bak*
+.linkedin_crawl_*
+logs/
+server_restart.log
+_*.log
+.env
+.env
+
+# Personal userscript with a hardcoded identity block
+gem_autofill.js
+
+# Discovery-round scratch and Gmail-derived scripts (personal / huge)
+_apply_confirmations*
+_gmail_scan/
+_probe_*
+_r*_pages/
+_r*.jsonl
+_r*_keeps_*.json
+_r*_slugs.json*
+_r*_review.txt
+_r*_rescue.txt
+_r*_glv_good.json
+_r*_intradups_drop.json
+_r*_names.txt
+_r*_filtered.txt
+_r*_agent_*.txt
+_r*_sr_*.json
+_r*_wd_*.jsonl
+_r*_rp*.jsonl
+_r*_stock.jsonl

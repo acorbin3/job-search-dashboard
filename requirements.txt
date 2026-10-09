@@ -1,0 +1,11 @@
+# Runtime
+flask>=3.0
+requests>=2.31
+beautifulsoup4>=4.12
+
+# Optional: resume upload -> fit profile
+pypdf>=4.0          # PDF text extraction (or install the `pdftotext` CLI instead)
+anthropic>=0.40     # let Claude derive the fit profile; needs ANTHROPIC_API_KEY
+
+# Dev
+pytest>=8.0

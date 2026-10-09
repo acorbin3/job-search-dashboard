@@ -1,0 +1,1539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{{ profile_label }} Roles — AI Signal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/static/app.css">
+  <style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         background: var(--bg); color: var(--text); }
+  header { padding: 18px 24px; border-bottom: 1px solid var(--border);
+           display: flex; align-items: center; justify-content: space-between; gap: 16px;
+           background: linear-gradient(180deg, rgba(122,162,255,0.08), transparent); }
+  header h1 { margin: 0; font-size: 18px; font-weight: 600; }
+  header .meta { color: var(--muted); font-size: 12px; }
+  header .right { display: flex; align-items: center; gap: 12px; }
+  .profile-tabs { display: flex; gap: 4px; }
+  .profile-tabs a {
+    padding: 6px 12px; border-radius: 6px; font-size: 12px; text-decoration: none;
+    color: var(--muted); background: var(--panel-2); border: 1px solid var(--border);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .profile-tabs a.active { background: rgba(122,162,255,0.15); color: var(--accent); border-color: rgba(122,162,255,0.4); }
+  .profile-tabs a:hover { color: var(--text); }
+  .profile-tabs a.tab-add { font-weight: 700; padding: 6px 10px; }
+  #prompt-panel, #li-panel {
+    margin: 0 24px 16px; padding: 16px 20px; background: var(--panel);
+    border: 1px solid var(--border); border-radius: 10px;
+  }
+  .li-grid { display: grid; grid-template-columns: 1fr 1fr 260px; gap: 16px; margin-top: 14px; }
+  .li-grid h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .li-grid h4 span { text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 400; }
+  .li-grid textarea, .li-grid select, .li-grid input[type=number] {
+    width: 100%; background: var(--bg); color: var(--text); font-family: inherit;
+    font-size: 12.5px; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px;
+  }
+  .li-grid textarea { resize: vertical; font-family: ui-monospace, Menlo, monospace; }
+  .li-grid label { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; font-size: 12.5px; color: var(--muted); }
+  .li-grid label input[type=number] { width: 84px; }
+  .li-grid label select { flex: 1; }
+  #li-progress { display: none; margin-top: 14px; }
+  #li-progress .li-bar {
+    height: 8px; border-radius: 5px; background: var(--bg);
+    border: 1px solid var(--border); overflow: hidden;
+  }
+  #li-progress .li-bar > i {
+    display: block; height: 100%; width: 0; background: var(--success);
+    border-radius: 5px; transition: width 0.5s ease;
+  }
+  #li-progress .li-meta {
+    display: flex; justify-content: space-between; gap: 12px; margin-top: 6px;
+    font-size: 12px; color: var(--muted);
+  }
+  #li-progress .li-meta b { color: var(--text); font-weight: 600; }
+  /* One row per keyword. Rows update in place — at 20 keywords a single
+     rewriting status line reads as flicker. */
+  #li-queries {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2px 16px; margin: 10px 0 0; padding: 0; list-style: none;
+    max-height: 210px; overflow: auto; font-size: 12px;
+  }
+  #li-queries li {
+    display: flex; align-items: baseline; gap: 6px; padding: 2px 0;
+    color: var(--muted); white-space: nowrap;
+  }
+  #li-queries li .kw {
+    overflow: hidden; text-overflow: ellipsis; flex: 1 1 auto;
+  }
+  #li-queries li .mark { flex: none; width: 12px; text-align: center; }
+  #li-queries li .yield { flex: none; font-variant-numeric: tabular-nums; }
+  #li-queries li.done { color: var(--text); }
+  #li-queries li.done .mark { color: var(--success); }
+  #li-queries li.active { color: var(--text); font-weight: 600; }
+  #li-queries li.pending { opacity: 0.55; }
+  #li-log {
+    margin: 14px 0 0; padding: 10px 12px; max-height: 190px; overflow: auto;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+    font-size: 12px; line-height: 1.5; color: var(--muted); white-space: pre-wrap;
+  }
+  .prompt-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .prompt-note { color: var(--muted); font-size: 12.5px; line-height: 1.5; margin: 8px 0 0; }
+  .prompt-note .flag {
+    display: inline-block; margin: 0 4px; padding: 1px 8px; font-size: 11px;
+    border-radius: 10px; background: rgba(122,162,255,0.15); color: var(--accent);
+  }
+  .prompt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 14px; }
+  .prompt-grid h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .prompt-grid h4 span { text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 400; }
+  .prompt-grid ul { margin: 0; padding: 0; list-style: none; }
+  .prompt-grid li {
+    font-family: ui-monospace, Menlo, monospace; font-size: 11.5px; color: var(--text);
+    padding: 2px 0; border-bottom: 1px solid var(--border); word-break: break-all;
+  }
+  .prompt-grid li.none { color: var(--muted); font-style: italic; border: 0; }
+  @media (max-width: 720px) { .prompt-grid { grid-template-columns: 1fr; } }
+  .btn {
+    padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;
+    background: var(--panel-2); color: var(--text); border: 1px solid var(--border);
+    text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+    text-decoration: none; display: inline-block;
+  }
+  a.btn:hover { text-decoration: none; }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn:disabled { opacity: 0.5; cursor: wait; }
+  .btn.primary { background: rgba(122,162,255,0.15); border-color: rgba(122,162,255,0.4); color: var(--accent); }
+  .controls { display: flex; gap: 12px; flex-wrap: wrap; padding: 16px 24px;
+              border-bottom: 1px solid var(--border); background: var(--panel);
+              position: sticky; top: 0; z-index: 5; }
+  .controls input, .controls select {
+    background: var(--panel-2); color: var(--text); border: 1px solid var(--border);
+    padding: 8px 12px; border-radius: 8px; font-size: 13px; outline: none;
+  }
+  .controls input:focus, .controls select:focus { border-color: var(--accent); }
+  .controls .field { display: flex; flex-direction: column; gap: 4px; min-width: 140px; }
+  .controls .field label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .summary { padding: 12px 24px; color: var(--muted); font-size: 13px;
+             display: flex; gap: 16px; flex-wrap: wrap; }
+  .summary .stat { color: var(--text); }
+  .summary .stat strong { color: var(--accent); }
+  .summary .stat.applied strong { color: var(--success); }
+  .summary .stat.ignored strong { color: var(--danger); }
+  .summary .stat.starred strong { color: var(--gold); }
+  table { width: 100%; border-collapse: collapse; table-layout: auto; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--panel); color: var(--muted); font-size: 11px; text-transform: uppercase;
+       letter-spacing: 0.5px; cursor: pointer; user-select: none; position: sticky; top: 73px; z-index: 4; }
+  th .sort-arrow { color: var(--accent); margin-left: 4px; }
+  th.num-col { cursor: default; }
+  td.num-col { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right;
+               white-space: nowrap; padding-right: 6px; }
+  tr.row { cursor: pointer; }
+  tr.row:hover { background: var(--panel); }
+  tr.row.expanded { background: var(--panel); }
+  tr.row.applied { opacity: 0.65; }
+  tr.row.applied td.title { color: var(--success); }
+  tr.row.ignored { opacity: 0.45; }
+  tr.row.ignored td.title { color: var(--danger); text-decoration: line-through; }
+  tr.snippet td { background: var(--panel-2); color: var(--muted); font-size: 13px;
+                  line-height: 1.7; border-bottom: 1px solid var(--border); }
+  tr.snippet .desc-body { max-height: 520px; overflow-y: auto; padding: 4px 12px 4px 0; max-width: 90ch;
+                          font-size: 13.5px; line-height: 1.55; color: var(--text); }
+  tr.snippet .desc-body p { margin: 0 0 10px; }
+  tr.snippet .desc-body h4 { margin: 16px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px;
+                             color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 3px; }
+  tr.snippet .desc-body h4:first-child { margin-top: 0; }
+  tr.snippet .desc-body ul { margin: 0 0 10px; padding-left: 20px; }
+  tr.snippet .desc-body li { margin: 0 0 4px; }
+  tr.snippet .desc-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 8px;
+                          color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  tr.snippet .desc-meta a { color: var(--accent); text-decoration: none; }
+  tr.snippet .desc-meta a:hover { text-decoration: underline; }
+  tr.snippet em { font-style: normal; color: var(--text); padding: 0 2px; border-radius: 3px; background: transparent; }
+  tr.snippet em.ai { box-shadow: inset 0 -2px 0 rgba(179, 136, 255, 0.9); background: rgba(179, 136, 255, 0.10); }
+  tr.snippet em.hc { box-shadow: inset 0 -2px 0 rgba(61, 220, 151, 0.9);  background: rgba(61, 220, 151, 0.10); }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px;
+          background: var(--panel-2); color: var(--text); font-size: 12px;
+          border: 1px solid var(--border); margin: 2px 4px 2px 0; }
+  .pill.ai { background: rgba(122,162,255,0.15); border-color: rgba(122,162,255,0.4); color: var(--accent); }
+  .badge-count { display: inline-block; min-width: 22px; text-align: center;
+                 padding: 2px 8px; border-radius: 999px;
+                 background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                 color: #0b1020; font-weight: 700; font-size: 12px; }
+  .badge-count.hot { background: linear-gradient(135deg, #ff6b9d, #ff8e3c); color: #fff; }
+  .fit-badge { display: inline-block; min-width: 24px; text-align: center;
+               padding: 2px 7px; border-radius: 999px; font-weight: 700; font-size: 12px;
+               border: 1px solid var(--border); }
+  .fit-badge.fit-high { background: rgba(61,220,151,0.18); border-color: rgba(61,220,151,0.5); color: #3ddc97; }
+  .fit-badge.fit-mid  { background: rgba(255,193,7,0.14); border-color: rgba(255,193,7,0.45); color: #ffc107; }
+  .fit-badge.fit-low  { background: var(--panel-2); color: var(--muted); }
+  .company { font-weight: 600; color: var(--accent); }
+  .title { font-weight: 500; }
+  .title a { color: inherit; text-decoration: none; }
+  .title a:hover { color: var(--accent-2); text-decoration: underline; }
+  .location { color: var(--muted); font-size: 12px; }
+  .posted { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .posted.fresh { color: var(--success); font-weight: 600; }
+  .posted.stale { color: var(--warn); }
+  .pay { font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pay.high { color: var(--success); font-weight: 600; }
+  .pay.mid { color: var(--accent); }
+  .pay.low { color: var(--muted); }
+  .pay.unknown { color: var(--muted); opacity: 0.5; }
+  .remote-pill { display: inline-block; padding: 2px 8px; border-radius: 999px;
+                 font-size: 12px; white-space: nowrap;
+                 background: var(--panel-2); border: 1px solid var(--border); }
+  .remote-pill.remote { background: rgba(74, 222, 128, 0.15); border-color: rgba(74, 222, 128, 0.4); color: var(--success); }
+  .remote-pill.hybrid { background: rgba(122, 162, 255, 0.15); border-color: rgba(122, 162, 255, 0.4); color: var(--accent); }
+  .remote-pill.onsite { background: rgba(251, 191, 36, 0.15); border-color: rgba(251, 191, 36, 0.4); color: var(--warn); }
+  .remote-pill.unknown { opacity: 0.5; }
+  .stage-pill, .sector-pill { display: inline-block; padding: 2px 8px; border-radius: 4px;
+                              font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
+                              background: var(--panel-2); border: 1px solid var(--border); color: var(--muted);
+                              white-space: nowrap; }
+  .stage-pill.stage-B { background: rgba(74, 222, 128, 0.15); border-color: rgba(74, 222, 128, 0.4); color: var(--success); }
+  .stage-pill.stage-C { background: rgba(122, 162, 255, 0.15); border-color: rgba(122, 162, 255, 0.4); color: var(--accent); }
+  .stage-pill.stage-D { background: rgba(179, 136, 255, 0.15); border-color: rgba(179, 136, 255, 0.4); color: var(--accent-2); }
+  .stage-pill.stage-Public { background: rgba(154, 166, 194, 0.15); }
+  .sector-pill { font-weight: 500; text-transform: lowercase; }
+  .hc-pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+             border: 1px solid var(--border); background: var(--panel-2); color: var(--muted); cursor: help; }
+  .hc-pill.core { background: rgba(61,220,151,0.18); border-color: rgba(61,220,151,0.5); color: #3ddc97; }
+  .hc-pill.adj  { background: rgba(255,193,7,0.14); border-color: rgba(255,193,7,0.45); color: #ffc107; }
+  .ats { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+         padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px; margin-left: 6px; color: var(--muted); }
+  .ats.ats-greenhouse { background: rgba(74, 222, 128, 0.15); border-color: rgba(74, 222, 128, 0.4); color: #4ade80; }
+  .ats.ats-lever      { background: rgba(122, 162, 255, 0.15); border-color: rgba(122, 162, 255, 0.4); color: #7aa2ff; }
+  .ats.ats-ashby      { background: rgba(179, 136, 255, 0.15); border-color: rgba(179, 136, 255, 0.4); color: #b388ff; }
+  .ats.ats-workday    { background: rgba(251, 146, 60, 0.15); border-color: rgba(251, 146, 60, 0.4); color: #fb923c; }
+  .empty, .loading { padding: 60px; text-align: center; color: var(--muted); }
+  .footer { padding: 24px; color: var(--muted); font-size: 12px; text-align: center; }
+  .open-icon { opacity: 0.5; margin-left: 6px; font-size: 11px; }
+  .lnk-row { display: inline-flex; gap: 4px; margin-left: 10px; vertical-align: middle; flex-wrap: wrap; }
+  .lnk { font-size: 10px; text-transform: lowercase; letter-spacing: 0.3px;
+         padding: 2px 6px; border: 1px solid var(--border); border-radius: 4px;
+         color: #0a66c2; background: rgba(10, 102, 194, 0.08); text-decoration: none; white-space: nowrap; }
+  .lnk:hover { background: rgba(10, 102, 194, 0.2); border-color: #0a66c2; }
+  .lnk.lvl, .lnk.lvl-search { color: #16a34a; background: rgba(22, 163, 74, 0.08); border-color: rgba(22, 163, 74, 0.3); }
+  .lnk.lvl:hover, .lnk.lvl-search:hover { background: rgba(22, 163, 74, 0.2); border-color: #16a34a; }
+
+  .actions { display: inline-flex; gap: 4px; }
+  .act {
+    width: 26px; height: 26px; border-radius: 6px; cursor: pointer; user-select: none;
+    background: var(--panel-2); border: 1px solid var(--border);
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 13px; line-height: 1;
+  }
+  .act:hover { border-color: var(--accent); }
+  .act.on.applied { background: rgba(74,222,128,0.2); border-color: var(--success); color: var(--success); }
+  .act.on.ignored { background: rgba(239,68,68,0.2); border-color: var(--danger); color: var(--danger); }
+  .act.on.starred { background: rgba(250,204,21,0.2); border-color: var(--gold); color: var(--gold); }
+  .status-badge {
+    display: inline-block; margin-left: 8px; padding: 1px 6px; border-radius: 4px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+  }
+  .status-badge.applied { background: rgba(74,222,128,0.15); border: 1px solid rgba(74,222,128,0.4); color: var(--success); }
+  .status-badge.starred { background: rgba(250,204,21,0.15); border: 1px solid rgba(250,204,21,0.4); color: var(--gold); }
+  .toast {
+    position: fixed; right: 24px; bottom: 24px; padding: 10px 14px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    font-size: 13px; color: var(--text); z-index: 100; opacity: 0; transition: opacity 0.2s;
+  }
+  .toast.show { opacity: 1; }
+  .toast.error { border-color: var(--danger); color: var(--danger); }
+  .scrape-bar {
+    display: inline-block; vertical-align: middle; width: 120px; height: 8px;
+    background: var(--border); border-radius: 4px; overflow: hidden;
+  }
+  .scrape-bar-fill {
+    display: block; height: 100%; background: var(--success);
+    border-radius: 4px; transition: width 0.5s ease;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>{{ profile_label }} Roles — AI Signal</h1>
+    <div class="meta">
+      Last refresh: <span id="generated">loading…</span> · <span id="total-count">—</span> roles · <span id="company-count">—</span> companies <span id="scrape-status"></span>
+      · Fit vs <a href="/tabs#resume" title="Which resume the Fit column is scored against — upload one on the Manage Tabs page">{{ fit_label }}</a>{% if fit_is_builtin %} <a href="/tabs#resume" class="flag" style="text-decoration:none" title="Scores use a generic table until you upload a resume">upload a resume to personalize</a>{% endif %}
+    </div>
+  </div>
+  <div class="right">
+    <div class="profile-tabs">
+      {% for p in profiles %}
+        <a href="/dashboard/{{ p.key }}" class="{% if p.key == profile %}active{% endif %}">{{ p.short }}</a>
+      {% endfor %}
+      <a href="/tabs" class="tab-add" title="Add or configure tabs">＋</a>
+    </div>
+    <a class="btn" href="/applied" title="View applications submitted per day">📊 Applied</a>
+    <button class="btn" id="prompt-btn" title="Show the filter rules this tab searches with">🔍 Prompt</button>
+    <button class="btn" id="undo-btn" style="display:none;" title="Undo the last triage action">↶ Undo</button>
+    {# The LinkedIn tab is fed by linkedin_scrape.py, not the ATS scan, so it
+       gets its own crawl button. The ATS buttons stay in the DOM (hidden) so
+       the shared refresh JS keeps working. #}
+    <button class="btn" id="reparse-btn" {% if source == 'linkedin' %}style="display:none;"{% endif %} title="Rebuild every tab from the cached raw scan — no network, just re-runs the profile filters">⟳ Re-parse</button>
+    <button class="btn primary" id="refresh-btn" {% if source == 'linkedin' %}style="display:none;"{% endif %}>↻ Refresh data</button>
+    {% if source == 'linkedin' %}
+    <button class="btn primary" id="li-crawl-btn" title="Crawl LinkedIn's public job search">🔗 Crawl LinkedIn</button>
+    {% endif %}
+  </div>
+</header>
+
+{% if source == 'linkedin' %}
+<div id="li-panel" style="display:none;">
+  <div class="prompt-head">
+    <strong>Crawl LinkedIn</strong>
+    <span class="prompt-note" style="margin:0;">Each keyword is a separate search, capped by LinkedIn at ~1000 results. More keywords = more coverage.</span>
+  </div>
+  <div id="li-last-run" class="prompt-note" style="margin:0 0 8px;"></div>
+  <div class="li-grid">
+    <div>
+      <h4>Keywords <span>(one per line)</span></h4>
+      <textarea id="li-keywords" rows="8" spellcheck="false"></textarea>
+    </div>
+    <div>
+      <h4>Search URLs <span>(optional — paste from LinkedIn)</span></h4>
+      <textarea id="li-urls" rows="8" spellcheck="false"
+        placeholder="https://www.linkedin.com/jobs/search-results/?keywords=..."></textarea>
+    </div>
+    <div>
+      <h4>Options</h4>
+      <label>Saved search
+        <select id="li-search">
+          <option value="">(none — use the keywords box)</option>
+        </select>
+      </label>
+      <label title="The guest endpoint ignores quotes, OR/NOT and sort-by-date; the signed-in one honors them. Needs li_at + JSESSIONID configured.">
+        <input type="checkbox" id="li-voyager"> Signed-in search (boolean + newest-first)
+      </label>
+      <label><input type="checkbox" id="li-remote"> Remote only</label>
+      <label>Posted within <input type="number" id="li-posted-days" min="0" max="90" placeholder="any"> days</label>
+      <label>Min pay <input type="number" id="li-min-pay" min="0" step="5000" placeholder="any"></label>
+      <label>Min fit <input type="number" id="li-min-fit" min="0" max="100" placeholder="any"></label>
+      <label>Max per keyword <input type="number" id="li-max" min="10" max="1000" step="10" value="200"></label>
+      <label>Title filter
+        <select id="li-title-profile">
+          <option value="">(none — keep every title)</option>
+          {% for p in profiles %}
+          <option value="{{ p.key }}">{{ p.label }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <button class="btn primary" id="li-start-btn" style="margin-top:8px;">▶ Start crawl</button>
+    </div>
+  </div>
+  <div id="li-progress">
+    <div class="li-bar"><i id="li-bar-fill"></i></div>
+    <div class="li-meta">
+      <span id="li-phase"></span>
+      <span id="li-stats"></span>
+    </div>
+    <ol id="li-queries"></ol>
+  </div>
+  <pre id="li-log" style="display:none;"></pre>
+  <p class="prompt-note">Salary filtering happens here, not on LinkedIn — its
+    guest search ignores the <code>f_SAL</code> parameter, so pay is parsed
+    from each description. The crawler self-throttles if LinkedIn pushes back,
+    and caches descriptions, so re-runs are much faster than the first.</p>
+</div>
+{% endif %}
+
+<div id="prompt-panel" style="display:none;">
+  <div class="prompt-head">
+    <strong>What “↻ Refresh data” searches for on this tab</strong>
+    <a class="btn" href="/tabs?edit={{ profile }}" title="Edit this tab's rules">✎ Edit this tab</a>
+  </div>
+  <p class="prompt-note">A job is kept when its <b>title</b> matches a <b>Level</b> pattern <b>and</b> a <b>Domain</b> pattern, does <b>not</b> match any <b>Exclude</b> pattern, and its description contains at least {{ prompt.min_ai_hits }} AI keyword{{ '' if prompt.min_ai_hits == 1 else 's' }}. Patterns are case-insensitive regular expressions.</p>
+  <div class="prompt-grid">
+    <div><h4>Level <span>(title must match one)</span></h4><ul>{% for p in prompt.level %}<li>{{ p }}</li>{% endfor %}</ul></div>
+    <div><h4>Domain <span>(title must match one)</span></h4><ul>{% for p in prompt.domain %}<li>{{ p }}</li>{% endfor %}</ul></div>
+    <div><h4>Exclude <span>(title must match none)</span></h4><ul>{% if prompt.exclude %}{% for p in prompt.exclude %}<li>{{ p }}</li>{% endfor %}{% else %}<li class="none">(none)</li>{% endif %}</ul></div>
+  </div>
+  {% if prompt.require_etl_signal or prompt.require_healthtech_sector or prompt.require_remote_or_local %}
+  <p class="prompt-note">Extra requirements:
+    {% if prompt.require_etl_signal %}<span class="flag">ETL / data-infra signal</span>{% endif %}
+    {% if prompt.require_healthtech_sector %}<span class="flag">healthtech sector only</span>{% endif %}
+    {% if prompt.require_remote_or_local %}<span class="flag">remote or local only{% if prompt.local_re %} ({{ prompt.local_re }}){% endif %}</span>{% endif %}
+  </p>
+  {% endif %}
+</div>
+
+<div class="controls">
+  <div class="field">
+    <label for="search">Search</label>
+    <input id="search" type="text" placeholder="title, company, description..." />
+  </div>
+  <div class="field">
+    <label for="exclude">Exclude</label>
+    <input id="exclude" type="text" placeholder="staff, contract, ... (title/company)" title="Hide jobs whose title or company contains any of these comma-separated keywords. Saved per tab." />
+  </div>
+  <div class="field">
+    <label for="status-filter">Status</label>
+    <select id="status-filter">
+      <option value="active" selected>Active (hide ignored & applied)</option>
+      <option value="all">All (show everything)</option>
+      <option value="applied">Applied</option>
+      <option value="starred">Starred</option>
+      <option value="ignored">Ignored only</option>
+      <option value="untriaged">Untriaged only</option>
+    </select>
+  </div>
+  {% if source == 'linkedin' %}
+  <div class="field">
+    <label for="applied-filter">Applied?</label>
+    <select id="applied-filter">
+      <option value="">All</option>
+      <option value="hide">Hide applied (yes + maybe)</option>
+      <option value="hide-yes">Hide yes only</option>
+      <option value="only">Only applied (yes + maybe)</option>
+      <option value="only-maybe">Only maybe</option>
+    </select>
+  </div>
+  {% endif %}
+  <div class="field">
+    <label for="company">Company</label>
+    <select id="company"><option value="">All</option></select>
+  </div>
+  <div class="field">
+    <label for="remote-filter">Remote</label>
+    <select id="remote-filter">
+      <option value="" {{ 'selected' if remote_default == '' }}>All</option>
+      <option value="remote" {{ 'selected' if remote_default == 'remote' }}>Remote only</option>
+      <option value="hybrid" {{ 'selected' if remote_default == 'hybrid' }}>Hybrid</option>
+      <option value="onsite" {{ 'selected' if remote_default == 'onsite' }}>Onsite</option>
+      <option value="not-onsite" {{ 'selected' if remote_default == 'not-onsite' }}>Remote or Hybrid</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="ats">ATS</label>
+    <select id="ats">
+      <option value="">All</option>
+      <option value="greenhouse">Greenhouse</option>
+      <option value="ashby">Ashby</option>
+      <option value="lever">Lever</option>
+      <option value="workday">Workday</option>
+      <option value="rippling">Rippling</option>
+      <option value="smartrecruiters">SmartRecruiters</option>
+      <option value="workable">Workable</option>
+      <option value="bamboohr">BambooHR</option>
+      <option value="breezy">Breezy</option>
+      <option value="jazzhr">JazzHR</option>
+      <option value="jobvite">Jobvite</option>
+      <option value="icims">iCIMS</option>
+      <option value="ultipro">UKG UltiPro</option>
+      <option value="paylocity">Paylocity</option>
+      <option value="dayforce">Dayforce</option>
+      <option value="recruitee">Recruitee</option>
+      <option value="gem">Gem</option>
+      <option value="comeet">Comeet</option>
+      <option value="jobscore">Jobscore</option>
+      <option value="trakstar">Trakstar</option>
+      <option value="applicantpro">ApplicantPro</option>
+      <option value="pinpoint">Pinpoint</option>
+      <option value="adp">ADP</option>
+      <option value="paycom">Paycom</option>
+      <option value="csod">Cornerstone</option>
+      <option value="eightfold">Eightfold</option>
+      <option value="avature">Avature</option>
+      <option value="brassring">BrassRing</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="min-hits">Min AI hits</label>
+    <input id="min-hits" type="number" min="1" max="20" value="1" style="width: 80px;" />
+  </div>
+  <div class="field">
+    <label for="min-pay">Min pay max ($K)</label>
+    <input id="min-pay" type="number" min="0" max="500" step="10" value="0" style="width: 100px;" />
+  </div>
+  <div class="field">
+    <label for="stage-filter">Stage</label>
+    <select id="stage-filter">
+      <option value="">All</option>
+      <option value="B">Series B</option>
+      <option value="C">Series C</option>
+      <option value="D">Series D</option>
+      <option value="E+">Late (E+)</option>
+      <option value="Public">Public</option>
+      <option value="midstage">Mid-stage (B/C/D)</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="sector-filter">Sector</label>
+    <select id="sector-filter"><option value="">All</option></select>
+  </div>
+  <div class="field">
+    <label for="hc-filter" title="core = healthtech/medtech company; adj = any company whose posting is healthcare-facing">Healthcare</label>
+    <select id="hc-filter">
+      <option value="">All</option>
+      <option value="any">Core or adjacent</option>
+      <option value="core">Core only</option>
+      <option value="adj">Adjacent only</option>
+      <option value="none">No signal</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="title-filter">Title contains</label>
+    <select id="title-filter">
+      <option value="">Any</option>
+      <option value="engineering">Engineering</option>
+      <option value="data">Data</option>
+      <option value="ai">AI / ML</option>
+      <option value="product">Product</option>
+    </select>
+  </div>
+</div>
+
+<div class="summary" id="summary"></div>
+
+<table id="jobs-table">
+  <thead>
+    <tr>
+      <th class="num-col">#</th>
+      <th data-sort="fit">Fit</th>
+      <th data-sort="ai_hit_count">AI</th>
+      <th>Actions</th>
+      {% if source == 'linkedin' %}<th data-sort="applied_match">Applied?</th>{% endif %}
+      <th data-sort="company">Company</th>
+      <th data-sort="stage">Stage</th>
+      <th data-sort="sector">Sector</th>
+      <th data-sort="health" title="Healthcare signal: core = healthtech company, adj = healthcare-facing posting at any company">HC</th>
+      <th data-sort="gd_rating">Glassdoor</th>
+      <th data-sort="title">Title</th>
+      <th data-sort="location">Location</th>
+      <th data-sort="remote">Remote</th>
+      <th data-sort="posted_at" class="sort-active">Posted <span class="sort-arrow">▼</span></th>
+      <th data-sort="pay_max">Pay</th>
+      <th>Hits</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"><tr><td colspan="{{ 16 if source == 'linkedin' else 15 }}" class="loading">Loading…</td></tr></tbody>
+</table>
+
+<div class="footer">
+  Data is fetched live. State is persisted in <code>state.db</code> (SQLite). Click ↻ Refresh to re-scrape.
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+const PROFILE = "{{ profile }}";
+let DATA = [];
+let STATE_MAP = {};  // url -> {status, notes, updated_at}
+let GENERATED = "—";
+
+let view = {
+  sort: "posted_at",
+  dir: "desc",
+  search: "",
+  exclude: localStorage.getItem("dash_exclude_" + PROFILE) || "",
+  company: "",
+  ats: "",
+  minHits: 1,
+  minPay: 0,
+  remoteFilter: "{{ remote_default }}",
+  appliedFilter: "",
+  statusFilter: "active",
+  stageFilter: "",
+  sectorFilter: "",
+  hcFilter: "",
+  titleFilter: "",
+  expanded: new Set(),
+};
+
+function toast(msg, isError) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.toggle("error", !!isError);
+  t.classList.add("show");
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+async function fetchJobs() {
+  const r = await fetch(`/api/jobs/${PROFILE}`);
+  const body = await r.json();
+  DATA = body.jobs || [];
+  GENERATED = body.generated || "—";
+}
+async function fetchState() {
+  const r = await fetch(`/api/state`);
+  STATE_MAP = await r.json();
+}
+let LAST_ACTION = null; // {url, prevStatus, newStatus} — for undo
+
+async function setState(url, status, isUndo) {
+  const cur = STATE_MAP[url] || {};
+  const newStatus = (cur.status === status) ? null : status;  // toggle
+  const prevStatus = cur.status || null;
+  if (newStatus === null) delete STATE_MAP[url];
+  else STATE_MAP[url] = { ...cur, status: newStatus };
+  render();
+  try {
+    const r = await fetch(`/api/state`, {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({url, status: newStatus}),
+    });
+    if (!r.ok) throw new Error("server returned " + r.status);
+    if (isUndo) {
+      LAST_ACTION = null;
+    } else {
+      LAST_ACTION = { url, prevStatus, newStatus };
+    }
+    refreshUndoBtn();
+  } catch (e) {
+    toast("Failed to save: " + e.message, true);
+    await fetchState(); render();
+  }
+}
+
+function refreshUndoBtn() {
+  const btn = document.getElementById("undo-btn");
+  if (!LAST_ACTION) { btn.style.display = "none"; return; }
+  const verb = LAST_ACTION.newStatus
+    ? `marked ${LAST_ACTION.newStatus}`
+    : `cleared ${LAST_ACTION.prevStatus || "status"}`;
+  btn.style.display = "";
+  btn.textContent = `↶ Undo (${verb})`;
+}
+
+document.getElementById("undo-btn").addEventListener("click", async () => {
+  if (!LAST_ACTION) return;
+  const { url, prevStatus, newStatus } = LAST_ACTION;
+  // restore prevStatus directly via POST (bypass toggle logic)
+  STATE_MAP[url] = prevStatus
+    ? { ...(STATE_MAP[url] || {}), status: prevStatus }
+    : (delete STATE_MAP[url], undefined);
+  render();
+  LAST_ACTION = null;
+  refreshUndoBtn();
+  try {
+    const r = await fetch(`/api/state`, {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({url, status: prevStatus}),
+    });
+    if (!r.ok) throw new Error("server returned " + r.status);
+    toast(`Undone: ${newStatus || "clear"} → ${prevStatus || "clear"}`);
+  } catch (e) {
+    toast("Undo failed: " + e.message, true);
+    await fetchState(); render();
+  }
+});
+
+let POLL_TIMER = null;
+
+function formatGenerated(iso) {
+  if (!iso || iso === "never") return iso || "—";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  const diffSec = Math.round((Date.now() - d.getTime()) / 1000);
+  const abs = d.toLocaleString();
+  if (diffSec < 60) return `${abs} (${diffSec}s ago)`;
+  if (diffSec < 3600) return `${abs} (${Math.round(diffSec/60)}m ago)`;
+  if (diffSec < 86400) return `${abs} (${Math.round(diffSec/3600)}h ago)`;
+  return abs;
+}
+
+function setRefreshUI(running, startedAt, progress) {
+  const btn = document.getElementById("refresh-btn");
+  const reparseBtn = document.getElementById("reparse-btn");
+  const status = document.getElementById("scrape-status");
+  btn.disabled = running;
+  reparseBtn.disabled = running;
+  btn.textContent = running ? "Scraping…" : "↻ Refresh data";
+  if (!running) {
+    status.textContent = "";
+    return;
+  }
+  const elapsed = startedAt
+    ? Math.round((Date.now() - new Date(startedAt).getTime()) / 1000) : 0;
+  const phase = progress && progress.phase;
+  if (phase && phase !== "scan") {
+    const done = progress.done, total = progress.total || 1;
+    const pct = Math.round(done / total * 100);
+    let txt;
+    if (phase === "fit") {
+      txt = `scoring fit ${done.toLocaleString()} / ${total.toLocaleString()} jobs`;
+    } else if (phase === "save_raw") {
+      txt = `saving raw cache (${(progress.jobs_found || 0).toLocaleString()} jobs)…`;
+    } else if (phase === "load_raw") {
+      txt = "loading raw cache…";
+    } else if (phase === "derive") {
+      const cur = Math.min(done + 1, total);
+      txt = `building tab ${cur}/${total}` +
+            (progress.profile ? ` (${escapeHtml(progress.profile)})` : "");
+    } else {
+      txt = phase;
+    }
+    status.innerHTML =
+      ` · <span class="scrape-bar"><span class="scrape-bar-fill" style="width:${pct}%"></span></span> ${txt}`;
+    return;
+  }
+  if (progress && progress.total) {
+    const done = progress.done, total = progress.total;
+    const pct = Math.round(done / total * 100);
+    const remaining = total - done;
+    let eta = "";
+    if (done > 20 && elapsed > 5 && remaining > 0) {
+      const secsLeft = Math.round(elapsed / done * remaining);
+      eta = secsLeft >= 60 ? ` · ~${Math.round(secsLeft / 60)}m left`
+                           : ` · ~${secsLeft}s left`;
+    }
+    status.innerHTML =
+      ` · <span class="scrape-bar"><span class="scrape-bar-fill" style="width:${pct}%"></span></span> ` +
+      `${done.toLocaleString()} / ${total.toLocaleString()} companies (${pct}%)` +
+      ` · ${progress.jobs_found} raw matches${eta}`;
+  } else {
+    status.textContent = ` · scrape starting… (${elapsed}s)`;
+  }
+}
+
+async function pollScrape() {
+  const r = await fetch("/api/scrape_all");
+  const body = await r.json();
+  if (body.status === "running") {
+    setRefreshUI(true, body.started_at, body.progress);
+    POLL_TIMER = setTimeout(pollScrape, 2000);
+    return;
+  }
+  // finished (or idle)
+  if (POLL_TIMER) { // we were polling — refresh data
+    POLL_TIMER = null;
+    await fetchJobs();
+    populateFilters(); render();
+    document.getElementById("generated").textContent = formatGenerated(GENERATED);
+    if (body.status === "error") toast(`scrape failed (rc=${body.rc})`, true);
+    else if (body.status === "done") toast(`All tabs refreshed — ${DATA.length} jobs here`);
+  }
+  setRefreshUI(false);
+}
+
+document.getElementById("prompt-btn").addEventListener("click", () => {
+  const panel = document.getElementById("prompt-panel");
+  panel.style.display = panel.style.display === "none" ? "block" : "none";
+});
+
+async function startScrapeAll(fromRaw) {
+  setRefreshUI(true, new Date().toISOString());
+  try {
+    const r = await fetch("/api/scrape_all", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({from_raw: !!fromRaw}),
+    });
+    const body = await r.json();
+    if (!r.ok) {
+      toast(body.error || "scrape failed to start", true);
+      setRefreshUI(false);
+      return;
+    }
+    toast(body.started
+      ? (fromRaw ? "Re-parsing cached raw scan — rebuilding every tab"
+                 : "Scraping all tabs — one scan updates every profile")
+      : "A scrape is already running");
+    if (POLL_TIMER) clearTimeout(POLL_TIMER);
+    POLL_TIMER = setTimeout(pollScrape, 1500);
+  } catch (e) {
+    toast(e.message, true);
+    setRefreshUI(false);
+  }
+}
+
+document.getElementById("refresh-btn").addEventListener("click", () => startScrapeAll(false));
+document.getElementById("reparse-btn").addEventListener("click", () => startScrapeAll(true));
+
+// --- LinkedIn crawl (this tab only) --------------------------------------
+if (document.getElementById("li-crawl-btn")) {
+  // Which tab this panel crawls. Every crawl endpoint is keyed by it, so the
+  // manager / healthcare-SWE / adjunct searches keep separate saved forms,
+  // progress files and run history.
+  const LI_PROFILE = {{ profile | tojson }};
+  const panel = document.getElementById("li-panel");
+  const logBox = document.getElementById("li-log");
+  const startBtn = document.getElementById("li-start-btn");
+  let liTimer = null;
+  let liPublished = null;   // last published-row count we pulled results for
+
+  document.getElementById("li-crawl-btn").addEventListener("click", () => {
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
+  });
+
+  function setLiUI(running) {
+    startBtn.disabled = running;
+    startBtn.textContent = running ? "Crawling…" : "▶ Start crawl";
+    document.getElementById("li-crawl-btn").disabled = running;
+  }
+
+  function showLog(lines) {
+    if (!lines || !lines.length) return;
+    logBox.style.display = "block";
+    logBox.textContent = lines.join("\n");
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+
+  const PHASE_LABEL = {
+    starting: "Starting", search: "Searching", filter: "Filtering",
+    details: "Fetching descriptions", done: "Done",
+  };
+
+  const dur = (s) => {
+    if (s == null) return "";
+    const m = Math.floor(s / 60);
+    return m ? `${m}m ${String(s % 60).padStart(2, "0")}s` : `${s}s`;
+  };
+
+  // Per-keyword rows: ✓ finished (with how many it returned), ▸ the one in
+  // flight (with its page), · still queued. Only the active row changes, so
+  // a 20-keyword run reads as a list filling in rather than a flickering line.
+  let liQueriesSig = "";
+  function showQueries(rows, p) {
+    const box = document.getElementById("li-queries");
+    if (!box) return;
+    if (!rows || !rows.length) { box.innerHTML = ""; return; }
+    const searching = p.phase === "starting" || p.phase === "search";
+    const html = rows.map(q => {
+      // Past the search phase every keyword is finished, whatever its row says.
+      const state = searching ? (q.state || "pending") : "done";
+      const mark = state === "done" ? "✓" : state === "active" ? "▸" : "·";
+      const note = state === "done"
+        ? `${q.cards || 0}`
+        : state === "active"
+          ? (q.page ? `p${q.page}` : "…")
+          : "";
+      return `<li class="${state}"><span class="mark">${mark}</span>` +
+             `<span class="kw" title="${escapeHtml(q.label || "")}">` +
+             `${escapeHtml(q.label || "")}</span>` +
+             `<span class="yield">${note}</span></li>`;
+    }).join("");
+    // Rewriting identical markup every 2s would fight the scroll position.
+    if (html !== liQueriesSig) { liQueriesSig = html; box.innerHTML = html; }
+  }
+
+  function showProgress(p, running) {
+    const box = document.getElementById("li-progress");
+    if (!p) {
+      box.style.display = running ? "block" : "none";
+      showQueries(null, {});
+      return;
+    }
+    box.style.display = "block";
+    document.getElementById("li-bar-fill").style.width = `${p.pct || 0}%`;
+
+    const phase = PHASE_LABEL[p.phase] || p.phase;
+    const step = p.phase === "search" && p.queries_total
+      ? ` ${Math.min(Math.floor(p.queries_done) + 1, p.queries_total)}/${p.queries_total}`
+      : p.phase === "details" && p.details_total
+        ? ` ${p.details_done}/${p.details_total}`
+        : "";
+    // With the per-keyword list below, the header stays put: the active
+    // keyword and its page live in their own row instead of rewriting this
+    // line. Older crawlers send no `queries`, so keep showing the label then.
+    const rows = Array.isArray(p.queries) ? p.queries : null;
+    document.getElementById("li-phase").innerHTML =
+      `<b>${p.pct || 0}%</b> · ${escapeHtml(phase)}${step}` +
+      (!rows && p.label ? ` · ${escapeHtml(p.label)}` : "");
+    showQueries(rows, p);
+
+    const bits = [];
+    if (p.cards) bits.push(`${p.cards} cards`);
+    if (p.published) bits.push(`${p.published} published`);
+    bits.push(dur(p.elapsed_sec) + " elapsed");
+    // ETA only exists once the detail phase has enough samples to rate-estimate.
+    if (running && p.eta_sec) bits.push(`~${dur(p.eta_sec)} left`);
+    if (p.throttles) bits.push(`${p.throttles} throttled (${p.interval}s gap)`);
+    document.getElementById("li-stats").textContent = bits.join(" · ");
+  }
+
+  // "Last crawl: <when> · <duration> · N published" — read from the
+  // linkedin_runs table, so it's still right after a server restart.
+  function showLastRun(body) {
+    const box = document.getElementById("li-last-run");
+    if (!box) return;
+    const r = body.last_run;
+    if (!r) { box.textContent = "No crawl recorded yet."; return; }
+    const bits = [formatGenerated(r.started_at)];
+    if (r.duration_sec != null) bits.push(`ran ${dur(r.duration_sec)}`);
+    if (r.published) bits.push(`${r.published} published`);
+    else if (r.cards) bits.push(`${r.cards} cards`);
+    if (r.status !== "done") bits.push(r.status + (r.rc != null ? ` (rc=${r.rc})` : ""));
+    if (r.keywords) bits.push(escapeHtml(r.keywords));
+    box.innerHTML = "Last crawl: " + bits.join(" · ");
+  }
+
+  async function pollLinkedin() {
+    const body = await (await fetch(`/api/linkedin/crawl?profile=${encodeURIComponent(LI_PROFILE)}`)).json();
+    showLog(body.log);
+    showLastRun(body);
+    showProgress(body.progress, body.status === "running");
+    if (body.status === "running") {
+      setLiUI(true);
+      // The crawler republishes the file every 25 descriptions, so pull the
+      // partial results in as they land rather than waiting for the finish.
+      // The results file runs to several MB, so only refetch when the crawler
+      // says it actually republished — the progress poll itself is cheap and
+      // can run often enough to keep the bar smooth.
+      const published = body.progress ? body.progress.published : null;
+      if (published === null || published !== liPublished) {
+        liPublished = published;
+        const before = DATA.length;
+        await fetchJobs();
+        if (DATA.length !== before) { populateFilters(); render(); }
+        document.getElementById("generated").textContent = formatGenerated(GENERATED);
+      }
+      liTimer = setTimeout(pollLinkedin, 2000);
+      return;
+    }
+    if (liTimer) {          // we were polling — pull in the new rows
+      liTimer = null;
+      await fetchJobs();
+      populateFilters(); render();
+      document.getElementById("generated").textContent = formatGenerated(GENERATED);
+      if (body.status === "error") toast(`crawl failed (rc=${body.rc})`, true);
+      else toast(`LinkedIn crawl done — ${DATA.length} jobs`);
+    }
+    setLiUI(false);
+  }
+
+  const numVal = (id) => {
+    const v = parseInt(document.getElementById(id).value, 10);
+    return Number.isFinite(v) && v > 0 ? v : null;
+  };
+
+  startBtn.addEventListener("click", async () => {
+    const splitLines = (id) => document.getElementById(id).value
+      .split("\n").map(s => s.trim()).filter(Boolean);
+    const payload = {
+      keywords: splitLines("li-keywords"),
+      urls: splitLines("li-urls"),
+      remote: document.getElementById("li-remote").checked,
+      posted_days: numVal("li-posted-days"),
+      min_pay: numVal("li-min-pay"),
+      min_fit: numVal("li-min-fit"),
+      max_per_query: numVal("li-max"),
+      title_profile: document.getElementById("li-title-profile").value || null,
+      // Only when the box is empty — otherwise the box already holds this
+      // search's queries and sending both would run each one twice.
+      search: splitLines("li-keywords").length
+        ? null : (document.getElementById("li-search").value || null),
+      voyager: document.getElementById("li-voyager").checked,
+      profile: LI_PROFILE,
+    };
+    if (!payload.keywords.length && !payload.urls.length && !payload.search) {
+      toast("Pick a saved search, or add a keyword or search URL", true);
+      return;
+    }
+    setLiUI(true);
+    logBox.style.display = "block";
+    logBox.textContent = "starting…";
+    showProgress(null, true);
+    try {
+      const r = await fetch("/api/linkedin/crawl", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload),
+      });
+      const body = await r.json();
+      if (!r.ok) { toast(body.error || "crawl failed to start", true); setLiUI(false); return; }
+      toast(body.started ? "Crawling LinkedIn…"
+        : `A crawl is already running${body.busy_profile ? " on " + body.busy_profile : ""}`);
+      if (liTimer) clearTimeout(liTimer);
+      liTimer = setTimeout(pollLinkedin, 2000);
+    } catch (e) {
+      toast(e.message, true);
+      setLiUI(false);
+    }
+  });
+
+  // Restore the last crawl's settings (falling back to server defaults), and
+  // reattach to a crawl already in flight (e.g. started before a reload).
+  fetch(`/api/linkedin/crawl?profile=${encodeURIComponent(LI_PROFILE)}`).then(r => r.json()).then(body => {
+    showLastRun(body);
+    const saved = body.saved || {};
+    const sel = document.getElementById("li-search");
+    for (const [key, cfg] of Object.entries(body.searches || {})) {
+      const o = document.createElement("option");
+      o.value = key;
+      o.textContent = `${cfg.label} (${cfg.keywords.length})`;
+      sel.appendChild(o);
+    }
+    // Default to whichever saved search feeds this tab.
+    sel.value = saved.search || body.default_search || "";
+    if (saved.voyager) document.getElementById("li-voyager").checked = true;
+    // Picking a search drops its queries into the box, so they are visible and
+    // editable rather than applied invisibly server-side. The box is the source
+    // of truth from then on — see the payload below, which omits `search` once
+    // keywords are present, so a query never gets sent twice.
+    sel.addEventListener("change", () => {
+      const cfg = (body.searches || {})[sel.value];
+      document.getElementById("li-keywords").value =
+        cfg ? cfg.keywords.join("\n") : "";
+    });
+    // A saved search brings its own keywords. Only fall back to the built-in
+    // list when this tab has neither saved keywords nor a search selected —
+    // otherwise the crawl would send the engineering defaults *plus* the
+    // search, mixing unrelated roles into the tab.
+    const searchKw = ((body.searches || {})[sel.value] || {}).keywords || [];
+    document.getElementById("li-keywords").value =
+      (saved.keywords && saved.keywords.length ? saved.keywords
+        : (searchKw.length ? searchKw : (body.default_keywords || []))
+      ).join("\n");
+    if (saved.urls) document.getElementById("li-urls").value = saved.urls.join("\n");
+    if (saved.remote) document.getElementById("li-remote").checked = true;
+    const setIf = (id, v) => { if (v) document.getElementById(id).value = v; };
+    setIf("li-posted-days", saved.posted_days);
+    setIf("li-min-pay", saved.min_pay);
+    setIf("li-min-fit", saved.min_fit);
+    setIf("li-max", saved.max_per_query);
+    // Default the title filter to this tab's own profile. Left at "(none)" a
+    // crawl publishes every cached job that survives no filter at all, which
+    // is how the healthcare tab ended up mirroring the engineering one.
+    document.getElementById("li-title-profile").value =
+      saved.title_profile || LI_PROFILE;
+    setIf("li-title-profile", saved.title_profile);
+    if (body.status === "running") {
+      panel.style.display = "block";
+      setLiUI(true);
+      liTimer = setTimeout(pollLinkedin, 1000);
+    }
+  });
+}
+
+// Healthcare term patterns (from scrape.HEALTH_TERMS), highlighted in their
+// own color. Python and JS regex syntax agree for what these use.
+const HEALTH_TERM_RE = (() => {
+  const pats = {{ health_terms | tojson }};
+  try { return pats.length ? new RegExp(pats.map(p => "(?:" + p + ")").join("|"), "gi") : null; }
+  catch (e) { console.warn("health term regex failed", e); return null; }
+})();
+
+// Single-pass highlighter: one combined regex, longest term first, so a
+// short term can never re-match inside a tag an earlier term inserted.
+// AI keywords -> <em class="ai">, healthcare terms -> <em class="hc">.
+function highlight(text, hits) {
+  const escaped = escapeHtml(text || "");
+  if (!escaped) return "";
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const ai = [...new Set((hits || []).filter(Boolean))].sort((a, b) => b.length - a.length).map(esc);
+  const parts = [];
+  if (ai.length) parts.push("(?<ai>" + ai.join("|") + ")");
+  if (HEALTH_TERM_RE) parts.push("(?<hc>" + HEALTH_TERM_RE.source + ")");
+  if (!parts.length) return escaped;
+  const re = new RegExp(parts.join("|"), "gi");
+  return escaped.replace(re, (m, ...rest) => {
+    const g = rest[rest.length - 1] || {};
+    return `<em class="${g.ai !== undefined ? "ai" : "hc"}">${m}</em>`;
+  });
+}
+
+const COMPANY_DISPLAY = {
+  twochairs: "Two Chairs", modernhealth: "Modern Health", headway: "Headway",
+  talkspace: "Talkspace", growtherapy: "Grow Therapy", "grow-therapy": "Grow Therapy",
+  cerebral: "Cerebral", charliehealth: "Charlie Health", ophelia: "Ophelia",
+  bicyclehealth: "Bicycle Health", pelago: "Pelago", alma: "Alma", octave: "Octave",
+  bouldercare: "Boulder Care", workithealth: "Workit Health", oshihealth: "Oshi Health",
+  omadahealth: "Omada Health", lyrahealth: "Lyra Health", sondermind: "SonderMind",
+  talkiatry: "Talkiatry", rula: "Rula", equip: "Equip Health",
+};
+
+function linkedinLinks(j) {
+  // Object.hasOwn guard: slugs like "constructor" hit Object.prototype otherwise
+  const company = Object.hasOwn(COMPANY_DISPLAY, j.company)
+    ? COMPANY_DISPLAY[j.company] : (j.company || "");
+  const slug = company.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+  const jobsUrl = "https://www.linkedin.com/jobs/search/?keywords=" + encodeURIComponent(`${j.title} ${company}`);
+  const companyUrl = "https://www.linkedin.com/search/results/companies/?keywords=" + encodeURIComponent(company);
+  const recruiterUrl = "https://www.linkedin.com/search/results/people/?keywords=" + encodeURIComponent(`${company} recruiter`);
+  const levelsUrl = `https://www.levels.fyi/companies/${slug}/salaries/software-engineer`;
+  const levelsSearchUrl = `https://www.levels.fyi/?search=${encodeURIComponent(company)}`;
+  return `
+    <span class="lnk-row">
+      <a class="lnk" href="${jobsUrl}" target="_blank" rel="noopener">in/job</a>
+      <a class="lnk" href="${companyUrl}" target="_blank" rel="noopener">in/co</a>
+      <a class="lnk" href="${recruiterUrl}" target="_blank" rel="noopener">in/recruiter</a>
+      <a class="lnk lvl" href="${levelsUrl}" target="_blank" rel="noopener">$ levels</a>
+      <a class="lnk lvl-search" href="${levelsSearchUrl}" target="_blank" rel="noopener">$ search</a>
+    </span>`;
+}
+
+function hcRank(j) { return j.health === "core" ? 2 : j.health === "adj" ? 1 : 0; }
+function hcBadge(j) {
+  const h = j.health || "";
+  const hits = (j.health_hits || []);
+  const tip = h === "core" ? "Healthtech / medtech company" + (hits.length ? " · mentions: " + hits.join(", ") : "")
+            : h === "adj"  ? "Healthcare-adjacent posting · mentions: " + hits.join(", ")
+            : hits.length  ? "Weak signal: " + hits.join(", ") : "No healthcare signal";
+  return `<span class="hc-pill ${h}" title="${escapeHtml(tip)}">${h || "—"}${hits.length && h ? `<sup> ${hits.length}</sup>` : ""}</span>`;
+}
+// Section headers that job postings use. Matched case-insensitively at the
+// start of a line (structured text) or mid-run (flat legacy text), and
+// promoted to <h4>.
+const DESC_HEADERS = [
+  "about (the )?(role|position|job|team|company|us|you)", "the (role|opportunity|team|position)",
+  "(key |core |primary |your )?responsibilities", "what you('|’)ll (do|be doing|own|work on|bring|need)",
+  "what you will (do|be doing|own|need)", "what we('|’)re looking for", "what we (offer|value)",
+  "who you are", "who we are", "why (join|work with) us", "our (mission|values|stack|tech stack)",
+  "(minimum |basic |required |preferred |desired |bonus |additional )?(qualifications|requirements|skills( and experience)?)",
+  "nice[- ]to[- ]haves?", "bonus points", "you (have|are|bring)", "must[- ]haves?",
+  "experience", "education", "benefits( and perks)?", "perks( and benefits)?", "compensation( and benefits)?",
+  "(salary|pay) (range|transparency)", "how (you('|’)ll|we) work", "interview process", "location",
+  "equal (employment )?opportunity( employer)?", "eeo statement", "job (summary|description|overview)",
+  "position (summary|overview)", "role (summary|overview)", "overview", "summary",
+  "day[- ]to[- ]day", "a day in the life", "tech(nology)? stack", "tools (you('|’)ll|we) use",
+];
+const DESC_HEADER_RE = new RegExp("^(" + DESC_HEADERS.join("|") + ")\\s*:?$", "i");
+// Flat legacy text (no newlines): only split on headers that are unmistakable
+// mid-sentence — multi-word phrases or the strong single words — and never
+// when the phrase is just the tail of a sentence ("About the role", "in this
+// role"). Single words like "experience"/"location" only count as headers in
+// line mode, where the line boundary does the work.
+const DESC_FLAT_HEADERS = DESC_HEADERS.filter(h => /[ (]/.test(h) || /^(responsibilities|requirements|qualifications|benefits|perks|compensation)$/.test(h))
+  .concat(["(key |core |primary |your )?responsibilities", "requirements", "qualifications", "benefits", "perks", "compensation"]);
+const DESC_FLAT_SPLIT_RE = new RegExp(
+  "(?<!\\b(?:about|the|our|your|of|in|for|to|and|this|a|an|with|on|at|as|is))\\s+(?=(?:" + DESC_FLAT_HEADERS.join("|") + ")\\s*:?\\s+[A-Z•\\-])", "gi");
+const DESC_FLAT_HEADER_RE = new RegExp("^(" + DESC_FLAT_HEADERS.join("|") + ")\\s*:?$", "i");
+
+function formatDesc(text, hits) {
+  if (!text) return "";
+  let lines;
+  if (text.includes("\n")) {
+    lines = text.split("\n");
+  } else {
+    // Legacy flat text: carve out headers, then bullets, then paragraphs.
+    let t = text.replace(DESC_FLAT_SPLIT_RE, "\n");
+    // " - " between words is an inline bullet; en/em dashes are punctuation.
+    t = t.replace(/\s+(?=[•▪◦]\s)/g, "\n").replace(/(?<=[A-Za-z.,;:)])\s+-\s+(?=\S)/g, "\n• ");
+    lines = [];
+    for (const seg of t.split("\n")) {
+      // "Responsibilities: Build APIs..." / "What you'll do Build APIs..."
+      let m = null;
+      const words = seg.split(/\s+/);
+      for (let n = Math.min(6, words.length - 1); n >= 1 && !m; n--) {
+        const head = words.slice(0, n).join(" ").replace(/:$/, "");
+        const rest = words.slice(n).join(" ");
+        if (DESC_FLAT_HEADER_RE.test(head) && /^[A-Z•\-]/.test(rest)) m = [head, rest];
+      }
+      if (m) { lines.push(m[0] + ":"); lines.push(m[1]); } else lines.push(seg);
+    }
+    // Break long paragraphs every ~3 sentences.
+    lines = lines.flatMap(seg => {
+      if (seg.startsWith("• ") || seg.length < 500) return [seg];
+      const sents = seg.split(/(?<=[.!?])\s+(?=[A-Z])/);
+      const out = []; for (let i = 0; i < sents.length; i += 3) out.push(sents.slice(i, i + 3).join(" "));
+      return out;
+    });
+  }
+  const html = [];
+  let list = [];
+  const flushList = () => { if (list.length) { html.push("<ul>" + list.map(l => "<li>" + highlight(l, hits) + "</li>").join("") + "</ul>"); list = []; } };
+  for (let raw of lines) {
+    const line = raw.trim();
+    if (!line) { flushList(); continue; }
+    const bullet = line.match(/^[•▪◦\-\*·]\s+(.*)$/);
+    if (bullet) { list.push(bullet[1]); continue; }
+    flushList();
+    const head = line.replace(/:$/, "").trim();
+    if (head.length <= 60 && DESC_HEADER_RE.test(head)) html.push("<h4>" + highlight(head, hits) + "</h4>");
+    else html.push("<p>" + highlight(line, hits) + "</p>");
+  }
+  flushList();
+  return html.join("");
+}
+function fitBadge(fit) {
+  const v = fit || 0;
+  const cls = v >= 70 ? "fit-high" : v >= 45 ? "fit-mid" : "fit-low";
+  return `<span class="fit-badge ${cls}" title="Resume fit score (0-100)">${v}</span>`;
+}
+
+function remoteLabel(r) {
+  if (r === "remote") return "🌐 Remote";
+  if (r === "hybrid") return "⚡ Hybrid";
+  if (r === "onsite") return "🏢 Onsite";
+  return "—";
+}
+function formatPay(j) {
+  if (!j.pay_max) return { label: "—", title: "no salary range published", cls: " unknown" };
+  const fmt = n => "$" + Math.round(n / 1000) + "K";
+  const label = `${fmt(j.pay_min)}–${fmt(j.pay_max)}`;
+  let cls = "";
+  if (j.pay_max >= 250000) cls = " high";
+  else if (j.pay_max >= 180000) cls = " mid";
+  else cls = " low";
+  return { label, title: j.pay_text || label, cls };
+}
+function relativeDate(iso) {
+  if (!iso) return { label: "—", days: Infinity, fresh: false, stale: false };
+  const then = new Date(iso);
+  if (isNaN(then)) return { label: "—", days: Infinity, fresh: false, stale: false };
+  const days = Math.floor((Date.now() - then.getTime()) / 86400000);
+  let label;
+  if (days < 1) label = "today";
+  else if (days < 7) label = days + "d ago";
+  else if (days < 30) label = Math.floor(days / 7) + "w ago";
+  else if (days < 365) label = Math.floor(days / 30) + "mo ago";
+  else label = Math.floor(days / 365) + "y ago";
+  return { label, days, fresh: days <= 14, stale: days >= 90, iso };
+}
+function escapeHtml(s) {
+  return (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+function statusOf(j) { return (STATE_MAP[j.url] || {}).status || ""; }
+
+function applyFilters() {
+  let filtered = DATA.filter(j => {
+    const status = statusOf(j);
+    if (view.statusFilter === "active" && (status === "ignored" || status === "applied")) return false;
+    else if (view.statusFilter === "applied" && status !== "applied") return false;
+    else if (view.statusFilter === "starred" && status !== "starred") return false;
+    else if (view.statusFilter === "ignored" && status !== "ignored") return false;
+    else if (view.statusFilter === "untriaged" && status) return false;
+    if (view.minHits > 1 && j.ai_hits.length < view.minHits) return false;
+    if (view.minPay > 0 && (!j.pay_max || j.pay_max < view.minPay * 1000)) return false;
+    if (view.remoteFilter) {
+      if (view.remoteFilter === "not-onsite") { if (j.remote === "onsite") return false; }
+      else if (j.remote !== view.remoteFilter) return false;
+    }
+    if (view.stageFilter) {
+      if (view.stageFilter === "midstage") { if (!["B", "C", "D"].includes(j.stage)) return false; }
+      else if (j.stage !== view.stageFilter) return false;
+    }
+    if (view.sectorFilter && j.sector !== view.sectorFilter) return false;
+    if (view.hcFilter) {
+      const h = j.health || "";
+      if (view.hcFilter === "any" && !h) return false;
+      else if (view.hcFilter === "none" && h) return false;
+      else if ((view.hcFilter === "core" || view.hcFilter === "adj") && h !== view.hcFilter) return false;
+    }
+    if (view.appliedFilter) {
+      const m = j.applied_match;   // "yes" | "maybe" | undefined
+      if (view.appliedFilter === "hide" && m) return false;
+      else if (view.appliedFilter === "hide-yes" && m === "yes") return false;
+      else if (view.appliedFilter === "only" && !m) return false;
+      else if (view.appliedFilter === "only-maybe" && m !== "maybe") return false;
+    }
+    if (view.company && j.company !== view.company) return false;
+    if (view.ats && j.ats !== view.ats) return false;
+    if (view.titleFilter) {
+      const t = j.title.toLowerCase();
+      const map = { engineering: /\bengineer/i, data: /\bdata\b/i,
+                    ai: /\b(ai|ml|machine\s+learning|artificial)/i, product: /\bproduct\b/i };
+      if (!map[view.titleFilter].test(t)) return false;
+    }
+    if (view.search) {
+      const q = view.search.toLowerCase();
+      const blob = (j.title + " " + j.company + " " + (j.description || j.snippet) + " " + j.location + " " + j.ai_hits.join(" ")).toLowerCase();
+      if (!blob.includes(q)) return false;
+    }
+    if (view.exclude) {
+      const titleCo = (j.title + " " + j.company).toLowerCase();
+      const terms = view.exclude.toLowerCase().split(",").map(s => s.trim()).filter(Boolean);
+      if (terms.some(term => titleCo.includes(term))) return false;
+    }
+    return true;
+  });
+  filtered.sort((a, b) => {
+    let av = a[view.sort], bv = b[view.sort];
+    if (view.sort === "ai_hit_count") { av = a.ai_hits.length; bv = b.ai_hits.length; }
+    if (view.sort === "posted_at") {
+      av = a.posted_at ? new Date(a.posted_at).getTime() : 0;
+      bv = b.posted_at ? new Date(b.posted_at).getTime() : 0;
+    }
+    if (view.sort === "pay_max") { av = a.pay_max || 0; bv = b.pay_max || 0; }
+    if (view.sort === "fit") { av = a.fit || 0; bv = b.fit || 0; }
+    if (view.sort === "health") { av = hcRank(a); bv = hcRank(b); }
+    if (view.sort === "gd_rating") { av = gdRating(a); bv = gdRating(b); }
+    if (typeof av === "string") { av = av.toLowerCase(); bv = bv.toLowerCase(); }
+    if (av < bv) return view.dir === "asc" ? -1 : 1;
+    if (av > bv) return view.dir === "asc" ? 1 : -1;
+    return 0;
+  });
+  return filtered;
+}
+
+/* injected once: applied-flag styling */
+(function(){ const css = `
+  .applied-flag { font-size: 11px; white-space: nowrap; padding: 1px 6px; border-radius: 10px; }
+  .applied-flag.yes { background: rgba(74,222,128,0.18); color: var(--success); border: 1px solid rgba(74,222,128,0.4); }
+  .applied-flag.maybe { background: rgba(250,204,21,0.15); color: var(--gold); border: 1px solid rgba(250,204,21,0.4); cursor: help; }
+  .applied-flag.none { color: var(--muted); }
+  tr.row.applied-yes { opacity: 0.55; }
+`; const s = document.createElement("style"); s.textContent = css; document.head.appendChild(s); })();
+
+/* ---------------------------------------------------------- Glassdoor column
+   Ratings are served from the server-side cache; anything not cached yet is
+   queued there and fetched slowly in the background, so the column fills in
+   over the following minute or two rather than blocking the page.
+   GD is a Map, not an object — company slugs like "constructor" poison
+   plain-object lookups. */
+const GD = new Map();          // company key -> {rating, reviews, url, name} | null
+let GD_POLLS = 0;
+let GD_INFO = null;            // {cached, queued, running, error} from the server
+
+(function(){ const css = `
+  .gd-cell { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .gd-cell a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(154,166,194,0.5); }
+  .gd-cell a:hover { color: var(--accent); }
+  .gd-score { font-weight: 600; }
+  .gd-score.good { color: var(--success); }
+  .gd-score.mid { color: var(--gold); }
+  .gd-score.bad { color: var(--danger, #ff6b6b); }
+  .gd-reviews { color: var(--muted); font-size: 11px; margin-left: 4px; }
+  .gd-pending { color: var(--muted); opacity: 0.5; }
+`; const s = document.createElement("style"); s.textContent = css; document.head.appendChild(s); })();
+
+function gdKey(j) { return (j.company || "").trim().toLowerCase(); }
+function gdRating(j) { const g = GD.get(gdKey(j)); return g ? g.rating : 0; }
+
+function gdReviewLabel(n) {
+  if (!n) return "";
+  return n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + "k" : String(n);
+}
+
+function glassdoorCell(j) {
+  const key = gdKey(j);
+  if (!GD.has(key)) return `<span class="gd-pending" title="looking up…">·</span>`;
+  const g = GD.get(key);
+  if (!g) return `<span class="gd-pending" title="no Glassdoor match">—</span>`;
+  const cls = g.rating >= 4 ? "good" : g.rating >= 3.4 ? "mid" : "bad";
+  const title = `${g.name} — ${g.rating.toFixed(1)} out of 5` +
+                (g.reviews ? `, based on ${g.reviews.toLocaleString()} ratings` : "");
+  const count = g.reviews ? `<span class="gd-reviews">(${gdReviewLabel(g.reviews)})</span>` : "";
+  return `<a href="${escapeHtml(g.url)}" target="_blank" rel="noopener" title="${escapeHtml(title)}">` +
+         `<span class="gd-score ${cls}">★ ${g.rating.toFixed(1)}</span>${count}</a>`;
+}
+
+/* Ask for the companies currently on screen. Repeats while the server still
+   has queued lookups, backing off after a while so an idle tab stops polling. */
+async function fetchGlassdoor(companies) {
+  const want = [...new Set(companies.map(c => (c || "").trim()).filter(Boolean))]
+                 .filter(c => !GD.has(c.toLowerCase()));
+  if (!want.length) return;
+  let body;
+  try {
+    const r = await fetch("/api/glassdoor", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({companies: want.slice(0, 300)}),
+    });
+    body = await r.json();
+  } catch (e) { return; }
+  let added = 0;
+  for (const [key, val] of Object.entries(body.ratings || {})) {
+    if (!GD.has(key)) added++;
+    GD.set(key, val);
+  }
+  GD_INFO = body.status || null;
+  if (added) render(); else updateGlassdoorStat();
+  // Keep checking while the server still owes us rows, easing off so a tab
+  // left open all day isn't polling every 15s for hours.
+  if (body.pending && GD_POLLS < 200) {
+    GD_POLLS++;
+    setTimeout(() => fetchGlassdoor(companies), GD_POLLS <= 10 ? 15000 : 60000);
+  }
+}
+
+/* Progress lives in the summary bar: without it, a tab whose companies are all
+   still queued looks broken rather than busy. */
+function updateGlassdoorStat() {
+  const el = document.getElementById("gd-stat");
+  if (!el || !GD_INFO) return;
+  if (GD_INFO.error) {
+    el.textContent = `Glassdoor: ${GD_INFO.error}`;
+    el.title = "Load a Glassdoor page in Chrome, then run gd_session_from_chrome.py";
+    return;
+  }
+  const queued = GD_INFO.queued || 0;
+  el.textContent = `Glassdoor ${(GD_INFO.cached || 0).toLocaleString()} rated` +
+                   (queued ? ` · ${queued.toLocaleString()} queued` : "");
+  el.title = queued ? "Fetching newest-posting-first, about 1.5 companies a minute"
+                    : "All companies on file have been looked up";
+}
+
+/* Called at the end of every render; debounced so typing in the search box
+   doesn't fire a request per keystroke. Safe against loops: a request that
+   adds no new keys never re-renders. */
+let GD_DEBOUNCE = null;
+function scheduleGlassdoor(companies) {
+  clearTimeout(GD_DEBOUNCE);
+  GD_DEBOUNCE = setTimeout(() => fetchGlassdoor(companies), 300);
+}
+
+function appliedBadge(j) {
+  const why = escapeHtml(j.applied_why || "");
+  if (j.applied_match === "yes")
+    return `<span class="applied-flag yes" title="${why}">✅ yes</span>`;
+  if (j.applied_match === "maybe")
+    return `<span class="applied-flag maybe" title="${why}">🟡 maybe</span>`;
+  return `<span class="applied-flag none">—</span>`;
+}
+
+function render() {
+  const filtered = applyFilters();
+  const counts = { applied: 0, ignored: 0, starred: 0 };
+  for (const j of DATA) {
+    const s = statusOf(j);
+    if (s in counts) counts[s]++;
+  }
+  document.getElementById("summary").innerHTML =
+    `<span class="stat">Showing <strong>${filtered.length}</strong> of ${DATA.length}</span>` +
+    `<span class="stat applied"><strong>${counts.applied}</strong> applied</span>` +
+    `<span class="stat starred"><strong>${counts.starred}</strong> starred</span>` +
+    `<span class="stat ignored"><strong>${counts.ignored}</strong> ignored</span>` +
+    `<span class="stat" id="gd-stat"></span>`;
+  updateGlassdoorStat();
+
+  const tbody = document.getElementById("tbody");
+  if (!filtered.length) {
+    tbody.innerHTML = `<tr><td colspan="{{ 16 if source == 'linkedin' else 15 }}" class="empty">No roles match these filters.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = filtered.map((j, i) => {
+    const status = statusOf(j);
+    const isExpanded = view.expanded.has(j.url);
+    const hits = j.ai_hits.length;
+    const hot = hits >= 5 ? " hot" : "";
+    const pills = j.ai_hits.slice(0, 6).map(h => `<span class="pill ai">${escapeHtml(h)}</span>`).join("");
+    const more = j.ai_hits.length > 6 ? `<span class="pill">+${j.ai_hits.length - 6} more</span>` : "";
+    const rowClass = ["row", isExpanded ? "expanded" : "", status].filter(Boolean).join(" ");
+    const rel = relativeDate(j.posted_at);
+    const dateClass = rel.fresh ? " fresh" : rel.stale ? " stale" : "";
+    const dateTitle = rel.iso ? `posted ${rel.iso.slice(0,10)}` : "no date available";
+    const pay = formatPay(j);
+    const statusBadge = status && status !== "ignored"
+      ? `<span class="status-badge ${status}">${status}</span>` : "";
+    return `
+      <tr class="${rowClass}" data-url="${escapeHtml(j.url)}">
+        <td class="num-col">${i + 1}</td>
+        <td>${fitBadge(j.fit)}</td>
+        <td><span class="badge-count${hot}">${hits}</span></td>
+        <td><div class="actions">
+          <span class="act ${status==='applied'?'on applied':''}" data-act="applied" title="Applied">✓</span>
+          <span class="act ${status==='starred'?'on starred':''}" data-act="starred" title="Star">★</span>
+          <span class="act ${status==='ignored'?'on ignored':''}" data-act="ignored" title="Ignore">✕</span>
+        </div></td>
+        {% if source == 'linkedin' %}<td>${appliedBadge(j)}</td>{% endif %}
+        <td><span class="company">${escapeHtml(j.company)}</span><span class="ats ats-${j.ats}">${j.ats}</span></td>
+        <td><span class="stage-pill stage-${j.stage || 'unknown'}">${escapeHtml(j.stage || "?")}</span></td>
+        <td><span class="sector-pill">${escapeHtml(j.sector || "—")}</span></td>
+        <td>${hcBadge(j)}</td>
+        <td class="gd-cell">${glassdoorCell(j)}</td>
+        <td class="title">
+          <a href="${escapeHtml(j.url)}" target="_blank" rel="noopener">${escapeHtml(j.title)}<span class="open-icon">↗</span></a>
+          ${statusBadge}
+          ${linkedinLinks(j)}
+        </td>
+        <td class="location">${escapeHtml(j.location || "—")}</td>
+        <td class="remote-cell"><span class="remote-pill ${j.remote || 'unknown'}">${remoteLabel(j.remote)}</span></td>
+        <td class="posted${dateClass}" title="${escapeHtml(dateTitle)}">${rel.label}</td>
+        <td class="pay${pay.cls}" title="${escapeHtml(pay.title)}">${pay.label}</td>
+        <td>${pills}${more}</td>
+      </tr>
+      ${isExpanded ? `<tr class="snippet"><td colspan="{{ 16 if source == 'linkedin' else 15 }}">
+        <div class="desc-meta">
+          <span>${j.description ? "Full description" : "Snippet only"}</span>
+          <a href="${escapeHtml(j.url)}" target="_blank" rel="noopener">Open original ↗</a>
+        </div>
+        <div class="desc-body">${formatDesc(j.description || j.snippet, j.ai_hits)}</div>
+      </td></tr>` : ""}
+    `;
+  }).join("");
+
+  scheduleGlassdoor(filtered.map(j => j.company));
+
+  tbody.querySelectorAll("tr.row").forEach(tr => {
+    tr.addEventListener("click", e => {
+      if (e.target.closest("a")) return;
+      const actEl = e.target.closest(".act");
+      if (actEl) {
+        e.stopPropagation();
+        setState(tr.dataset.url, actEl.dataset.act);
+        return;
+      }
+      const url = tr.dataset.url;
+      if (view.expanded.has(url)) view.expanded.delete(url);
+      else view.expanded.add(url);
+      render();
+    });
+  });
+}
+
+function populateFilters() {
+  const companySelect = document.getElementById("company");
+  const cur = companySelect.value;
+  companySelect.innerHTML = '<option value="">All</option>';
+  [...new Set(DATA.map(j => j.company))].sort().forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c; opt.textContent = c;
+    if (c === cur) opt.selected = true;
+    companySelect.appendChild(opt);
+  });
+  const sectorSelect = document.getElementById("sector-filter");
+  const curS = sectorSelect.value;
+  sectorSelect.innerHTML = '<option value="">All</option>';
+  [...new Set(DATA.map(j => j.sector).filter(Boolean))].sort().forEach(s => {
+    const opt = document.createElement("option");
+    opt.value = s; opt.textContent = s;
+    if (s === curS) opt.selected = true;
+    sectorSelect.appendChild(opt);
+  });
+  document.getElementById("generated").textContent = formatGenerated(GENERATED);
+  document.getElementById("total-count").textContent = DATA.length;
+  document.getElementById("company-count").textContent = new Set(DATA.map(j => j.company)).size;
+}
+
+document.querySelectorAll("th[data-sort]").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.sort;
+    if (view.sort === key) view.dir = view.dir === "asc" ? "desc" : "asc";
+    else { view.sort = key; view.dir = key === "ai_hit_count" ? "desc" : "asc"; }
+    document.querySelectorAll("th").forEach(t => t.classList.remove("sort-active"));
+    th.classList.add("sort-active");
+    document.querySelectorAll(".sort-arrow").forEach(a => a.remove());
+    const arrow = document.createElement("span");
+    arrow.className = "sort-arrow";
+    arrow.textContent = view.dir === "desc" ? "▼" : "▲";
+    th.appendChild(arrow);
+    render();
+  });
+});
+
+document.getElementById("search").addEventListener("input", e => { view.search = e.target.value; render(); });
+(() => {
+  const el = document.getElementById("exclude");
+  el.value = view.exclude;
+  el.addEventListener("input", e => {
+    view.exclude = e.target.value;
+    localStorage.setItem("dash_exclude_" + PROFILE, view.exclude);
+    render();
+  });
+})();
+document.getElementById("status-filter").addEventListener("change", e => { view.statusFilter = e.target.value; render(); });
+document.getElementById("company").addEventListener("change", e => { view.company = e.target.value; render(); });
+document.getElementById("ats").addEventListener("change", e => { view.ats = e.target.value; render(); });
+document.getElementById("min-hits").addEventListener("input", e => { view.minHits = parseInt(e.target.value) || 1; render(); });
+document.getElementById("min-pay").addEventListener("input", e => { view.minPay = parseInt(e.target.value) || 0; render(); });
+document.getElementById("remote-filter").addEventListener("change", e => { view.remoteFilter = e.target.value; render(); });
+{ const af = document.getElementById("applied-filter");
+  if (af) af.addEventListener("change", e => { view.appliedFilter = e.target.value; render(); }); }
+document.getElementById("stage-filter").addEventListener("change", e => { view.stageFilter = e.target.value; render(); });
+document.getElementById("sector-filter").addEventListener("change", e => { view.sectorFilter = e.target.value; render(); });
+document.getElementById("hc-filter").addEventListener("change", e => { view.hcFilter = e.target.value; render(); });
+document.getElementById("title-filter").addEventListener("change", e => { view.titleFilter = e.target.value; render(); });
+
+(async () => {
+  await Promise.all([fetchJobs(), fetchState()]);
+  populateFilters();
+  render();
+  // Resume spinner if the all-profile scrape is still running server-side
+  const r = await fetch("/api/scrape_all");
+  const body = await r.json();
+  if (body.status === "running") {
+    setRefreshUI(true, body.started_at);
+    POLL_TIMER = setTimeout(pollScrape, 1500);
+  }
+})();
+</script>
+</body>
+</html>

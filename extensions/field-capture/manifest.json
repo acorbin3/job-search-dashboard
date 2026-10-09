@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Job Application Field Capture (Learn Mode)",
+  "version": "0.1.0",
+  "description": "When Learn mode is ON, records the fields you fill into job applications and sends them to the local healthtech-jobs server at 127.0.0.1:5050.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Field Capture — toggle Learn mode"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}

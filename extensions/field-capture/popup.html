@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  body { width: 240px; margin: 0; padding: 14px 16px; background: #0f1117; color: #e5e7eb; font: 13px/1.5 -apple-system, BlinkMacSystemFont, sans-serif; }
+  h1 { font-size: 14px; margin: 0 0 12px; }
+  .row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; inset: 0; background: #2a3142; border-radius: 24px; transition: 0.2s; }
+  .slider:before { content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background: #e5e7eb; border-radius: 50%; transition: 0.2s; }
+  input:checked + .slider { background: #4ade80; }
+  input:checked + .slider:before { transform: translateX(20px); }
+  .status { font-size: 12px; color: #9ca3af; }
+  .status.on { color: #4ade80; }
+  a { color: #60a5fa; font-size: 12px; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hint { font-size: 11px; color: #6b7280; margin-top: 8px; border-top: 1px solid #2a3142; padding-top: 8px; }
+  button { width: 100%; margin-top: 4px; padding: 8px; background: #1e40af; color: #fff; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+  button:hover { background: #2563eb; }
+  button:disabled { background: #374151; cursor: default; }
+</style>
+</head>
+<body>
+  <h1>Field Capture</h1>
+  <div class="row">
+    <span>Learn mode</span>
+    <label class="switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="status" id="status">off — nothing is recorded</div>
+  <button id="fill">Fill this page</button>
+  <div class="status" id="fillStatus"></div>
+  <div class="hint">
+    When on, fields you fill are sent to <br>127.0.0.1:5050.
+    <a href="http://127.0.0.1:5050/answers" target="_blank">Review captured answers →</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
