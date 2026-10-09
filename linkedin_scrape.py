@@ -1072,6 +1072,9 @@ def main():
     ap.add_argument("--list-searches", action="store_true",
                     help="print the named searches and exit")
     ap.add_argument("--json", help="also write the raw job list here")
+    ap.add_argument("--out", help="output file (default: .latest_<profile>.json; "
+                                  "mixed-source tabs use .latest_<profile>.linkedin.json "
+                                  "so the ATS scan's file is left alone)")
     ap.add_argument("--fit", default=scrape.DEFAULT_FIT,
                     choices=sorted(scrape.FIT_PROFILES),
                     help="resume fit profile used for scoring")
@@ -1184,7 +1187,7 @@ def main():
         progress(force=True, phase="done", label="nothing survived filters")
         return
 
-    out = ROOT / f".latest_{args.profile}.json"
+    out = Path(args.out) if args.out else ROOT / f".latest_{args.profile}.json"
 
     # Snapshot previously-crawled roles once, up front: publish() runs on
     # worker threads during the detail phase, and a SQLite connection can only

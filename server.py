@@ -140,6 +140,8 @@ def profile_prompt(cfg: dict) -> dict:
         "local_re": cfg.get("local_re") or "",
         "health_adjacent_ok": bool(cfg.get("health_adjacent_ok", False)),
         "fit": cfg.get("fit") or "",
+        "sources": sorted(scrape.profile_sources(cfg)),
+        "linkedin_keywords": list(cfg.get("linkedin_keywords") or []),
     }
 
 ALLOWED_STATUS = {"applied", "ignored", "starred"}
@@ -310,9 +312,16 @@ def init_db():
                 keywords TEXT,
                 cards INTEGER,
                 published INTEGER,
-                queries_total INTEGER
+                queries_total INTEGER,
+                profile TEXT,
+                pid INTEGER
             )
         """)
+        # Databases created before per-tab crawls lack these two columns.
+        have = {r[1] for r in conn.execute("PRAGMA table_info(linkedin_runs)")}
+        for col, typ in (("profile", "TEXT"), ("pid", "INTEGER")):
+            if col not in have:
+                conn.execute(f"ALTER TABLE linkedin_runs ADD COLUMN {col} {typ}")
         conn.execute(
             "CREATE INDEX IF NOT EXISTS idx_linkedin_runs_started "
             "ON linkedin_runs(started_at DESC)"
@@ -374,6 +383,8 @@ def dashboard(profile):
         # by linkedin_scrape.py and get the crawl panel instead of the ATS
         # refresh buttons. Gate on this, never on the tab's name.
         source=scrape.profile_source(profiles[profile]),
+        ats_enabled="ats" in scrape.profile_sources(profiles[profile]),
+        li_enabled="linkedin" in scrape.profile_sources(profiles[profile]),
         profiles=profile_tabs(profiles),
         prompt=profile_prompt(profiles[profile]),
         # Most tabs want the Remote-only default. Tabs whose sources don't set
@@ -414,10 +425,26 @@ def _clean_profile_payload(body: dict, existing: dict | None = None):
     if not label:
         return None, "Label is required"
     cfg = {"label": label, "short": short or label[:12]}
-    source = body.get("source") or scrape.profile_source(existing or {})
-    if source not in ("ats", "linkedin"):
-        return None, "source must be 'ats' or 'linkedin'"
-    cfg["source"] = source
+    # Sources: new payloads send the booleans; older ones (and legacy files)
+    # send/hold `source`. Normalize to the booleans and keep `source` in step
+    # so scrape.profile_source() agrees.
+    if "ats" in body or "linkedin" in body:
+        ats_on, li_on = bool(body.get("ats", True)), bool(body.get("linkedin", False))
+    elif body.get("source") in ("ats", "linkedin"):
+        ats_on, li_on = body["source"] == "ats", body["source"] == "linkedin"
+    else:
+        srcs = scrape.profile_sources(existing or {})
+        ats_on, li_on = "ats" in srcs, "linkedin" in srcs
+    if not (ats_on or li_on):
+        return None, "pick at least one source (job boards or LinkedIn)"
+    cfg["ats"], cfg["linkedin"] = ats_on, li_on
+    cfg["source"] = "ats" if ats_on else "linkedin"
+    raw_kw = body.get("linkedin_keywords", (existing or {}).get("linkedin_keywords", []))
+    if isinstance(raw_kw, str):
+        raw_kw = raw_kw.splitlines()
+    cfg["linkedin_keywords"] = [k.strip() for k in (raw_kw or []) if k and k.strip()][:20]
+    if li_on and not cfg["linkedin_keywords"]:
+        cfg["linkedin_keywords"] = [label]
     for f in _LIST_FIELDS:
         raw = body.get(f, [])
         if isinstance(raw, str):
@@ -529,21 +556,46 @@ def api_profiles_delete(key):
 def api_jobs(profile):
     if profile not in load_profiles():
         abort(404)
-    path = ROOT / f".latest_{profile}.json"
-    if not path.exists():
+    cfg = load_profiles()[profile]
+    srcs = scrape.profile_sources(cfg)
+    # A tab's rows come from up to two files: the ATS scan's .latest_<key>.json
+    # and the LinkedIn crawl's sibling. A LinkedIn-only tab (legacy) writes the
+    # plain file itself. Merge by URL; newest file sets "generated".
+    paths = []
+    if "ats" in srcs:
+        paths.append(ROOT / f".latest_{profile}.json")
+        if "linkedin" in srcs:
+            paths.append(li_out_path(profile))
+    else:
+        paths.append(ROOT / f".latest_{profile}.json")
+    paths = [p for p in paths if p.exists()]
+    if not paths:
         return jsonify({"jobs": [], "generated": "never"})
-    jobs = json.loads(path.read_text())
+    jobs, seen = [], set()
+    for p in paths:
+        try:
+            rows = json.loads(p.read_text())
+        except (json.JSONDecodeError, OSError):
+            continue
+        for j in rows:
+            key = j.get("url") or f"{j.get('company')}|{j.get('title')}"
+            if key in seen:
+                continue
+            seen.add(key)
+            jobs.append(j)
     mtime = datetime.fromtimestamp(
-        path.stat().st_mtime, tz=timezone.utc
+        max(p.stat().st_mtime for p in paths), tz=timezone.utc
     ).isoformat(timespec="seconds")
-    # LinkedIn-fed tabs get an already-applied flag, cross-referencing the
-    # applied rows + Gmail confirmation signals. Cheap: one index build per
-    # request, then a dict/regex check per row (no network).
-    if scrape.profile_source(load_profiles()[profile]) == "linkedin":
+    # LinkedIn rows get an already-applied flag, cross-referencing the applied
+    # rows + confirmation signals. Cheap: one index build per request, then a
+    # dict/regex check per row (no network).
+    if "linkedin" in srcs:
         try:
             with db() as conn:
                 index = applied_match.build_index(conn, _all_jobs_index())
             for j in jobs:
+                if j.get("ats") != "linkedin":
+                    continue
                 tier, why = applied_match.flag(j, index)
                 j["applied_match"] = tier          # "yes" | "maybe" | None
                 j["applied_why"] = why
@@ -986,6 +1038,32 @@ def _li_setting_key(profile):
     return f"linkedin_crawl:{profile}"
 
 
+def li_out_path(profile):
+    """Where the LinkedIn crawl writes for a tab. Mixed-source tabs get a
+    sibling file so the ATS scan's .latest_<key>.json isn't clobbered."""
+    srcs = scrape.profile_sources(load_profiles().get(profile) or {})
+    if "ats" in srcs:
+        return ROOT / f".latest_{profile}.linkedin.json"
+    return ROOT / f".latest_{profile}.json"
+
+
+def li_session_status():
+    """Is a signed-in LinkedIn session on disk? (Guest crawling works without.)"""
+    sess = None
+    try:
+        sess = linkedin_scrape.load_session()
+    except Exception:
+        sess = None
+    return {"signed_in": bool(sess),
+            "path": str(linkedin_scrape.SESSION_PATH),
+            "how": "python3 tools/li_session_from_chrome.py"}
+
+
+@app.route("/api/linkedin/session", methods=["GET"])
+def api_linkedin_session():
+    return jsonify(li_session_status())
+
+
 def _li_saved(profile):
     """The remembered crawl form for a tab.
 
@@ -1037,7 +1115,7 @@ def _li_running():
 def li_profiles():
     """Tabs fed by the LinkedIn crawler, in profiles.json order."""
     return [k for k, v in load_profiles().items()
-            if scrape.profile_source(v) == "linkedin"]
+            if "linkedin" in scrape.profile_sources(v)]
 
 DEFAULT_LI_KEYWORDS = [
     "Senior Engineering Manager",
@@ -1145,7 +1223,8 @@ def api_linkedin_crawl():
                         "started_at": busy.get("started_at")})
 
     cmd = [sys.executable, str(ROOT / "linkedin_scrape.py"),
-           "--profile", profile]
+           "--profile", profile, "--out", str(li_out_path(profile))]
+    tab_cfg = load_profiles().get(profile) or {}
     # A named search brings its own keywords and title filter; --profile above
     # still wins, so a search can be pointed at whichever tab is being crawled.
     search = str(body.get("search") or "").strip()
@@ -1154,11 +1233,19 @@ def api_linkedin_crawl():
         cmd += ["--search", search]
     else:
         search = ""
-    if body.get("voyager"):
+    # Use the signed-in endpoint whenever a session exists (boolean queries,
+    # sortBy); linkedin_scrape falls back to guest on its own otherwise.
+    if body.get("voyager") or body.get("use_tab_defaults") or li_session_status()["signed_in"]:
         cmd.append("--voyager")
     keywords = body.get("keywords")
+    if body.get("use_tab_defaults"):
+        # "Refresh data" on a mixed tab: the tab's own keywords, remote when
+        # the tab asks for it, no manual form involved.
+        keywords = tab_cfg.get("linkedin_keywords") or [tab_cfg.get("label") or profile]
+        if tab_cfg.get("require_remote_or_local"):
+            body["remote"] = True
     if not keywords and not search:
-        keywords = DEFAULT_LI_KEYWORDS
+        keywords = tab_cfg.get("linkedin_keywords") or DEFAULT_LI_KEYWORDS
     for kw in (keywords or []):
         kw = str(kw).strip()
         if kw:
@@ -1191,8 +1278,10 @@ def api_linkedin_crawl():
     if body.get("fresh"):
         cmd.append("--fresh")
 
-    # Remember the form per tab, so each search keeps its own setup.
-    set_setting(_li_setting_key(profile), body)
+    # Remember the form per tab, so each search keeps its own setup (not the
+    # implicit Refresh run, which carries no form).
+    if not body.get("use_tab_defaults"):
+        set_setting(_li_setting_key(profile), body)
 
     # Drop the previous run's progress so the bar doesn't briefly show a stale
     # 100% before the crawler writes its first update.
@@ -1229,7 +1318,9 @@ def api_linkedin_crawl_status():
     entry["generated"] = _latest_generated(profile)
     entry["log"] = _linkedin_log_tail(profile)
     entry["progress"] = _linkedin_progress(profile)
-    entry["default_keywords"] = DEFAULT_LI_KEYWORDS
+    entry["default_keywords"] = ((load_profiles().get(profile) or {}).get("linkedin_keywords")
+                                or DEFAULT_LI_KEYWORDS)
+    entry["session"] = li_session_status()
     entry["searches"] = {
         key: {"label": cfg.get("label", key),
               "profile": cfg.get("profile", "linkedin"),

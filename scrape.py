@@ -73,16 +73,34 @@ def migrate_profile(cfg):
 PROFILES = load_profiles()
 
 
-def profile_source(cfg):
-    """Where a tab's rows come from: "ats" (the shared scan) or "linkedin".
+def profile_sources(cfg):
+    """Which feeds fill a tab: a set drawn from {"ats", "linkedin"}.
 
-    `source` is the switch; the older `external: true` flag is still honored so
-    profiles.json files written before the field existed keep working.
+    New-style tabs set the booleans `ats` / `linkedin` (default: ATS only).
+    Older files used `source: "linkedin"` (or `external: true`) for a
+    LinkedIn-only tab; those still mean linkedin without ATS.
     """
-    src = (cfg or {}).get("source")
-    if src in ("ats", "linkedin"):
-        return src
-    return "linkedin" if (cfg or {}).get("external") else "ats"
+    cfg = cfg or {}
+    if "ats" in cfg or "linkedin" in cfg:
+        out = set()
+        if cfg.get("ats", True):
+            out.add("ats")
+        if cfg.get("linkedin"):
+            out.add("linkedin")
+        return out or {"ats"}
+    if cfg.get("source") == "linkedin" or cfg.get("external"):
+        return {"linkedin"}
+    return {"ats"}
+
+
+def profile_source(cfg):
+    """"ats" if the shared scan should derive this tab, else "linkedin".
+
+    Mixed tabs count as "ats" here — the scan writes .latest_<key>.json and
+    the LinkedIn crawl writes a sibling file the server merges at read time.
+    """
+    return "ats" if "ats" in profile_sources(cfg) else "linkedin"
+
 
 # Active filter globals; main()/set_superset_globals() point these at a profile.
 _first = next(iter(PROFILES.values()), {"level": [], "domain": [], "exclude": []})

@@ -25,11 +25,16 @@ The first visit lands on the setup page:
 2. **Pick a starter tab** — Senior Software Engineer, Staff Engineer,
    Engineering Manager, Director of Engineering, Product Manager, Project /
    Program Manager, ML Engineer, Data Engineer — or write your own title
-   rules. A tab is a saved search: regexes a job title must match (level +
-   domain) and must not match (exclude).
-3. Open the tab and hit **↻ Refresh data**. The first full scan takes 10–20
-   minutes; it caches a raw superset so later rule changes re-derive in
-   seconds (**⟳ Re-parse**).
+   rules. A tab is a saved search with two sources, **company job boards**
+   and **LinkedIn** (each can be switched off): regexes a job title must
+   match (level + domain) and must not match (exclude), plus the LinkedIn
+   search phrases to crawl.
+3. Open the tab and hit **↻ Refresh data**. That scans every company job
+   board and crawls LinkedIn for the tab's phrases; the two result sets land
+   in one table. The first full scan takes 10–20 minutes; it caches a raw
+   superset so later rule changes re-derive in seconds (**⟳ Re-parse**).
+   LinkedIn works signed-out; `python3 tools/li_session_from_chrome.py`
+   lifts your browser session for boolean queries and better sorting.
 
 ## How fit scoring works
 

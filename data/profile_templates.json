@@ -1,93 +1,424 @@
 {
-  "_comment": "Starter tabs offered on /tabs when profiles.json is empty. Same schema as a profiles.json entry; 'key' is the suggested slug. Regexes are case-insensitive and match the job TITLE.",
+  "_comment": "Starter tabs offered on /tabs when profiles.json is empty. Same schema as a profiles.json entry; 'key' is the suggested slug. Regexes are case-insensitive and match the job TITLE. 'ats'/'linkedin' pick the sources; 'linkedin_keywords' are the LinkedIn search phrases.",
   "templates": [
     {
       "key": "senior_swe",
       "label": "Senior Software Engineer",
       "short": "Senior SWE",
       "description": "Senior / Sr. individual-contributor engineering roles. Excludes managers, directors, sales engineering, and interns.",
-      "source": "ats",
-      "level": ["\\bsenior\\b", "\\bsr\\.?\\b", "\\b(software|backend|back-end|full[ -]?stack|frontend|front-end|platform)\\s+(engineer|developer)\\s*(iii|iv|3|4)\\b"],
-      "domain": ["\\bsoftware\\b", "\\bengineer\\b", "\\bdeveloper\\b", "\\bbackend\\b", "\\bback-end\\b", "\\bfull[ -]?stack\\b", "\\bfrontend\\b", "\\bfront-end\\b", "\\bplatform\\b", "\\binfrastructure\\b", "\\bdata\\b", "\\b(ai|ml)\\b", "\\bmachine\\s+learning\\b", "\\bcloud\\b", "\\bdevops\\b", "\\bsre\\b", "\\breliability\\b"],
-      "exclude": ["\\bmanager\\b", "\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bvice\\s+president\\b", "\\bstaff\\b", "\\bprincipal\\b", "\\bintern(ship)?\\b", "\\bsales\\b", "\\bsolutions?\\s+engineer\\b", "\\bsupport\\s+engineer\\b", "\\bcustomer\\b", "\\brecruit", "\\bclinical\\b", "\\bmechanical\\b", "\\belectrical\\b", "\\bhardware\\b", "\\bmanufacturing\\b", "\\bqa\\b", "\\btest\\s+engineer\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bsenior\\b",
+        "\\bsr\\.?\\b",
+        "\\b(software|backend|back-end|full[ -]?stack|frontend|front-end|platform)\\s+(engineer|developer)\\s*(iii|iv|3|4)\\b"
+      ],
+      "domain": [
+        "\\bsoftware\\b",
+        "\\bengineer\\b",
+        "\\bdeveloper\\b",
+        "\\bbackend\\b",
+        "\\bback-end\\b",
+        "\\bfull[ -]?stack\\b",
+        "\\bfrontend\\b",
+        "\\bfront-end\\b",
+        "\\bplatform\\b",
+        "\\binfrastructure\\b",
+        "\\bdata\\b",
+        "\\b(ai|ml)\\b",
+        "\\bmachine\\s+learning\\b",
+        "\\bcloud\\b",
+        "\\bdevops\\b",
+        "\\bsre\\b",
+        "\\breliability\\b"
+      ],
+      "exclude": [
+        "\\bmanager\\b",
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bvice\\s+president\\b",
+        "\\bstaff\\b",
+        "\\bprincipal\\b",
+        "\\bintern(ship)?\\b",
+        "\\bsales\\b",
+        "\\bsolutions?\\s+engineer\\b",
+        "\\bsupport\\s+engineer\\b",
+        "\\bcustomer\\b",
+        "\\brecruit",
+        "\\bclinical\\b",
+        "\\bmechanical\\b",
+        "\\belectrical\\b",
+        "\\bhardware\\b",
+        "\\bmanufacturing\\b",
+        "\\bqa\\b",
+        "\\btest\\s+engineer\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Senior Software Engineer",
+        "Senior Backend Engineer",
+        "Senior Full Stack Engineer"
+      ]
     },
     {
       "key": "staff_swe",
       "label": "Staff / Principal Software Engineer",
       "short": "Staff SWE",
       "description": "Staff, Principal, Distinguished, and Architect-level individual contributors.",
-      "source": "ats",
-      "level": ["\\bstaff\\b", "\\bprincipal\\b", "\\bdistinguished\\b", "\\barchitect\\b", "\\bsenior\\s+staff\\b"],
-      "domain": ["\\bsoftware\\b", "\\bengineer\\b", "\\bdeveloper\\b", "\\bbackend\\b", "\\bplatform\\b", "\\binfrastructure\\b", "\\bdata\\b", "\\b(ai|ml)\\b", "\\bmachine\\s+learning\\b", "\\bcloud\\b", "\\bsystems?\\b", "\\barchitect\\b", "\\bsre\\b"],
-      "exclude": ["\\bmanager\\b", "\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bintern(ship)?\\b", "\\bsales\\b", "\\bsolutions?\\s+(engineer|architect)\\b", "\\bcustomer\\b", "\\bpre-?sales\\b", "\\benterprise\\s+architect\\b", "\\bmechanical\\b", "\\belectrical\\b", "\\bhardware\\b", "\\bclinical\\b", "\\bchief\\s+of\\s+staff\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bstaff\\b",
+        "\\bprincipal\\b",
+        "\\bdistinguished\\b",
+        "\\barchitect\\b",
+        "\\bsenior\\s+staff\\b"
+      ],
+      "domain": [
+        "\\bsoftware\\b",
+        "\\bengineer\\b",
+        "\\bdeveloper\\b",
+        "\\bbackend\\b",
+        "\\bplatform\\b",
+        "\\binfrastructure\\b",
+        "\\bdata\\b",
+        "\\b(ai|ml)\\b",
+        "\\bmachine\\s+learning\\b",
+        "\\bcloud\\b",
+        "\\bsystems?\\b",
+        "\\barchitect\\b",
+        "\\bsre\\b"
+      ],
+      "exclude": [
+        "\\bmanager\\b",
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bintern(ship)?\\b",
+        "\\bsales\\b",
+        "\\bsolutions?\\s+(engineer|architect)\\b",
+        "\\bcustomer\\b",
+        "\\bpre-?sales\\b",
+        "\\benterprise\\s+architect\\b",
+        "\\bmechanical\\b",
+        "\\belectrical\\b",
+        "\\bhardware\\b",
+        "\\bclinical\\b",
+        "\\bchief\\s+of\\s+staff\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Staff Software Engineer",
+        "Principal Software Engineer",
+        "Software Architect"
+      ]
     },
     {
       "key": "eng_manager",
       "label": "Engineering Manager",
       "short": "EM",
       "description": "Engineering Manager / Senior Engineering Manager / Software Development Manager roles.",
-      "source": "ats",
-      "level": ["\\bengineering\\s+manager\\b", "\\bsoftware\\s+(engineering|development)?\\s*manager\\b", "\\bmanager,?\\s+(software|engineering|platform|data|ml|machine\\s+learning)\\b", "\\bdevelopment\\s+manager\\b", "\\b(senior|sr\\.?)\\s+engineering\\s+manager\\b", "\\bgroup\\s+engineering\\s+manager\\b"],
-      "domain": ["\\bengineering\\b", "\\bsoftware\\b", "\\bdevelopment\\b", "\\bplatform\\b", "\\binfrastructure\\b", "\\bdata\\b", "\\b(ai|ml)\\b", "\\bmachine\\s+learning\\b", "\\bbackend\\b", "\\bfrontend\\b", "\\bcloud\\b", "\\bdevops\\b", "\\bsre\\b"],
-      "exclude": ["\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bvice\\s+president\\b", "\\bsales\\b", "\\bcustomer\\s+success\\b", "\\bsupport\\b", "\\bproduct\\s+manager\\b", "\\bproject\\s+manager\\b", "\\bprogram\\s+manager\\b", "\\baccount\\b", "\\bmechanical\\b", "\\belectrical\\b", "\\bhardware\\b", "\\bmanufacturing\\b", "\\bclinical\\b", "\\bfacilities\\b", "\\bqa\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bengineering\\s+manager\\b",
+        "\\bsoftware\\s+(engineering|development)?\\s*manager\\b",
+        "\\bmanager,?\\s+(software|engineering|platform|data|ml|machine\\s+learning)\\b",
+        "\\bdevelopment\\s+manager\\b",
+        "\\b(senior|sr\\.?)\\s+engineering\\s+manager\\b",
+        "\\bgroup\\s+engineering\\s+manager\\b"
+      ],
+      "domain": [
+        "\\bengineering\\b",
+        "\\bsoftware\\b",
+        "\\bdevelopment\\b",
+        "\\bplatform\\b",
+        "\\binfrastructure\\b",
+        "\\bdata\\b",
+        "\\b(ai|ml)\\b",
+        "\\bmachine\\s+learning\\b",
+        "\\bbackend\\b",
+        "\\bfrontend\\b",
+        "\\bcloud\\b",
+        "\\bdevops\\b",
+        "\\bsre\\b"
+      ],
+      "exclude": [
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bvice\\s+president\\b",
+        "\\bsales\\b",
+        "\\bcustomer\\s+success\\b",
+        "\\bsupport\\b",
+        "\\bproduct\\s+manager\\b",
+        "\\bproject\\s+manager\\b",
+        "\\bprogram\\s+manager\\b",
+        "\\baccount\\b",
+        "\\bmechanical\\b",
+        "\\belectrical\\b",
+        "\\bhardware\\b",
+        "\\bmanufacturing\\b",
+        "\\bclinical\\b",
+        "\\bfacilities\\b",
+        "\\bqa\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Engineering Manager",
+        "Senior Engineering Manager",
+        "Software Development Manager"
+      ]
     },
     {
       "key": "director_eng",
       "label": "Director of Engineering",
       "short": "Director",
       "description": "Director, Senior Director, and Head of roles in engineering, data, platform, and AI/ML.",
-      "source": "ats",
-      "level": ["\\bdirector\\b", "\\bsr\\.?\\s*director\\b", "\\bsenior\\s+director\\b", "\\bhead\\s+of\\b"],
-      "domain": ["\\bengineering\\b", "\\bsoftware\\b", "\\bdata\\b", "\\b(ai|ml)\\b", "\\bmachine\\s+learning\\b", "\\bplatform\\b", "\\binfrastructure\\b", "\\btechnology\\b", "\\btechnical\\b", "\\bdevelopment\\b", "\\bapplied\\s+science\\b", "\\barchitecture\\b"],
-      "exclude": ["\\bclinical\\b", "\\bmedical\\s+director\\b", "\\bart\\s+director\\b", "\\bcreative\\b", "\\bmarketing\\b", "\\bgrowth\\b", "\\bsales\\b", "\\bbusiness\\s+development\\b", "\\bcustomer\\b", "\\baccount\\b", "\\bpartnerships?\\b", "\\bfinance\\b", "\\blegal\\b", "\\bpeople\\b", "\\btalent\\b", "\\brecruit", "\\bfacilities\\b", "\\bmanufacturing\\b", "\\bquality\\s+(assurance|engineering)\\b", "\\bproduct\\s+marketing\\b", "\\bassociate\\s+director\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bdirector\\b",
+        "\\bsr\\.?\\s*director\\b",
+        "\\bsenior\\s+director\\b",
+        "\\bhead\\s+of\\b"
+      ],
+      "domain": [
+        "\\bengineering\\b",
+        "\\bsoftware\\b",
+        "\\bdata\\b",
+        "\\b(ai|ml)\\b",
+        "\\bmachine\\s+learning\\b",
+        "\\bplatform\\b",
+        "\\binfrastructure\\b",
+        "\\btechnology\\b",
+        "\\btechnical\\b",
+        "\\bdevelopment\\b",
+        "\\bapplied\\s+science\\b",
+        "\\barchitecture\\b"
+      ],
+      "exclude": [
+        "\\bclinical\\b",
+        "\\bmedical\\s+director\\b",
+        "\\bart\\s+director\\b",
+        "\\bcreative\\b",
+        "\\bmarketing\\b",
+        "\\bgrowth\\b",
+        "\\bsales\\b",
+        "\\bbusiness\\s+development\\b",
+        "\\bcustomer\\b",
+        "\\baccount\\b",
+        "\\bpartnerships?\\b",
+        "\\bfinance\\b",
+        "\\blegal\\b",
+        "\\bpeople\\b",
+        "\\btalent\\b",
+        "\\brecruit",
+        "\\bfacilities\\b",
+        "\\bmanufacturing\\b",
+        "\\bquality\\s+(assurance|engineering)\\b",
+        "\\bproduct\\s+marketing\\b",
+        "\\bassociate\\s+director\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Director of Engineering",
+        "Director of Software Engineering",
+        "Head of Engineering"
+      ]
     },
     {
       "key": "product_manager",
       "label": "Product Manager",
       "short": "PM",
       "description": "Product Manager, Senior PM, Group/Principal PM, and Product Owner roles for software products.",
-      "source": "ats",
-      "level": ["\\bproduct\\s+manager\\b", "\\bproduct\\s+owner\\b", "\\b(senior|sr\\.?|staff|principal|group|lead)\\s+product\\s+manager\\b", "\\bproduct\\s+lead\\b"],
-      "domain": ["\\bproduct\\b"],
-      "exclude": ["\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bvice\\s+president\\b", "\\bmarketing\\b", "\\bassociate\\s+product\\s+manager\\b", "\\bintern(ship)?\\b", "\\bhardware\\b", "\\bmanufacturing\\b", "\\bsupply\\s+chain\\b", "\\bmerchandis", "\\bclinical\\b", "\\bpharma", "\\bsales\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bproduct\\s+manager\\b",
+        "\\bproduct\\s+owner\\b",
+        "\\b(senior|sr\\.?|staff|principal|group|lead)\\s+product\\s+manager\\b",
+        "\\bproduct\\s+lead\\b"
+      ],
+      "domain": [
+        "\\bproduct\\b"
+      ],
+      "exclude": [
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bvice\\s+president\\b",
+        "\\bmarketing\\b",
+        "\\bassociate\\s+product\\s+manager\\b",
+        "\\bintern(ship)?\\b",
+        "\\bhardware\\b",
+        "\\bmanufacturing\\b",
+        "\\bsupply\\s+chain\\b",
+        "\\bmerchandis",
+        "\\bclinical\\b",
+        "\\bpharma",
+        "\\bsales\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Product Manager",
+        "Senior Product Manager",
+        "Technical Product Manager"
+      ]
     },
     {
       "key": "project_manager",
       "label": "Project / Program Manager",
       "short": "PjM",
       "description": "Technical project and program management roles (TPM, Program Manager, Project Manager, Delivery Manager, Scrum Master).",
-      "source": "ats",
-      "level": ["\\bproject\\s+manager\\b", "\\bprogram\\s+manager\\b", "\\btechnical\\s+program\\s+manager\\b", "\\btpm\\b", "\\bdelivery\\s+manager\\b", "\\bscrum\\s+master\\b", "\\bagile\\s+coach\\b", "\\bproject\\s+lead\\b", "\\bprogram\\s+lead\\b", "\\bpmo\\b"],
-      "domain": ["\\bproject\\b", "\\bprogram\\b", "\\btechnical\\b", "\\bengineering\\b", "\\bsoftware\\b", "\\bit\\b", "\\bdelivery\\b", "\\bscrum\\b", "\\bagile\\b", "\\bpmo\\b", "\\bimplementation\\b", "\\bdata\\b", "\\b(ai|ml)\\b"],
-      "exclude": ["\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bconstruction\\b", "\\bfacilities\\b", "\\bclinical\\s+(trial|research|project)\\b", "\\bmarketing\\b", "\\bevents?\\b", "\\bsales\\b", "\\bintern(ship)?\\b", "\\bcoordinator\\b", "\\bmanufacturing\\b", "\\bcapital\\b", "\\breal\\s+estate\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bproject\\s+manager\\b",
+        "\\bprogram\\s+manager\\b",
+        "\\btechnical\\s+program\\s+manager\\b",
+        "\\btpm\\b",
+        "\\bdelivery\\s+manager\\b",
+        "\\bscrum\\s+master\\b",
+        "\\bagile\\s+coach\\b",
+        "\\bproject\\s+lead\\b",
+        "\\bprogram\\s+lead\\b",
+        "\\bpmo\\b"
+      ],
+      "domain": [
+        "\\bproject\\b",
+        "\\bprogram\\b",
+        "\\btechnical\\b",
+        "\\bengineering\\b",
+        "\\bsoftware\\b",
+        "\\bit\\b",
+        "\\bdelivery\\b",
+        "\\bscrum\\b",
+        "\\bagile\\b",
+        "\\bpmo\\b",
+        "\\bimplementation\\b",
+        "\\bdata\\b",
+        "\\b(ai|ml)\\b"
+      ],
+      "exclude": [
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bconstruction\\b",
+        "\\bfacilities\\b",
+        "\\bclinical\\s+(trial|research|project)\\b",
+        "\\bmarketing\\b",
+        "\\bevents?\\b",
+        "\\bsales\\b",
+        "\\bintern(ship)?\\b",
+        "\\bcoordinator\\b",
+        "\\bmanufacturing\\b",
+        "\\bcapital\\b",
+        "\\breal\\s+estate\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Technical Program Manager",
+        "Project Manager software",
+        "Program Manager engineering"
+      ]
     },
     {
       "key": "ml_engineer",
       "label": "ML / AI Engineer",
       "short": "ML Eng",
       "description": "Machine learning, applied AI, and LLM engineering roles at any IC level.",
-      "source": "ats",
-      "level": ["\\bengineer\\b", "\\bscientist\\b", "\\bdeveloper\\b", "\\bresearcher\\b"],
-      "domain": ["\\bmachine\\s+learning\\b", "\\b(ai|ml)\\b", "\\bllm\\b", "\\bgenai\\b", "\\bgenerative\\b", "\\bdeep\\s+learning\\b", "\\bnlp\\b", "\\bcomputer\\s+vision\\b", "\\bapplied\\s+(ai|science)\\b", "\\bmlops\\b", "\\bagents?\\b", "\\bagentic\\b"],
-      "exclude": ["\\bmanager\\b", "\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bintern(ship)?\\b", "\\bsales\\b", "\\bsolutions?\\b", "\\bcustomer\\b", "\\bannotat", "\\bdata\\s+entry\\b", "\\bhardware\\b", "\\bchip\\b", "\\bsilicon\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bengineer\\b",
+        "\\bscientist\\b",
+        "\\bdeveloper\\b",
+        "\\bresearcher\\b"
+      ],
+      "domain": [
+        "\\bmachine\\s+learning\\b",
+        "\\b(ai|ml)\\b",
+        "\\bllm\\b",
+        "\\bgenai\\b",
+        "\\bgenerative\\b",
+        "\\bdeep\\s+learning\\b",
+        "\\bnlp\\b",
+        "\\bcomputer\\s+vision\\b",
+        "\\bapplied\\s+(ai|science)\\b",
+        "\\bmlops\\b",
+        "\\bagents?\\b",
+        "\\bagentic\\b"
+      ],
+      "exclude": [
+        "\\bmanager\\b",
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bintern(ship)?\\b",
+        "\\bsales\\b",
+        "\\bsolutions?\\b",
+        "\\bcustomer\\b",
+        "\\bannotat",
+        "\\bdata\\s+entry\\b",
+        "\\bhardware\\b",
+        "\\bchip\\b",
+        "\\bsilicon\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Machine Learning Engineer",
+        "AI Engineer",
+        "Applied Scientist"
+      ]
     },
     {
       "key": "data_engineer",
       "label": "Data Engineer",
       "short": "Data Eng",
       "description": "Data engineering, data platform, and analytics engineering roles.",
-      "source": "ats",
-      "level": ["\\bengineer\\b", "\\bdeveloper\\b", "\\barchitect\\b"],
-      "domain": ["\\bdata\\b", "\\betl\\b", "\\banalytics\\s+engineer", "\\bpipeline", "\\bwarehouse\\b", "\\blakehouse\\b", "\\bbig\\s+data\\b", "\\bspark\\b", "\\bsnowflake\\b", "\\bdatabricks\\b"],
-      "exclude": ["\\bmanager\\b", "\\bdirector\\b", "\\bhead\\s+of\\b", "\\bvp\\b", "\\bintern(ship)?\\b", "\\bsales\\b", "\\bsolutions?\\b", "\\bcustomer\\b", "\\bdata\\s+entry\\b", "\\bdata\\s+center\\b", "\\bnetwork\\b", "\\bhardware\\b", "\\bscientist\\b", "\\banalyst\\b"],
-      "min_ai_hits": 0
+      "level": [
+        "\\bengineer\\b",
+        "\\bdeveloper\\b",
+        "\\barchitect\\b"
+      ],
+      "domain": [
+        "\\bdata\\b",
+        "\\betl\\b",
+        "\\banalytics\\s+engineer",
+        "\\bpipeline",
+        "\\bwarehouse\\b",
+        "\\blakehouse\\b",
+        "\\bbig\\s+data\\b",
+        "\\bspark\\b",
+        "\\bsnowflake\\b",
+        "\\bdatabricks\\b"
+      ],
+      "exclude": [
+        "\\bmanager\\b",
+        "\\bdirector\\b",
+        "\\bhead\\s+of\\b",
+        "\\bvp\\b",
+        "\\bintern(ship)?\\b",
+        "\\bsales\\b",
+        "\\bsolutions?\\b",
+        "\\bcustomer\\b",
+        "\\bdata\\s+entry\\b",
+        "\\bdata\\s+center\\b",
+        "\\bnetwork\\b",
+        "\\bhardware\\b",
+        "\\bscientist\\b",
+        "\\banalyst\\b"
+      ],
+      "min_ai_hits": 0,
+      "ats": true,
+      "linkedin": true,
+      "linkedin_keywords": [
+        "Data Engineer",
+        "Senior Data Engineer",
+        "Analytics Engineer"
+      ]
     }
   ]
 }

@@ -54,6 +54,8 @@
   .welcome { margin-bottom: 24px; border-color: var(--accent); }
   .welcome h2 { font-size: 18px; }
   .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
+  .steps.three { grid-template-columns: 1fr 1.4fr 1fr; }
+  .cmd { background: var(--panel-2); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 0 0 8px; overflow-x: auto; }
   .step { border: 1px solid var(--border); border-radius: 8px; padding: 14px; background: var(--bg); }
   .step .n { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
              color: #0b1020; font-weight: 700; text-align: center; line-height: 22px; margin-right: 8px; font-size: 12px; }
@@ -80,7 +82,7 @@
   .summary .g { background: var(--panel-2); border-radius: 6px; padding: 3px 8px; font-size: 12px; }
   .summary .g small { color: var(--muted); }
   .warn { color: #f5c26b; }
-  @media (max-width: 800px) { .wrap, .steps, .two, .keyrow, .upload { grid-template-columns: 1fr; } }
+  @media (max-width: 800px) { .wrap, .steps, .steps.three, .two, .keyrow, .upload { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -97,8 +99,8 @@
   {% if welcome %}
   <div class="panel welcome" id="welcome">
     <h2>{% if has_profiles %}Add another tab{% else %}Welcome — let's set up your first search{% endif %}</h2>
-    <p class="hint">A <b>tab</b> is a saved search over ~{{ '12,000' }} company career pages: which job titles to keep, and what to exclude. The <b>Fit</b> column then scores every match 0–100 against your resume.</p>
-    <div class="steps">
+    <p class="hint">A <b>tab</b> is a saved search over ~12,000 company career pages <b>and</b> LinkedIn: which job titles to keep, and what to exclude. The <b>Fit</b> column then scores every match 0–100 against your resume.</p>
+    <div class="steps three">
       <div class="step">
         <h3><span class="n">1</span>Upload your resume <span style="color:var(--muted);font-weight:normal">(optional, recommended)</span></h3>
         <p>PDF, DOCX, TXT or TEX. It stays on this machine unless you choose the Claude option. The Fit score is generic until you do this.</p>
@@ -108,6 +110,12 @@
         <h3><span class="n">2</span>Pick a starter tab</h3>
         <p>One click creates it. You can tweak the title rules afterwards, or build one from scratch below.</p>
         <div class="cards" id="template-cards"><span style="color:var(--muted)">loading…</span></div>
+      </div>
+      <div class="step">
+        <h3><span class="n">3</span>LinkedIn <span style="color:var(--muted);font-weight:normal">(optional)</span></h3>
+        <p>Every starter tab searches <b>company job boards</b> and <b>LinkedIn</b> together; one ↻ Refresh runs both. LinkedIn works signed-out. Signing in unlocks boolean queries and better sorting:</p>
+        <pre class="cmd">python3 tools/li_session_from_chrome.py</pre>
+        <p id="li-session-status" style="margin:0;color:var(--muted)">checking…</p>
       </div>
     </div>
     <div class="actions"><span class="msg" id="welcome-msg"></span></div>
@@ -121,7 +129,7 @@
 
     <div class="panel">
       <h2 id="editor-title">New tab</h2>
-      <p class="hint">When you hit <b>↻ Refresh data</b> on a tab's dashboard, the scraper keeps a job only if its <b>title</b> matches a Level pattern <b>and</b> a Domain pattern, matches <b>no</b> Exclude pattern, and its description contains at least the given number of AI keywords. One regular expression per line, case-insensitive.</p>
+      <p class="hint">When you hit <b>↻ Refresh data</b> on a tab's dashboard, each enabled source is searched and a job is kept only if its <b>title</b> matches a Level pattern <b>and</b> a Domain pattern, matches <b>no</b> Exclude pattern, and its description contains at least the given number of AI keywords. One regular expression per line, case-insensitive.</p>
 
       <form id="tab-form">
         <div id="template-pick" style="display:none;">
@@ -141,6 +149,16 @@
             <label for="f-short">Short</label>
             <input type="text" id="f-short" placeholder="Staff-AI" />
           </div>
+        </div>
+
+        <label>Sources</label>
+        <div class="flags" style="margin-top:4px;">
+          <label><input type="checkbox" id="f-ats" checked /> Company job boards <span style="color:var(--muted)">(~12k career pages)</span></label>
+          <label><input type="checkbox" id="f-li" checked /> LinkedIn search</label>
+        </div>
+        <div id="li-kw-wrap">
+          <label for="f-likw">LinkedIn search phrases <span>(one per line — plain phrases; the title rules below filter the results)</span></label>
+          <textarea id="f-likw" style="min-height:70px;" placeholder="Senior Software Engineer&#10;Senior Backend Engineer"></textarea>
         </div>
 
         <div class="two">
@@ -338,7 +356,26 @@ function fill(cfg) {
   $("f-hcadj").checked = !!cfg.health_adjacent_ok;
   $("f-fit").value = cfg.fit || "";
   $("f-minai").value = cfg.min_ai_hits ?? 0;
+  const srcs = sourcesOf(cfg);
+  $("f-ats").checked = srcs.has("ats");
+  $("f-li").checked = srcs.has("linkedin");
+  $("f-likw").value = (cfg.linkedin_keywords || []).join("\n");
+  $("li-kw-wrap").style.display = $("f-li").checked ? "" : "none";
 }
+
+function sourcesOf(cfg) {
+  // Mirrors scrape.profile_sources(): booleans win; legacy `source` otherwise.
+  if ("ats" in cfg || "linkedin" in cfg) {
+    const s = new Set();
+    if (cfg.ats !== false) s.add("ats");
+    if (cfg.linkedin) s.add("linkedin");
+    return s.size ? s : new Set(["ats"]);
+  }
+  if (cfg.source === "linkedin" || cfg.external) return new Set(["linkedin"]);
+  // Brand-new tab (empty cfg): both on.
+  return Object.keys(cfg).length <= 1 ? new Set(["ats", "linkedin"]) : new Set(["ats"]);
+}
+$("f-li").addEventListener("change", () => { $("li-kw-wrap").style.display = $("f-li").checked ? "" : "none"; });
 
 function editTab(key) {
   editingKey = key;
@@ -370,6 +407,7 @@ $("f-template").addEventListener("change", () => {
   const t = TEMPLATES.find(t => t.key === $("f-template").value);
   if (!t) { fill({min_ai_hits: 0}); $("f-key").value = ""; return; }
   fill(t);
+  if (!$("f-likw").value) $("f-likw").value = t.label;
   $("f-key").value = Object.hasOwn(PROFILES, t.key) ? t.key + "_2" : t.key;
 });
 
@@ -399,7 +437,11 @@ $("tab-form").addEventListener("submit", async (e) => {
     health_adjacent_ok: $("f-hcadj").checked,
     fit: $("f-fit").value,
     min_ai_hits: parseInt($("f-minai").value || "0", 10),
+    ats: $("f-ats").checked,
+    linkedin: $("f-li").checked,
+    linkedin_keywords: linesToVal($("f-likw").value),
   };
+  if (!body.ats && !body.linkedin) { setMsg("Pick at least one source", false); return; }
   const r = await fetch("/api/profiles/" + key, {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
   });
@@ -537,6 +579,14 @@ $("r-save").addEventListener("click", async () => {
   const pre = params.get("edit");
   if (pre && PROFILES[pre]) editTab(pre); else newTab();
   if (location.hash === "#resume") $("resume").scrollIntoView();
+  const st = $("li-session-status");
+  if (st) {
+    try {
+      const s = await (await fetch("/api/linkedin/session")).json();
+      st.innerHTML = s.signed_in ? "✓ Signed-in LinkedIn session found."
+        : "No signed-in session yet — crawls run as a guest (fine to start with).";
+    } catch (e) { st.textContent = ""; }
+  }
 })();
 </script>
 </body>

@@ -125,8 +125,14 @@ wall, so don't "simplify" it. A 403 means the cookie jar went stale: load a
 Glassdoor page in Chrome, re-run the tool. Throughput tops out ~1.5
 companies/min regardless of pacing.
 
-**LinkedIn tabs** (`source: "linkedin"`) are fed by `linkedin_scrape.py`, not
-the ATS scan; they get a Crawl button instead of Refresh and honor
-`require_desc` / `exclude_desc` description rules. The signed-in (voyager)
+**Sources.** A tab sets `ats` / `linkedin` booleans (legacy files use
+`source: "linkedin"` for LinkedIn-only; `scrape.profile_sources()` normalizes).
+The ATS scan writes `.latest_<key>.json`; the LinkedIn crawl
+(`linkedin_scrape.py --out`) writes `.latest_<key>.linkedin.json` for a mixed
+tab and `GET /api/jobs/<key>` merges them by URL. ↻ Refresh on a mixed tab
+starts the ATS scan and then `POST /api/linkedin/crawl {use_tab_defaults}`,
+which crawls the tab's `linkedin_keywords`. The 🔗 LinkedIn panel is the
+manual/tuning path. LinkedIn tabs honor `require_desc` / `exclude_desc`
+description rules. The signed-in (voyager)
 endpoint is needed for boolean queries; `tools/li_session_from_chrome.py`
 extracts the session.

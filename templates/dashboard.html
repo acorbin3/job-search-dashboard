@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>{{ profile_label }} Roles — AI Signal</title>
+<title>{{ profile_label }} — jobs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="/static/app.css">
   <style>
@@ -255,7 +255,7 @@
 <body>
 <header>
   <div>
-    <h1>{{ profile_label }} Roles — AI Signal</h1>
+    <h1>{{ profile_label }}</h1>
     <div class="meta">
       Last refresh: <span id="generated">loading…</span> · <span id="total-count">—</span> roles · <span id="company-count">—</span> companies <span id="scrape-status"></span>
       · Fit vs <a href="/tabs#resume" title="Which resume the Fit column is scored against — upload one on the Manage Tabs page">{{ fit_label }}</a>{% if fit_is_builtin %} <a href="/tabs#resume" class="flag" style="text-decoration:none" title="Scores use a generic table until you upload a resume">upload a resume to personalize</a>{% endif %}
@@ -274,15 +274,15 @@
     {# The LinkedIn tab is fed by linkedin_scrape.py, not the ATS scan, so it
        gets its own crawl button. The ATS buttons stay in the DOM (hidden) so
        the shared refresh JS keeps working. #}
-    <button class="btn" id="reparse-btn" {% if source == 'linkedin' %}style="display:none;"{% endif %} title="Rebuild every tab from the cached raw scan — no network, just re-runs the profile filters">⟳ Re-parse</button>
-    <button class="btn primary" id="refresh-btn" {% if source == 'linkedin' %}style="display:none;"{% endif %}>↻ Refresh data</button>
-    {% if source == 'linkedin' %}
-    <button class="btn primary" id="li-crawl-btn" title="Crawl LinkedIn's public job search">🔗 Crawl LinkedIn</button>
+    <button class="btn" id="reparse-btn" {% if not ats_enabled %}style="display:none;"{% endif %} title="Rebuild every tab from the cached raw scan — no network, just re-runs the profile filters">⟳ Re-parse</button>
+    <button class="btn primary" id="refresh-btn" {% if not ats_enabled %}style="display:none;"{% endif %} title="{% if li_enabled %}Scan every company job board and crawl LinkedIn for this tab's keywords{% else %}Scan every company job board{% endif %}">↻ Refresh data</button>
+    {% if li_enabled %}
+    <button class="btn {% if not ats_enabled %}primary{% endif %}" id="li-crawl-btn" title="LinkedIn crawl settings for this tab">🔗 LinkedIn</button>
     {% endif %}
   </div>
 </header>
 
-{% if source == 'linkedin' %}
+{% if li_enabled %}
 <div id="li-panel" style="display:none;">
   <div class="prompt-head">
     <strong>Crawl LinkedIn</strong>
@@ -346,6 +346,10 @@
     <strong>What “↻ Refresh data” searches for on this tab</strong>
     <a class="btn" href="/tabs?edit={{ profile }}" title="Edit this tab's rules">✎ Edit this tab</a>
   </div>
+  <p class="prompt-note">Sources:
+    {% if 'ats' in prompt.sources %}<span class="flag">company job boards (~12k companies)</span>{% endif %}
+    {% if 'linkedin' in prompt.sources %}<span class="flag">LinkedIn search: {{ prompt.linkedin_keywords | join(' · ') }}</span>{% endif %}
+  </p>
   <p class="prompt-note">A job is kept when its <b>title</b> matches a <b>Level</b> pattern <b>and</b> a <b>Domain</b> pattern, does <b>not</b> match any <b>Exclude</b> pattern, and its description contains at least {{ prompt.min_ai_hits }} AI keyword{{ '' if prompt.min_ai_hits == 1 else 's' }}. Patterns are case-insensitive regular expressions.</p>
   <div class="prompt-grid">
     <div><h4>Level <span>(title must match one)</span></h4><ul>{% for p in prompt.level %}<li>{{ p }}</li>{% endfor %}</ul></div>
@@ -381,7 +385,7 @@
       <option value="untriaged">Untriaged only</option>
     </select>
   </div>
-  {% if source == 'linkedin' %}
+  {% if li_enabled %}
   <div class="field">
     <label for="applied-filter">Applied?</label>
     <select id="applied-filter">
@@ -443,7 +447,7 @@
   </div>
   <div class="field">
     <label for="min-hits">Min AI hits</label>
-    <input id="min-hits" type="number" min="1" max="20" value="1" style="width: 80px;" />
+    <input id="min-hits" type="number" min="0" max="20" value="{{ prompt.min_ai_hits }}" style="width: 80px;" />
   </div>
   <div class="field">
     <label for="min-pay">Min pay max ($K)</label>
@@ -496,7 +500,7 @@
       <th data-sort="fit">Fit</th>
       <th data-sort="ai_hit_count">AI</th>
       <th>Actions</th>
-      {% if source == 'linkedin' %}<th data-sort="applied_match">Applied?</th>{% endif %}
+      {% if li_enabled %}<th data-sort="applied_match">Applied?</th>{% endif %}
       <th data-sort="company">Company</th>
       <th data-sort="stage">Stage</th>
       <th data-sort="sector">Sector</th>
@@ -510,7 +514,7 @@
       <th>Hits</th>
     </tr>
   </thead>
-  <tbody id="tbody"><tr><td colspan="{{ 16 if source == 'linkedin' else 15 }}" class="loading">Loading…</td></tr></tbody>
+  <tbody id="tbody"><tr><td colspan="{{ 16 if li_enabled else 15 }}" class="loading">Loading…</td></tr></tbody>
 </table>
 
 <div class="footer">
@@ -532,7 +536,7 @@ let view = {
   exclude: localStorage.getItem("dash_exclude_" + PROFILE) || "",
   company: "",
   ats: "",
-  minHits: 1,
+  minHits: {{ prompt.min_ai_hits }},
   minPay: 0,
   remoteFilter: "{{ remote_default }}",
   appliedFilter: "",
@@ -742,7 +746,12 @@ async function startScrapeAll(fromRaw) {
   }
 }
 
-document.getElementById("refresh-btn").addEventListener("click", () => startScrapeAll(false));
+document.getElementById("refresh-btn").addEventListener("click", async () => {
+  await startScrapeAll(false);
+  // Mixed-source tab: the same click also crawls LinkedIn with the tab's own
+  // keywords (the 🔗 panel is for tuning; Refresh is the one-button path).
+  if (window.liCrawlWithTabDefaults) window.liCrawlWithTabDefaults();
+});
 document.getElementById("reparse-btn").addEventListener("click", () => startScrapeAll(true));
 
 // --- LinkedIn crawl (this tab only) --------------------------------------
@@ -900,6 +909,23 @@ if (document.getElementById("li-crawl-btn")) {
   const numVal = (id) => {
     const v = parseInt(document.getElementById(id).value, 10);
     return Number.isFinite(v) && v > 0 ? v : null;
+  };
+
+  window.liCrawlWithTabDefaults = async () => {
+    try {
+      const r = await fetch("/api/linkedin/crawl", {
+        method: "POST", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({profile: LI_PROFILE, use_tab_defaults: true}),
+      });
+      const body = await r.json();
+      if (!r.ok) { toast(body.error || "LinkedIn crawl failed to start", true); return; }
+      if (body.started) {
+        setLiUI(true);
+        toast("Also crawling LinkedIn for this tab's keywords…");
+        if (liTimer) clearTimeout(liTimer);
+        liTimer = setTimeout(pollLinkedin, 2000);
+      }
+    } catch (e) { toast("LinkedIn: " + e.message, true); }
   };
 
   startBtn.addEventListener("click", async () => {
@@ -1190,7 +1216,7 @@ function applyFilters() {
     else if (view.statusFilter === "starred" && status !== "starred") return false;
     else if (view.statusFilter === "ignored" && status !== "ignored") return false;
     else if (view.statusFilter === "untriaged" && status) return false;
-    if (view.minHits > 1 && j.ai_hits.length < view.minHits) return false;
+    if (view.minHits > 0 && j.ai_hits.length < view.minHits) return false;
     if (view.minPay > 0 && (!j.pay_max || j.pay_max < view.minPay * 1000)) return false;
     if (view.remoteFilter) {
       if (view.remoteFilter === "not-onsite") { if (j.remote === "onsite") return false; }
@@ -1386,7 +1412,9 @@ function render() {
 
   const tbody = document.getElementById("tbody");
   if (!filtered.length) {
-    tbody.innerHTML = `<tr><td colspan="{{ 16 if source == 'linkedin' else 15 }}" class="empty">No roles match these filters.</td></tr>`;
+    tbody.innerHTML = GENERATED === "never"
+      ? `<tr><td colspan="{{ 16 if li_enabled else 15 }}" class="empty">Nothing scraped yet. Hit <b>↻ Refresh data</b> to run the first scan{% if ats_enabled %} of ~12,000 company job boards (10–20 min){% endif %}{% if li_enabled and ats_enabled %} plus{% endif %}{% if li_enabled %} a LinkedIn crawl for: <i>{{ prompt.linkedin_keywords | join(' · ') }}</i>{% endif %}. Results stream in as they land.</td></tr>`
+      : `<tr><td colspan="{{ 16 if li_enabled else 15 }}" class="empty">No roles match these filters.</td></tr>`;
     return;
   }
   tbody.innerHTML = filtered.map((j, i) => {
@@ -1413,7 +1441,7 @@ function render() {
           <span class="act ${status==='starred'?'on starred':''}" data-act="starred" title="Star">★</span>
           <span class="act ${status==='ignored'?'on ignored':''}" data-act="ignored" title="Ignore">✕</span>
         </div></td>
-        {% if source == 'linkedin' %}<td>${appliedBadge(j)}</td>{% endif %}
+        {% if li_enabled %}<td>${appliedBadge(j)}</td>{% endif %}
         <td><span class="company">${escapeHtml(j.company)}</span><span class="ats ats-${j.ats}">${j.ats}</span></td>
         <td><span class="stage-pill stage-${j.stage || 'unknown'}">${escapeHtml(j.stage || "?")}</span></td>
         <td><span class="sector-pill">${escapeHtml(j.sector || "—")}</span></td>
@@ -1430,7 +1458,7 @@ function render() {
         <td class="pay${pay.cls}" title="${escapeHtml(pay.title)}">${pay.label}</td>
         <td>${pills}${more}</td>
       </tr>
-      ${isExpanded ? `<tr class="snippet"><td colspan="{{ 16 if source == 'linkedin' else 15 }}">
+      ${isExpanded ? `<tr class="snippet"><td colspan="{{ 16 if li_enabled else 15 }}">
         <div class="desc-meta">
           <span>${j.description ? "Full description" : "Snippet only"}</span>
           <a href="${escapeHtml(j.url)}" target="_blank" rel="noopener">Open original ↗</a>
@@ -1512,7 +1540,7 @@ document.getElementById("search").addEventListener("input", e => { view.search =
 document.getElementById("status-filter").addEventListener("change", e => { view.statusFilter = e.target.value; render(); });
 document.getElementById("company").addEventListener("change", e => { view.company = e.target.value; render(); });
 document.getElementById("ats").addEventListener("change", e => { view.ats = e.target.value; render(); });
-document.getElementById("min-hits").addEventListener("input", e => { view.minHits = parseInt(e.target.value) || 1; render(); });
+document.getElementById("min-hits").addEventListener("input", e => { view.minHits = parseInt(e.target.value) || 0; render(); });
 document.getElementById("min-pay").addEventListener("input", e => { view.minPay = parseInt(e.target.value) || 0; render(); });
 document.getElementById("remote-filter").addEventListener("change", e => { view.remoteFilter = e.target.value; render(); });
 { const af = document.getElementById("applied-filter");
