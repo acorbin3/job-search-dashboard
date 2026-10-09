@@ -45,6 +45,8 @@ State lives in state.db (SQLite):
 import argparse
 import json
 import os
+import time
+import signal
 import re
 import sqlite3
 import subprocess
@@ -775,6 +777,19 @@ def api_fit_profiles_delete(key):
 # One superset scan updates every profile's table (scrape.py --all). Tracked
 # under a reserved SCRAPES key so it can't collide with a profile name.
 ALL_KEY = "_all"
+SCRAPE_ALL_PID = ROOT / ".scrape_all.pid"
+
+
+def _orphan_scan_pid():
+    """pid of a scan started by a previous server life, if it's still alive."""
+    try:
+        pid = int(SCRAPE_ALL_PID.read_text().strip())
+    except (OSError, ValueError):
+        return None
+    if _pid_alive(pid):
+        return pid
+    SCRAPE_ALL_PID.unlink(missing_ok=True)
+    return None
 
 
 def _run_scrape_all(from_raw=False, fit=None):
@@ -788,13 +803,59 @@ def _run_scrape_all(from_raw=False, fit=None):
     proc = subprocess.Popen(cmd, cwd=str(ROOT))
     with SCRAPES_LOCK:
         SCRAPES[ALL_KEY]["pid"] = proc.pid
+    # The pid outlives this server process (a restart orphans the scan), so
+    # persist it: the status/stop endpoints read it back when SCRAPES is cold.
+    try:
+        SCRAPE_ALL_PID.write_text(str(proc.pid))
+    except OSError:
+        pass
     rc = proc.wait()
+    SCRAPE_ALL_PID.unlink(missing_ok=True)
     with SCRAPES_LOCK:
+        stopped = SCRAPES[ALL_KEY].get("stop_requested")
         SCRAPES[ALL_KEY].update(
-            status="done" if rc == 0 else "error",
+            status="stopped" if stopped else ("done" if rc == 0 else "error"),
             finished_at=_iso_now(),
             rc=rc,
         )
+
+
+def _terminate(pid, grace=5.0):
+    """SIGTERM a child, then SIGKILL if it lingers. Returns True if it was alive."""
+    if not _pid_alive(pid):
+        return False
+    try:
+        os.kill(int(pid), signal.SIGTERM)
+    except OSError:
+        return False
+    deadline = time.time() + grace
+    while time.time() < deadline and _pid_alive(pid):
+        time.sleep(0.2)
+    if _pid_alive(pid):
+        try:
+            os.kill(int(pid), signal.SIGKILL)
+        except OSError:
+            pass
+    return True
+
+
+@app.route("/api/scrape_all/stop", methods=["POST"])
+def api_scrape_all_stop():
+    """Stop the running job-board scan. The cached raw scan from the previous
+    run is left untouched, so the tabs keep their last good data."""
+    with SCRAPES_LOCK:
+        entry = SCRAPES.get(ALL_KEY)
+        if not entry or entry["status"] != "running":
+            pid = _orphan_scan_pid()
+            if not pid:
+                return jsonify({"stopped": False, "status": entry["status"] if entry else "idle"})
+            _terminate(pid)
+            SCRAPE_ALL_PID.unlink(missing_ok=True)
+            return jsonify({"stopped": True, "orphan": True})
+        entry["stop_requested"] = True
+        pid = entry.get("pid")
+    _terminate(pid)
+    return jsonify({"stopped": True})
 
 
 @app.route("/api/scrape_all", methods=["POST"])
@@ -824,6 +885,8 @@ def api_scrape_all():
 def _start_scrape_all(from_raw=False, fit=None):
     """Kick off scrape.py --all/--from-raw in a thread. Returns the status
     snapshot, or None if one is already running."""
+    if _orphan_scan_pid():
+        return None
     with SCRAPES_LOCK:
         existing = SCRAPES.get(ALL_KEY)
         if existing and existing["status"] == "running":
@@ -847,6 +910,11 @@ def _start_scrape_all(from_raw=False, fit=None):
 def api_scrape_all_status():
     with SCRAPES_LOCK:
         entry = dict(SCRAPES.get(ALL_KEY) or {"status": "idle"})
+    if entry["status"] != "running":
+        pid = _orphan_scan_pid()
+        if pid:
+            entry = {"status": "running", "pid": pid, "orphan": True,
+                     "started_at": None, "mode": "scan"}
     if entry["status"] == "running":
         entry["progress"] = _read_progress("all")
     return jsonify(entry)
@@ -1180,7 +1248,9 @@ def _run_linkedin_crawl(cmd, run_id, started_at, profile):
                           (proc.pid, run_id))
                 c.commit()
             rc = proc.wait()
-        status = "done" if rc == 0 else "error"
+        with SCRAPES_LOCK:
+            stopped = SCRAPES[_li_key(profile)].get("stop_requested")
+        status = "stopped" if stopped else ("done" if rc == 0 else "error")
     except Exception:
         status = "error"
         raise
@@ -1299,6 +1369,26 @@ def api_linkedin_crawl():
                      args=(cmd, run_id, started_at, profile),
                      daemon=True).start()
     return jsonify({"started": True, **snapshot})
+
+
+@app.route("/api/linkedin/crawl/stop", methods=["POST"])
+def api_linkedin_crawl_stop():
+    """Stop the LinkedIn crawl in flight (any tab — only one runs at a time).
+    Rows it already published stay in the tab."""
+    busy = _li_running()
+    if not busy:
+        return jsonify({"stopped": False, "status": "idle"})
+    profile = busy.get("profile") or "linkedin"
+    with SCRAPES_LOCK:
+        entry = SCRAPES.setdefault(_li_key(profile), {"status": "running"})
+        entry["stop_requested"] = True
+    alive = _terminate(busy.get("pid"))
+    if not alive:   # crawler from a previous server life: close its row ourselves
+        with db() as conn:
+            conn.execute("UPDATE linkedin_runs SET status='stopped' WHERE id=?",
+                         (busy["id"],))
+            conn.commit()
+    return jsonify({"stopped": True, "profile": profile})
 
 
 @app.route("/api/linkedin/crawl", methods=["GET"])

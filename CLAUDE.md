@@ -132,7 +132,13 @@ The ATS scan writes `.latest_<key>.json`; the LinkedIn crawl
 tab and `GET /api/jobs/<key>` merges them by URL. ↻ Refresh on a mixed tab
 starts the ATS scan and then `POST /api/linkedin/crawl {use_tab_defaults}`,
 which crawls the tab's `linkedin_keywords`. The 🔗 LinkedIn panel is the
-manual/tuning path. LinkedIn tabs honor `require_desc` / `exclude_desc`
+manual/tuning path. `POST /api/scrape_all/stop` and
+`POST /api/linkedin/crawl/stop` SIGTERM the child (status becomes
+`stopped`; rows already published stay). The scan's pid is persisted in
+`.scrape_all.pid` and the crawl's in `linkedin_runs.pid`, so a restarted
+server still sees — and can stop — a child it didn't start. LinkedIn needs no
+login: crawls use the public guest search; a session from
+`tools/li_session_from_chrome.py` is optional (boolean queries, sort). LinkedIn tabs honor `require_desc` / `exclude_desc`
 description rules. The signed-in (voyager)
 endpoint is needed for boolean queries; `tools/li_session_from_chrome.py`
 extracts the session.

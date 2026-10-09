@@ -85,3 +85,4 @@ _r*_sr_*.json
 _r*_wd_*.jsonl
 _r*_rp*.jsonl
 _r*_stock.jsonl
+.scrape_all.pid

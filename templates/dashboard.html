@@ -257,7 +257,7 @@
   <div>
     <h1>{{ profile_label }}</h1>
     <div class="meta">
-      Last refresh: <span id="generated">loading…</span> · <span id="total-count">—</span> roles · <span id="company-count">—</span> companies <span id="scrape-status"></span>
+      Last refresh: <span id="generated">loading…</span> · <span id="total-count">—</span> roles · <span id="company-count">—</span> companies <span id="scrape-status"></span><span id="li-status"></span>
       · Fit vs <a href="/tabs#resume" title="Which resume the Fit column is scored against — upload one on the Manage Tabs page">{{ fit_label }}</a>{% if fit_is_builtin %} <a href="/tabs#resume" class="flag" style="text-decoration:none" title="Scores use a generic table until you upload a resume">upload a resume to personalize</a>{% endif %}
     </div>
   </div>
@@ -275,6 +275,7 @@
        gets its own crawl button. The ATS buttons stay in the DOM (hidden) so
        the shared refresh JS keeps working. #}
     <button class="btn" id="reparse-btn" {% if not ats_enabled %}style="display:none;"{% endif %} title="Rebuild every tab from the cached raw scan — no network, just re-runs the profile filters">⟳ Re-parse</button>
+    <button class="btn danger" id="stop-btn" style="display:none;" title="Stop the running scan / crawl. Results already saved stay.">■ Stop</button>
     <button class="btn primary" id="refresh-btn" {% if not ats_enabled %}style="display:none;"{% endif %} title="{% if li_enabled %}Scan every company job board and crawl LinkedIn for this tab's keywords{% else %}Scan every company job board{% endif %}">↻ Refresh data</button>
     {% if li_enabled %}
     <button class="btn {% if not ats_enabled %}primary{% endif %}" id="li-crawl-btn" title="LinkedIn crawl settings for this tab">🔗 LinkedIn</button>
@@ -334,6 +335,7 @@
     <ol id="li-queries"></ol>
   </div>
   <pre id="li-log" style="display:none;"></pre>
+  <p class="prompt-note" id="li-how">LinkedIn needs nothing from you: the crawler reads LinkedIn's public job search as a guest and filters the results with this tab's title rules. <span id="li-session-note"></span></p>
   <p class="prompt-note">Salary filtering happens here, not on LinkedIn — its
     guest search ignores the <code>f_SAL</code> parameter, so pay is parsed
     from each description. The crawler self-throttles if LinkedIn pushes back,
@@ -641,13 +643,31 @@ function formatGenerated(iso) {
   return abs;
 }
 
+let ATS_RUNNING = false, LI_RUNNING = false;
+function updateStopBtn() {
+  document.getElementById("stop-btn").style.display = (ATS_RUNNING || LI_RUNNING) ? "" : "none";
+}
+document.getElementById("stop-btn").addEventListener("click", async () => {
+  const btn = document.getElementById("stop-btn");
+  btn.disabled = true; btn.textContent = "Stopping…";
+  try {
+    const calls = [];
+    if (ATS_RUNNING) calls.push(fetch("/api/scrape_all/stop", {method: "POST"}));
+    if (LI_RUNNING) calls.push(fetch("/api/linkedin/crawl/stop", {method: "POST"}));
+    await Promise.all(calls);
+    toast("Stopping — rows already saved stay in the tab");
+  } catch (e) { toast(e.message, true); }
+  finally { btn.disabled = false; btn.textContent = "■ Stop"; }
+});
+
 function setRefreshUI(running, startedAt, progress) {
   const btn = document.getElementById("refresh-btn");
   const reparseBtn = document.getElementById("reparse-btn");
   const status = document.getElementById("scrape-status");
+  ATS_RUNNING = !!running; updateStopBtn();
   btn.disabled = running;
   reparseBtn.disabled = running;
-  btn.textContent = running ? "Scraping…" : "↻ Refresh data";
+  btn.textContent = running ? "Scanning job boards…" : "↻ Refresh data";
   if (!running) {
     status.textContent = "";
     return;
@@ -710,6 +730,7 @@ async function pollScrape() {
     populateFilters(); render();
     document.getElementById("generated").textContent = formatGenerated(GENERATED);
     if (body.status === "error") toast(`scrape failed (rc=${body.rc})`, true);
+    else if (body.status === "stopped") toast("Job-board scan stopped");
     else if (body.status === "done") toast(`All tabs refreshed — ${DATA.length} jobs here`);
   }
   setRefreshUI(false);
@@ -771,6 +792,8 @@ if (document.getElementById("li-crawl-btn")) {
   });
 
   function setLiUI(running) {
+    LI_RUNNING = !!running; updateStopBtn();
+    if (!running) document.getElementById("li-status").textContent = "";
     startBtn.disabled = running;
     startBtn.textContent = running ? "Crawling…" : "▶ Start crawl";
     document.getElementById("li-crawl-btn").disabled = running;
@@ -854,6 +877,12 @@ if (document.getElementById("li-crawl-btn")) {
     if (running && p.eta_sec) bits.push(`~${dur(p.eta_sec)} left`);
     if (p.throttles) bits.push(`${p.throttles} throttled (${p.interval}s gap)`);
     document.getElementById("li-stats").textContent = bits.join(" · ");
+    if (running) {
+      const q = p.queries_total ? ` · query ${Math.min(Math.floor(p.queries_done || 0) + 1, p.queries_total)}/${p.queries_total}` : "";
+      document.getElementById("li-status").innerHTML =
+        ` · <span class="scrape-bar"><span class="scrape-bar-fill" style="width:${p.pct || 0}%"></span></span> LinkedIn ${p.pct || 0}%${q}` +
+        (p.published ? ` · ${p.published} jobs in` : "");
+    }
   }
 
   // "Last crawl: <when> · <duration> · N published" — read from the
@@ -901,6 +930,7 @@ if (document.getElementById("li-crawl-btn")) {
       populateFilters(); render();
       document.getElementById("generated").textContent = formatGenerated(GENERATED);
       if (body.status === "error") toast(`crawl failed (rc=${body.rc})`, true);
+      else if (body.status === "stopped") toast("LinkedIn crawl stopped — what it found so far is in the tab");
       else toast(`LinkedIn crawl done — ${DATA.length} jobs`);
     }
     setLiUI(false);
@@ -977,6 +1007,12 @@ if (document.getElementById("li-crawl-btn")) {
   // reattach to a crawl already in flight (e.g. started before a reload).
   fetch(`/api/linkedin/crawl?profile=${encodeURIComponent(LI_PROFILE)}`).then(r => r.json()).then(body => {
     showLastRun(body);
+    const sess = body.session || {};
+    document.getElementById("li-session-note").innerHTML = sess.signed_in
+      ? "A signed-in session was found, so boolean queries (quotes / OR / NOT) and sort order work too."
+      : `Optional: run <code>${escapeHtml(sess.how || "li_session_from_chrome.py")}</code> once to lift your browser's LinkedIn login — that unlocks boolean queries and sort order. Not required.`;
+    // Reattach to a crawl already in flight (e.g. started by Refresh or before a reload).
+    if (body.status === "running") { setLiUI(true); if (liTimer) clearTimeout(liTimer); liTimer = setTimeout(pollLinkedin, 1500); }
     const saved = body.saved || {};
     const sel = document.getElementById("li-search");
     for (const [key, cfg] of Object.entries(body.searches || {})) {
