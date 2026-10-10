@@ -7,6 +7,21 @@ filters the postings down to the roles you actually want, scores each one
 
 Everything runs on your machine. No accounts, no SaaS, one SQLite file.
 
+![Dashboard: one tab's results from company job boards and LinkedIn, scored against your resume](screenshots/dashboard.png)
+
+<details>
+<summary>More screenshots</summary>
+
+**First run** — upload a resume, pick a starter tab, done:
+
+![Welcome page with starter tabs](screenshots/welcome.png)
+
+**Tab editor** — sources, LinkedIn phrases, and the title rules:
+
+![Tab editor](screenshots/tab-editor.png)
+
+</details>
+
 ## Quick start
 
 ```bash
