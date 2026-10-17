@@ -1,0 +1,164 @@
+{
+ "461306": {
+  "name": "D A Dorsey Technical College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+    "company": "miamidadecT1"
+   }
+  ],
+  "notes": "Miami-Dade County Public Schools SuccessFactors career site (company=miamidadecT1) now classifies as college_successfactors; the district board carries the technical-college instructor postings. apply.dadeschools.net serves an expired TLS cert; the successfactors fetcher falls back to verify=False.",
+  "prev_status": "generic",
+  "prev_url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+  "state": "FL",
+  "homepage": "www.dadorseytech.edu/",
+  "sector": 7
+ },
+ "135294": {
+  "name": "Lindsey Hopkins Technical College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+    "company": "miamidadecT1"
+   }
+  ],
+  "notes": "Miami-Dade County Public Schools SuccessFactors career site (company=miamidadecT1) now classifies as college_successfactors; the district board carries the technical-college instructor postings. apply.dadeschools.net serves an expired TLS cert; the successfactors fetcher falls back to verify=False.",
+  "prev_status": "generic",
+  "prev_url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+  "state": "FL",
+  "homepage": "www.lindseyhopkins.edu/",
+  "sector": 4
+ },
+ "135647": {
+  "name": "Miami Lakes Educational Center and Technical College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+    "company": "miamidadecT1"
+   }
+  ],
+  "notes": "Miami-Dade County Public Schools SuccessFactors career site (company=miamidadecT1) now classifies as college_successfactors; the district board carries the technical-college instructor postings. apply.dadeschools.net serves an expired TLS cert; the successfactors fetcher falls back to verify=False.",
+  "prev_status": "generic",
+  "prev_url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+  "state": "FL",
+  "homepage": "https://miamilakes.edu/",
+  "sector": 4
+ },
+ "136826": {
+  "name": "Robert Morgan Educational Center and Technical College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+    "company": "miamidadecT1"
+   }
+  ],
+  "notes": "Miami-Dade County Public Schools SuccessFactors career site (company=miamidadecT1) now classifies as college_successfactors; the district board carries the technical-college instructor postings. apply.dadeschools.net serves an expired TLS cert; the successfactors fetcher falls back to verify=False.",
+  "prev_status": "generic",
+  "prev_url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+  "state": "FL",
+  "homepage": "www.robertmorgantech.net/",
+  "sector": 4
+ },
+ "107488": {
+  "name": "Northwest Technical Institute",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://arcareers.arkansas.gov/search/?q=NWTI",
+    "company": "stateofark"
+   }
+  ],
+  "notes": "NWTI is a state agency; its faculty postings ('NWTI CAREER & TECHNICAL FACULTY I/II') run on the State of Arkansas SuccessFactors board arcareers.arkansas.gov (company=stateofark), which classifies as college_successfactors. Replaces the bogus indeed.com footer link. Note: the fetcher ignores the q= filter and walks the state-wide list, so the title filter does the narrowing.",
+  "prev_status": "generic",
+  "prev_url": "https://www.indeed.com/hire/how-to-write-a-job-description?from=jobsearch_footer",
+  "state": "AR",
+  "homepage": "www.nwti.edu/",
+  "sector": 7
+ },
+ "137120": {
+  "name": "Suncoast Technical College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_focus",
+    "url": "https://suncoast.focusschoolsoftware.com/focus/jobs/"
+   }
+  ],
+  "notes": "STC's own Focus School Software job board (linked from sarasotacountyschools.net/o/stcsmc/page/job-board and /page/stc-employment) classifies as college_focus. 0 public postings at verification time (Okaloosa control board returned 118), so the board is live but currently empty. The district's sarasota.k12.fl.us/jobs/Jobpost.exe requires login.",
+  "prev_status": "none",
+  "prev_url": "",
+  "state": "FL",
+  "homepage": "www.sarasotacountyschools.net/o/stcsmc",
+  "sector": 4
+ },
+ "177977": {
+  "name": "State Technical College of Missouri",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_paycor",
+    "url": "https://recruitingbypaycor.com/career/CareerHome.action?clientId=8a7883c66f25835f016f33a9f5510184",
+    "client_id": "8a7883c66f25835f016f33a9f5510184"
+   }
+  ],
+  "notes": "statetechmo.edu/career-openings/ embeds a Paycor Recruiting (Newton) iframe; the Paycor board (clientId 8a7883c6..., jobs located Linn, MO) classifies as college_paycor and returned 14 postings incl. Automotive Instructor and Surveying Adjunct Instructor.",
+  "prev_status": "generic",
+  "prev_url": "https://statetechmo.edu/career-openings/",
+  "state": "MO",
+  "homepage": "https://www.statetechmo.edu/",
+  "sector": 4
+ },
+ "202648": {
+  "name": "Edison State Community College",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://edisonohio.pinpointhq.com/jobs.rss"
+   }
+  ],
+  "notes": "Pinpoint career site exposes an RSS feed (jobs.rss) that parses through the rss fetcher (2 adjunct postings matched, incl. 'Adjunct Instructor for Professional & Technical Programs'); replaces the browser-rendered generic scrape of the Pinpoint landing page.",
+  "prev_status": "generic",
+  "prev_url": "https://edisonohio.pinpointhq.com/",
+  "state": "OH",
+  "homepage": "https://www.edisonohio.edu/",
+  "sector": 1
+ },
+ "498739": {
+  "name": "Lehigh Career & Technical Institute",
+  "source": "manual-ws-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.lcti.org/work-lcti/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Work-at-LCTI page lists openings as 'Job Description' PDF links (HVAC Teacher 2026, Automotive Safety Inspection & Emissions Instructor PT, Heavy Equipment Operations Program Instruction Coordinator, ...); generic fetcher with pdf_links picks the titles from the adjacent headings. The site's WP Job Manager feed (/?feed=job_feed) is a community employer job board, not LCTI's own openings, so it is deliberately not used.",
+  "prev_status": "none",
+  "prev_url": "",
+  "state": "PA",
+  "homepage": "https://www.lcti.org/adulted",
+  "sector": 7
+ },
+ "203331": {
+  "name": "Eastern Gateway Community College",
+  "source": "manual-ws-public",
+  "configs": [],
+  "notes": "CLOSED: egcc.edu now redirects to egcc.edu/closure-teachout/ (college ceased operations / teach-out). No job board; drop from scanning.",
+  "prev_status": "none",
+  "prev_url": "",
+  "state": "OH",
+  "homepage": "www.egcc.edu/",
+  "sector": 4
+ }
+}

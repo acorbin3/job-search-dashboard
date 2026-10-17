@@ -1,0 +1,1137 @@
+{
+ "183026": {
+  "name": "Southern New Hampshire University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.snhu.edu/en/jobs/",
+    "pages": [
+     "https://jobs.snhu.edu/en/jobs/?page=2",
+     "https://jobs.snhu.edu/en/jobs/?page=3",
+     "https://jobs.snhu.edu/en/jobs/?page=4"
+    ]
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.snhu.edu/en/jobs/?search=adjunct"
+   }
+  ],
+  "notes": "Custom Umbraco job board (jobs.snhu.edu; XHR umbraco/jobboard/CandidateJobs/GetRecentJobs, Beamery CRM); server-rendered, ~14 per page, 4 pages (?page=N); adjunct postings sit under /en/career-areas/online-teaching-jobs/. Previous config kept, pages added",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.snhu.edu/en/jobs/?search=adjunct"
+ },
+ "164988": {
+  "name": "Boston University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/BU/External",
+    "pages": [
+     "https://jobs.silkroad.com/BU/External?SearchString=adjunct",
+     "https://jobs.silkroad.com/BU/External?SearchString=lecturer",
+     "https://jobs.silkroad.com/BU/External?SearchString=instructor"
+    ]
+   }
+  ],
+  "notes": "SilkRoad EmploymentPortal (jobs.silkroad.com/<Tenant>/External): server-rendered 10/page, ?page=N (12+ pages) and ?SearchString=<kw> filter; staff only (faculty searches hire per school/Interfolio). VENDOR MISSING: SilkRoad EmploymentPortal (README notes only the -openhire epostings variant is handled)",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.silkroad.com/BU/External"
+ },
+ "131113": {
+  "name": "Wilmington University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=WILMU&cws=60",
+    "org": "WILMU",
+    "cws": "60",
+    "ats": "college_taleobe"
+   },
+   {
+    "url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=WILMU&cws=51",
+    "org": "WILMU",
+    "cws": "51",
+    "ats": "college_taleobe"
+   }
+  ],
+  "notes": "classify() now detects college_taleobe on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=WILMU&cws=60"
+ },
+ "162928": {
+  "name": "Johns Hopkins University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hiring.jhu.edu/careers",
+    "pages": [
+     "https://hiring.jhu.edu/careers?query=adjunct",
+     "https://hiring.jhu.edu/careers?query=lecturer",
+     "https://hiring.jhu.edu/careers?query=instructor"
+    ]
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://facultyjobs.jhu.edu/positions"
+   }
+  ],
+  "notes": "Staff/non-faculty board is Eightfold (hiring.jhu.edu; JSON at https://hiring.jhu.edu/api/pcsx/search?domain=jhu.edu&query=&start=0&num=10 -> data.positions, 609 open). Faculty board is a custom Interfolio-built site facultyjobs.jhu.edu (JSON at https://facultyjobs.jhu.edu/api/positions?page=1, postings apply via apply.interfolio.com/<id>). Both JS-rendered: college_generic gets nothing without a fetcher. careers.jhu.edu / jobs.jhu.edu are Cloudflare-walled landing pages. VENDOR MISSING: Eightfold",
+  "prev_status": "generic",
+  "prev_url": "https://hiring.jhu.edu/careers"
+ },
+ "145725": {
+  "name": "Illinois Institute of Technology",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://iit.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "iit",
+    "ats": "college_clearcompany"
+   }
+  ],
+  "notes": "classify() now detects college_clearcompany on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://iit.hrmdirect.com/employment/job-openings.php?search=true&nohd=&dept=-1&city=-1&state=-1"
+ },
+ "194310": {
+  "name": "Pace University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://secure6.saashr.com/ta/6000630.careers?CareersSearch",
+    "host": "secure6.saashr.com",
+    "company": "6000630",
+    "ats": "college_ukgready"
+   }
+  ],
+  "notes": "classify() now detects college_ukgready on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://secure6.saashr.com/ta/6000630.careers?CareersSearch"
+ },
+ "129941": {
+  "name": "University of New Haven",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://newhaven.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "newhaven",
+    "ats": "college_clearcompany"
+   }
+  ],
+  "notes": "classify() now detects college_clearcompany on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://newhaven.hrmdirect.com/employment/job-openings.php?sort=td&search=true&nohd=&dept=-1&city=-1&state=-1"
+ },
+ "166683": {
+  "name": "Massachusetts Institute of Technology",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.peopleclick.com/careerscp/client_mit/external/results/searchResult.html"
+   }
+  ],
+  "notes": "PeopleFluent (PeopleClick RWD) portal; the listing page results/searchResult.html is only populated after a POST from search/search.html (form action ../results/searchResult.html); JSON at https://careers.peopleclick.com/careerscp/api/client_mit/external/site/getJobs needs the session cookie. ~7 titles/page. VENDOR MISSING: PeopleFluent",
+  "prev_status": "generic",
+  "prev_url": "https://careers.peopleclick.com/careerscp/client_mit/external/search.do"
+ },
+ "179894": {
+  "name": "Webster University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://myjobs.adp.com/websteruniversity/cx",
+    "domain": "websteruniversity",
+    "ats": "college_myjobsadp"
+   }
+  ],
+  "notes": "classify() now detects college_myjobsadp on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://myjobs.adp.com/websteruniversity?c=1180715&d=ExternalCareerSite&sor=adprm"
+ },
+ "153861": {
+  "name": "Maharishi International University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "508e8a33-89d7-4bc2-9d0f-c900577429d7",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=508e8a33-89d7-4bc2-9d0f-c900577429d7&lang=en_US"
+   }
+  ],
+  "notes": "ADP WorkforceNow linked from https://services.miu.edu/human-resources/job-openings/ (faculty ccId 9200606081120_2, staff ccId 9200605081433_2; the cid alone returns all 6 requisitions via the public API). Faculty hiring is mostly via forms at services.miu.edu/human-resources/faculty/apply/",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "178059": {
+  "name": "Maryville University of Saint Louis",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://myjobs.adp.com/adjunctmaryvilleuniversityexternalcs/cx",
+    "domain": "adjunctmaryvilleuniversityexternalcs",
+    "ats": "college_myjobsadp"
+   },
+   {
+    "url": "https://myjobs.adp.com/facultyandstaffmaryvilleuniversityexternalcs/cx",
+    "domain": "facultyandstaffmaryvilleuniversityexternalcs",
+    "ats": "college_myjobsadp"
+   }
+  ],
+  "notes": "classify() now detects college_myjobsadp on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://myjobs.adp.com/adjunctmaryvilleuniversityexternalcs"
+ },
+ "239318": {
+  "name": "Milwaukee School of Engineering",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.milwaukeejobs.com/s/e-Milwaukee-School-of-Engineering-jobs-e2522.html?pbid=68354",
+    "pages": [
+     "https://www.milwaukeejobs.com/s/e-Milwaukee-School-of-Engineering-jobs-e2522.html?pbid=68355"
+    ]
+   }
+  ],
+  "notes": "MSOE posts only on MilwaukeeJobs.com, iframed into msoe.edu/about-msoe/careers-at-msoe/faculty-positions/ (pbid 68354 faculty, 68355 staff). Listing anchors are javascript:self.popup('/j/t-...-jobs-jNNNN.html') so the generic fetcher must take the popup path. Adjunct Electrical/Computer/Biomedical Engineering Faculty posted. VENDOR MISSING: MilwaukeeJobs.com (regional board)",
+  "prev_status": "generic",
+  "prev_url": "https://www.msoe.edu/about-msoe/careers-at-msoe/"
+ },
+ "225201": {
+  "name": "Hallmark University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.hallmarkuniversity.edu/jobs/"
+   }
+  ],
+  "notes": "WordPress careers site with a 'jobs' custom post type (not WP Job Manager: ?feed=job_feed 404s, which the wpjobmanager detector still accepts from the URL alone); /jobs/ is the canonical list (Adjunct UAS Instructor, Dean School of Technology)",
+  "prev_status": "generic",
+  "prev_url": "https://careers.hallmarkuniversity.edu/"
+ },
+ "243601": {
+  "name": "Universidad Ana G. Mendez-Gurabo Campus",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All",
+    "pages": [
+     "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=Facultad"
+    ]
+   }
+  ],
+  "notes": "Shared Universidad Ana G. Mendez board jobs.uagm.edu (same custom app as jobs.agmu.edu already in the registry; 49 open, 27 faculty, part-time faculty talent pool at /page-acervo). jobs.uagm.edu serves an incomplete TLS chain so requests fails certificate verification; renders in Chromium",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "178891": {
+  "name": "Ranken Technical College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=rankentechnicalcollege.appone.com",
+    "server_var": "rankentechnicalcollege.appone.com",
+    "ats": "college_appone"
+   }
+  ],
+  "notes": "classify() now detects college_appone on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://ranken.edu/about-us/careers-at-ranken/"
+ },
+ "243346": {
+  "name": "Universidad Ana G. Mendez-Carolina Campus",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All",
+    "pages": [
+     "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=Facultad"
+    ]
+   }
+  ],
+  "notes": "Shared Universidad Ana G. Mendez board jobs.uagm.edu (same custom app as jobs.agmu.edu already in the registry; 49 open, 27 faculty, part-time faculty talent pool at /page-acervo). jobs.uagm.edu serves an incomplete TLS chain so requests fails certificate verification; renders in Chromium",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "168847": {
+  "name": "Baker College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://learnbaker.isolvedhire.com/jobs/",
+    "isolved_slug": "learnbaker",
+    "host": "learnbaker.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://learnbaker.isolvedhire.com/"
+ },
+ "241739": {
+  "name": "Universidad Ana G. Mendez-Cupey Campus",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All",
+    "pages": [
+     "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=Facultad"
+    ]
+   }
+  ],
+  "notes": "Shared Universidad Ana G. Mendez board jobs.uagm.edu (same custom app as jobs.agmu.edu already in the registry; 49 open, 27 faculty, part-time faculty talent pool at /page-acervo). jobs.uagm.edu serves an incomplete TLS chain so requests fails certificate verification; renders in Chromium",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "110404": {
+  "name": "California Institute of Technology",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://phf.tbe.taleo.net/phf03/ats/careers/v2/searchResults?org=CALTECH&cws=37",
+    "org": "CALTECH",
+    "cws": "37",
+    "ats": "college_taleobe"
+   }
+  ],
+  "notes": "classify() now detects college_taleobe on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://phf.tbe.taleo.net/phf03/ats/careers/v2/searchResults?org=CALTECH&cws=37"
+ },
+ "188429": {
+  "name": "Adelphi University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://phf.tbe.taleo.net/phf02/ats/careers/v2/searchResults?org=ADELPHI&cws=43",
+    "org": "ADELPHI",
+    "cws": "43",
+    "ats": "college_taleobe"
+   }
+  ],
+  "notes": "classify() now detects college_taleobe on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://phf.tbe.taleo.net/phf02/ats/careers/v2/searchResults?org=ADELPHI&cws=43"
+ },
+ "198136": {
+  "name": "Campbell University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://phg.tbe.taleo.net/phg01/ats/careers/v2/searchResults?org=CAMPUNIV&cws=37",
+    "org": "CAMPUNIV",
+    "cws": "37",
+    "ats": "college_taleobe"
+   }
+  ],
+  "notes": "classify() now detects college_taleobe on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://phg.tbe.taleo.net/phg01/ats/careers/v2/searchResults?org=CAMPUNIV&cws=37"
+ },
+ "120166": {
+  "name": "San Francisco Bay University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://app.trinethire.com/companies/33737-san-francisco-bay-university/jobs",
+    "company": "33737-san-francisco-bay-university",
+    "ats": "college_trinethire"
+   }
+  ],
+  "notes": "classify() now detects college_trinethire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://app.trinethire.com/companies/33737-san-francisco-bay-university/jobs"
+ },
+ "157863": {
+  "name": "Union Commonwealth University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.unionky.edu/about/human-resources/employment-opportunities/faculty-positions",
+    "pages": [
+     "https://www.unionky.edu/about/human-resources/employment-opportunities/staff-positions",
+     "https://www.unionky.edu/about/human-resources/employment-opportunities/part-time-staff-positions"
+    ]
+   }
+  ],
+  "notes": "staff and part-time (adjunct) pages added to the faculty page already in the registry",
+  "prev_status": "generic",
+  "prev_url": "https://www.unionky.edu/about/human-resources/employment-opportunities/faculty-positions"
+ },
+ "173045": {
+  "name": "Augsburg University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "AugsburgUniversity-MinneapolisMN",
+    "url": "https://careers.smartrecruiters.com/AugsburgUniversity-MinneapolisMN/faculty"
+   },
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "AugsburgUniversity-MinneapolisMN",
+    "url": "https://careers.smartrecruiters.com/AugsburgUniversity-MinneapolisMN/staff"
+   }
+  ],
+  "notes": "classify() now detects smartrecruiters on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://careers.smartrecruiters.com/AugsburgUniversity-MinneapolisMN/faculty"
+ },
+ "212656": {
+  "name": "Geneva College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "e608a326-904e-4593-8187-cc469468e019",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=e608a326-904e-4593-8187-cc469468e019&lang=en_US"
+   }
+  ],
+  "notes": "ADP WorkforceNow behind the geneva.edu/fte-adjunct (ccId 9202074665708_2) and /fte-faculty (ccId 9202074663540_2) redirects; cid alone returns every requisition (1 open today)",
+  "prev_status": "generic",
+  "prev_url": "https://www.geneva.edu/employment/"
+ },
+ "233541": {
+  "name": "Shenandoah University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/ShenandoahUniversity/EmploymentPortal?embedded=true",
+    "pages": [
+     "https://jobs.silkroad.com/ShenandoahUniversity/EmploymentPortal?embedded=true&page=2",
+     "https://jobs.silkroad.com/ShenandoahUniversity/EmploymentPortal?embedded=true&page=3",
+     "https://jobs.silkroad.com/ShenandoahUniversity/EmploymentPortal?embedded=true&SearchString=adjunct"
+    ]
+   }
+  ],
+  "notes": "SilkRoad EmploymentPortal embedded in su.edu/human-resources/; the portal only serves the listing with ?embedded=true (without it it bounces back to su.edu). 10/page, 3 pages, SearchString filter; adjunct pools listed (Graduate Business online)",
+  "prev_status": "generic",
+  "prev_url": "https://www.su.edu/human-resources/?cxembeddedroot=%2fShenandoahUniversity%2fEmploymentPortal%3fembedded%3dtrue"
+ },
+ "226471": {
+  "name": "University of Mary Hardin-Baylor",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://umhb.applicantstack.com/x/openings",
+    "astack_slug": "umhb",
+    "ats": "college_applicantstack"
+   }
+  ],
+  "notes": "classify() now detects college_applicantstack on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://umhb.applicantstack.com/x/openings"
+ },
+ "215798": {
+  "name": "Saint Vincent College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=saintvincentcollege.appone.com",
+    "server_var": "saintvincentcollege.appone.com",
+    "ats": "college_appone"
+   }
+  ],
+  "notes": "classify() now detects college_appone on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://www2.appone.com/Search/Search.aspx?ServerVar=saintvincentcollege.appone.com"
+ },
+ "154235": {
+  "name": "Saint Ambrose University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://stambroseuniv.applicantlist.com/jobs/",
+    "isolved_slug": "stambroseuniv",
+    "host": "stambroseuniv.applicantlist.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://stambroseuniv.applicantlist.com/jobs/"
+ },
+ "213358": {
+  "name": "La Roche University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://laroche.edu/about/employment_opportunities/staff_openings/",
+    "pages": [
+     "https://laroche.edu/about/employment_opportunities/faculty_openings/"
+    ]
+   }
+  ],
+  "notes": "laroche.edu/employment/ is a landing page; staff and faculty openings (adjunct clinical instructors) are on these two sub-pages",
+  "prev_status": "generic",
+  "prev_url": "https://laroche.edu/employment/"
+ },
+ "207582": {
+  "name": "Oral Roberts University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://oru.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "oru",
+    "ats": "college_clearcompany"
+   }
+  ],
+  "notes": "classify() now detects college_clearcompany on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://oru.hrmdirect.com/employment/job-openings.php?search=true"
+ },
+ "199209": {
+  "name": "North Carolina Wesleyan University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ncwu.edu/community/careers/current-openings/",
+    "pages": [
+     "https://ncwu.edu/community/careers/current-openings/faculty-teaching-positions/"
+    ]
+   }
+  ],
+  "notes": "ncwu.edu/community/careers/ is a landing page; openings and the adjunct section live under current-openings/",
+  "prev_status": "generic",
+  "prev_url": "https://ncwu.edu/community/careers/"
+ },
+ "153834": {
+  "name": "Luther College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://go.jobflows.co/LutherCollege"
+   }
+  ],
+  "notes": "JobFlows board (Next.js shell; data from https://jobflows.jtpk.app/jobs/searchAndFilter/LutherCollege JSON, postings at go.jobflows.co/LutherCollege/<id>); needs JS or the API. VENDOR MISSING: JobFlows",
+  "prev_status": "generic",
+  "prev_url": "https://go.jobflows.co/LutherCollege"
+ },
+ "205957": {
+  "name": "Franciscan University of Steubenville",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://franciscan.edu/staff-openings/",
+    "pages": [
+     "https://myfranciscan.franciscan.edu/ICS/Employment_Application/"
+    ]
+   }
+  ],
+  "notes": "Jenzabar JICS Employment_Application portlet lists the same 10 openings with apply links",
+  "prev_status": "generic",
+  "prev_url": "https://franciscan.edu/staff-openings/"
+ },
+ "151263": {
+  "name": "University of Indianapolis",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.keldair.com/uindy"
+   }
+  ],
+  "notes": "Keldair HR board (React; JSON at https://job-gateway.keldair.com/jobs?pageNumber=1&sort.field=PostedDate&sort.direction=1&getFacets=true&visibilityType=External after /app + /session calls on the same host); 16 postings incl. Assistant Professor roles. VENDOR MISSING: Keldair",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.keldair.com/uindy"
+ },
+ "170532": {
+  "name": "Kalamazoo College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://provost.kzoo.edu/faculty-information/facultyjobs/",
+    "pages": [
+     "https://hr.kzoo.edu/careers-at-k/staff-positions/"
+    ]
+   }
+  ],
+  "notes": "staff positions page on hr.kzoo.edu added",
+  "prev_status": "generic",
+  "prev_url": "https://provost.kzoo.edu/faculty-information/facultyjobs/"
+ },
+ "106342": {
+  "name": "Lyon College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://lyon.isolvedhire.com/jobs/",
+    "isolved_slug": "lyon",
+    "host": "lyon.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://lyon.isolvedhire.com/jobs/"
+ },
+ "220516": {
+  "name": "King University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.king.edu/",
+    "pages": [
+     "https://jobs.king.edu/Home/Index?criteria=&jobType=0&resultsPerPage=10&page=2",
+     "https://jobs.king.edu/Home/Index?criteria=&jobType=0&resultsPerPage=10&page=3"
+    ]
+   }
+  ],
+  "notes": "custom ASP.NET board jobs.king.edu, 10/page; pages 2-3 added (Part Time Faculty - Nursing etc.)",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.king.edu/"
+ },
+ "101912": {
+  "name": "Oakwood University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://oakwood.edu/?feed=job_feed",
+    "ats": "college_wpjobmanager"
+   }
+  ],
+  "notes": "classify() now detects college_wpjobmanager on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://oakwood.edu/?feed=job_feed"
+ },
+ "173160": {
+  "name": "Bethel University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://ats.rippling.com/bethel-university-faculty/jobs",
+    "rippling_slug": "bethel-university-faculty",
+    "ats": "college_rippling"
+   },
+   {
+    "url": "https://ats.rippling.com/bethel-university-staff/jobs",
+    "rippling_slug": "bethel-university-staff",
+    "ats": "college_rippling"
+   }
+  ],
+  "notes": "classify() now detects college_rippling on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://ats.rippling.com/bethel-university-faculty/jobs"
+ },
+ "486901": {
+  "name": "Milligan University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://milligan.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "WP Job Manager site (feed=job_feed) but the whole host sits behind a bot wall (HTTP 202 challenge) for requests; listing renders in Chromium at https://milligan.edu/employment/; fetcher returns 0 until it gets a browser fallback",
+  "prev_status": "generic",
+  "prev_url": "https://milligan.edu/employment/"
+ },
+ "209922": {
+  "name": "Reed College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://reed-college.breezy.hr/",
+    "breezy_slug": "reed-college",
+    "ats": "college_breezy"
+   }
+  ],
+  "notes": "classify() now detects college_breezy on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://reed-college.breezy.hr/"
+ },
+ "151786": {
+  "name": "Marian University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "marian.rec.pro.ukg.net",
+    "tenant": "MAR1500MNUI",
+    "board": "fde73847-46d9-4c8a-924e-a28b5c630bfc",
+    "url": "https://marian.rec.pro.ukg.net/MAR1500MNUI/JobBoard/fde73847-46d9-4c8a-924e-a28b5c630bfc/?q=&o=postedDateDesc"
+   }
+  ],
+  "notes": "classify() now detects ultipro on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://marian.rec.pro.ukg.net/MAR1500MNUI/JobBoard/fde73847-46d9-4c8a-924e-a28b5c630bfc/?q=&o=postedDateDesc"
+ },
+ "220613": {
+  "name": "Lee University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://www.leeuniversity.edu/?feed=job_feed",
+    "ats": "college_wpjobmanager"
+   }
+  ],
+  "notes": "classify() now detects college_wpjobmanager on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://www.leeuniversity.edu/human-resources/positions/"
+ },
+ "213303": {
+  "name": "Keystone College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.keystone.edu/jobs_at_keystone/"
+   }
+  ],
+  "notes": "registry URL (giving/naming-opportunities) was a false hit; jobs_at_keystone lists the openings (Adjunct Faculty - Law etc.)",
+  "prev_status": "generic",
+  "prev_url": "https://www.keystone.edu/giving/naming-opportunities/"
+ },
+ "107141": {
+  "name": "John Brown University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.jbu.edu/human-resources/faculty-job-listings/",
+    "pages": [
+     "https://www.jbu.edu/human-resources/staff-job-listings/"
+    ]
+   }
+  ],
+  "notes": "staff-job-listings page added",
+  "prev_status": "generic",
+  "prev_url": "https://www.jbu.edu/human-resources/faculty-job-listings/"
+ },
+ "164216": {
+  "name": "Washington College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://washcollege.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "washcollege",
+    "ats": "college_clearcompany"
+   }
+  ],
+  "notes": "classify() now detects college_clearcompany on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://washcollege.hrmdirect.com/employment/job-openings.php?search=true&nohd=&dept=-1&city=-1&state=-1"
+ },
+ "139393": {
+  "name": "Covenant College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://covenant.workbrightats.com/jobs/",
+    "isolved_slug": "covenant",
+    "host": "covenant.workbrightats.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://covenant.workbrightats.com/jobs/"
+ },
+ "200156": {
+  "name": "University of Jamestown",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://universityofjamestown.applytojob.com/apply",
+    "jazz_slug": "universityofjamestown",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "classify() now detects college_jazzhr on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://universityofjamestown.applytojob.com/apply"
+ },
+ "153001": {
+  "name": "Buena Vista University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://secure10.saashr.com/ta/6013429.careers?CareersSearch",
+    "host": "secure10.saashr.com",
+    "company": "6013429",
+    "ats": "college_ukgready"
+   }
+  ],
+  "notes": "classify() now detects college_ukgready on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://secure10.saashr.com/ta/6013429.careers?CareersSearch=&lang=en-US"
+ },
+ "233426": {
+  "name": "Roanoke College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://careers.jobscore.com/careers/roanokecollege",
+    "jobscore_slug": "roanokecollege",
+    "ats": "college_jobscore"
+   }
+  ],
+  "notes": "classify() now detects college_jobscore on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://careers.jobscore.com/careers/roanokecollege"
+ },
+ "101693": {
+  "name": "University of Mobile",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://umobile.edu/employment/"
+   }
+  ],
+  "notes": "Plain listing on umobile.edu/employment/ (8 postings, faculty incl.); IPEDS homepage failed DNS/TLS in the crawl",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "218539": {
+  "name": "Presbyterian College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.presby.edu/about/offices-and-services/human-resources/employment/"
+   }
+  ],
+  "notes": "registry URL is the HR landing page; /employment/ lists 10 openings",
+  "prev_status": "generic",
+  "prev_url": "https://www.presby.edu/about/offices-and-services/human-resources/"
+ },
+ "191533": {
+  "name": "Hartwick College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://hartwickcollege.applytojob.com/apply",
+    "jazz_slug": "hartwickcollege",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "classify() now detects college_jazzhr on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://hartwickcollege.applytojob.com/apply"
+ },
+ "217907": {
+  "name": "Coker University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://coker.isolvedhire.com/jobs/",
+    "isolved_slug": "coker",
+    "host": "coker.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://coker.isolvedhire.com/jobs/"
+ },
+ "230816": {
+  "name": "Bennington College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://webinfo.bennington.edu/RecruiterboxBC/RecruiterBoxJobs.cfm"
+   }
+  ],
+  "notes": "Trakstar Hire (ex-RecruiterBox) board at https://bennington.hire.trakstar.com/; bennington.edu/employment-opportunities embeds the plain-HTML list above (7 postings). VENDOR MISSING: Trakstar Hire",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "178369": {
+  "name": "Missouri Valley College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.moval.edu/employment-opportunities/",
+    "pages": [
+     "https://www.moval.edu/job-type/adjunct-faculty/"
+    ]
+   }
+  ],
+  "notes": "added the adjunct-faculty job-type archive (16 adjunct postings)",
+  "prev_status": "generic",
+  "prev_url": "https://www.moval.edu/employment-opportunities/"
+ },
+ "162210": {
+  "name": "Washington Adventist University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://wau.catsone.com/careers/9207",
+    "host": "wau.catsone.com",
+    "portal": "9207",
+    "ats": "college_catsone"
+   }
+  ],
+  "notes": "classify() now detects college_catsone on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://wau.catsone.com/careers/9207"
+ },
+ "217776": {
+  "name": "Southern Wesleyan University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.swu.edu/about/employment/",
+    "pages": [
+     "https://www.swu.edu/about/employment/faculty-positions/"
+    ]
+   }
+  ],
+  "notes": "faculty-positions sub-page holds the 17 faculty postings",
+  "prev_status": "generic",
+  "prev_url": "https://www.swu.edu/about/employment/"
+ },
+ "206491": {
+  "name": "Wilberforce University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://wilberforce.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "WP Job Manager site (feed=job_feed) but the whole host sits behind a bot wall (HTTP 202 challenge) for requests; listing renders in Chromium at https://wilberforce.edu/jobs/; fetcher returns 0 until it gets a browser fallback",
+  "prev_status": "generic",
+  "prev_url": "https://wilberforce.edu/jobs/"
+ },
+ "154013": {
+  "name": "Mount Mercy University",
+  "source": "manual-cs-private",
+  "prev_status": "generic",
+  "prev_url": "https://mtmercy.applicantlist.com/jobs/",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://mtmercy.applicantlist.com/jobs/",
+    "isolved_slug": "mtmercy",
+    "host": "mtmercy.applicantlist.com"
+   }
+  ],
+  "notes": "isolved Hire (applicantlist.com white label); detect_existing() mis-fires on the www.applicantpro.com footer link (slug 'www') before the isolvedhire detector runs; fetcher verified (Adjunct Instructor - Math)"
+ },
+ "150677": {
+  "name": "Grace College and Theological Seminary",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.grace.edu/about/grace-college/employment/current-openings/"
+   }
+  ],
+  "notes": "registry URL is the landing page; current-openings lists 40 postings",
+  "prev_status": "generic",
+  "prev_url": "https://www.grace.edu/about/grace-college/employment/"
+ },
+ "191676": {
+  "name": "Houghton University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.houghton.edu/employment/administrative-staff-openings/",
+    "pages": [
+     "https://www.houghton.edu/employment/faculty-openings/"
+    ]
+   }
+  ],
+  "notes": "faculty-openings page added",
+  "prev_status": "generic",
+  "prev_url": "https://www.houghton.edu/employment/administrative-staff-openings/"
+ },
+ "138868": {
+  "name": "Point University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://secure7.saashr.com/ta/6208629.careers?CareersSearch",
+    "host": "secure7.saashr.com",
+    "company": "6208629",
+    "ats": "college_ukgready"
+   }
+  ],
+  "notes": "classify() now detects college_ukgready on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://secure7.saashr.com/ta/6208629.careers?CareersSearch=&lang=en-US"
+ },
+ "150145": {
+  "name": "Bethel University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://secure3.yourpayrollhr.com/ta/TPC0139.careers?CareersSearch",
+    "host": "secure3.yourpayrollhr.com",
+    "company": "TPC0139",
+    "ats": "college_ukgready"
+   }
+  ],
+  "notes": "classify() now detects college_ukgready on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://secure3.yourpayrollhr.com/ta/TPC0139.careers?CareersSearch=&lang=en-US"
+ },
+ "194958": {
+  "name": "Roberts Wesleyan University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "paylocity",
+    "guid": "eb3ed5e0-4d4c-4df9-a671-f8e5c3f833d1",
+    "url": "https://recruiting.paylocity.com/recruiting/jobs/All/eb3ed5e0-4d4c-4df9-a671-f8e5c3f833d1/Roberts-Wesleyan-University"
+   }
+  ],
+  "notes": "Paylocity board linked from roberts.edu/employment/ (3 postings); fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://www.roberts.edu/employment/"
+ },
+ "204194": {
+  "name": "Mount Vernon Nazarene University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mvnu.edu/employment-opportunities/adjunct-job-opportunities/",
+    "pages": [
+     "https://mvnu.edu/employment-opportunities/faculty-job-opportunities/",
+     "https://mvnu.edu/staff-job-opportunities/"
+    ]
+   }
+  ],
+  "notes": "adjunct page lists Graduate Computer Science Adjunct, Graduate Information Technology Adjunct, Healthcare Informatics Adjunct",
+  "prev_status": "generic",
+  "prev_url": "https://mvnu.edu/staff-job-opportunities/"
+ },
+ "188641": {
+  "name": "Alfred University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://alfreduniversity.applytojob.com/apply",
+    "jazz_slug": "alfreduniversity",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "classify() now detects college_jazzhr on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://alfreduniversity.applytojob.com/apply"
+ },
+ "213668": {
+  "name": "Lycoming College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://lycomingcollege.applytojob.com/apply",
+    "jazz_slug": "lycomingcollege",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "classify() now detects college_jazzhr on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://lycomingcollege.applytojob.com/apply"
+ },
+ "199865": {
+  "name": "Warren Wilson College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://warren-wilson.breezy.hr/",
+    "breezy_slug": "warren-wilson",
+    "ats": "college_breezy"
+   }
+  ],
+  "notes": "classify() now detects college_breezy on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://warren-wilson.breezy.hr/"
+ },
+ "191621": {
+  "name": "Hilbert College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=hilbertcollege.appone.com",
+    "server_var": "hilbertcollege.appone.com",
+    "ats": "college_appone"
+   }
+  ],
+  "notes": "classify() now detects college_appone on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://www2.appone.com/Search/Search.aspx?ServerVar=hilbertcollege.appone.com"
+ },
+ "188340": {
+  "name": "Vaughn College of Aeronautics and Technology",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=vaughncollegeofaeronautics.appone.com",
+    "server_var": "vaughncollegeofaeronautics.appone.com",
+    "ats": "college_appone"
+   }
+  ],
+  "notes": "classify() now detects college_appone on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://www.vaughn.edu/events/career-fair/"
+ },
+ "217961": {
+  "name": "Converse University",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://converse.isolvedhire.com/jobs/",
+    "isolved_slug": "converse",
+    "host": "converse.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "classify() now detects college_isolvedhire on the board the registry held as college_generic; fetcher verified",
+  "prev_status": "generic",
+  "prev_url": "https://converse.isolvedhire.com/jobs/"
+ },
+ "481137": {
+  "name": "Shepherds College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "url": "https://shepherdscollege.applytojob.com/apply",
+    "jazz_slug": "shepherdscollege",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "college_jazzhr board found; fetcher verified",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "120865": {
+  "name": "Pacific Union College",
+  "source": "manual-cs-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.puc.edu/campus-services/human-resources/faculty-job-postings",
+    "pages": [
+     "https://www.puc.edu/campus-services/human-resources/staff-job-postings"
+    ]
+   }
+  ],
+  "notes": "staff-job-postings page added (puc.edu homepage 403s to requests, the HR pages do not)",
+  "prev_status": "generic",
+  "prev_url": "https://www.puc.edu/campus-services/human-resources/faculty-job-postings"
+ }
+}

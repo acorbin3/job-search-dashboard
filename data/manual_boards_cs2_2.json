@@ -1,0 +1,402 @@
+{
+ "166683": {
+  "name": "Massachusetts Institute of Technology",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.peopleclick.com/careerscp/client_mit/external/results/searchResult.html",
+    "browser": true
+   }
+  ],
+  "notes": "VENDOR: PeopleFluent (PeopleClick RWD). Registry URL search.do redirects to the empty search form; the results page results/searchResult.html is an Angular app that populates itself in Chromium (35 titles, jobDetail.html?jobPostId= links) - browser:true unblocked it. First page only; the getJobs JSON API needs the in-page session. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://careers.peopleclick.com/careerscp/client_mit/external/search.do"
+ },
+ "154022": {
+  "name": "Ashford University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uagc.careers/jobs/",
+    "browser": true
+   }
+  ],
+  "notes": "VENDOR: DirectEmployers / jobsyn.org Nuxt career site (requests gets an empty <div id=__nuxt>). Renders in Chromium: 1 posting ('Global Campus Professor - Early Childhood (Remote)'). Side door for a fetcher: GET https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&num_items=50 with header x-origin: uagc.careers returns JSON. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://uagc.careers/jobs/"
+ },
+ "195173": {
+  "name": "St. Francis College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sfc.edu/why-sfc/careers-at-sfc",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Faculty vacancies are PDFs on assets.sfc.edu (Adjunct Faculty, Adjunct Professor of Biology, Nursing faculty); pdf_links variant of the registry URL returns them (12 vs 2). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.sfc.edu/why-sfc/careers-at-sfc"
+ },
+ "206914": {
+  "name": "Cameron University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/Cameron/Careers/sitemap"
+   }
+  ],
+  "notes": "VENDOR: SilkRoad Recruiting jobs.silkroad.com portal (the silkroad fetcher only handles -openhire.silkroad.com). /sitemap is server-rendered and lists every posting (60-cap hit; 'Adjunct Department of Business', 'Adjunct Instructor Physics'); the portal home only shows featured ones. Each title appears twice ('Apply to ...'). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.silkroad.com/Cameron/Careers"
+ },
+ "164155": {
+  "name": "United States Naval Academy",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search/Results?a=NV22&k=faculty",
+    "browser": true
+   }
+  ],
+  "notes": "usajobs. Federal: USNA hires through USAJobs (agency NV22). Search results are JS-rendered - requests sees 0, Chromium sees the result list (3 today). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.usajobs.gov/Search?k=United%20States%20Naval%20Academy"
+ },
+ "418320": {
+  "name": "Mid-America Technology Center",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.redroverk12.com/org/matc",
+    "browser": true
+   }
+  ],
+  "notes": "VENDOR: Red Rover K12 (jobs.redroverk12.com) - JS board, requests sees 0; Chromium renders /org/matc/opening/<id> links ('Adjunct Instructor', 'Food Service Assistant'). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.redroverk12.com/org/matc"
+ },
+ "246017": {
+  "name": "Central Technology Center",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.centraltech.edu/page/job-board",
+    "browser": true
+   }
+  ],
+  "notes": "Apptegy site; requests is flagged blocked (challenge text in the 2MB page), Chromium renders the Job Board ('JOB: Maintenance Administrative Assistant' -> /page/<slug>). Program pages add noise. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.centraltech.edu/page/job-board"
+ },
+ "230816": {
+  "name": "Bennington College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_trakstar",
+    "url": "https://bennington.hire.trakstar.com/",
+    "trakstar_slug": "bennington"
+   }
+  ],
+  "notes": "Trakstar Hire board (the fetcher now exists; classify() detects it on the registry's RecruiterBoxJobs.cfm embed). trakstar fetch returns 9 postings via /jobfeeds/bennington. Replaces the college_generic embed URL. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://webinfo.bennington.edu/RecruiterboxBC/RecruiterBoxJobs.cfm"
+ },
+ "155858": {
+  "name": "Seward County Community College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sccc.edu/employees/hr/employment-opportunities/",
+    "browser": true
+   }
+  ],
+  "notes": "SiteGround 'Robot Challenge' (202 + sgcaptcha redirect) blocks requests AND the WP Job Manager feed (?feed=job_feed also 202); headless Chromium passes and the listing shows 11 WP Job Manager jobs ('Computer Information System Instructor', 'Automotive Technology Adjunct Instructor', /job/<slug>). Verified 2026-10-16. CAVEAT: SiteGround challenge returns 202 on the first load of a fresh Chromium context and 200 on the next load of the same context (challenge cookie); the generic fetcher only accepts 200, so a scan may need to load the page twice.",
+  "prev_status": "generic",
+  "prev_url": "https://sccc.edu/employees/hr/employment-opportunities/"
+ },
+ "217925": {
+  "name": "Columbia International University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ciu.edu/about/employment/",
+    "browser": true
+   }
+  ],
+  "notes": "Bot wall (nginx 403) on the whole site for requests; headless Chromium got through on the first audit pass (29 /position/<slug> links incl. 'CIU Global Adjunct Faculty', 'Digital Media and Cinema Adjunct Faculty', 'Director of Corporate IT') but returned 403 on later passes the same day, so the wall is IP/rate based - expect intermittent results. SIDE DOOR: https://ciu.edu/position-sitemap.xml (Yoast sitemap of the 'position' post type, 33 URLs) stays reachable while every HTML page, feed and wp-json endpoint 403s; a sitemap-aware fetcher could list postings from it. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://ciu.edu/about/employment/"
+ },
+ "177542": {
+  "name": "Hannibal-LaGrange University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hlg.edu/about-hlgu/employment-opportunities/",
+    "browser": true
+   }
+  ],
+  "notes": "Registry URL returns 520/202 (SiteGround challenge) to requests; Chromium renders 20 /job_opening/<slug> links ('Director of the Office of Computer Services', 'Professor of Counseling'). Verified 2026-10-16. CAVEAT: SiteGround challenge returns 202 on the first load of a fresh Chromium context and 200 on the next load of the same context (challenge cookie); the generic fetcher only accepts 200, so a scan may need to load the page twice.",
+  "prev_status": "generic",
+  "prev_url": "https://www.hlg.edu/about-hlgu/employment-opportunities/"
+ },
+ "224323": {
+  "name": "University of Dallas",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://udallas.edu/offices-services/human-resources/open-positions.php",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDF job announcements (_documents_open_positions/JP_*.pdf); pdf_links variant returns 6 incl. 'Adjunct Instructor, Various Courses, Constantin College and Braniff Graduate School' and Gupta College of Business. Registry config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://udallas.edu/offices-services/human-resources/open-positions.php"
+ },
+ "187967": {
+  "name": "New Mexico Institute of Mining and Technology",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.nmt.edu/hr/employment.php",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Every NMT vacancy is a PDF under /hr/; pdf_links variant returns 35 ('Senior Database Administrator', 'IT Network Technician', 'Network Specialist II'). Registry config returned 1 nav link. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.nmt.edu/hr/employment.php"
+ },
+ "245625": {
+  "name": "Warren County Community College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.warren.edu/employment/full-time-part-time-adjunct-openings/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Openings are wp-content PDFs; pdf_links variant returns 5 ('Adjunct Professor of History/Spanish/Psychology'). Registry config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.warren.edu/employment/full-time-part-time-adjunct-openings/"
+ },
+ "133021": {
+  "name": "Chipola College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.chipola.edu/about/administrative-offices/human-resources/job-openings/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Job openings are NOV-*.pdf notices; pdf_links variant returns 8 ('Instructor - Chemistry', 'Adjunct - Clinical Instructor - RN Program'). Scan only - Chipola is on the no-outreach list. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.chipola.edu/about/administrative-offices/human-resources/job-openings/"
+ },
+ "438708": {
+  "name": "Eastern West Virginia Community and Technical College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://easternwv.edu/employment-opportunities/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are wp-content PDFs; pdf_links variant returns 3 ('Adjunct Faculty for Math-Part Time', 'Nursing Adjunct'). Registry config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://easternwv.edu/employment-opportunities/"
+ },
+ "200086": {
+  "name": "Nueta Hidatsa Sahnish College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://nhsc.edu/jobs-at-nhsc/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDF/DOC links; pdf_links variant returns 5 ('English Instructor', 'Business Instructor', 'Tutor ... Computers'). Registry config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://nhsc.edu/jobs-at-nhsc/"
+ },
+ "155566": {
+  "name": "Neosho County Community College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.neosho.edu/AcademicsandServices/HumanResources.aspx",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Registry URL was a Construction Technology program page (false hit). The HR page lists openings as /Portals/0/Departments/hr/*.pdf ('Welding Instructor', 'Upward Bound Tutor', 'Adjunct/Seasonal/Temporary' tab). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.neosho.edu/Academics-and-Services/Academic-Programs/Career-and-Technical-Education/Construction-Technology"
+ },
+ "206446": {
+  "name": "Washington State College of Ohio",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wsco.edu/about/offices/human-resources/current-openings/",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "Registry URL was a news article. www.wsco.edu serves a certificate chain requests rejects (SSLError); Chromium loads it. Openings are HR-Position-Description PDFs ('Advanced Manufacturing and Integration Faculty', 'Process Engineering Faculty'). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.wsco.edu/news/wsco-alumnus-terry-reiter-builds-a-career-in-engineering-manufacturing-and-education/"
+ },
+ "180203": {
+  "name": "Aaniiih Nakoda College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ancollege.edu/careers",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "Wix site: requests gets the empty shell (flagged blocked); Chromium renders 6 PDF postings ('Environmental Science Instructor', 'Nurse Education Instructor'). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.ancollege.edu/careers"
+ },
+ "180160": {
+  "name": "Chief Dull Knife College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.cdkc.edu/faculty-staff/employment/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Vacancies are .docx uploads; pdf_links variant returns them (1 today: 'Birney Vacancy Open Until Filled'). Registry config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.cdkc.edu/faculty-staff/employment/"
+ },
+ "202648": {
+  "name": "Edison State Community College",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://edisonohio.pinpointhq.com/",
+    "browser": true
+   }
+  ],
+  "notes": "VENDOR: Pinpoint (edisonohio.pinpointhq.com, linked from the HR page). React page - requests sees no links, Chromium renders /en/postings/<uuid> (6 + 'Adjunct & Temporary Opportunities' page). Side door for a fetcher: https://edisonohio.pinpointhq.com/postings.json (public JSON incl. adjunct pay text). Registry URL was the student career-services page. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.edisonohio.edu/services-support/career-job-services"
+ },
+ "174437": {
+  "name": "North Central University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://northcentraluniversity.applytojob.com/apply",
+    "jazz_slug": "northcentraluniversity"
+   }
+  ],
+  "notes": "JazzHR board embedded on the openings page (classify() found it only in the Chromium-rendered HTML). jazzhr fetch returns 9 incl. 'Adjunct Faculty'. Registry generic config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.northcentral.edu/about/employment/current-job-openings/"
+ },
+ "181738": {
+  "name": "Union Adventist University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ugroups.ucollege.edu/job_postings?job_type=13229",
+    "browser": true,
+    "pages": [
+     "https://ugroups.ucollege.edu/job_postings?job_type=11955",
+     "https://ugroups.ucollege.edu/job_postings?job_type=11935"
+    ]
+   }
+  ],
+  "notes": "Custom ugroups.ucollege.edu portal; the job list is JS-rendered (requests: 0 links). Chromium: 5 faculty postings on job_type=13229 ('Adjunct Clinical Instructor', 'Business Professor'); 11955/11935 are full-/part-time staff. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://ugroups.ucollege.edu/job_postings?job_type=11955"
+ },
+ "375373": {
+  "name": "Knox County Career Center",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.knoxtechnicalcenter.com/page/employment",
+    "browser": true
+   }
+  ],
+  "notes": "Apptegy site flagged blocked for requests; Chromium renders the postings (aptg.co short links -> thrillshare PDF announcements: 'Cosmetology Instructor', 'Emergency Medical Technician'). Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.knoxtechnicalcenter.com/page/employment"
+ },
+ "145707": {
+  "name": "Illinois Eastern Community Colleges",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://iecc.edu/jobs",
+    "pdf_links": true
+   }
+  ],
+  "notes": "All 30+ IECC postings are PDF links on /jobs; pdf_links variant returns them ('Data Analyst', 'Enterprise Systems Administrator', 'Director of Online Learning', 'Adjunct Adult Education Instructor'). Registry config skipped PDFs. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://iecc.edu/jobs"
+ },
+ "157818": {
+  "name": "Transylvania University",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_trakstar",
+    "url": "https://transy.hire.trakstar.com/",
+    "trakstar_slug": "transy"
+   }
+  ],
+  "notes": "transy.edu/employment-opportunities embeds a RecruiterBox/Trakstar widget (w.recruiterbox.com widget 84934, JS only). Trakstar Hire slug is 'transy': /jobfeeds/transy returns 8 ('Assistant Professor of Chemistry', 'Human Resources Manager'). Registry generic config returned 0. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://www.transy.edu/employment-opportunities/"
+ },
+ "111717": {
+  "name": "CET-San Jose",
+  "source": "manual-cs2-2",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cetweb.edu/careers-at-cet",
+    "pdf_links": true
+   }
+  ],
+  "notes": "NOT IN REGISTRY. CET careers page lists instructor openings as HubSpot-hosted job-description files ('Electrician Instructor', 'HVAC Technician and Green Technology Instructor', 'Plumbing Technician Instructor'); program links add noise. Verified 2026-10-16.",
+  "homepage": "https://cetweb.edu/",
+  "state": "CA",
+  "sector": 8,
+  "prev_status": null,
+  "prev_url": null
+ }
+}

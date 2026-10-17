@@ -28,6 +28,19 @@ import fit_profiles
 
 ROOT = Path(__file__).parent
 COMPANIES_FILE = ROOT / "data" / "companies.json"
+COLLEGES_FILE = ROOT / "data" / "colleges.json"   # US college job boards (colleges/discover.py)
+
+
+def load_companies(path=None, colleges=True):
+    """companies.json plus, by default, the discovered college boards."""
+    merged = json.loads(Path(path or COMPANIES_FILE).read_text())
+    if colleges and COLLEGES_FILE.exists():
+        for ats, entries in json.loads(COLLEGES_FILE.read_text()).items():
+            if ats.startswith("_"):
+                continue
+            merged.setdefault(ats, [])
+            merged[ats] = list(merged[ats]) + list(entries)
+    return merged
 
 ETL_KEYWORDS = [
     "etl", "elt", "data pipeline", "data integration", "data replication",
@@ -222,10 +235,38 @@ def compute_health(job):
         job.health = ""
     return job.health
 
+# Higher-ed postings: is it an adjunct/part-time gig, a full-time faculty
+# line, or staff? Shown in the Stage column (companies use funding stage there).
+ROLE_ADJUNCT_RE = re.compile(
+    r"adjunct|part[- ]time|\bpool\b|per[- ]course|temporary|\btemp\b|hourly|"
+    r"contingent|non[- ]tenure|\bpt\b|(associate|affiliate|contract|term|course[- ]contracted|"
+    r"casual|supplemental|overload|contributing|community)\s+(faculty|instructor|lecturer)|"
+    r"\bsubstitute\b|\bper[- ]diem\b|\bsessional\b", re.I)
+ROLE_FACULTY_RE = re.compile(
+    r"professor|faculty|tenure|instructor|lecturer|full[- ]time|\bft\b|teaching|"
+    r"\bteacher\b|\bchair\b|\bdean\b", re.I)
+ROLE_DESC_ADJUNCT_RE = re.compile(r"\b(adjunct|part[- ]time)\b", re.I)
+ROLE_DESC_FULLTIME_RE = re.compile(r"\bfull[- ]time\b", re.I)
+
+
+def classify_role(title, description=""):
+    """'Adjunct' | 'Faculty' | 'Staff' for a college posting."""
+    if ROLE_ADJUNCT_RE.search(title):
+        return "Adjunct"
+    if ROLE_FACULTY_RE.search(title):
+        head = (description or "")[:3000]
+        if ROLE_DESC_ADJUNCT_RE.search(head) and not ROLE_DESC_FULLTIME_RE.search(head):
+            return "Adjunct"
+        return "Faculty"
+    return "Staff"
+
+
 def score_job(job, fp=None):
     """Everything derived from a Job's text: fit score + healthcare signal."""
     job.fit = compute_fit(job, fp)
     compute_health(job)
+    if job.sector == "higher-ed":
+        job.stage = classify_role(job.title, job.description)
 
 def set_fit_profile(name):
     global ACTIVE_FIT
@@ -290,9 +331,136 @@ def title_matches_for(title, level, domain, exclude):
         return False
     return any(re.search(p, t) for p in domain)
 
+# Online/remote teaching: title or location says so, or the fetcher classified
+# it remote. Used by "exclude_unless_online" (a tab can allow e.g. tenure-track
+# faculty only when the role is taught online).
+ONLINE_RE = re.compile(
+    r"\b(online|remote|virtual|distance|e-?learning|ecampus|global campus|"
+    r"world ?campus|worldwide|work[- ]from[- ]home|telecommut)", re.I)
+
+
+# Description phrasing that says the teaching itself happens online (not just
+# "apply online"): "teach online", "online format", "courses are delivered
+# remotely", "remote position" ...
+ONLINE_DESC_RE = re.compile(
+    r"(fully|100%|completely|entirely|taught|delivered|teach(es|ing)?|courses?|"
+    r"position is|work)\s+(is\s+)?(online|remote(ly)?|virtual(ly)?)\b"
+    r"|\bremote (position|work|faculty|instructor|adjunct)\b"
+    r"|\bonline (courses?|faculty|instructor|adjunct|program|teaching|modality|format)\b",
+    re.I)
+
+
+def job_is_online(j):
+    return (j.remote == "remote"
+            or bool(ONLINE_RE.search(f"{j.title} {j.location}"))
+            or bool(ONLINE_DESC_RE.search(j.description or "")))
+
+
 def title_matches(title):
     return title_matches_for(
         title, LEVEL_PATTERNS, DOMAIN_PATTERNS, EXCLUDE_TITLE_PATTERNS)
+
+
+# ---------------------------------------------------------------------------
+# Generic teaching titles. Many college postings are titled just "Adjunct
+# Instructor", "Part-Time Faculty Pool" or "Adjunct Faculty - Business &
+# Technology" with the discipline only in the department field or the body.
+# Those never contain a domain word, so: (1) college fetchers also keep a
+# posting whose title is a *generic* teaching title (teaching word, no other
+# discipline named) and (2) the posting counts for a tab with
+# "domain_in_description": true when DISCIPLINE_RE hits the department or
+# description. discipline_hit() returns the matched phrase with context.
+TEACH_RE = re.compile(
+    r"\b(adjunct|instructor|lecturer|faculty|professor|teaching|teacher)\b", re.I)
+# A generic title is teaching words plus filler only ("Adjunct Instructor",
+# "Part-Time Faculty Pool - All Disciplines", "Adjunct Faculty - Business &
+# Technology"); any other word (a discipline, a programme, a place) makes it
+# specific and the title alone decides.
+GENERIC_FILLER = set("""
+adjunct adjuncts instructor instructors lecturer lecturers faculty professor professors teaching
+teacher teachers pool pools part time parttime full fulltime temporary temp hourly contingent
+continuing open general various all multiple disciplines discipline positions position opening
+openings fall spring summer winter semester term academic year ay fy campus campuses online remote
+virtual hybrid evening weekend day night division department dept school college university
+community cc cte program programs programme instruction instructional affairs credit noncredit
+non ce continuing education workforce development dual enrollment enrolment business technology
+technologies tech stem career technical applied sciences science arts letters professional studies
+extension lab laboratory assistant associate senior junior visiting clinical teaching track rank
+per course per-course overload substitute sub supplemental seasonal casual ongoing continuous
+posting postings applicant applicants wanted needed opportunity opportunities multi subject subjects
+area areas of the and or for in at a an to with on by level levels i ii iii iv v 1 2 3 4 5
+high hs middle elementary k12 early childhood dept district unit north south east west central
+main downtown satellite regional branch site sites location locations center centre centers
+""".split())
+_WORD_RE = re.compile(r"[a-z0-9]+(?:'[a-z]+)?")
+
+
+def generic_teaching_title(title):
+    t = (title or "").lower()
+    if not TEACH_RE.search(t):
+        return False
+    words = _WORD_RE.findall(re.sub(r"\b(19|20)\d\d(\s*[-/]\s*(19|20)?\d\d)?\b", " ", t))
+    return all(w in GENERIC_FILLER or len(w) <= 2 or w.isdigit() for w in words)
+
+
+# Strong computing phrases for department / description matching ...
+DISCIPLINE_RE = re.compile(
+    r"\b(computer\s+(science|information\s+systems|information\s+technology|programming|"
+    r"networking|systems|studies)|cyber\s*security|cyber\s+(defense|operations)|"
+    r"information\s+(technology|systems|security|assurance|sciences?)|"
+    r"software\s+(engineering|development|design)|data\s+(science|analytics|mining|engineering)|"
+    r"machine\s+learning|artificial\s+intelligence|web\s+(development|design|programming)|"
+    r"database\s+(management|design|administration|systems)|"
+    r"network(ing)?\s+(administration|security|technology|fundamentals)|cloud\s+computing|"
+    r"management\s+information\s+systems|"
+    r"programming\s+(languages?|fundamentals|logic)|game\s+(design|development|programming)|"
+    r"mobile\s+(app|application)\s+development|digital\s+forensics|"
+    r"\bcis\b|\bcsc\b|\bcosc\b|\bcit\b|\bmis\b)\b", re.I)
+# ... and only in a teaching/discipline context: "teach courses in X", "X
+# department", "Master's in X", "disciplines: ..., X, ...". A bare "computer
+# skills" / "Microsoft Office" requirement never qualifies.
+DISCIPLINE_CTX_BEFORE = re.compile(
+    r"(teach\w*|instruct\w*|courses?|class(es)?|curricul\w*|program\w*|department|dept|disciplines?|"
+    r"division|school\s+of|college\s+of|faculty\s+of|subject|area|field|position|opening|"
+    r"lecturer|adjunct|professor|degree|master'?s|doctorate|ph\.?d|bachelor'?s|graduate|"
+    r"expertise|background|specializ\w*|concentration|major)\b[^.;\n]{0,80}$", re.I)
+# Strict context for titles that are not adjunct-flavoured ("Lecturer",
+# "Assistant Professor"): the discipline must be the posting's own unit.
+DISCIPLINE_DEPT_CTX = re.compile(
+    r"\b(department|dept\.?|school|college|division|program(me)?|unit|disciplines?|"
+    r"lecturer|instructor|professor|faculty|adjunct|teach\w*|courses?)\b(\s+(of|in|for|:|-|–|—))?\s*[^.;\n]{0,25}$", re.I)
+DISCIPLINE_DEPT_CTX_AFTER = re.compile(
+    r"^[^.;\n]{0,25}\b(courses?|department|dept|division|program\w*|faculty|curriculum|instructor|lecturer)\b", re.I)
+DISCIPLINE_CTX_AFTER = re.compile(
+    r"^[^.;\n]{0,40}\b(courses?|class(es)?|department|dept|disciplines?|division|program\w*|"
+    r"faculty|instructor|adjunct|lecturer|teacher|curriculum|degree|or\s+(a\s+)?(closely\s+)?related)\b", re.I)
+
+
+def discipline_hit(text, window=90, strict=False):
+    """(phrase, context) for a computing discipline named in a teaching
+    context in text, else None. strict: the discipline must be named as the
+    posting's own department/program/courses (used for non-adjunct titles,
+    where a passing mention of "data science" in a research blurb is noise)."""
+    if not text:
+        return None
+    for m in DISCIPLINE_RE.finditer(text):
+        before = text[max(0, m.start() - 100):m.start()]
+        after = text[m.end():m.end() + 60]
+        if strict:
+            if not (DISCIPLINE_DEPT_CTX.search(before[-60:]) or DISCIPLINE_DEPT_CTX_AFTER.search(after)):
+                continue
+        elif not (DISCIPLINE_CTX_BEFORE.search(before) or DISCIPLINE_CTX_AFTER.search(after)):
+            continue
+        a, b = max(0, m.start() - window), min(len(text), m.end() + window)
+        ctx = re.sub(r"\s+", " ", text[a:b]).strip()
+        return m.group(0), ctx
+    return None
+
+
+def college_title_candidate(title):
+    """Fetcher-level gate: domain in the title, or a generic teaching title
+    (the discipline is checked against the description afterwards)."""
+    return title_matches(title) or generic_teaching_title(title)
 
 # ETL data-infra company whitelist — these always pass the signal check
 ETL_COMPANIES = {
@@ -1408,13 +1576,16 @@ ULTIPRO_SEARCH_BODY = {
 def fetch_ultipro(config):
     """
     UKG Pro Recruiting (recruiting.ultipro.com). config:
-      {"slug": "usaa-ins", "tenant": "AAA1002AWCN", "board": "<guid>"}
+      {"slug": "usaa-ins", "tenant": "AAA1002AWCN", "board": "<guid>",
+       "host": "<tenant>.rec.pro.ukg.net" (optional)}
     POST JobBoardView/LoadSearchResults pages the board (Top=100); the
     OpportunityDetail HTML embeds the full description as a JSON string.
     Locations carry exact Country.Code ("USA").
     """
     slug, tenant, board = config["slug"], config["tenant"], config["board"]
-    base = f"https://recruiting.ultipro.com/{tenant}/JobBoard/{board}"
+    # Optional "host": UKG Pro tenants on <tenant>.rec.pro.ukg.net serve the same API.
+    host = config.get("host") or "recruiting.ultipro.com"
+    base = f"https://{host}/{tenant}/JobBoard/{board}"
     out = []
     skip = 0
     try:
@@ -1495,10 +1666,22 @@ def fetch_paylocity(config):
         if r.status_code != 200:
             return []
         m = PAYLOCITY_DATA_RE.search(r.text)
-        if not m:
-            return []
-        jobs = (json.loads(m.group(1)).get("Jobs")) or []
-    except (requests.RequestException, json.JSONDecodeError):
+        jobs = (json.loads(m.group(1)).get("Jobs")) or [] if m else []
+        if not jobs:
+            # Some boards (e.g. Sullivan University) redirect /Jobs/All to
+            # JobNotFound; the v2 feed still serves them, description inline.
+            rf = requests.get(f"https://recruiting.paylocity.com/recruiting/v2/api/feed/jobs/{guid}",
+                              headers=UA, timeout=20)
+            if rf.status_code == 200:
+                for f in (rf.json().get("jobs") or []):
+                    jl = f.get("jobLocation") or {}
+                    jobs.append({"JobTitle": f.get("title", ""), "JobId": f.get("jobId"),
+                                 "_description": strip_html(f.get("description") or ""),
+                                 "PublishedDate": f.get("publishedDate") or "",
+                                 "IsRemote": "remote" in " ".join(f.get("jobTypesArray") or []).lower(),
+                                 "JobLocation": {"City": jl.get("city"), "State": jl.get("state"),
+                                                 "Country": "USA" if jl.get("state") else ""}})
+    except (requests.RequestException, json.JSONDecodeError, ValueError):
         return []
     for j in jobs:
         title = j.get("JobTitle", "")
@@ -1506,10 +1689,10 @@ def fetch_paylocity(config):
             continue
         jid = j.get("JobId")
         url = f"https://recruiting.paylocity.com/Recruiting/Jobs/Details/{jid}"
-        content = ""
+        content = j.get("_description") or ""
         try:
-            rd = requests.get(url, headers=UA, timeout=20)
-            if rd.status_code == 200:
+            rd = None if content else requests.get(url, headers=UA, timeout=20)
+            if rd is not None and rd.status_code == 200:
                 i = rd.text.find("Description</div>")
                 if i >= 0:
                     seg = rd.text[i + len("Description</div>"):]
@@ -2055,12 +2238,17 @@ def fetch_adp(config):
     """
     cid = config["cid"]
     slug = config["slug"]
-    q = f"cid={cid}&lang=en_US&ccId=19000101_000001&locale=en_US"
+    # Optional: "ccId" (career-center id; multi-site tenants need a non-default
+    # one) and "host_override" (e.g. workforcenow.cloud.adp.com).
+    cc_id = config.get("ccId") or "19000101_000001"
+    host = config.get("host_override") or "workforcenow.adp.com"
+    base = f"https://{host}/mascsr/default/careercenter/public/events"
+    q = f"cid={cid}&lang=en_US&ccId={cc_id}&locale=en_US"
     out = []
     skip = 0
     try:
         while skip < 400:
-            r = requests.get(f"{ADP_STAFFING_BASE}?{q}&$top=20&$skip={skip}",
+            r = requests.get(f"{base}/staffing/v1/job-requisitions?{q}&$top=20&$skip={skip}",
                              headers=UA, timeout=20)
             if r.status_code != 200 or not r.text.strip().startswith("{"):
                 break
@@ -2077,8 +2265,7 @@ def fetch_adp(config):
                 parts = [((L.get("nameCode") or {}).get("shortName") or "").strip()
                          for L in (j.get("requisitionLocations") or [])]
                 loc = "; ".join(p for p in parts if p)
-                url = (f"https://workforcenow.adp.com/mascsr/default/careercenter/"
-                       f"public/events/staffing/v1/job-requisitions/{iid}?{q}")
+                url = f"{base}/staffing/v1/job-requisitions/{iid}?{q}"
                 content = ""
                 for _ in range(3):
                     try:
@@ -2100,8 +2287,7 @@ def fetch_adp(config):
                 pay_min, pay_max, pay_text = extract_pay(content)
                 out.append(Job(
                     company=slug, ats="adp", title=title, location=loc,
-                    url=(f"https://workforcenow.adp.com/mascsr/default/careercenter/"
-                         f"public/events/globalsearch/index.html?cid={cid}"),
+                    url=f"{base}/globalsearch/index.html?cid={cid}&ccId={cc_id}",
                     ai_hits=hits,
                     ai_hit_count=sum(content.lower().count(h) for h in hits),
                     snippet=snippet, description=content,
@@ -2595,6 +2781,14 @@ FETCHERS = {
     "brassring": fetch_brassring_wrapper,
 }
 
+# Higher-ed ATS fetchers (PeopleAdmin, PageUp, NeoGov, Interfolio, ...) and
+# faculty job aggregators live in colleges/fetchers; keys are "college_<name>".
+try:
+    from colleges.fetchers import register as _register_college_fetchers
+    _register_college_fetchers(FETCHERS)
+except Exception as _e:  # pragma: no cover
+    print(f"[warn] college fetchers unavailable: {_e}", file=sys.stderr)
+
 def _write_progress(path, done, total, jobs_found, phase="scan", **extra):
     # Atomic write so a concurrent reader never sees a partial file.
     tmp = Path(str(path) + ".tmp")
@@ -2715,8 +2909,18 @@ def apply_profile(jobs, key, min_ai_hits=None):
     rx_local = local_rx(p)
     out = []
     for j in jobs:
-        if not title_matches_for(j.title, p["level"], p["domain"], p["exclude"]):
-            continue
+        exclude = p["exclude"]
+        if p.get("exclude_unless_online") and not job_is_online(j):
+            exclude = exclude + p["exclude_unless_online"]
+        if not title_matches_for(j.title, p["level"], p["domain"], exclude):
+            # "domain_in_description": a generic teaching title ("Adjunct
+            # Instructor") whose department/description names the discipline.
+            if not (p.get("domain_in_description")
+                    and title_matches_for(j.title, p["level"], [r"."], exclude)
+                    and generic_teaching_title(j.title)
+                    and discipline_hit(j.description or j.snippet,
+                                       strict=not ROLE_ADJUNCT_RE.search(j.title))):
+                continue
         if len(j.ai_hits) < min_ai_hits:
             continue
         if p.get("require_etl_signal") and not has_etl_signal(
@@ -2756,7 +2960,7 @@ def run_all(args):
               f"(fit: {args.fit})")
     else:
         set_superset_globals()
-        companies = json.loads(Path(args.companies).read_text())
+        companies = load_companies(args.companies, colleges=not args.no_colleges)
         raw = scan(companies, max_workers=args.workers,
                    progress_file=progress_file,
                    accenture_keywords=accenture_keywords())
@@ -2812,6 +3016,8 @@ def main():
     ap.add_argument("--min-ai-hits", type=int, default=None,
                     help="minimum unique AI keywords required (overrides the tab's own setting)")
     ap.add_argument("--workers", type=int, default=24)
+    ap.add_argument("--no-colleges", action="store_true",
+                    help="skip data/colleges.json (the US college job boards)")
     ap.add_argument("--progress-file",
                     help="write {done, total, jobs_found} JSON here as companies finish")
     ap.add_argument("--profile", choices=list(PROFILES.keys()),
@@ -2863,7 +3069,7 @@ def main():
     # asks for zero hits (aerospace). Fetchers read this global during scan().
     REQUIRE_AI_HITS = min_ai_hits > 0
 
-    companies = json.loads(Path(args.companies).read_text())
+    companies = load_companies(args.companies, colleges=not args.no_colleges)
     t0 = time.time()
     progress_file = Path(args.progress_file) if args.progress_file else None
     jobs = scan(companies, max_workers=args.workers, progress_file=progress_file)

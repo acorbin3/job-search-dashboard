@@ -1,0 +1,27 @@
+{
+ "_comment": "Hands-on audit of state/system-level consortium boards (Oct 2026). Per-school link-out pages for TX (TCCTA job bank), MS (MCCB), WI (WTCS), MT (MUS), WV (HEPC/CTCS), ME (MCCS) and OK (OSRHE) were compared against the registry: every campus they list is either already 'ok' or points at the same generic campus HTML page the registry already has (classify() finds no ATS), so no per-unitid entries were needed. True aggregators (SUNY, SBCTC, NCCCS, CommunityCollegeJobs.com) got their own fetcher modules instead and are seeded via registry.AGGREGATORS.",
+ "_systems": {
+  "Louisiana Community and Technical College System": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://careers.lctcs.edu"
+   },
+   "unitids": [
+    "158088",
+    "158431",
+    "158662",
+    "158884",
+    "160010",
+    "160481",
+    "160579",
+    "160667",
+    "434061",
+    "436304",
+    "437103",
+    "483212"
+   ],
+   "notes": "careers.lctcs.edu is a new system-wide PageUp (Nuxt front end) board: 266 open jobs across BRCC, BPCC, CLTCC, Delgado, Fletcher, LDCC, SOWELA, SLCC and the system office (143 part-time faculty). Read by the pageup fetcher's nuxt flavour; adds to (does not replace) the governmentjobs.com/careers/louisiana config.",
+   "verified": "manual (38 title-matched postings via college_pageup, 2026-10-16)"
+  }
+ }
+}

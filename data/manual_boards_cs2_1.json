@@ -1,0 +1,645 @@
+{
+ "183026": {
+  "name": "Southern New Hampshire University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_beamery",
+    "url": "https://jobs.snhu.edu/en/jobs/"
+   }
+  ],
+  "notes": "jobs.snhu.edu now classifies as college_beamery (61 postings incl. Clinical Faculty); replaces the generic page scrape.",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.snhu.edu/en/jobs/?search=adjunct"
+ },
+ "433068": {
+  "name": "Okaloosa Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_focus",
+    "url": "https://okaloosa.focusschoolsoftware.com/focus/jobs/"
+   }
+  ],
+  "notes": "Okaloosa County School District Focus job board now classifies as college_focus (123 postings, K-12 district incl. OTC instructors).",
+  "prev_status": "generic",
+  "prev_url": "https://okaloosa.focusschoolsoftware.com/focus/jobs"
+ },
+ "457378": {
+  "name": "Emerald Coast Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_powerschool",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=WA002771",
+    "host": "ats3.atenterprise.powerschool.com",
+    "company_id": "WA002771"
+   }
+  ],
+  "notes": "Walton County School District PowerSchool ATE board now classifies as college_powerschool (11 postings).",
+  "prev_status": "generic",
+  "prev_url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=WA002771"
+ },
+ "137087": {
+  "name": "Pinellas Technical College-St. Petersburg",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_powerschool",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=OA002067",
+    "host": "ats3.atenterprise.powerschool.com",
+    "company_id": "OA002067"
+   }
+  ],
+  "notes": "Pinellas County Schools PowerSchool ATE board (OA002067) classifies as college_powerschool (127 postings); replaces generic pcsb.org/jobs.",
+  "prev_status": "generic",
+  "prev_url": "https://www.pcsb.org/jobs"
+ },
+ "222822": {
+  "name": "Angelina College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_jics",
+    "url": "https://myac.angelina.edu/ICS/AC_Employment/Position_Openings.jnz"
+   }
+  ],
+  "notes": "Jenzabar JICS Position_Openings portlet now classifies as college_jics (16 postings incl. 'Adjunct Instructor-Electromechanical-PT').",
+  "prev_status": "generic",
+  "prev_url": "https://myac.angelina.edu/ICS/AC_Employment/Position_Openings.jnz"
+ },
+ "154493": {
+  "name": "Upper Iowa University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_jics",
+    "url": "https://my.uiu.edu/ICS/Employment_Opportunities.jnz"
+   }
+  ],
+  "notes": "Jenzabar JICS Employment_Opportunities portlet now classifies as college_jics (8 postings).",
+  "prev_status": "generic",
+  "prev_url": "https://my.uiu.edu/ICS/Employment_Opportunities.jnz?portlet=Employment_Opportunities"
+ },
+ "431716": {
+  "name": "Ocean County Vocational-Technical School",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_willsub",
+    "url": "https://jobs.willsubplus.com/jobs?districtIds=2804",
+    "district_ids": "2804"
+   }
+  ],
+  "notes": "WillSub+ board now classifies as college_willsub (4 substitute postings today).",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.willsubplus.com/jobs?districtIds=2804"
+ },
+ "430908": {
+  "name": "Clearfield County Career and Technology Center",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_willsub",
+    "url": "https://jobs.willsubplus.com/jobs?districtIds=2688",
+    "district_ids": "2688"
+   }
+  ],
+  "notes": "WillSub+ board now classifies as college_willsub (2 postings today).",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.willsubplus.com/jobs?districtIds=2688"
+ },
+ "172291": {
+  "name": "St Clair County Community College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_silkroad",
+    "url": "https://jobs.silkroad.com/stclairccc/ExternalCareerSite",
+    "host": "jobs.silkroad.com",
+    "tenant": "stclairccc",
+    "site": "ExternalCareerSite"
+   }
+  ],
+  "notes": "SilkRoad jobs.silkroad.com portal now classifies as college_silkroad (54 postings incl. 'Adjunct Engineering Technology - Mechatronics and Robotics').",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.silkroad.com/stclairccc/ExternalCareerSite"
+ },
+ "427991": {
+  "name": "Osceola Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_brassring",
+    "url": "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=26623&siteid=5686",
+    "partnerid": "26623",
+    "siteid": "5686"
+   }
+  ],
+  "notes": "Osceola County Schools BrassRing board (linked from jobs.osceolaschools.net) now classifies as college_brassring (189 postings).",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.osceolaschools.net/jobs"
+ },
+ "441414": {
+  "name": "M-DCPS The English Center",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/",
+    "company": "miamidadecT1"
+   }
+  ],
+  "notes": "apply.dadeschools.net is SAP SuccessFactors (company miamidadecT1), not Radancy; college_successfactors returns 40 instructional postings incl. 'PART-TIME ADULT EDUCATION' teachers.",
+  "prev_status": "generic",
+  "prev_url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+ },
+ "225399": {
+  "name": "Houston Christian University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://hcu.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "hcu"
+   }
+  ],
+  "notes": "hc.edu (Cloudflare-walled) links hcu.clearcompany.com/careers/portal; the legacy hcu.hrmdirect.com listing works with college_clearcompany: 43 postings incl. 'Adjunct Professor of Business Data Analytics', 'Adjunct Professor of Finance'.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "431017": {
+  "name": "Mid-Del Technology Center",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://middel.schoolspring.com/",
+    "domain": "middel.schoolspring.com"
+   }
+  ],
+  "notes": "Mid-Del Technology Center is run by Mid-Del Public Schools (Imperva-walled Apptegy sites); the district's TalentEd board middel.tedk12.com -> middel.schoolspring.com classifies as college_schoolspring (34 K-12 postings).",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "494542": {
+  "name": "Sattler College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_trinethire",
+    "url": "https://app.trinethire.com/companies/20243-sattler-college-inc/jobs",
+    "company": "20243-sattler-college-inc"
+   }
+  ],
+  "notes": "sattler.edu/about-us/careers/ embeds TriNet Hire (classifies as college_trinethire); 0 openings today.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "128151": {
+  "name": "Pickens Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "url": "https://www.aurorak12.org/cms/one.aspx?pageId=3546539",
+    "host": "https://fa-epop-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1"
+   }
+  ],
+  "notes": "Pickens Technical College hires through Aurora Public Schools' Oracle Cloud HCM board (college_oracle; 3 postings today incl. 'Pickens Technical College: AFS-Pickens Instructor-Practical Nursing'). Registry URL was a program FAQ page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.pickenstech.org/blog/ufaqs/employment/"
+ },
+ "138284": {
+  "name": "Florida Panhandle Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_focus",
+    "url": "https://fptc.focusschoolsoftware.com/focus/jobs/"
+   }
+  ],
+  "notes": "Washington County (FL) School District Focus job board classifies as college_focus; 0 postings returned today (board empty). Registry URL was the programs page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.fptc.edu/programs"
+ },
+ "135407": {
+  "name": "Manatee Technical College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://careers.manateeschools.net/psc/HCPRDC/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "site_id": "1"
+   }
+  ],
+  "notes": "Manatee Technical College = School District of Manatee County; manateeschools.net is Imperva-walled but its 'Search Jobs & Apply' link resolves to a PeopleSoft HRS careers site that classifies as college_peoplesoft (159 postings, MTC ones tagged 'MTC'). Registry URL was the student career board.",
+  "prev_status": "generic",
+  "prev_url": "https://www.manateetech.edu/students/career-board/"
+ },
+ "243346": {
+  "name": "Universidad Ana G. Mendez-Carolina Campus",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All",
+    "browser": true
+   }
+  ],
+  "notes": "jobs.uagm.edu serves an incomplete TLS chain (requests fails); browser=True loads it: 52 links incl. 'Full-Time Faculty of Veterinary ...', 'Profesores(as) Conferenciantes'.",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All"
+ },
+ "241739": {
+  "name": "Universidad Ana G. Mendez-Cupey Campus",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All",
+    "browser": true
+   }
+  ],
+  "notes": "Shared UAGM board; see 243346. browser=True gets through the TLS problem.",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.uagm.edu/page-jobs-category?lang=en-us&cat=All"
+ },
+ "195544": {
+  "name": "St. Joseph's University-New York",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sjny.edu/employment",
+    "browser": true
+   }
+  ],
+  "notes": "sjny.edu is Cloudflare-walled (403 to requests) but headless Chromium gets through: 14 posting links incl. 'Adjunct Physics Instructor', 'Adjunct Clinical Instructor - Nursing'.",
+  "prev_status": "generic",
+  "prev_url": "https://www.sjny.edu/employment"
+ },
+ "229832": {
+  "name": "Western Texas College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wtc.edu/page/hr",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "Apptegy HR page returns nothing to requests; browser=True + pdf_links=True yields 'Adjunct Chemistry Instructor', 'Physics Instructor', 'Data Center Technician' (aptg.co PDF links).",
+  "prev_status": "generic",
+  "prev_url": "https://www.wtc.edu/page/hr"
+ },
+ "107974": {
+  "name": "South Arkansas College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.southark.edu/page/employment-at-southark",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "southark.edu is Imperva-walled ('Client Challenge'); browser=True on the real employment page yields 21 postings incl. 'Adjunct Instructor (English/Math)- Adult Ed', 'Industrial Technology Instructor'. Registry URL was the CTE page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.southark.edu/page/career-and-tech"
+ },
+ "242705": {
+  "name": "Inter American University of Puerto Rico-Bayamon",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.inter.edu/conocenos/empleos-3/",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "Inter American University system HR page (www.inter.edu has a broken TLS chain for requests; Chromium loads it). Convocatorias are posted as links/PDFs; none open today, so 0 postings returned.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "175421": {
+  "name": "Belhaven University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.belhaven.edu/about/contact/employment.html",
+    "pdf_links": true
+   }
+  ],
+  "notes": "All postings are PDFs under /pdfs/employment/: 'On-Campus Adjunct Faculty for School of Business', 'Adjunct Faculty - DBA', 'Online Adjunct for China' etc. pdf_links=True returns them.",
+  "prev_status": "generic",
+  "prev_url": "https://www.belhaven.edu/about/contact/employment.html"
+ },
+ "207403": {
+  "name": "Oklahoma Baptist University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.okbu.edu/hr/jobs",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs under /hr/job-forms/: 'Assistant or Associate Professor of Computer Science, Cybersecurity Emphasis', 'Adjunct Professors', 'Online Chemistry Course Developer'.",
+  "prev_status": "generic",
+  "prev_url": "https://www.okbu.edu/hr/jobs"
+ },
+ "204194": {
+  "name": "Mount Vernon Nazarene University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mvnu.edu/employment-opportunities/adjunct-job-opportunities/",
+    "pdf_links": true,
+    "pages": [
+     "https://mvnu.edu/employment-opportunities/faculty-job-opportunities/",
+     "https://mvnu.edu/staff-job-opportunities/"
+    ]
+   }
+  ],
+  "notes": "Adjunct page lists 'Graduate Computer Science Adjunct', 'Healthcare Informatics Adjunct', 'Graduate Engineering Management Adjunct'; staff postings are PDFs so pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://mvnu.edu/staff-job-opportunities/"
+ },
+ "101675": {
+  "name": "Miles College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.miles.edu/departments-programs/office-human-resources",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'Adjunct Pool (In-Person & Online)', 'Academic Advisor', ... pdf_links=True returns 14.",
+  "prev_status": "generic",
+  "prev_url": "https://www.miles.edu/departments-programs/office-human-resources"
+ },
+ "178697": {
+  "name": "College of the Ozarks",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.cofo.edu/jobs",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are DNN PDFs (?ver=): 'Faculty Position in Computer Science', 'Adjunct Faculty in Agriculture/Biology/Chemistry/Computer Science/...', 'Adjunct Faculty in Engineering'.",
+  "prev_status": "generic",
+  "prev_url": "https://www.cofo.edu/jobs"
+ },
+ "176008": {
+  "name": "Mississippi Delta Community College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.msdelta.edu/human-resources/employment-opportunities.php",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Notices of vacancy are PDFs (Campus Police Officer, Comptroller, LETA Training Officer...); pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://www.msdelta.edu/human-resources/employment-opportunities.php"
+ },
+ "218399": {
+  "name": "Morris College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.morris.edu/employment-opportunities/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs incl. 'Adjunct or Instructor/Assistant/Associate Professor of Cybersecurity', '... of Esports', 'Supplemental Instructor-Mathematics'.",
+  "prev_status": "generic",
+  "prev_url": "https://www.morris.edu/employment-opportunities/"
+ },
+ "107840": {
+  "name": "Shorter College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://shortercollege.edu/careers/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'Adjunct Faculty (Computer Science)', 'Department Chair Business & Computer Science', 'Adjunct Faculty (Math)'.",
+  "prev_status": "generic",
+  "prev_url": "http://shortercollege.edu/careers/"
+ },
+ "235422": {
+  "name": "Heritage University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://heritage.edu/faculty-staff/human-resources/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'Assistant Professor of Bilingual Education', 'Adjunct Faculty Pool Areas', 'Director of Institutional Research'.",
+  "prev_status": "generic",
+  "prev_url": "https://heritage.edu/faculty-staff/human-resources/"
+ },
+ "130776": {
+  "name": "Western Connecticut State University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wcsu.edu/hr/employment/current-opportunities/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "University Assistant / part-time postings are PDFs ('Adjunct (Part Time) Teaching Opportunities', 'Part Time Librarian'); pdf_links=True. Full-time faculty searches are not on this page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.wcsu.edu/hr/employment/current-opportunities/"
+ },
+ "138293": {
+  "name": "Webber International University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.webber.edu/jobs-at-webber/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'Assistant Professor of Computer and Information Systems', 'Adjunct Faculty - Health Services Administration', 'Adjunct Faculty Pool'.",
+  "prev_status": "generic",
+  "prev_url": "https://www.webber.edu/jobs-at-webber/"
+ },
+ "240338": {
+  "name": "Wisconsin Lutheran College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wlc.edu/about-wlc/offices-resources/human-resources/index.html",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Two PDF job descriptions (technology specialist, nursing faculty) linked as 'See the job description' / 'POSITION DESCRIPTION'; pdf_links=True. Low volume.",
+  "prev_status": "generic",
+  "prev_url": "https://www.wlc.edu/about-wlc/offices-resources/human-resources/index.html"
+ },
+ "243106": {
+  "name": "University of Puerto Rico-Aguadilla",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprag.edu/convocatorias/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Convocatorias are PDFs (Spanish): 'Assistant Professor - Electronics Engineering', 'Especialista en Equipo de Computacion'; pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://www.uprag.edu/convocatorias/"
+ },
+ "243221": {
+  "name": "University of Puerto Rico-Rio Piedras",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprrp.edu/empleos/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Avisos de empleo are PDFs (Spanish, e.g. 'Confeccionador de Alimentos', clinic convocatoria); pdf_links=True returns them.",
+  "prev_status": "generic",
+  "prev_url": "https://www.uprrp.edu/empleos/"
+ },
+ "142294": {
+  "name": "The College of Idaho",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://collegeofidaho.edu/careers/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are wp-content PDFs ('Chemistry, Visiting Assistant Professor', 'HR Data Coordinator', 'Dean of Students'); pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://collegeofidaho.edu/careers/"
+ },
+ "191302": {
+  "name": "Fulton-Montgomery Community College",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://fmcc.edu/about-fmcc/employment-opportunities",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'Associate Director of Information Technology', 'Chemistry Instructor', 'Adjunct Positions'; pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://fmcc.edu/about-fmcc/employment-opportunities"
+ },
+ "210429": {
+  "name": "Western Oregon University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://wou.edu/hr/employment/jobs/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Job announcements are cdn.wou.edu PDFs ('BI Reporting Analyst', 'Dean of Students', ...); pdf_links=True. wou.edu is slow (25s timeouts seen).",
+  "prev_status": "generic",
+  "prev_url": "https://wou.edu/hr/employment/jobs/"
+ },
+ "117751": {
+  "name": "The Master's University and Seminary",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.masters.edu/faculty-staff/careers-at-tmus/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Postings are PDFs: 'MABC Professor - Open Rank', 'Application Support Engineer', 'Educational Technology Coordinator'; pdf_links=True.",
+  "prev_status": "generic",
+  "prev_url": "https://www.masters.edu/faculty-staff/careers-at-tmus/"
+ },
+ "231420": {
+  "name": "Averett University",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.averett.edu/about-us/employment-opportunities/traditional-faculty-employment-opportunities/",
+    "pages": [
+     "https://www.averett.edu/about-us/employment-opportunities/gps-faculty-employment-opportunities/",
+     "https://www.averett.edu/about-us/employment-opportunities/staff-employment-opportunities/"
+    ]
+   }
+  ],
+  "notes": "The registry's parent page only links three sub-pages; postings live on Traditional Faculty / Averett Online (GPS) Faculty / Staff pages (e.g. 'Nursing Clinical and Simulation Coordinator', 'Program Coordinator - Center for e-Learning').",
+  "prev_status": "generic",
+  "prev_url": "https://www.averett.edu/about-us/employment-opportunities/"
+ },
+ "418560": {
+  "name": "Indiana County Technology Center",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ictc.edu/apps/pages/index.jsp?uREC_ID=4382431&type=d&pREC_ID=2588668",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Edlio 'Employment' page; postings are edl.io PDFs ('Principals opening', 'HOT Instructional Aide', 'External Job Postings'). pdf_links=True.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "381325": {
+  "name": "CET-Santa Maria",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cetweb.edu/careers-at-cet",
+    "pdf_links": true
+   }
+  ],
+  "notes": "CET careers page; postings are HubSpot-hosted PDF job descriptions ('Electrician Instructor', 'Plumbing Technician Instructor', 'HVAC Technician and Green Technology Instructor', 'Financial Aid Assistant'). pdf_links=True.",
+  "prev_status": null,
+  "prev_url": null,
+  "homepage": "https://www.cetweb.edu/",
+  "state": "CA",
+  "sector": 8
+ },
+ "200697": {
+  "name": "Air Force Institute of Technology-Graduate School of Engineering & Management",
+  "source": "manual-cs2-1",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search/Results?k=Air%20Force%20Institute%20of%20Technology"
+   }
+  ],
+  "notes": "usajobs. AFIT is a federal (USAF) school; afit.edu/HR/ is a policy page. USAJobs search for the institute.",
+  "prev_status": "generic",
+  "prev_url": "https://www.afit.edu/HR/"
+ }
+}

@@ -1,0 +1,1284 @@
+{
+ "488934": {
+  "name": "Tulsa Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/tulsatech/onlineapp/default.aspx?all=1",
+    "district": "tulsatech"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 25 postings."
+ },
+ "132851": {
+  "name": "College of Central Florida",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "url": "https://myjobs.adp.com/collegeofcentralfloridaexternalcs/cx",
+    "domain": "collegeofcentralfloridaexternalcs"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_myjobsadp; fetcher verified today: 63 postings."
+ },
+ "142559": {
+  "name": "College of Southern Idaho",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_silkroad",
+    "url": "https://csi-openhire.silkroad.com/epostings/index.cfm?fuseaction=app.allpositions&company_id=17127&version=1",
+    "host": "csi-openhire.silkroad.com",
+    "company_id": "17127"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_silkroad; fetcher verified today: 7 postings."
+ },
+ "418296": {
+  "name": "Indian Capital Technology Center-Muskogee",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/ictctech/onlineapp/default.aspx?all=1",
+    "district": "ictctech"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 3 postings."
+ },
+ "170055": {
+  "name": "Grand Rapids Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://grcc.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "grcc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 20 postings."
+ },
+ "162690": {
+  "name": "Hagerstown Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_ukgready",
+    "url": "https://secure10.saashr.com/ta/6160104.careers?CareersSearch",
+    "host": "secure10.saashr.com",
+    "company": "6160104"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_ukgready; fetcher verified today: 46 postings."
+ },
+ "248606": {
+  "name": "Moore Norman Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/mntc/onlineapp/default.aspx?all=1",
+    "district": "mntc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 8 postings."
+ },
+ "180416": {
+  "name": "Montana Technological University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://montanatechuniversity.applytojob.com/apply",
+    "jazz_slug": "montanatechuniversity"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_jazzhr; fetcher verified today: 18 postings."
+ },
+ "225070": {
+  "name": "Grayson College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_apscareer",
+    "url": "https://grayson-county-junior-college-district.apscareerportal.com/jobs?locale=en-US",
+    "aps_slug": "grayson-county-junior-college-district"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_apscareer; fetcher verified today: 13 postings."
+ },
+ "152637": {
+  "name": "Vincennes University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_ukgready",
+    "url": "https://secure7.saashr.com/ta/6051788.careers?CareersSearch",
+    "host": "secure7.saashr.com",
+    "company": "6051788"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_ukgready; fetcher verified today: 50 postings."
+ },
+ "262031": {
+  "name": "St Charles Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://stchas.aaimtrack.com/jobs/",
+    "isolved_slug": "stchas",
+    "host": "stchas.aaimtrack.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_isolvedhire; fetcher verified today: 75 postings."
+ },
+ "365374": {
+  "name": "Canadian Valley Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://cvtech.schoolspring.com/",
+    "domain": "cvtech.schoolspring.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_schoolspring; fetcher verified today: 6 postings."
+ },
+ "178341": {
+  "name": "Missouri Southern State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://mssu.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "mssu"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 11 postings."
+ },
+ "145831": {
+  "name": "Illinois Valley Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/ivcc/onlineapp/default.aspx?all=1",
+    "district": "ivcc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 18 postings."
+ },
+ "129215": {
+  "name": "Eastern Connecticut State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://easternctstateuniversity.applytojob.com/apply",
+    "jazz_slug": "easternctstateuniversity"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_jazzhr; fetcher verified today: 8 postings."
+ },
+ "131399": {
+  "name": "University of the District of Columbia",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applicantstack",
+    "url": "https://udc.applicantstack.com/x/openings",
+    "astack_slug": "udc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applicantstack; fetcher verified today: 100 postings."
+ },
+ "239220": {
+  "name": "Mid-State Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=MIDSTECH&cws=41",
+    "org": "MIDSTECH",
+    "cws": "41"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_taleobe; fetcher verified today: 7 postings."
+ },
+ "106458": {
+  "name": "Arkansas State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=40",
+    "org": "ARKASTAT2",
+    "cws": "40"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_taleobe; fetcher verified today: 31 postings."
+ },
+ "440402": {
+  "name": "Arkansas State University-Newport",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phe.tbe.taleo.net/phe03/ats/careers/v2/searchResults?org=ASUN&cws=37",
+    "org": "ASUN",
+    "cws": "37"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_taleobe; fetcher verified today: 8 postings."
+ },
+ "107071": {
+  "name": "Henderson State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=53",
+    "org": "ARKASTAT2",
+    "cws": "53"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_taleobe; fetcher verified today: 5 postings."
+ },
+ "495013": {
+  "name": "Western Maricopa Education Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/westmec/onlineapp/default.aspx?all=1",
+    "district": "westmec"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 7 postings."
+ },
+ "183141": {
+  "name": "Nashua Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "226019": {
+  "name": "Kilgore College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://kilgorecollege.applytojob.com/apply",
+    "jazz_slug": "kilgorecollege"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_jazzhr; fetcher verified today: 37 postings."
+ },
+ "183150": {
+  "name": "Great Bay Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "100724": {
+  "name": "Alabama State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_ukgready",
+    "url": "https://secure7.saashr.com/ta/6217950.careers?CareersSearch",
+    "host": "secure7.saashr.com",
+    "company": "6217950"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_ukgready; fetcher verified today: 35 postings."
+ },
+ "363165": {
+  "name": "Metro Technology Centers",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/metrotech/onlineapp/default.aspx?all=1",
+    "district": "metrotech"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 12 postings."
+ },
+ "183099": {
+  "name": "NHTI-Concord's Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "365213": {
+  "name": "Autry Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://autrytech.schoolspring.com/",
+    "domain": "autrytech.schoolspring.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_schoolspring; fetcher verified today: 0 postings. (0 today on autrytech.schoolspring.com - board may be empty; the tedk12 page redirects there.)"
+ },
+ "211079": {
+  "name": "Community College of Beaver County",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "client": "communitycollege",
+    "site": "CANDIDATEPORTAL",
+    "url": "https://jobs.dayforcehcm.com/en-US/communitycollege/CANDIDATEPORTAL"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to dayforce; fetcher verified today: 1 postings."
+ },
+ "107521": {
+  "name": "Arkansas State University Three Rivers",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=64",
+    "org": "ARKASTAT2",
+    "cws": "64"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_taleobe; fetcher verified today: 5 postings."
+ },
+ "237817": {
+  "name": "Southern West Virginia Community and Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_ukgready",
+    "url": "https://secure.entertimeonline.com/ta/CBIZ20823.careers?CareersSearch",
+    "host": "secure.entertimeonline.com",
+    "company": "CBIZ20823"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_ukgready; fetcher verified today: 2 postings."
+ },
+ "205966": {
+  "name": "Southern State Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "client": "sscc",
+    "site": "CANDIDATEPORTAL",
+    "url": "https://jobs.dayforcehcm.com/en-US/sscc/CANDIDATEPORTAL"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to dayforce; fetcher verified today: 1 postings."
+ },
+ "219189": {
+  "name": "Mitchell Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://mitchelltech.schoolspring.com/",
+    "domain": "mitchelltech.schoolspring.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_schoolspring; fetcher verified today: 2 postings."
+ },
+ "183123": {
+  "name": "Lakes Region Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "183132": {
+  "name": "Manchester Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "105297": {
+  "name": "Dine College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://dinecollege.isolvedhire.com/jobs/",
+    "isolved_slug": "dinecollege",
+    "host": "dinecollege.isolvedhire.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_isolvedhire; fetcher verified today: 9 postings."
+ },
+ "168607": {
+  "name": "Alpena Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_appone",
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=alpenacc.appone.com",
+    "server_var": "alpenacc.appone.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_appone; fetcher verified today: 22 postings."
+ },
+ "190053": {
+  "name": "Clinton Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_breezy",
+    "url": "https://suny-clinton-clinton-community-college.breezy.hr/",
+    "breezy_slug": "suny-clinton-clinton-community-college"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_breezy; fetcher verified today: 8 postings."
+ },
+ "183114": {
+  "name": "River Valley Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "195988": {
+  "name": "Sullivan County Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://sunysullivan.isolvedhire.com/jobs/",
+    "isolved_slug": "sunysullivan",
+    "host": "sunysullivan.isolvedhire.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_isolvedhire; fetcher verified today: 14 postings."
+ },
+ "180081": {
+  "name": "Highlands College of Montana Tech",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://montanatechuniversity.applytojob.com/apply",
+    "jazz_slug": "montanatechuniversity"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_jazzhr; fetcher verified today: 18 postings."
+ },
+ "146278": {
+  "name": "John Wood Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://jwcc.aaimtrack.com/jobs/",
+    "isolved_slug": "jwcc",
+    "host": "jwcc.aaimtrack.com"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_isolvedhire; fetcher verified today: 8 postings."
+ },
+ "155201": {
+  "name": "Independence Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_apscareer",
+    "url": "https://indycc.apscareerportal.com/jobs?locale=en-US",
+    "aps_slug": "indycc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_apscareer; fetcher verified today: 8 postings."
+ },
+ "183105": {
+  "name": "White Mountains Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "ccsnh"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 61 postings."
+ },
+ "190169": {
+  "name": "Columbia-Greene Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_breezy",
+    "url": "https://columbia-greene-community-college.breezy.hr/",
+    "breezy_slug": "columbia-greene-community-college"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_breezy; fetcher verified today: 11 postings."
+ },
+ "154934": {
+  "name": "Colby Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_apscareer",
+    "url": "https://colbycc.apscareerportal.com/jobs?locale=en-US",
+    "aps_slug": "colbycc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_apscareer; fetcher verified today: 10 postings."
+ },
+ "145521": {
+  "name": "Highland Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://highlandedu.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "highlandedu"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_clearcompany; fetcher verified today: 8 postings."
+ },
+ "418533": {
+  "name": "Lancaster County Career and Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/lancasterctc/onlineapp/default.aspx?all=1",
+    "district": "lancasterctc"
+   }
+  ],
+  "notes": "Registry had this board as college_generic (audited); classify() now resolves the same URL to college_applitrack; fetcher verified today: 6 postings."
+ },
+ "170976": {
+  "name": "University of Michigan-Ann Arbor",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.umich.edu/search-jobs?career_interest=265&work_location=4&position=All&regular_temporary=All&keyword=",
+    "pages": [
+     "https://careers.umich.edu/search-jobs?career_interest=230&work_location=4&position=All&regular_temporary=All&keyword=",
+     "https://careers.umich.edu/search-jobs?career_interest=230&work_location=4&position=All&regular_temporary=All&keyword=&page=1",
+     "https://careers.umich.edu/search-jobs?career_interest=210&work_location=4&position=All&regular_temporary=All&keyword="
+    ]
+   }
+  ],
+  "notes": "U-M custom Drupal board (careers.umich.edu). Registry URL was temporary-only (regular_temporary=T). Listing filtered to Ann Arbor campus: career_interest 265 = LEO Lecturers, 230 = Instructional-Regular, 210 = IT; 25/page, ?page=N. RSS at careers.umich.edu/search/feed/advanced (all campuses, recent only)."
+ },
+ "171137": {
+  "name": "University of Michigan-Dearborn",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.umich.edu/search-jobs?career_interest=265&work_location=1&position=All&regular_temporary=All&keyword=",
+    "pages": [
+     "https://careers.umich.edu/search-jobs?career_interest=230&work_location=1&position=All&regular_temporary=All&keyword=",
+     "https://careers.umich.edu/search-jobs?career_interest=210&work_location=1&position=All&regular_temporary=All&keyword="
+    ]
+   }
+  ],
+  "notes": "Shared U-M board careers.umich.edu, work_location=1 (Dearborn campus); career_interest 265 LEO Lecturers, 230 Instructional-Regular, 210 IT."
+ },
+ "171146": {
+  "name": "University of Michigan-Flint",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.umich.edu/search-jobs?career_interest=265&work_location=2&position=All&regular_temporary=All&keyword=",
+    "pages": [
+     "https://careers.umich.edu/search-jobs?career_interest=230&work_location=2&position=All&regular_temporary=All&keyword=",
+     "https://careers.umich.edu/search-jobs?career_interest=210&work_location=2&position=All&regular_temporary=All&keyword="
+    ]
+   }
+  ],
+  "notes": "Shared U-M board careers.umich.edu, work_location=2 (Flint campus); career_interest 265 LEO Lecturers, 230 Instructional-Regular, 210 IT. Saw 'LEO Lecturer I - EGR 369/569 - College of Innovation & Technology - Hybrid'."
+ },
+ "129367": {
+  "name": "Connecticut State Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://ctstatecommunitycollege.applytojob.com/apply",
+    "jazz_slug": "ctstatecommunitycollege"
+   }
+  ],
+  "notes": "CT State Community College posts on JazzHR (linked from ctstate.edu/work-at-ctstate); 67 postings incl. 'Non-Credit Lecturer-Information Technology', 'Part-time Lecturer-Science, Technology, Engineering, & Mathematics'. Classified state jobs stay on jobapscloud.com/CT."
+ },
+ "217475": {
+  "name": "Community College of Rhode Island",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_teamtailor",
+    "url": "https://jobs.ccri.edu/jobs",
+    "host": "jobs.ccri.edu"
+   }
+  ],
+  "notes": "jobs.ccri.edu is a Teamtailor site (custom host); /jobs.rss works, 14 postings."
+ },
+ "196699": {
+  "name": "Ulster County Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://sunyulster.applytojob.com/apply",
+    "jazz_slug": "sunyulster"
+   }
+  ],
+  "notes": "SUNY Ulster faculty/staff postings on JazzHR (linked from sunyulster.edu/jobs-at-suny-ulster/faculty-jobs.php); 15 postings."
+ },
+ "191199": {
+  "name": "Finger Lakes Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://flcc.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "flcc"
+   }
+  ],
+  "notes": "FLCC embeds ClearCompany (flcc.clearcompany.com/careers/portal) on flcc.edu/jobs/staff/; legacy hrmdirect listing works (13 postings incl. 'Adjunct Faculty - Computing Science (GRADE)'). classify() mis-reads the CDN host as slug cc-client-cdn."
+ },
+ "165112": {
+  "name": "Bunker Hill Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://bhcc.interviewexchange.com/static/clients/450BHM1/index.jsp",
+    "company_id": "450"
+   }
+  ],
+  "notes": "Bunker Hill CC uses Interview Exchange (bhcc.edu/jobs redirects there); registry URL was the student career-services page. Only 1 posting live today; 'Adjunct Faculty' category catid=1017."
+ },
+ "191719": {
+  "name": "Hudson Valley Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hvcc.hire.trakstar.com/"
+   }
+  ],
+  "notes": "Hudson Valley CC uses Trakstar Hire (ex-Recruiterbox), widget 64063 embedded on hvcc.edu/hr/employment-opportunities.html. Public JSON: https://jsapi.recruiterbox.com/v1/openings?client_name=hvcc (27 openings, e.g. 'Adjunct Instructor Welding'). Vendor not detected."
+ },
+ "128771": {
+  "name": "Central Connecticut State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ccsu.edu/hr/current-openings"
+   }
+  ],
+  "notes": "CCSU: registry URL /hr/job-opportunities is a landing page; /hr/current-openings is the listing. Adjunct pools are PDF/DOCX links (e.g. 'Department of Computer Science: Adjunct Faculty' PDF), which the generic fetcher skips; full-time searches go through jobapscloud.com/CT."
+ },
+ "148937": {
+  "name": "Southeastern Illinois College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "southernillinois",
+    "url": "https://southernillinois.bamboohr.com/careers"
+   }
+  ],
+  "notes": "Southeastern Illinois College posts on BambooHR (southernillinois.bamboohr.com/careers, linked from sic.edu/employment job pages); /careers/list shows 4 openings incl. 'Adjunct Instructors - English'. Registry had the sic.edu WordPress list."
+ },
+ "106980": {
+  "name": "National Park College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_paycor",
+    "client_id": "8a7883d07acff70f017b11c4c03f16bc",
+    "url": "https://recruitingbypaycor.com/career/CareerHome.action?clientId=8a7883d07acff70f017b11c4c03f16bc"
+   }
+  ],
+  "notes": "National Park College embeds Paycor Recruiting (iframe.action?clientId=...) on np.edu employment page; 6 postings incl. 'Adjunct Faculty'."
+ },
+ "171304": {
+  "name": "Muskegon Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_silkroad",
+    "host": "muskegoncc-openhire.silkroad.com",
+    "company_id": "17262",
+    "url": "https://muskegoncc-openhire.silkroad.com/epostings/index.cfm?fuseaction=app.allpositions&company_id=17262&version=1"
+   }
+  ],
+  "notes": "Muskegon CC: the Careers/EmploymentListings.html page links the SilkRoad OpenHire board; 69 postings incl. many 'Adjunct ... Instructor' pools."
+ },
+ "172291": {
+  "name": "St Clair County Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/stclairccc/ExternalCareerSite/sitemap"
+   }
+  ],
+  "notes": "SilkRoad Recruiting (new jobs.silkroad.com portal, not the OpenHire epostings API) - vendor not detected. The /sitemap page lists every posting (60 links incl. 'Adjunct Engineering Technology - Mechatronics and Robotics'); the ExternalCareerSite home shows only 9."
+ },
+ "206914": {
+  "name": "Cameron University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/Cameron/Careers/sitemap"
+   }
+  ],
+  "notes": "SilkRoad Recruiting jobs.silkroad.com portal (vendor not detected); /sitemap lists all postings incl. 'Adjunct Department of Business', 'Adjunct Instructor Physics'. Registry URL was the portal home page."
+ },
+ "243221": {
+  "name": "University of Puerto Rico-Rio Piedras",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprrp.edu/empleos/"
+   }
+  ],
+  "notes": "UPR Rio Piedras 'Empleos' page; convocatorias are PDF links (Spanish), which the generic fetcher skips.",
+  "homepage": "https://www.uprrp.edu/",
+  "state": "PR",
+  "sector": 1
+ },
+ "243179": {
+  "name": "University of Puerto Rico-Humacao",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprh.edu/empleos/"
+   }
+  ],
+  "notes": "UPR Humacao 'Ofertas de Empleos' page (site is uprh.edu, IPEDS homepage upr.edu/humacao redirects); PDF convocatorias.",
+  "homepage": "https://www.uprh.edu/",
+  "state": "PR",
+  "sector": 1
+ },
+ "243106": {
+  "name": "University of Puerto Rico-Aguadilla",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprag.edu/convocatorias/"
+   }
+  ],
+  "notes": "UPR Aguadilla 'Oferta de Empleo - Convocatorias' page; PDF announcements (Spanish).",
+  "homepage": "https://www.uprag.edu/",
+  "state": "PR",
+  "sector": 1
+ },
+ "243133": {
+  "name": "University of Puerto Rico-Bayamon",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uprb.edu/sobre-uprb/decanato-de-asuntos-administrativos/recursos-humanos/"
+   }
+  ],
+  "notes": "UPR Bayamon HR page with 'Solicitud de Empleo y Convocatorias' accordion; PDF announcements.",
+  "homepage": "https://www.uprb.edu/",
+  "state": "PR",
+  "sector": 1
+ },
+ "136491": {
+  "name": "Pinellas Technical College-Clearwater",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=OA002067"
+   }
+  ],
+  "notes": "Pinellas County Schools PowerSchool Applicant Tracking Enterprise job board (vendor not detected; titles are in table cells, detail links are job_board_form?op=view&JOB_ID=). Registry URL was the pcsb.org/jobs landing page."
+ },
+ "137087": {
+  "name": "Pinellas Technical College-St. Petersburg",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=OA002067"
+   }
+  ],
+  "notes": "Pinellas County Schools PowerSchool Applicant Tracking Enterprise job board (shared with PTC-Clearwater); vendor not detected."
+ },
+ "135276": {
+  "name": "Lively Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=JA001601"
+   }
+  ],
+  "notes": "Lively Technical College posts through Leon County Schools' PowerSchool ATE job board (108 postings, paged start_index=100); vendor not detected. Registry URL was a CareerSource tour page."
+ },
+ "457378": {
+  "name": "Emerald Coast Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=WA002771"
+   }
+  ],
+  "notes": "Emerald Coast Technical College = Walton County School District; PowerSchool ATE job board (vendor not detected).",
+  "homepage": "https://www.ectc.edu/",
+  "state": "FL",
+  "sector": 7
+ },
+ "459329": {
+  "name": "Fred K Marchman Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://pasco.schoolspring.com/",
+    "domain": "pasco.schoolspring.com"
+   }
+  ],
+  "notes": "Marchman Technical College = Pasco County Schools; district board pasco.tedk12.com -> pasco.schoolspring.com (236 postings, K-12 heavy). Registry URL was the programs page."
+ },
+ "132976": {
+  "name": "Charlotte Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://charlotteschools.schoolspring.com/",
+    "domain": "charlotteschools.schoolspring.com"
+   }
+  ],
+  "notes": "Charlotte Technical College = Charlotte County Public Schools; SchoolSpring board (40 postings).",
+  "homepage": "https://www.charlottetechcollege.net/ctc",
+  "state": "FL",
+  "sector": 7
+ },
+ "457387": {
+  "name": "Immokalee Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/collier/onlineapp/default.aspx?all=1",
+    "district": "collier"
+   }
+  ],
+  "notes": "Immokalee Technical College = Collier County Public Schools; Frontline AppliTrack 'collier' (82 postings).",
+  "homepage": "https://www.itech.edu/",
+  "state": "FL",
+  "sector": 7
+ },
+ "137713": {
+  "name": "Riveroak Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/suwannee/onlineapp/default.aspx?all=1",
+    "district": "suwannee"
+   }
+  ],
+  "notes": "Riveroak Technical College = Suwannee County School District; Frontline AppliTrack 'suwannee' (16 postings).",
+  "homepage": "https://rtc.suwannee.k12.fl.us/o/rtc",
+  "state": "FL",
+  "sector": 7
+ },
+ "135267": {
+  "name": "Fort Myers Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://apply.leeschools.net/psc/CGPRD/EMPLOYEE/HRMSEXT/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant",
+    "site_id": ""
+   }
+  ],
+  "notes": "Fort Myers Technical College = School District of Lee County; PeopleSoft Candidate Gateway at apply.leeschools.net (157 postings). Registry URL was a job-placement stats page."
+ },
+ "431558": {
+  "name": "Cape Coral Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://apply.leeschools.net/psc/CGPRD/EMPLOYEE/HRMSEXT/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant",
+    "site_id": ""
+   }
+  ],
+  "notes": "Cape Coral Technical College = School District of Lee County; PeopleSoft Candidate Gateway at apply.leeschools.net. Registry URL was an employment-partners page."
+ },
+ "134291": {
+  "name": "George Stone Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apps2.winocular.com/escambia/jobs/"
+   }
+  ],
+  "notes": "George Stone Technical College = Escambia County Public Schools; WinOcular applicant system (vendor not detected; listing renders via JS, generic fetcher got 0).",
+  "homepage": "https://www.georgestonecollege.edu/",
+  "state": "FL",
+  "sector": 7
+ },
+ "433068": {
+  "name": "Okaloosa Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://okaloosa.focusschoolsoftware.com/focus/jobs"
+   }
+  ],
+  "notes": "Okaloosa Technical College = Okaloosa County School District; Focus School Software job board (JS app, vendor not detected). Registry URL was a dual-enrollment page."
+ },
+ "369419": {
+  "name": "Erwin Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS%20JOB%20BOARD&csk.HROrganization=HCPS"
+   }
+  ],
+  "notes": "Erwin Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM job board (JS app, vendor not detected). The old applitrack.com/sdhc link is dead (500)."
+ },
+ "367875": {
+  "name": "H W Brewster Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS%20JOB%20BOARD&csk.HROrganization=HCPS"
+   }
+  ],
+  "notes": "Brewster Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM job board (vendor not detected)."
+ },
+ "485342": {
+  "name": "Aparicio-Levy Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS%20JOB%20BOARD&csk.HROrganization=HCPS"
+   }
+  ],
+  "notes": "Aparicio-Levy Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM job board (vendor not detected).",
+  "homepage": "https://www.hillsboroughschools.org/altc",
+  "state": "FL",
+  "sector": 7
+ },
+ "135294": {
+  "name": "Lindsey Hopkins Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+   }
+  ],
+  "notes": "Lindsey Hopkins Technical College = Miami-Dade County Public Schools; Radancy (TMP) career site apply.dadeschools.net (JS, vendor not detected). Registry URL was a programs page."
+ },
+ "461306": {
+  "name": "D A Dorsey Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+   }
+  ],
+  "notes": "D A Dorsey Technical College = M-DCPS; Radancy career site apply.dadeschools.net (vendor not detected)."
+ },
+ "135647": {
+  "name": "Miami Lakes Educational Center and Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+   }
+  ],
+  "notes": "Miami Lakes Educational Center = M-DCPS; Radancy career site apply.dadeschools.net (vendor not detected)."
+ },
+ "136826": {
+  "name": "Robert Morgan Educational Center and Technical College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+   }
+  ],
+  "notes": "Robert Morgan Educational Center = M-DCPS; Radancy career site apply.dadeschools.net (vendor not detected).",
+  "homepage": "https://www.robertmorgantech.net/",
+  "state": "FL",
+  "sector": 7
+ },
+ "441414": {
+  "name": "M-DCPS The English Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.dadeschools.net/go/Instructional-Opportunities/9524400/"
+   }
+  ],
+  "notes": "The English Center = M-DCPS adult school; Radancy career site apply.dadeschools.net (vendor not detected).",
+  "homepage": "https://www.tecmiami.com/",
+  "state": "FL",
+  "sector": 7
+ },
+ "222822": {
+  "name": "Angelina College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://myac.angelina.edu/ICS/AC_Employment/Position_Openings.jnz"
+   }
+  ],
+  "notes": "Angelina College lists openings in its Jenzabar JICS portal (Position_Openings.jnz, vendor not detected); the registry URL angelina.edu/employment/ is the HR landing page."
+ },
+ "207661": {
+  "name": "Rogers State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://my.rsu.edu/ICS/RSU_Jobs/RSU_Employment_Opportunities.jnz"
+   }
+  ],
+  "notes": "Rogers State University posts in Jenzabar JICS (RSU_Employment_Opportunities.jnz, vendor not detected); the registry URL is the HR landing page."
+ },
+ "145707": {
+  "name": "Illinois Eastern Community Colleges",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://iecc.edu/jobs"
+   }
+  ],
+  "notes": "Illinois Eastern CC: /jobs is the actual listing (32 postings as PDF links, e.g. 'Data Analyst'); registry URL /employment is the landing page. PDF links are skipped by the generic fetcher."
+ },
+ "229832": {
+  "name": "Western Texas College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wtc.edu/page/hr"
+   }
+  ],
+  "notes": "Western Texas College: HR page lists openings ('Adjunct Chemistry Instructor', 'Physics Instructor') as Apptegy aptg.co short links to PDFs; registry URL was the CTE programs page."
+ },
+ "382258": {
+  "name": "Mt. Diablo Adult Education-Mt. Diablo USD",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://mdusd.schoolspring.com/",
+    "domain": "mdusd.schoolspring.com"
+   }
+  ],
+  "notes": "Mt. Diablo Adult Education = Mt. Diablo USD; district board mdusd.tedk12.com -> mdusd.schoolspring.com (also on EdJoin districtID=5178).",
+  "homepage": "https://mdae.mdusd.org/",
+  "state": "CA",
+  "sector": 7
+ },
+ "440730": {
+  "name": "Onondaga Cortland Madison BOCES",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ocmboces.org/careers"
+   }
+  ],
+  "notes": "OCM BOCES careers page lists vacancies as PDFs (35 links); applications go through OLAS (olasjobs.org/ocm-boces), a vendor we do not detect.",
+  "homepage": "https://ocmboces.org/",
+  "state": "NY",
+  "sector": 7
+ },
+ "431716": {
+  "name": "Ocean County Vocational-Technical School",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.willsubplus.com/jobs?districtIds=2804"
+   }
+  ],
+  "notes": "Ocean County Vo-Tech posts on WillSub+ (jobs.willsubplus.com, vendor not detected; JS list, generic fetcher sees only nav).",
+  "homepage": "https://www.ocvts.org/",
+  "state": "NJ",
+  "sector": 7
+ },
+ "417868": {
+  "name": "Clinton Essex Warren Washington BOCES",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.mgmt.cves.org/?feed=job_feed"
+   }
+  ],
+  "notes": "CVES BOCES career page on mgmt.cves.org runs WP Job Manager; job_feed returns 10 postings (e.g. 'Adult Education LPN Teacher/RN- Hourly').",
+  "homepage": "https://www.cves.org/",
+  "state": "NY",
+  "sector": 7
+ },
+ "237899": {
+  "name": "West Virginia State University",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://wvstateu.edu/category/administration-governance/human-resources/job-listings/",
+    "pages": [
+     "https://wvstateu.edu/category/administration-governance/human-resources/job-listings/part-time-adjunct-positions/",
+     "https://wvstateu.edu/category/administration-governance/human-resources/job-listings/faculty-positions/"
+    ]
+   }
+  ],
+  "notes": "WVSU WordPress job-listings category archive (29 postings) with part-time/adjunct and faculty sub-categories; registry URL was the faculty-job-listings landing page."
+ },
+ "200208": {
+  "name": "Cankdeska Cikana Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.littlehoop.edu/jobs/"
+   }
+  ],
+  "notes": "Cankdeska Cikana CC: /jobs/ lists postings (e.g. 'Math Instructor/Faculty'); registry URL was the community/employment page."
+ },
+ "155098": {
+  "name": "Fort Scott Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://fortscott.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "Fort Scott CC: fortscott.edu/jobs/ is a WP Job Manager board (classify() detects the job_feed).",
+  "homepage": "https://www.fortscott.edu/",
+  "state": "KS",
+  "sector": 4
+ },
+ "243647": {
+  "name": "Palau Community College",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://pcc.palau.edu/about/jobs-pcc/"
+   }
+  ],
+  "notes": "Palau Community College 'Jobs @ PCC' page (site is pcc.palau.edu; IPEDS homepage palau.edu does not resolve); vacancies are PDF links incl. 'Faculty for the Bachelor of Science in Science Program'.",
+  "homepage": "https://pcc.palau.edu/",
+  "state": "PW",
+  "sector": 4
+ },
+ "206905": {
+  "name": "Pontotoc Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.pontotoctech.edu/page/open-positions"
+   }
+  ],
+  "notes": "Pontotoc Technology Center 'PTC Jobs' page (Apptegy site; job descriptions are aptg.co PDF links).",
+  "homepage": "https://www.pontotoctech.edu/",
+  "state": "OK",
+  "sector": 7
+ },
+ "389860": {
+  "name": "Mid-EastCTC-Adult Education",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mideastctc.org/employment"
+   }
+  ],
+  "notes": "Mid-East Career and Technology Centers employment page (lists e.g. 'Power Line Technician' instructor posting); district uses Frontline for HR.",
+  "homepage": "https://adulted.mideastctc.org/",
+  "state": "OH",
+  "sector": 7
+ },
+ "208053": {
+  "name": "High Plains Technology Center",
+  "source": "manual-cs-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hptc.edu/employment-opportunities"
+   }
+  ],
+  "notes": "High Plains Technology Center employment page (no openings listed today; PDF application).",
+  "homepage": "https://www.hptc.edu/",
+  "state": "OK",
+  "sector": 7
+ }
+}

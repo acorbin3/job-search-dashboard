@@ -1,0 +1,2608 @@
+{
+ "100724": {
+  "name": "Alabama State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure7.saashr.com/ta/6217950.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "VENDOR: UKG Ready (saashr.com careers; JS)"
+ },
+ "102313": {
+  "name": "H Councill Trenholm State Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_neogov",
+    "agency": "accs",
+    "url": "https://www.schooljobs.com/careers/accs"
+   }
+  ],
+  "notes": "Trenholm State is an ACCS college; replaces governmentjobs/pcbgov"
+ },
+ "104577": {
+  "name": "Eastern Arizona College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://eac.edu/careers/open-positions/"
+   }
+  ],
+  "notes": "HR page lists openings; JS-light"
+ },
+ "105297": {
+  "name": "Dine College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://dinecollege.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "VENDOR: isolved Hire (returns 503 to scripted UA)"
+ },
+ "106458": {
+  "name": "Arkansas State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=40&org=ARKASTAT2"
+   }
+  ],
+  "notes": "VENDOR: Taleo Business Edition (ASU System shared org ARKASTAT2, cws=40); replaces inherited jobs.asub.edu (ASU-Beebe)"
+ },
+ "106980": {
+  "name": "National Park College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://np.edu/facstaff/human-resources/employment-opportunities/"
+   }
+  ],
+  "notes": "HR page embeds Paycor Recruiting (gnk=job&gni= links); Paycor clientId not exposed"
+ },
+ "107071": {
+  "name": "Henderson State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=53&org=ARKASTAT2",
+    "pages": [
+     "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=52&org=ARKASTAT2"
+    ]
+   }
+  ],
+  "notes": "VENDOR: Taleo Business Edition (staff cws=53, adjunct cws=52); replaces jobs.asub.edu"
+ },
+ "107318": {
+  "name": "Arkansas State University Mid-South",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://asumidsouth.edu/about/careers/"
+   }
+  ],
+  "notes": "Careers page with /jobs/ detail links; replaces jobs.asub.edu"
+ },
+ "107521": {
+  "name": "Arkansas State University Three Rivers",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=64&org=ARKASTAT2"
+   }
+  ],
+  "notes": "VENDOR: Taleo Business Edition (cws=64); replaces jobs.asub.edu"
+ },
+ "107549": {
+  "name": "Ozarka College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ozarka.edu/jobs.cfm"
+   }
+  ],
+  "notes": "Job postings page (replaces hr index)"
+ },
+ "107983": {
+  "name": "Southern Arkansas University Main Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.saumag.edu/human-resources/category/employment-opportunities/faculty-positions/",
+    "pages": [
+     "https://www.saumag.edu/human-resources/category/employment-opportunities/staff-positions/",
+     "https://www.saumag.edu/human-resources/category/employment-opportunities/admin/"
+    ]
+   }
+  ],
+  "notes": "WordPress category pages with postings"
+ },
+ "110398": {
+  "name": "University of California College of the Law-San Francisco",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uclawsf.breezy.hr/"
+   }
+  ],
+  "notes": "VENDOR: Breezy HR (server-rendered list)"
+ },
+ "110635": {
+  "name": "University of California-Berkeley",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://careerspub.universityofcalifornia.edu/psc/ucb/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=21",
+    "site_id": "21"
+   }
+  ],
+  "notes": "UC Berkeley careerspub ucb SiteId=21, verified; replaces inherited UCSB site"
+ },
+ "110644": {
+  "name": "University of California-Davis",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://careerspub.universityofcalifornia.edu/psp/ucdavis/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=7",
+    "site_id": "7"
+   }
+  ],
+  "notes": "UC Davis TAM (careerspub ucdavis SiteId=7), verified; replaces inherited ucdavis.peopleadmin.com"
+ },
+ "111434": {
+  "name": "Canada College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://smccd.interviewexchange.com/static/clients/628SCM1/index.jsp",
+    "company_id": "628"
+   }
+  ],
+  "notes": "SMCCCD district board (shared with CSM, Skyline)"
+ },
+ "117867": {
+  "name": "Los Angeles Mission College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "csod",
+    "host": "laccd",
+    "site": "6",
+    "url": "https://laccd.csod.com/ux/ats/careersite/6/home"
+   }
+  ],
+  "notes": "LA Mission is an LACCD college; replaces equitylifestyleproperties Workday"
+ },
+ "119678": {
+  "name": "Naval Postgraduate School",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=Naval%20Postgraduate%20School"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://main.hercjobs.org/jobs?keywords=naval+postgraduate+school"
+   }
+  ],
+  "notes": "Federal: USAJOBS search (public API available) + HERC for faculty"
+ },
+ "122791": {
+  "name": "College of San Mateo",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://smccd.interviewexchange.com/static/clients/628SCM1/index.jsp",
+    "company_id": "628"
+   }
+  ],
+  "notes": "SMCCCD district board"
+ },
+ "128328": {
+  "name": "United States Air Force Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=United%20States%20Air%20Force%20Academy"
+   }
+  ],
+  "notes": "Federal; USAJOBS"
+ },
+ "128771": {
+  "name": "Central Connecticut State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ccsu.edu/hr/job-opportunities"
+   }
+  ],
+  "notes": "CCSU job page (JazzHR-like embed not resolvable); replaces unrelated ryan.wd1 Workday"
+ },
+ "129020": {
+  "name": "University of Connecticut",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://jobs.hr.uconn.edu"
+   }
+  ],
+  "notes": "UConn PageUp, verified classify()"
+ },
+ "129215": {
+  "name": "Eastern Connecticut State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://easternctstateuniversity.applytojob.com/apply/"
+   }
+  ],
+  "notes": "VENDOR: JazzHR (applytojob.com; server-rendered list, 8 postings)"
+ },
+ "129367": {
+  "name": "Connecticut State Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ctstate.edu/work-at-ctstate"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://www.jobapscloud.com/CT/?Keyword=&Loc=&DeptNumber=BOR77700&OccList=&JobType=&KeywordFullText=0"
+   }
+  ],
+  "notes": "CT State lists faculty/adjunct openings on its own page; classified (state) positions via JobAps (VENDOR: JobAps, jobapscloud.com)"
+ },
+ "130776": {
+  "name": "Western Connecticut State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wcsu.edu/hr/employment/current-opportunities/"
+   }
+  ],
+  "notes": "WCSU current opportunities; replaces unrelated abcsupply Workday"
+ },
+ "131399": {
+  "name": "University of the District of Columbia",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://udc.applicantstack.com/x/openings"
+   }
+  ],
+  "notes": "VENDOR: ApplicantStack (server-rendered, 97 postings)"
+ },
+ "132374": {
+  "name": "Atlantic Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://careers.browardschools.com/",
+    "company": "browardcouT1"
+   }
+  ],
+  "notes": "Broward County Public Schools SuccessFactors board (district runs the technical colleges)"
+ },
+ "132851": {
+  "name": "College of Central Florida",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://myjobs.adp.com/collegeofcentralfloridaexternalcs/"
+   }
+  ],
+  "notes": "VENDOR: ADP Recruitment Management (myjobs.adp.com, not WorkforceNow cid; JS)"
+ },
+ "135735": {
+  "name": "Orange Technical College-South Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "teachers-ocps",
+    "url": "https://teachers-ocps.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "Orange County Public Schools iCIMS (district runs Orange Technical College)"
+ },
+ "136145": {
+  "name": "North Florida College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.nfc.edu/about/employment-opportunities/employment-openings.php"
+   }
+  ],
+  "notes": "Openings page (9 postings)"
+ },
+ "136303": {
+  "name": "Orange Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "teachers-ocps",
+    "url": "https://teachers-ocps.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "OCPS iCIMS"
+ },
+ "137245": {
+  "name": "Sheridan Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://careers.browardschools.com/",
+    "company": "browardcouT1"
+   }
+  ],
+  "notes": "Broward County Public Schools board"
+ },
+ "138372": {
+  "name": "Orange Technical College-West Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "teachers-ocps",
+    "url": "https://teachers-ocps.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "OCPS iCIMS"
+ },
+ "138479": {
+  "name": "William T McFatter Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://careers.browardschools.com/",
+    "company": "browardcouT1"
+   }
+  ],
+  "notes": "Broward County Public Schools board"
+ },
+ "138488": {
+  "name": "Orange Technical College-East Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "teachers-ocps",
+    "url": "https://teachers-ocps.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "OCPS iCIMS"
+ },
+ "142559": {
+  "name": "College of Southern Idaho",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://csi-openhire.silkroad.com/epostings/index.cfm?version=1&company_id=17127"
+   }
+  ],
+  "notes": "VENDOR: SilkRoad OpenHire (JS; needs fetcher)"
+ },
+ "145521": {
+  "name": "Highland Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://highlandedu.hrmdirect.com/employment/job-openings.php?search=true"
+   }
+  ],
+  "notes": "VENDOR: ClearCompany/HRM Direct (server-rendered list)"
+ },
+ "145831": {
+  "name": "Illinois Valley Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/ivcc/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack (server-rendered list with ?all=1)"
+ },
+ "146278": {
+  "name": "John Wood Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jwcc.aaimtrack.com/jobs/"
+   }
+  ],
+  "notes": "VENDOR: AAIM Track (aaimtrack.com; JS)"
+ },
+ "148256": {
+  "name": "Rend Lake College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://rlc.edu/jobs"
+   }
+  ],
+  "notes": "RLC jobs page (apply via Ellucian applicant portal); replaces jobs.xpo.com"
+ },
+ "148937": {
+  "name": "Southeastern Illinois College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sic.edu/employment/sic-positions/"
+   }
+  ],
+  "notes": "SIC positions page (replaces employment index)"
+ },
+ "149532": {
+  "name": "Triton College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://jobopenings.triton.edu"
+   }
+  ],
+  "notes": "PeopleAdmin, verified classify()"
+ },
+ "151111": {
+  "name": "Indiana University-Indianapolis",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://hrms.iu.edu/psc/PH1PRD_PUB/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "site_id": "1"
+   }
+  ],
+  "notes": "IU PeopleSoft careers (all IU campuses), verified classify()"
+ },
+ "152637": {
+  "name": "Vincennes University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure7.saashr.com/ta/6051788.careers?CareersSearch=&ein_id=118965912&lang=en-US"
+   }
+  ],
+  "notes": "VENDOR: UKG Ready (saashr; JS) - same as registry URL, recorded for vendor tracking"
+ },
+ "154396": {
+  "name": "Southwestern Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.swcciowa.edu/human-resources/employment-opportunities"
+   }
+  ],
+  "notes": "Employment page (12 postings)"
+ },
+ "154934": {
+  "name": "Colby Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://colbycc.apscareerportal.com/"
+   }
+  ],
+  "notes": "VENDOR: APS Career Portal (apscareerportal.com, JS SPA; needs fetcher)"
+ },
+ "155140": {
+  "name": "Haskell Indian Nations University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=Haskell%20Indian%20Nations%20University"
+   }
+  ],
+  "notes": "Federal (BIE); USAJOBS"
+ },
+ "155201": {
+  "name": "Independence Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://indycc.apscareerportal.com/"
+   }
+  ],
+  "notes": "VENDOR: APS Career Portal (JS)"
+ },
+ "155681": {
+  "name": "Pittsburg State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "host": "https://ebyf.fa.us2.oraclecloud.com",
+    "site": "CX_1001",
+    "url": "https://ebyf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs"
+   }
+  ],
+  "notes": "Oracle HCM, verified; replaces linkedin podcast link"
+ },
+ "161299": {
+  "name": "Maine Maritime Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mainemaritime.edu/employment-at-mma/faculty-positions/",
+    "pages": [
+     "https://mainemaritime.edu/employment-at-mma/staff-positions/"
+    ]
+   }
+  ],
+  "notes": "Faculty/staff pages (partly PDF)"
+ },
+ "162609": {
+  "name": "Garrett College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.garrettcollege.edu/employment.php"
+   }
+  ],
+  "notes": "Postings as PDF links on HR page; weak"
+ },
+ "162690": {
+  "name": "Hagerstown Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure10.saashr.com/ta/6160104.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "VENDOR: UKG Ready (saashr; JS)"
+ },
+ "164155": {
+  "name": "United States Naval Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=United%20States%20Naval%20Academy"
+   }
+  ],
+  "notes": "VENDOR: USAJOBS (public API: data.usajobs.gov)"
+ },
+ "166692": {
+  "name": "Massachusetts Maritime Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.keldair.com/maritime/Faculty",
+    "pages": [
+     "https://jobs.keldair.com/maritime/Staff"
+    ]
+   }
+  ],
+  "notes": "VENDOR: Keldair (jobs.keldair.com; JS)"
+ },
+ "168607": {
+  "name": "Alpena Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "http://alpenacc.appone.com/"
+   }
+  ],
+  "notes": "VENDOR: AppOne / CBIZ (appone.com); JS; needs fetcher"
+ },
+ "169992": {
+  "name": "Gogebic Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://gogebic.edu/community/jobopportunities.html"
+   }
+  ],
+  "notes": "Job opportunities page"
+ },
+ "170055": {
+  "name": "Grand Rapids Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://grcc.clearcompany.com/careers"
+   }
+  ],
+  "notes": "VENDOR: ClearCompany career site (JS; siteId c93db35e-a99d-6540-27c0-301f8f589f9a)"
+ },
+ "171234": {
+  "name": "Montcalm Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.montcalm.edu/about/employment/full-time-positions/",
+    "pages": [
+     "https://www.montcalm.edu/about/employment/part-time-positions/"
+    ]
+   }
+  ],
+  "notes": "Static HR pages"
+ },
+ "171304": {
+  "name": "Muskegon Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://muskegoncc-careers.silkroad.com/Careers/EmploymentListings.html"
+   }
+  ],
+  "notes": "VENDOR: SilkRoad / Rival (JS)"
+ },
+ "172291": {
+  "name": "St Clair County Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/stclairccc/ExternalCareerSite"
+   }
+  ],
+  "notes": "VENDOR: SilkRoad (JS)"
+ },
+ "172635": {
+  "name": "Wayne County Community College District",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wcccd.edu/divisions/human-resources/jobs-at-wcccd"
+   }
+  ],
+  "notes": "Jobs at WCCCD page"
+ },
+ "172963": {
+  "name": "Anoka-Ramsey Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "minnstate",
+    "wd": "wd115",
+    "site": "Minnesota_State_Careers",
+    "url": "https://minnstate.wd115.myworkdayjobs.com/Minnesota_State_Careers"
+   }
+  ],
+  "notes": "Minnesota State shared Workday (verified classify); replaces inherited peopleadmin / careers.mn.gov"
+ },
+ "173799": {
+  "name": "Inver Hills Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "minnstate",
+    "wd": "wd115",
+    "site": "Minnesota_State_Careers",
+    "url": "https://minnstate.wd115.myworkdayjobs.com/Minnesota_State_Careers"
+   }
+  ],
+  "notes": "Minnesota State shared Workday (verified classify); replaces inherited peopleadmin / careers.mn.gov"
+ },
+ "175236": {
+  "name": "Ridgewater College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "minnstate",
+    "wd": "wd115",
+    "site": "Minnesota_State_Careers",
+    "url": "https://minnstate.wd115.myworkdayjobs.com/Minnesota_State_Careers"
+   }
+  ],
+  "notes": "Minnesota State shared Workday (verified classify); replaces inherited peopleadmin / careers.mn.gov"
+ },
+ "176169": {
+  "name": "Northeast Mississippi Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://nmcc.applicant-apply.elluciancloud.com/applicant/external/share/39113267-a047-477e-9452-731e4d0a3144"
+   }
+  ],
+  "notes": "VENDOR: Ellucian applicant portal (applicant-apply.elluciancloud.com, JS; needs fetcher). HR page https://www.nemcc.edu/employees/employment/index.html"
+ },
+ "176239": {
+  "name": "Pearl River Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://prcc.edu/about/employment-opportunities/"
+   }
+  ],
+  "notes": "Page lists postings; applications via Ellucian applicant portal (VENDOR: Ellucian)"
+ },
+ "177250": {
+  "name": "East Central College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.eastcentral.edu/hr/employment-opportunities/"
+   }
+  ],
+  "notes": "Employment page with HireMojo apply links (VENDOR: HireMojo); replaces greenhouse xai"
+ },
+ "178341": {
+  "name": "Missouri Southern State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mssu.hrmdirect.com/employment/job-openings.php?search=true"
+   }
+  ],
+  "notes": "VENDOR: ClearCompany / HRM Direct (hrmdirect.com renders server-side HTML list; 19 postings seen)"
+ },
+ "178420": {
+  "name": "University of Missouri-St Louis",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://erecruit.umsystem.edu/psc/tamext/UMSL/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant",
+    "site_id": ""
+   }
+  ],
+  "notes": "UM System eRecruit, UMSL node (registry has COLUM/ROLLA nodes)"
+ },
+ "180081": {
+  "name": "Highlands College of Montana Tech",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://montanatechuniversity.applytojob.com/apply"
+   }
+  ],
+  "notes": "VENDOR: JazzHR (applytojob.com; server-rendered, 14 postings)"
+ },
+ "180179": {
+  "name": "Montana State University Billings",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://employment.msubillings.edu"
+   }
+  ],
+  "notes": "PeopleAdmin, verified; replaces inherited jobs.msun.edu (MSU-Northern)"
+ },
+ "180276": {
+  "name": "Helena College University of Montana",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_neogov",
+    "agency": "ummissoula",
+    "url": "https://www.schooljobs.com/careers/ummissoula"
+   }
+  ],
+  "notes": "Helena College is a UM affiliate; UM schooljobs board (classify on homepage); replaces jobs.msun.edu"
+ },
+ "180373": {
+  "name": "Miles Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.milescc.edu/Employment/"
+   }
+  ],
+  "notes": "Employment page (weak); replaces jobs.msun.edu"
+ },
+ "180416": {
+  "name": "Montana Technological University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://montanatechuniversity.applytojob.com/apply"
+   }
+  ],
+  "notes": "VENDOR: JazzHR"
+ },
+ "181215": {
+  "name": "University of Nebraska at Kearney",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://unk.peopleadmin.com"
+   }
+  ],
+  "notes": "UNK own PeopleAdmin, verified; replaces unmc.peopleadmin.com"
+ },
+ "181312": {
+  "name": "Mid-Plains Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mpcc.edu/faculty-staff/human-resources/employment-opportunities.php"
+   }
+  ],
+  "notes": "MPCC employment page (12 postings); replaces gphealth Workday (a partner posting on that page)"
+ },
+ "181419": {
+  "name": "Nebraska Indian Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.thenicc.edu/career-services/employment-opportunities.php"
+   }
+  ],
+  "notes": "Postings are PDF links (generic fetcher skips PDFs)"
+ },
+ "181783": {
+  "name": "Wayne State College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://nscs.peopleadmin.com"
+   }
+  ],
+  "notes": "Nebraska State College System PeopleAdmin, verified; replaces compass-usa successfactors"
+ },
+ "183099": {
+  "name": "NHTI-Concord's Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183105": {
+  "name": "White Mountains Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183114": {
+  "name": "River Valley Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183123": {
+  "name": "Lakes Region Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183132": {
+  "name": "Manchester Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183141": {
+  "name": "Nashua Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "183150": {
+  "name": "Great Bay Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   }
+  ],
+  "notes": "CCSNH system-wide board (VENDOR: ClearCompany/HRM Direct; server-rendered, 118 postings across 7 colleges)"
+ },
+ "186380": {
+  "name": "Rutgers University-New Brunswick",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "tenant": "RUT1002RUTUF",
+    "board": "03c661c1-484c-4a15-8070-9280aa7ed75a",
+    "url": "https://recruiting.ultipro.com/RUT1002RUTUF/JobBoard/03c661c1-484c-4a15-8070-9280aa7ed75a/?q=&o=postedDateDesc"
+   }
+  ],
+  "notes": "jobs.rutgers.edu -> UKG Pro board (same as Rutgers-Newark entry), verified classify()"
+ },
+ "188216": {
+  "name": "Southwestern Indian Polytechnic Institute",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=Southwestern%20Indian%20Polytechnic%20Institute"
+   }
+  ],
+  "notes": "Federal (BIE); USAJOBS"
+ },
+ "188261": {
+  "name": "Mesalands Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mesalands.edu/o/mcc/page/professional-employment-opportunities"
+   }
+  ],
+  "notes": "Apptegy site; 8 postings as links"
+ },
+ "190053": {
+  "name": "Clinton Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://suny-clinton-clinton-community-college.breezy.hr/"
+   }
+  ],
+  "notes": "VENDOR: Breezy HR; replaces inherited cnycentral.com news article"
+ },
+ "190169": {
+  "name": "Columbia-Greene Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://columbia-greene-community-college.breezy.hr/"
+   }
+  ],
+  "notes": "VENDOR: Breezy HR; replaces cnycentral.com"
+ },
+ "190840": {
+  "name": "Dutchess Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://sunydutchess.interviewexchange.com/static/clients/539DCM1/index.jsp",
+    "company_id": "539"
+   }
+  ],
+  "notes": "Interview Exchange, verified; replaces cnycentral.com"
+ },
+ "191199": {
+  "name": "Finger Lakes Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.flcc.edu/jobs/"
+   }
+  ],
+  "notes": "FLCC jobs page; replaces cnycentral.com"
+ },
+ "191302": {
+  "name": "Fulton-Montgomery Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://fmcc.edu/about-fmcc/employment-opportunities"
+   }
+  ],
+  "notes": "replaces cnycentral.com"
+ },
+ "191719": {
+  "name": "Hudson Valley Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hvcc.edu/hr/employment-opportunities.html"
+   }
+  ],
+  "notes": "replaces cnycentral.com"
+ },
+ "192022": {
+  "name": "Jefferson Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://sunyjefferson.interviewexchange.com/static/clients/559JCM1/index.jsp",
+    "company_id": "559"
+   }
+  ],
+  "notes": "Interview Exchange, verified; replaces cnycentral.com"
+ },
+ "193946": {
+  "name": "Niagara County Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://niagaracc-suny.peopleadmin.com"
+   }
+  ],
+  "notes": "PeopleAdmin, verified; replaces cnycentral.com"
+ },
+ "195988": {
+  "name": "Sullivan County Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sunysullivan.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "VENDOR: isolved Hire (503 to scripts); replaces cnycentral.com"
+ },
+ "196006": {
+  "name": "SUNY College of Technology at Alfred",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "url": "https://alfredstate.interviewexchange.com/static/clients/481ASM1/index.jsp",
+    "company_id": "481"
+   }
+  ],
+  "notes": "Interview Exchange, verified; replaces cnycentral.com"
+ },
+ "196699": {
+  "name": "Ulster County Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sunyulster.edu/jobs-at-suny-ulster/index.php"
+   }
+  ],
+  "notes": "replaces cnycentral.com"
+ },
+ "197027": {
+  "name": "United States Merchant Marine Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=United%20States%20Merchant%20Marine%20Academy"
+   }
+  ],
+  "notes": "Federal academy; site 403s; USAJOBS search"
+ },
+ "197036": {
+  "name": "United States Military Academy",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search?k=West%20Point"
+   }
+  ],
+  "notes": "Federal; USAJOBS (civilian faculty)"
+ },
+ "199120": {
+  "name": "University of North Carolina at Chapel Hill",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://unc.peopleadmin.com"
+   }
+  ],
+  "notes": "UNC-CH PeopleAdmin, verified; replaces jobs.ncsu.edu"
+ },
+ "203599": {
+  "name": "Lakeland Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hire.simplicant.com/?company_id=3743"
+   }
+  ],
+  "notes": "VENDOR: Simplicant (hire.simplicant.com widget; server-rendered list)"
+ },
+ "205966": {
+  "name": "Southern State Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.dayforcehcm.com/en-US/sscc/CANDIDATEPORTAL"
+   }
+  ],
+  "notes": "VENDOR: Dayforce new-style URL jobs.dayforcehcm.com/en-US/<client>/CANDIDATEPORTAL (client=sscc); existing dayforce fetcher uses this API but detector regex only matches <client>.dayforcehcm.com/CandidatePortal/"
+ },
+ "206613": {
+  "name": "Wright State University-Lake Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://jobs.wright.edu"
+   }
+  ],
+  "notes": "Wright State PeopleAdmin (all campuses), verified classify()"
+ },
+ "206914": {
+  "name": "Cameron University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/Cameron/Careers"
+   }
+  ],
+  "notes": "VENDOR: SilkRoad (JS)"
+ },
+ "207281": {
+  "name": "Northern Oklahoma College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.noc.edu/about-noc/employment-opportunities/faculty/",
+    "pages": [
+     "https://www.noc.edu/about-noc/employment-opportunities/staff/"
+    ]
+   }
+  ],
+  "notes": "Faculty/staff posting pages"
+ },
+ "207661": {
+  "name": "Rogers State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.rsu.edu/offices-services/human-resources/employment/"
+   }
+  ],
+  "notes": "RSU is RUSO not OSU A&M; employment page; replaces jobs.okstate.edu"
+ },
+ "207722": {
+  "name": "University of Science and Arts of Oklahoma",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://usao.edu/about/human-resources/careers-at-usao.html"
+   }
+  ],
+  "notes": "Vacancies as PDF notices; weak"
+ },
+ "208035": {
+  "name": "Western Oklahoma State College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wosc.edu/index.php?page=jobs"
+   }
+  ],
+  "notes": "WOSC jobs page (4 postings); replaces inherited jobs.okstate.edu"
+ },
+ "211079": {
+  "name": "Community College of Beaver County",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.dayforcehcm.com/en-US/communitycollege/CANDIDATEPORTAL"
+   }
+  ],
+  "notes": "VENDOR: Dayforce new-style URL (client=communitycollege); see 205966 note"
+ },
+ "215309": {
+  "name": "University of Pittsburgh-Titusville",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_taleo",
+    "tenant": "cfopitt",
+    "section": "pitt_staff_external",
+    "url": "https://cfopitt.taleo.net/careersection/pitt_staff_external/jobsearch.ftl"
+   },
+   {
+    "ats": "college_taleo",
+    "tenant": "cfopitt",
+    "section": "pitt_faculty_external",
+    "url": "https://cfopitt.taleo.net/careersection/pitt_faculty_external/jobsearch.ftl"
+   }
+  ],
+  "notes": "Pitt Talent Center (Taleo) staff + faculty sections, verified classify()"
+ },
+ "215585": {
+  "name": "Reading Area Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.racc.edu/about-racc/career-opportunities"
+   }
+  ],
+  "notes": "Career opportunities page (50 postings)"
+ },
+ "216339": {
+  "name": "Temple University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_taleo",
+    "tenant": "temple",
+    "section": "tu_ex_staff",
+    "url": "https://careers.temple.edu/careers-temple/search-and-apply-jobs"
+   },
+   {
+    "ats": "college_taleo",
+    "tenant": "temple",
+    "section": "tu_ex_faculty",
+    "url": "https://temple.taleo.net/careersection/tu_ex_faculty/jobsearch.ftl"
+   }
+  ],
+  "notes": "Temple Taleo staff+faculty, verified; replaces governmentjobs/pabureau"
+ },
+ "217475": {
+  "name": "Community College of Rhode Island",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.ccri.edu/jobs"
+   }
+  ],
+  "notes": "VENDOR: Teamtailor (server-rendered list)"
+ },
+ "219189": {
+  "name": "Mitchell Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mitchelltech.tedk12.com/hire/index.aspx"
+   }
+  ],
+  "notes": "VENDOR: PowerSchool Unified Talent / TalentEd (tedk12.com; JS)"
+ },
+ "219356": {
+  "name": "South Dakota State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://yourfuture.sdbor.edu"
+   }
+  ],
+  "notes": "SDBOR shared PeopleAdmin, verified; replaces rembrandtfoods Workday"
+ },
+ "223922": {
+  "name": "Clarendon College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://clarendoncollege.apscareerportal.com/jobs?locale=en-US"
+   }
+  ],
+  "notes": "VENDOR: APS Career Portal (JS)"
+ },
+ "225070": {
+  "name": "Grayson College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://grayson-county-junior-college-district.apscareerportal.com/"
+   }
+  ],
+  "notes": "VENDOR: APS Career Portal (JS)"
+ },
+ "225423": {
+  "name": "Houston Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_taleo",
+    "tenant": "hccs",
+    "section": "2",
+    "url": "https://hccs.referrals.selectminds.com/"
+   }
+  ],
+  "notes": "Taleo selectminds (same shape as City Colleges of Chicago entry), verified classify()"
+ },
+ "225520": {
+  "name": "Howard College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://runapplicant.com/Position/Index/4"
+   }
+  ],
+  "notes": "VENDOR: RunApplicant (runapplicant.com, iframe on howardcollege.edu/careers.html; JS)"
+ },
+ "226019": {
+  "name": "Kilgore College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://kilgorecollege.applytojob.com/apply/"
+   }
+  ],
+  "notes": "VENDOR: JazzHR (server-rendered, 34 postings)"
+ },
+ "227146": {
+  "name": "Navarro College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "host": "https://espf.fa.ocs.oraclegovcloud2.com",
+    "site": "CX_1",
+    "url": "https://espf.fa.ocs.oraclegovcloud2.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs"
+   }
+  ],
+  "notes": "Oracle HCM on oraclegovcloud2.com (oracle detector only matches oraclecloud.com host); same CandidateExperience API"
+ },
+ "229027": {
+  "name": "The University of Texas at San Antonio",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_peoplesoft",
+    "url": "https://zahr-prd-candidate-ada.utshare.utsystem.edu/psc/ZAHRPRDADA/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=21",
+    "site_id": "21"
+   }
+  ],
+  "notes": "UTShare PeopleSoft SiteId=21, verified; replaces UT Health SA careers"
+ },
+ "229179": {
+  "name": "Texas Woman's University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "host": "https://ewal.fa.us8.oraclecloud.com",
+    "site": "CX_1",
+    "url": "https://ewal.fa.us8.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs"
+   }
+  ],
+  "notes": "Oracle HCM, verified classify()"
+ },
+ "229337": {
+  "name": "Texas Tech University Health Sciences Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.brassring.com/1033/ASP/TG/cim_home.asp?partnerid=25898&siteid=5281"
+   }
+  ],
+  "notes": "VENDOR: Kenexa BrassRing (JS)"
+ },
+ "237817": {
+  "name": "Southern West Virginia Community and Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure.entertimeonline.com/ta/CBIZ20823.careers?careerssearch=&lang=en-US"
+   }
+  ],
+  "notes": "VENDOR: UKG Ready via CBIZ (entertimeonline.com; JS)"
+ },
+ "237899": {
+  "name": "West Virginia State University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://wvstateu.edu/human-resources/career-opportunities/faculty-job-listings/",
+    "pages": [
+     "https://wvstateu.edu/human-resources/staff-job-listings/",
+     "https://wvstateu.edu/human-resources/part-time-job-listings/"
+    ]
+   }
+  ],
+  "notes": "Listing pages by type"
+ },
+ "237932": {
+  "name": "West Liberty University",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "westlibertyuniversity",
+    "url": "https://westlibertyuniversity.bamboohr.com/careers"
+   }
+  ],
+  "notes": "BambooHR (slug from careers page embed script); detector missed the JS embed"
+ },
+ "239220": {
+  "name": "Mid-State Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=41&org=MIDSTECH"
+   }
+  ],
+  "notes": "VENDOR: Taleo Business Edition (tbe.taleo.net, not /careersection/); JS; needs fetcher"
+ },
+ "240745": {
+  "name": "Guam Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://apply.hafajobs.com/guam/GCC/jobs"
+   }
+  ],
+  "notes": "VENDOR: HafaJobs; replaces American Red Cross Workday"
+ },
+ "248606": {
+  "name": "Moore Norman Technology Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/mntc/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack"
+ },
+ "262031": {
+  "name": "St Charles Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://stchas.aaimtrack.com/jobsearch/"
+   }
+  ],
+  "notes": "VENDOR: AAIM Track (JS); unfiltered search URL"
+ },
+ "363165": {
+  "name": "Metro Technology Centers",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/metrotech/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack"
+ },
+ "365213": {
+  "name": "Autry Technology Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://autrytech.tedk12.com/hire/index.aspx"
+   }
+  ],
+  "notes": "VENDOR: PowerSchool TalentEd (JS)"
+ },
+ "365374": {
+  "name": "Canadian Valley Technology Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cvtech.tedk12.com/hire/index.aspx"
+   }
+  ],
+  "notes": "VENDOR: PowerSchool TalentEd; replaces medline Workday"
+ },
+ "366340": {
+  "name": "Stone Child College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.stonechild.edu/page/employment-rfps"
+   }
+  ],
+  "notes": "Apptegy page, postings as aptg.co links"
+ },
+ "367875": {
+  "name": "H W Brewster Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hillsboroughschools.org/page/welcome-to-hcps-employment"
+   }
+  ],
+  "notes": "Hillsborough County Public Schools HR page; district ATS not identified"
+ },
+ "369419": {
+  "name": "Erwin Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hillsboroughschools.org/page/welcome-to-hcps-employment"
+   }
+  ],
+  "notes": "Hillsborough County Public Schools HR page; district ATS not identified"
+ },
+ "382911": {
+  "name": "Southwest College for the Deaf",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://runapplicant.com/Position/Index/4"
+   }
+  ],
+  "notes": "SW College for the Deaf is a Howard College campus; same RunApplicant board"
+ },
+ "418296": {
+  "name": "Indian Capital Technology Center-Muskogee",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/ictctech/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack"
+ },
+ "418533": {
+  "name": "Lancaster County Career and Technology Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/lancasterctc/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack"
+ },
+ "420468": {
+  "name": "Western Suffolk BOCES",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wsboces.org/employment-services/job-openings/"
+   }
+  ],
+  "notes": "BOCES job openings page (OLAS for educators); replaces teamcarcare Workday"
+ },
+ "420723": {
+  "name": "Tillamook Bay Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://tillamookbaycc.edu/about-tbcc/jobs/"
+   }
+  ],
+  "notes": "Jobs page; no ATS link found (weak)"
+ },
+ "423652": {
+  "name": "Oregon Coast Community College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "paylocity",
+    "guid": "12ee5da2-248b-45f3-a6dd-acad610ba723",
+    "url": "https://recruiting.paylocity.com/recruiting/jobs/All/12ee5da2-248b-45f3-a6dd-acad610ba723/Oregon-Coast-Community-College"
+   }
+  ],
+  "notes": "Paylocity, classify() on homepage (new domain oregoncoast.edu)"
+ },
+ "436818": {
+  "name": "University of Connecticut-Waterbury Campus",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://jobs.hr.uconn.edu"
+   }
+  ],
+  "notes": "UConn PageUp (all campuses)"
+ },
+ "436827": {
+  "name": "University of Connecticut-Avery Point",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://jobs.hr.uconn.edu"
+   }
+  ],
+  "notes": "UConn PageUp (all campuses)"
+ },
+ "436836": {
+  "name": "University of Connecticut-Stamford",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://jobs.hr.uconn.edu"
+   }
+  ],
+  "notes": "UConn PageUp (all campuses)"
+ },
+ "440402": {
+  "name": "Arkansas State University-Newport",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.asun.edu/careers/index.php"
+   }
+  ],
+  "notes": "Careers page (links to Taleo Business Edition phe03); replaces jobs.asub.edu"
+ },
+ "444954": {
+  "name": "Mountwest Community and Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mctc.edu/hr/job-postings/"
+   }
+  ],
+  "notes": "Page lists postings; apply via Ellucian applicant portal (VENDOR: Ellucian)"
+ },
+ "447582": {
+  "name": "New River Community and Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "newriver",
+    "url": "https://newriver.bamboohr.com/careers"
+   }
+  ],
+  "notes": "BambooHR, classify() on homepage"
+ },
+ "461245": {
+  "name": "Flagler Technical College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://flaglerschools.schoolspring.com"
+   }
+  ],
+  "notes": "VENDOR: SchoolSpring (Flagler Schools district; JS)"
+ },
+ "483124": {
+  "name": "Arizona State University Digital Immersion",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "asu",
+    "wd": "wd1",
+    "site": "ASUStaffCareers",
+    "url": "https://asu.wd1.myworkdayjobs.com/ASUStaffCareers"
+   }
+  ],
+  "notes": "ASU Workday, verified classify() on cfo.asu.edu/applicant"
+ },
+ "484473": {
+  "name": "University of Florida-Online",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://explore.jobs.ufl.edu"
+   }
+  ],
+  "notes": "UF PageUp, verified classify()"
+ },
+ "488800": {
+  "name": "Teachers College of San Joaquin",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://teacherscollegesj.edu/careers/"
+   }
+  ],
+  "notes": "Careers page links EdJoin postings (VENDOR: EdJoin)"
+ },
+ "488934": {
+  "name": "Tulsa Technology Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/tulsatech/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack (server-rendered with ?all=1)"
+ },
+ "492689": {
+  "name": "Texas Tech University Health Sciences Center-El Paso",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&siteid=5625"
+   }
+  ],
+  "notes": "VENDOR: Kenexa BrassRing (JS)"
+ },
+ "495013": {
+  "name": "Western Maricopa Education Center",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.applitrack.com/westmec/onlineapp/default.aspx?all=1"
+   }
+  ],
+  "notes": "VENDOR: Frontline AppliTrack"
+ },
+ "495271": {
+  "name": "California Indian Nations College",
+  "source": "manual-public",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "6D1353D45F206B1C1F44D6CCC28333BA",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=6D1353D45F206B1C1F44D6CCC28333BA"
+   }
+  ],
+  "notes": "Paycom, classify() on homepage"
+ },
+ "_systems": {
+  "California State University": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://csucareers.calstate.edu"
+   },
+   "unitids": [
+    "110422",
+    "110486",
+    "110495",
+    "110501",
+    "110510",
+    "110529",
+    "110538",
+    "110547",
+    "110556",
+    "110565",
+    "110574",
+    "110583",
+    "110592",
+    "110608",
+    "110617",
+    "111188",
+    "115755",
+    "122409",
+    "122597",
+    "122755",
+    "123572",
+    "366711",
+    "409698",
+    "441937"
+   ],
+   "notes": "System-wide PageUp (csucareers.calstate.edu/en-us/listing/) aggregating all campuses; campuses also keep their own PageUp sites",
+   "verified": "classify()"
+  },
+  "Colorado Community College System": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://hr.cccs.edu"
+   },
+   "unitids": [
+    "126289",
+    "126748",
+    "126863",
+    "126942",
+    "127200",
+    "127389",
+    "127617",
+    "127732",
+    "127778",
+    "127820",
+    "127884",
+    "127909",
+    "128258"
+   ],
+   "notes": "hr.cccs.edu PageUp covers all 13 colleges; some campuses were mapped to governmentjobs.com/careers/colorado (state board) instead",
+   "verified": "classify()"
+  },
+  "Minnesota State Colleges and Universities": {
+   "board": {
+    "ats": "workday",
+    "tenant": "minnstate",
+    "wd": "wd115",
+    "site": "Minnesota_State_Careers",
+    "url": "https://minnstate.wd115.myworkdayjobs.com/Minnesota_State_Careers"
+   },
+   "unitids": [
+    "172918",
+    "172954",
+    "172963",
+    "173063",
+    "173115",
+    "173124",
+    "173203",
+    "173416",
+    "173461",
+    "173559",
+    "173638",
+    "173708",
+    "173735",
+    "173799",
+    "173911",
+    "173920",
+    "174020",
+    "174136",
+    "174358",
+    "174376",
+    "174428",
+    "174473",
+    "174570",
+    "174738",
+    "174756",
+    "174783",
+    "175041",
+    "175078",
+    "175236",
+    "175263",
+    "175272",
+    "175315",
+    "380368",
+    "428453"
+   ],
+   "notes": "Single Workday tenant for all 33 campuses (+system office, currently mapped to minnesotaschools.peopleadmin.com which is wrong)",
+   "verified": "classify()"
+  },
+  "Nebraska State College System": {
+   "board": {
+    "ats": "college_peopleadmin",
+    "url": "https://nscs.peopleadmin.com"
+   },
+   "unitids": [
+    "180948",
+    "181534",
+    "181783"
+   ],
+   "notes": "Chadron, Peru, Wayne State share nscs.peopleadmin.com",
+   "verified": "classify()"
+  },
+  "South Dakota Board of Regents": {
+   "board": {
+    "ats": "college_peopleadmin",
+    "url": "https://yourfuture.sdbor.edu"
+   },
+   "unitids": [
+    "219046",
+    "219082",
+    "219259",
+    "219347",
+    "219356",
+    "219471"
+   ],
+   "notes": "All six regental universities (SDSU currently mapped to rembrandtfoods Workday)",
+   "verified": "classify()"
+  },
+  "University of Connecticut": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://jobs.hr.uconn.edu"
+   },
+   "unitids": [
+    "129020",
+    "436818",
+    "436827",
+    "436836"
+   ],
+   "notes": "UConn PageUp covers Storrs + regional campuses",
+   "verified": "classify()"
+  },
+  "City University of New York": {
+   "board": {
+    "ats": "college_generic",
+    "url": "https://cuny.jobs/jobs/"
+   },
+   "unitids": [
+    "190035",
+    "190512",
+    "190521",
+    "190530",
+    "190549",
+    "190558",
+    "190567",
+    "190576",
+    "190585",
+    "190594",
+    "190600",
+    "190619",
+    "190628",
+    "190637",
+    "190646",
+    "190655",
+    "190664",
+    "190673",
+    "190682",
+    "190691",
+    "475565"
+   ],
+   "notes": "cuny.jobs/jobs/ is the public CUNY-wide listing (JS-rendered; needs fetcher). CUNYfirst (hrsa.cunyfirst.cuny.edu, PeopleSoft) requires CUNY login for the GUEST search; the rfcuny Workday board inherited by most campuses is the Research Foundation, not the colleges",
+   "verified": "manual"
+  },
+  "Maricopa Community College District": {
+   "board": {
+    "ats": "college_peoplesoft",
+    "site_id": "",
+    "url": "https://jobs.erp.maricopa.edu/psc/MCPAHPRD/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant"
+   },
+   "unitids": [
+    "104708",
+    "105136",
+    "105145",
+    "105154",
+    "105428",
+    "105668",
+    "105747",
+    "105792",
+    "364016",
+    "364025",
+    "384333"
+   ],
+   "notes": "jobs.erp.maricopa.edu PeopleSoft (already on campuses; system office 105136 is 'generic' and should inherit it). jobs.maricopa.edu resets connections",
+   "verified": "registry"
+  },
+  "Community College System of New Hampshire": {
+   "board": {
+    "ats": "college_generic",
+    "url": "https://ccsnh.hrmdirect.com/employment/job-openings.php?search=true&nohd=&office=-1"
+   },
+   "unitids": [
+    "183099",
+    "183105",
+    "183114",
+    "183123",
+    "183132",
+    "183141",
+    "183150"
+   ],
+   "notes": "VENDOR: ClearCompany/HRM Direct; single board for all 7 colleges (office=<id> filters per college)",
+   "verified": "manual (118 postings seen)"
+  },
+  "San Mateo County Community College District": {
+   "board": {
+    "ats": "college_interviewexchange",
+    "url": "https://smccd.interviewexchange.com/static/clients/628SCM1/index.jsp",
+    "company_id": "628"
+   },
+   "unitids": [
+    "111434",
+    "122791",
+    "123509"
+   ],
+   "notes": "Interview Exchange district board (Skyline already had it; Canada and CSM were 'none')",
+   "verified": "classify()"
+  },
+  "Broward County Public Schools": {
+   "board": {
+    "ats": "college_successfactors",
+    "url": "https://careers.browardschools.com/",
+    "company": "browardcouT1"
+   },
+   "unitids": [
+    "132374",
+    "137245",
+    "138479"
+   ],
+   "notes": "District SuccessFactors board for Atlantic/Sheridan/McFatter technical colleges",
+   "verified": "classify()"
+  },
+  "Orange County Public Schools": {
+   "board": {
+    "ats": "icims",
+    "slug_id": "teachers-ocps",
+    "url": "https://teachers-ocps.icims.com/jobs/search?ss=1"
+   },
+   "unitids": [
+    "135735",
+    "136303",
+    "138372"
+   ],
+   "notes": "District iCIMS for Orange Technical College campuses",
+   "verified": "classify()"
+  },
+  "Arkansas State University System": {
+   "board": {
+    "ats": "college_generic",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/jobSearch?act=redirectCwsV2&cws=40&org=ARKASTAT2"
+   },
+   "unitids": [
+    "106449",
+    "106458",
+    "107071",
+    "107318",
+    "107521",
+    "420538",
+    "440402",
+    "448336"
+   ],
+   "notes": "VENDOR: Taleo Business Edition org ARKASTAT2 with a cws per campus (ASU main 40, Henderson 53/52, Three Rivers 64); campuses were wrongly inheriting ASU-Beebe's PeopleAdmin",
+   "verified": "manual"
+  },
+  "Connecticut State Colleges and Universities": {
+   "board": {
+    "ats": "college_generic",
+    "url": "https://www.jobapscloud.com/CT/?Keyword=&Loc=&DeptNumber=BOR77700&OccList=&JobType=&KeywordFullText=0"
+   },
+   "unitids": [
+    "128771",
+    "128780",
+    "129215",
+    "129367",
+    "130493",
+    "130776"
+   ],
+   "notes": "No shared ATS: classified state jobs via JobAps (VENDOR), each university posts faculty on its own page (Eastern uses JazzHR, CT State lists on ctstate.edu/work-at-ctstate)",
+   "verified": "manual"
+  },
+  "Alabama Community College System": {
+   "board": {
+    "agency": "accs",
+    "ats": "college_neogov",
+    "url": "https://www.schooljobs.com/careers/accs"
+   },
+   "unitids": [
+    "100760",
+    "101028",
+    "101143",
+    "101161",
+    "101240",
+    "101286",
+    "101295",
+    "101301",
+    "101462",
+    "101505",
+    "101514",
+    "101569",
+    "101602",
+    "101648",
+    "101736",
+    "101897",
+    "101994",
+    "102030",
+    "102067",
+    "102076",
+    "102313",
+    "102429",
+    "251260"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Technical College System of Georgia": {
+   "board": {
+    "ats": "workday",
+    "site": "TGC",
+    "tenant": "georgia",
+    "url": "https://georgia.wd5.myworkdayjobs.com/TGC",
+    "wd": "wd5"
+   },
+   "unitids": [
+    "138682",
+    "138840",
+    "138956",
+    "139278",
+    "139357",
+    "139384",
+    "139986",
+    "140012",
+    "140243",
+    "140331",
+    "140678",
+    "140942",
+    "141006",
+    "141255",
+    "244446",
+    "246813",
+    "366465",
+    "368911",
+    "420431",
+    "483045",
+    "485458",
+    "487162"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University of Hawaii Board of Regents": {
+   "board": {
+    "agency": "hawaiiedu",
+    "ats": "college_neogov",
+    "url": "https://www.schooljobs.com/careers/hawaiiedu"
+   },
+   "unitids": [
+    "141565",
+    "141574",
+    "141680",
+    "141796",
+    "141802",
+    "141811",
+    "141839",
+    "141963",
+    "141981",
+    "141990",
+    "383190"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University of Alaska System of Higher Education": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://careers.alaska.edu"
+   },
+   "unitids": [
+    "102553",
+    "102614",
+    "102632",
+    "103529"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "North Dakota University System": {
+   "board": {
+    "ats": "college_peoplesoft",
+    "site_id": "1",
+    "url": "https://prd.hcm.ndus.edu/psc/recruit/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1"
+   },
+   "unitids": [
+    "200022",
+    "200059",
+    "200192",
+    "200226",
+    "200253",
+    "200280",
+    "200305",
+    "200314",
+    "200332",
+    "200341",
+    "200572"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Kentucky Community and Technical College System": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://careers.kctcs.edu"
+   },
+   "unitids": [
+    "156231",
+    "156338",
+    "156392",
+    "156648",
+    "156790",
+    "156851",
+    "156860",
+    "156921",
+    "157304",
+    "157331",
+    "157438",
+    "157483",
+    "157553",
+    "157711",
+    "157739",
+    "157854",
+    "247940"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Virginia Community College System": {
+   "board": {
+    "ats": "college_peopleadmin",
+    "url": "https://jobs.vccs.edu"
+   },
+   "unitids": [
+    "231536",
+    "231697",
+    "231873",
+    "231882",
+    "232052",
+    "232195",
+    "232414",
+    "232450",
+    "232575",
+    "232788",
+    "232867",
+    "232946",
+    "233019",
+    "233037",
+    "233116",
+    "233310",
+    "233639",
+    "233648",
+    "233754",
+    "233772",
+    "233903",
+    "233949",
+    "234377"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "TBR - The College System of Tennessee": {
+   "board": {
+    "ats": "college_pageup",
+    "url": "https://careers.tbr.edu"
+   },
+   "unitids": [
+    "219596",
+    "219824",
+    "219879",
+    "219888",
+    "219994",
+    "220057",
+    "220127",
+    "220251",
+    "220279",
+    "220321",
+    "220394",
+    "220400",
+    "220640",
+    "220756",
+    "220853",
+    "221050",
+    "221096",
+    "221102",
+    "221184",
+    "221236",
+    "221281",
+    "221333",
+    "221397",
+    "221430",
+    "221485",
+    "221494",
+    "221582",
+    "221591",
+    "221607",
+    "221616",
+    "221625",
+    "221643",
+    "221908",
+    "222053",
+    "222062",
+    "248925",
+    "409379"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University System of Georgia": {
+   "board": {
+    "ats": "college_peoplesoft",
+    "site_id": "57000",
+    "url": "https://careers.hprod.onehcm.usg.edu/psc/careers/CAREERS/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=57000"
+   },
+   "unitids": [
+    "138558",
+    "138716",
+    "138901",
+    "139250",
+    "139311",
+    "139366",
+    "139463",
+    "139621",
+    "139700",
+    "139719",
+    "139755",
+    "139764",
+    "139861",
+    "139931",
+    "139940",
+    "139959",
+    "139968",
+    "140960",
+    "141264",
+    "141334",
+    "244437",
+    "447689",
+    "482149",
+    "482158",
+    "482680",
+    "482699",
+    "486840"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Louisiana Community and Technical College System": {
+   "board": {
+    "agency": "louisiana",
+    "ats": "college_neogov",
+    "url": "https://www.governmentjobs.com/careers/louisiana"
+   },
+   "unitids": [
+    "158088",
+    "158431",
+    "158662",
+    "158884",
+    "160010",
+    "160481",
+    "160579",
+    "160667",
+    "434061",
+    "436304",
+    "437103",
+    "483212"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University of Arkansas System": {
+   "board": {
+    "ats": "workday",
+    "site": "UASYS",
+    "tenant": "uasys",
+    "url": "https://uasys.wd5.myworkdayjobs.com/UASYS",
+    "wd": "wd5"
+   },
+   "unitids": [
+    "106245",
+    "106263",
+    "106397",
+    "106412",
+    "106485",
+    "106795",
+    "106999",
+    "107585",
+    "107664",
+    "107725",
+    "107743",
+    "108056",
+    "108092"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Alamo Colleges": {
+   "board": {
+    "ats": "csod",
+    "host": "alamo",
+    "site": "1",
+    "url": "https://alamo.csod.com/ux/ats/careersite/1/home"
+   },
+   "unitids": [
+    "222497",
+    "227854",
+    "227924",
+    "246354",
+    "420398",
+    "488730"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Los Angeles Community College District": {
+   "board": {
+    "ats": "csod",
+    "host": "laccd",
+    "site": "6",
+    "url": "https://laccd.csod.com/ux/ats/careersite/6/home"
+   },
+   "unitids": [
+    "113856",
+    "117681",
+    "117690",
+    "117715",
+    "117724",
+    "117733",
+    "117788",
+    "125471"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "City Colleges of Chicago": {
+   "board": {
+    "ats": "college_taleo",
+    "section": "2",
+    "tenant": "cccconnect",
+    "url": "https://cccconnect.referrals.selectminds.com"
+   },
+   "unitids": [
+    "144157",
+    "144166",
+    "144175",
+    "144184",
+    "144193",
+    "144209",
+    "144218",
+    "144500"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University System of New Hampshire": {
+   "board": {
+    "ats": "workday",
+    "site": "Careers",
+    "tenant": "usnh",
+    "url": "https://usnh.wd5.myworkdayjobs.com/Careers",
+    "wd": "wd5"
+   },
+   "unitids": [
+    "182829",
+    "183044",
+    "183062",
+    "183071",
+    "183080",
+    "183257",
+    "183327"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Vermont State Colleges": {
+   "board": {
+    "ats": "workday",
+    "site": "VSCS",
+    "tenant": "vsc",
+    "url": "https://vsc.wd108.myworkdayjobs.com/VSCS",
+    "wd": "wd108"
+   },
+   "unitids": [
+    "230861",
+    "231156",
+    "231165"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "University of Wisconsin System": {
+   "board": {
+    "ats": "workday",
+    "site": "UW_Comprehensives",
+    "tenant": "wisconsin",
+    "url": "https://wisconsin.wd1.myworkdayjobs.com/UW_Comprehensives",
+    "wd": "wd1"
+   },
+   "unitids": [
+    "240189",
+    "240268",
+    "240277",
+    "240329",
+    "240365",
+    "240374",
+    "240417",
+    "240426",
+    "240435",
+    "240444",
+    "240453",
+    "240462",
+    "240471",
+    "240480",
+    "491288",
+    "491297"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  },
+  "Nevada System of Higher Education": {
+   "board": {
+    "ats": "workday",
+    "site": "NSHE-external",
+    "tenant": "nshe",
+    "url": "https://nshe.wd1.myworkdayjobs.com/NSHE-external",
+    "wd": "wd1"
+   },
+   "unitids": [
+    "182005",
+    "182281",
+    "182290",
+    "182306",
+    "182500",
+    "182519",
+    "182564",
+    "441900"
+   ],
+   "notes": "Already in registry (board taken from representative campus/system office); listed for the audit",
+   "verified": "registry"
+  }
+ },
+ "_systems_without_central_board": {
+  "State University of New York System": "No central ATS (suny.edu/careers is the ADP board of System Administration only); campuses use Interview Exchange / PeopleAdmin / NeoGov / Breezy individually. 13 campuses had inherited a cnycentral.com news article and are fixed above.",
+  "University of California": "No central ATS; jobs.universityofcalifornia.edu only links campuses. Most campuses are on careerspub.universityofcalifornia.edu (PeopleSoft TAM) with a campus node + SiteId (ucb=21, ucdavis=7, ucsb, ucsd, ucsc, ucr, ucm); UCI/UCLA on iCIMS, UCSF own site.",
+  "North Carolina Community College System": "No central board; nccommunitycolleges.edu/about-us/jobs/ lists only system-office jobs. Colleges use NeoGov/PeopleAdmin individually (all already resolved).",
+  "Washington State Board for Community and Technical Colleges": "No central board; ctcLink (hcprd.ctclink.us PeopleSoft) hosts many colleges with a SiteId each, others use NeoGov. All resolved.",
+  "Wisconsin Technical College System": "No central board (wtcsystem.edu has none); colleges on Workday/iCIMS/NeoGov individually.",
+  "Florida State Board of Education / Florida College System": "No central board. Sector-4 'technical colleges' are K-12 district schools (Broward, OCPS, Hillsborough, Miami-Dade, Pasco, Sarasota, Escambia...) hiring through district ATSes.",
+  "Pennsylvania State System of Higher Education": "No central board (passhe.edu TLS fails for scripts); universities use NeoGov/PeopleAdmin/CSOD individually. IUP and the system office inherited esu.csod.com (East Stroudsburg) which is wrong; IUP's own board could not be located (jobs.iup.edu down).",
+  "Massachusetts Community Colleges": "No central board; Interview Exchange per college (BHCC = bhcc.interviewexchange.com 450BHM1, added above).",
+  "Montana University System": "No central board; MSU campuses on PeopleAdmin (jobs.montana.edu, employment.msubillings.edu, jobs.gfcmsu.edu, jobs.msun.edu), UM affiliates on schooljobs.com/careers/ummissoula.",
+  "Texas community college districts / Florida College System / Oregon / Illinois / Mississippi / Arkansas / Iowa / Kansas / Missouri / Nebraska CCs / Wyoming / Idaho / Utah / New Mexico / Oklahoma / New Jersey": "No statewide boards found (checked state association/board sites); colleges post individually.",
+  "Oklahoma Department of Career and Technology Education": "No central board; tech centers use Frontline AppliTrack or PowerSchool TalentEd individually (added above).",
+  "University of Puerto Rico": "No central board found (upr.edu/recursos-humanos has no listings); campuses publish convocatorias as PDFs; only UPR-Mayaguez (uprm.edu/empleos/en/) has a scrapeable list (already generic)."
+ }
+}

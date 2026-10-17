@@ -1,0 +1,1015 @@
+{
+ "129020": {
+  "name": "University of Connecticut",
+  "state": "CT",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://jobs.hr.uconn.edu",
+    "ats": "college_pageup"
+   },
+   {
+    "ats": "paycom",
+    "clientkey": "45AD0066D0B38ED01AF19F78A7DD369A",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/portal/45AD0066D0B38ED01AF19F78A7DD369A/jobs/113393"
+   }
+  ]
+ },
+ "136330": {
+  "name": "Palm Beach Atlantic University",
+  "state": "FL",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "85B0677EE5F565F7218786A34C475495",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/portal/85B0677EE5F565F7218786A34C475495/jobs/342240"
+   }
+  ]
+ },
+ "148937": {
+  "name": "Southeastern Illinois College",
+  "state": "IL",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "southernillinois",
+    "url": "https://southernillinois.bamboohr.com/careers/43?source=aWQ9MjY%3D"
+   }
+  ]
+ },
+ "151111": {
+  "name": "Indiana University-Indianapolis",
+  "state": "IN",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://hrms.iu.edu/psc/PH1PRD_PUB/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "site_id": "1",
+    "ats": "college_peoplesoft"
+   }
+  ]
+ },
+ "153658": {
+  "name": "University of Iowa",
+  "state": "IA",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://uiowa.referrals.selectminds.com/jobs/walk-in-clinics-physician-associate-pa-c-50-65-51088",
+    "tenant": "uiowa",
+    "section": "2",
+    "ats": "college_taleo"
+   }
+  ]
+ },
+ "155423": {
+  "name": "Washburn Institute of Technology",
+  "state": "KS",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://careers.washburn.edu",
+    "ats": "college_pageup"
+   }
+  ]
+ },
+ "155593": {
+  "name": "Fort Hays Tech North Central",
+  "state": "KS",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "fhtechnc",
+    "url": "https://fhtechnc.bamboohr.com/careers"
+   }
+  ]
+ },
+ "166683": {
+  "name": "Massachusetts Institute of Technology",
+  "state": "MA",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://careers.ll.mit.edu/job/Lexington-Senior-Subcontracts-Administrator-MA-02420/1434581400/",
+    "company": "C0012546317T1",
+    "ats": "college_successfactors"
+   }
+  ]
+ },
+ "167057": {
+  "name": "The New England Conservatory of Music",
+  "state": "MA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "893844b7-6c2c-408f-a271-a61215b811f8",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=893844b7-6c2c-408f-a271-a61215b811f8&ccId=19000101_000001&source=CC2&lang=en_US&selectedMenuKey=CareerCenter&jobId=963953"
+   }
+  ]
+ },
+ "167598": {
+  "name": "Regis College",
+  "state": "MA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "6E871BCB0EFD76A7A4C5061C331B232C",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/portal/6E871BCB0EFD76A7A4C5061C331B232C/jobs/591569"
+   }
+  ]
+ },
+ "177551": {
+  "name": "Harris-Stowe State University",
+  "state": "MO",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "3dafa25b-df9a-4cf1-807f-142da815b815",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=3dafa25b-df9a-4cf1-807f-142da815b815&ccId=19000101_000001&type=MP&lang=en_US&jobId=549580"
+   }
+  ]
+ },
+ "183910": {
+  "name": "Caldwell University",
+  "state": "NJ",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "7137837f-5f45-46c7-bb9e-ceb9eafaea50",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=7137837f-5f45-46c7-bb9e-ceb9eafaea50&ccId=19000101_000001&jobId=566321&source=CC2&lang=en_US"
+   }
+  ]
+ },
+ "190725": {
+  "name": "Daemen University",
+  "state": "NY",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "daemen",
+    "url": "https://daemen.applicantpro.com/jobs/"
+   }
+  ]
+ },
+ "191630": {
+  "name": "Hobart William Smith Colleges",
+  "state": "NY",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://apply.interfolio.com/165318?applicant_id=B238BF6D-5983-4675-BDDF-4A9ED07E99B2&ad_id=54867AF4-9A65-4EF3-BC28-970E0AE39455",
+    "tenant": "",
+    "ats": "college_interfolio"
+   }
+  ]
+ },
+ "195128": {
+  "name": "Russell Sage College",
+  "state": "NY",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://sage.interviewexchange.com/jobofferdetails.jsp?JOBID=205245",
+    "company_id": "",
+    "ats": "college_interviewexchange"
+   }
+  ]
+ },
+ "199412": {
+  "name": "Queens University of Charlotte",
+  "state": "NC",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://apply.ca1.interfolio.com/124076",
+    "tenant": "",
+    "ats": "college_interfolio"
+   }
+  ]
+ },
+ "203599": {
+  "name": "Lakeland Community College",
+  "state": "OH",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "careers-rhperry",
+    "url": "https://careers-rhperry.icims.com/connect"
+   }
+  ]
+ },
+ "211981": {
+  "name": "Delaware Valley University",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "997c6fde-f713-4be9-b6cf-f4bdbc02cbbb",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=997c6fde-f713-4be9-b6cf-f4bdbc02cbbb&ccId=19000101_000001&jobId=574093"
+   }
+  ]
+ },
+ "212911": {
+  "name": "Haverford College",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "haverford",
+    "wd": "wd1",
+    "site": "External",
+    "url": "https://haverford.wd1.myworkdayjobs.com/External"
+   }
+  ]
+ },
+ "213385": {
+  "name": "Lafayette College",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://apply.interfolio.com/194187?applicant_id=6D141F21-6B37-49D4-9A80-C71F90DA93A7&ad_id=871AD97C-7554-4AE9-A254-2835C5FA5CDF",
+    "tenant": "",
+    "ats": "college_interfolio"
+   }
+  ]
+ },
+ "214069": {
+  "name": "Misericordia University",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "d687b185-ab48-45f0-afcf-5b1ceb8d32ea",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d687b185-ab48-45f0-afcf-5b1ceb8d32ea&ccId=19000101_000001&lang=en_US&jobId=9200984716413_1&&source=EN"
+   }
+  ]
+ },
+ "214582": {
+  "name": "Pennsylvania Institute of Technology",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "2f7cec26-8093-4cee-b414-33ca88afa96e",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=2f7cec26-8093-4cee-b414-33ca88afa96e&ccId=19000101_000001&jobId=939721&lang=en_US"
+   }
+  ]
+ },
+ "216524": {
+  "name": "Ursinus College",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "url": "https://www.ursinus.edu/live/profiles/11570-assistant-director-of-admission-transfer-outreach",
+    "host": "https://iaotqy.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "ats": "college_oracle"
+   }
+  ]
+ },
+ "216807": {
+  "name": "Westminster College",
+  "state": "PA",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "8b104a38-45ac-4682-9e01-117585322eb0",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=8b104a38-45ac-4682-9e01-117585322eb0&ccId=19000101_000001&lang=en_US&jobId=586000"
+   }
+  ]
+ },
+ "230038": {
+  "name": "Brigham Young University",
+  "state": "UT",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "byu",
+    "wd": "wd1",
+    "site": "faculty-careers",
+    "url": "https://byu.wd1.myworkdayjobs.com/faculty-careers"
+   }
+  ]
+ },
+ "238333": {
+  "name": "Beloit College",
+  "state": "WI",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "beloit",
+    "url": "https://beloit.applicantpro.com/jobs/4220486-472534.html"
+   }
+  ]
+ },
+ "238476": {
+  "name": "Carthage College",
+  "state": "WI",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "carthage",
+    "url": "https://carthage.applicantpro.com/jobs/4245164"
+   }
+  ]
+ },
+ "475495": {
+  "name": "Rocky Mountain University of Health Professions",
+  "state": "UT",
+  "source": "hej",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "71ced8b0-7b9f-4b6e-b8a9-a520f20f0ebb",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=71ced8b0-7b9f-4b6e-b8a9-a520f20f0ebb&ccId=9200946555009_3&jobId=571361&jwId=9200946555009_1&lang=en_US"
+   }
+  ]
+ },
+ "_unmatched": [
+  [
+   "Accrediting Bureau of Health Education Schools (ABHES)",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/d7ac0c80-bcdf-4009-b012-33c70714efd7/Accrediting-Bureau-of-Health-Education-Schools",
+   "paylocity",
+   "hej"
+  ],
+  [
+   "Alabama Institute for Deaf and Blind",
+   "https://ibaeqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+   "college_oracle",
+   "ihe"
+  ],
+  [
+   "Alfred State College",
+   "https://alfredstate.interviewexchange.com/jobofferdetails.jsp?JOBID=205834&jobboard=148",
+   "college_interviewexchange",
+   "hej"
+  ],
+  [
+   "American Board of Emergency Medicine",
+   "https://abem.bamboohr.com/careers/86?source=aWQ9NjM%3D",
+   "bamboohr",
+   "hej"
+  ],
+  [
+   "American Council of Learned Societies",
+   "https://acls.bamboohr.com/careers/77?source=aWQ9MjU%3D",
+   "bamboohr",
+   "ihe"
+  ],
+  [
+   "American Council of Learned Societies (ACLS)",
+   "https://acls.bamboohr.com/careers/75?source=aWQ9MjQ%3D",
+   "bamboohr",
+   "hej"
+  ],
+  [
+   "American International University Kuwait",
+   "https://aiu.bamboohr.com/careers/531",
+   "bamboohr",
+   "ihe"
+  ],
+  [
+   "Anderson University",
+   "https://andersonuniversity.wd1.myworkdayjobs.com/AndersonUniversity",
+   "workday",
+   "hej"
+  ],
+  [
+   "Arizona State University",
+   "https://asu.wd1.myworkdayjobs.com/ASUStaffCareers",
+   "workday",
+   "hej"
+  ],
+  [
+   "Bethany College, KS",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=06849628-1ff9-4555-9b68-cb637d20bae8&ccId=19000101_000001&type=JS&lang=en_US&jobId=622573",
+   "adp",
+   "hej"
+  ],
+  [
+   "Bible League International",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=7ee46f4c-eb2d-4e72-8d2d-84c482e57d54&ccId=19000101_000001&lang=en_US&selectedMenuKey=CurrentOpenings",
+   "adp",
+   "hej"
+  ],
+  [
+   "Butte-Glenn Community College",
+   "https://www.schooljobs.com/careers/buttecc",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "CENTERS @ University of Missouri - St. Louis",
+   "https://careers-centersusa.icims.com/jobs/search?ss=1&notFound=1&mobile=false&width=1350&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240",
+   "icims",
+   "hej"
+  ],
+  [
+   "Capstone On-Campus Management, LLC at Montclair State University",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=26793274-004a-41d0-956a-12718c230735&ccId=19000101_000001&jobId=599060&source=CC2&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "Capstone On-Campus Management, LLC at Queens College",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=26793274-004a-41d0-956a-12718c230735&ccId=19000101_000001&jobId=599167&source=CC2&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "Capstone On-Campus Management, LLC at Towson University",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=26793274-004a-41d0-956a-12718c230735&ccId=19000101_000001&jobId=597254&source=CC2&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "Cincinnati Children's Hospital Medical Center",
+   "https://cincinnatichildrens.wd5.myworkdayjobs.com/careersatcincinnatichildrens",
+   "workday",
+   "hej"
+  ],
+  [
+   "City Colleges of Chicago",
+   "https://cccconnect.referrals.selectminds.com/jobs/information-technology-services-associate-pt-8154",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "College Success Foundation",
+   "https://collegesuccessfoundation.applicantpro.com/jobs/4214066-938144.html",
+   "applicantpro",
+   "hej"
+  ],
+  [
+   "College of Saint Benedict/Saint John\u2019s University",
+   "https://www.schooljobs.com/careers/csbsju",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Colorado Community College System",
+   "https://hr.cccs.edu",
+   "college_pageup",
+   "hej"
+  ],
+  [
+   "Columbia Business School",
+   "https://apply.interfolio.com/190695",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "DTU Management",
+   "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/8215/?utm_medium=jobshare&utm_source=External+Job+Share",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "Department of Fire Services",
+   "https://massanf.taleo.net/careersection/ex/jobdetail.ftl?job=260006MF&tz=GMT-04%3A00&tzname=America%2FNew_York",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "Fordham University, Gabelli School of Business",
+   "https://apply.interfolio.com/195063",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "Franklin Cummings Tech",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/7566732a-4240-4a20-a614-53c85b140700/Benjamin-Franklin-Cummings-Institute-of-Technology",
+   "paylocity",
+   "hej"
+  ],
+  [
+   "Gillette Community College District",
+   "https://www.schooljobs.com/careers/gillettecollege",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Graduate Philadelphia",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/eff9ff37-3ffd-4cb7-8db6-3844a1e1bbbe/Graduate-Philadelphia",
+   "paylocity",
+   "hej"
+  ],
+  [
+   "Higher Colleges of Technology",
+   "https://iaavey.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/177",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "Holden Forests & Gardens",
+   "https://recruitingbypaycor.com/career/CareerHome.action?clientId=8a7883d07dc02468017e02ec874f143a",
+   "college_paycor",
+   "hej"
+  ],
+  [
+   "Home Page",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/17713721-eeb1-49c8-a8fe-8a7ec37f0088/Leepfrog-Technologies-Inc",
+   "paylocity",
+   "herc"
+  ],
+  [
+   "Hong Kong Baptist University",
+   "https://fa-ewqq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/hkbu/job/26270252/?utm_medium=jobshare&utm_source=External+Job+Share",
+   "college_oracle",
+   "ihe"
+  ],
+  [
+   "Houston City College",
+   "https://hccs.referrals.selectminds.com/jobs/assistant-dental-hygiene-operations-part-time-9308",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "Houston City College",
+   "https://hccs.referrals.selectminds.com/jobs/senior-analyst-system-9306",
+   "college_taleo",
+   "ihe"
+  ],
+  [
+   "Howard Hughes Medical Insitute",
+   "https://hhmi.wd1.myworkdayjobs.com/External",
+   "workday",
+   "ihe"
+  ],
+  [
+   "Illinois Mathematics and Science Academy",
+   "https://careers-imsa.icims.com/jobs/2041/coordinator-of-residence-life-%28programming%29/job?mobile=false&width=1521&height=500&bga=true&needsRedirect=false&jan1offset=-360&jun1offset=-300",
+   "icims",
+   "hej"
+  ],
+  [
+   "Indiana Tech",
+   "https://www.paycomonline.net/v4/ats/web.php/portal/9B7DD7DDF4B46DE388E0D590C86BBE1D/jobs/284423",
+   "paycom",
+   "ihe"
+  ],
+  [
+   "Indiana University - School of Medicine",
+   "https://indiana.peopleadmin.com",
+   "college_peopleadmin",
+   "hej"
+  ],
+  [
+   "Johnson & Wales University",
+   "https://jobs.jwu.edu",
+   "college_pageup",
+   "hej"
+  ],
+  [
+   "Juno",
+   "https://job-boards.greenhouse.io/juno/jobs/4410787009",
+   "greenhouse",
+   "hej"
+  ],
+  [
+   "Kaiser Permanente NCAL GME",
+   "https://www.kaiserpermanentejobs.org/",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "Kern Community College District",
+   "https://www.schooljobs.com/careers/kccd",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Lingnan University",
+   "https://lingnan.csod.com/ux/ats/careersite/4/home/requisition/2663?c=lingnan&sq=req2663",
+   "csod",
+   "ihe"
+  ],
+  [
+   "MOHAMED BIN ZAYED UNIVERSITY OF ARTIFICIAL INTELLIGENCE",
+   "https://apply.interfolio.com/195264",
+   "college_interfolio",
+   "ihe"
+  ],
+  [
+   "Maine Community College System",
+   "https://www.paycomonline.net/v4/ats/web.php/portal/CB41A12CFFFC3B05785D8B7E108D7E03/jobs/394640",
+   "paycom",
+   "hej"
+  ],
+  [
+   "Mass General Brigham",
+   "https://massgeneralbrigham.wd1.myworkdayjobs.com/MGBExternal",
+   "workday",
+   "hej"
+  ],
+  [
+   "McMaster University",
+   "https://careers.mcmaster.ca/psc/prcsprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1001",
+   "college_peoplesoft",
+   "hej"
+  ],
+  [
+   "Midwestern University",
+   "https://recruiting.ultipro.com/MID1016/JobBoard/14e53f57-a561-4a17-e6ef-fbd661b8b6c1/OpportunityDetail?opportunityId=09dce8bd-37f1-4d6f-b3cf-f919f95ec451",
+   "ultipro",
+   "hej"
+  ],
+  [
+   "Midwestern University - Arizona",
+   "https://recruiting.ultipro.com/MID1016/JobBoard/14e53f57-a561-4a17-e6ef-fbd661b8b6c1/OpportunityDetail?opportunityId=920aeaa1-8230-4f12-8bbb-2bd7f3b0a3d7",
+   "ultipro",
+   "hej"
+  ],
+  [
+   "Mount Saint Mary's University",
+   "https://msmu.interviewexchange.com/jobofferdetails.jsp?JOBID=205543&jobboard=148",
+   "college_interviewexchange",
+   "hej"
+  ],
+  [
+   "NC Community College System",
+   "https://nc.wd108.myworkdayjobs.com/NC_Careers",
+   "workday",
+   "ihe"
+  ],
+  [
+   "NYU Shanghai",
+   "https://apply.interfolio.com/194865",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "Nanyang Technological University, Singapore",
+   "https://apply.ap1.interfolio.com/119166",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "North Carolina Community College System",
+   "https://gtcc.peopleadmin.com",
+   "college_peopleadmin",
+   "hej"
+  ],
+  [
+   "Palo Verde Community College District",
+   "https://www.schooljobs.com/careers/paloverde",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Porter and Chester Institute",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a9401484-8017-4771-aac5-f519238232c4&ccId=19000101_000001&jobId=569098&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "Prince Mohammad Bin Fahd University",
+   "https://pmu.taleo.net/careersection/ex/joblist.ftl",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "RMIT University",
+   "https://rmit.wd3.myworkdayjobs.com/RMIT_Careers",
+   "workday",
+   "ihe"
+  ],
+  [
+   "Research Foundation For SUNY, The",
+   "https://systemrf.interviewexchange.com/jobofferdetails.jsp?applicant_id=DF21D09C-0BF7-4B73-9890-176C1A0ABB5E&ad_id=A4133F9D-F142-4B47-B35A-A51AB70C8B1F&JOBID=203933",
+   "college_interviewexchange",
+   "hej"
+  ],
+  [
+   "Research Foundation for SUNY at Binghamton University, The",
+   "https://rfbu.interviewexchange.com/candapply.jsp?JOBID=201795&jobboard=148#pageTop",
+   "college_interviewexchange",
+   "hej"
+  ],
+  [
+   "Research Foundation of CUNY",
+   "https://rfcuny.wd108.myworkdayjobs.com/RFCUNY",
+   "workday",
+   "hej"
+  ],
+  [
+   "SCRA",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/01379b28-c62c-4419-8202-ad29d6ce12f2/South-Carolina-Research-Authority",
+   "paylocity",
+   "ihe"
+  ],
+  [
+   "Salk Institute for Biological Studies",
+   "https://recruiting2.ultipro.com/SAL1013SIBS/JobBoard/e9f055e1-a105-4f91-9a67-21aea61655fa/OpportunityDetail?opportunityId=4293d842-4608-4c34-84fb-66851d7431b4",
+   "ultipro",
+   "ihe"
+  ],
+  [
+   "Schmidt Futures Projects",
+   "https://jobs.lever.co/schmidt-entities/1ca0b1fd-4d5c-433c-a495-0f10328e50f8/apply",
+   "lever",
+   "hej"
+  ],
+  [
+   "Schwarzman Scholars",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=8bcb13c1-40a1-42f3-a555-2ed29a1bc1e8&ccId=19000101_000003&jwId=SYS:JW:001&jobId=530619&source=CC2&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "Sewanee: The University of the South",
+   "https://www.schooljobs.com/careers/sewanee",
+   "college_neogov",
+   "ihe"
+  ],
+  [
+   "Sharjah Maritime Academy",
+   "https://fa-exow-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/66/?utm_medium=jobshare&utm_source=External+Job+Share",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "Simon Fraser University",
+   "https://apply.ca1.interfolio.com/124080",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "SkillOps",
+   "https://recruiting.ultipro.com/ECP1000ECPI/JobBoard/4c9d575b-c266-446e-9579-40aca0664779/OpportunityDetail?opportunityId=3279e791-8545-4d7e-87ef-370ed091141e",
+   "ultipro",
+   "hej"
+  ],
+  [
+   "South Carolina Governor's School for Science and Mathematics",
+   "https://www.governmentjobs.com/careers/sc",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Southern Illinois University School of Medicine",
+   "https://www.schooljobs.com/careers/siumed",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Southern Methodist University: Meadows School of the Arts",
+   "https://apply.interfolio.com/193858",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "Spark451 Inc.",
+   "https://apply.workable.com/jenzabar1/j/43D6ED6A0B",
+   "workable",
+   "hej"
+  ],
+  [
+   "St. Jude Children's Research Hospital",
+   "https://stjude.wd1.myworkdayjobs.com/stjude",
+   "workday",
+   "hej"
+  ],
+  [
+   "State University System of Florida",
+   "https://fa-ewkd-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/USF/job/44554/?mode=location",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "State University of New York (SUNY) at Albany",
+   "https://albany.interviewexchange.com/jobofferdetails.jsp?JOBID=205754&CNTRNO=0&TSTMP=0",
+   "college_interviewexchange",
+   "hej"
+  ],
+  [
+   "Tec de Monterrey",
+   "https://jobs.tec.mx/tecnologico-de-monterrey/job/Monterrey-Profesor%28a%29-de-Tiempo-Completo-de-Ingenier%C3%ADa-Industrial/1423313000/",
+   "college_successfactors",
+   "hej"
+  ],
+  [
+   "Tilting Futures",
+   "https://job-boards.greenhouse.io/tiltingfuturescareers?error=true",
+   "greenhouse",
+   "hej"
+  ],
+  [
+   "UC Davis Health",
+   "https://careerspub.universityofcalifornia.edu/psp/ucdmed/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=5",
+   "college_peoplesoft",
+   "hej"
+  ],
+  [
+   "UIC",
+   "https://uic.csod.com/ux/ats/careersite/1/home/requisition/21038?c=uic&sq=dean%2C%20jane%20addams%20college%20of%20social%20work",
+   "csod",
+   "hej"
+  ],
+  [
+   "UMass Chan Medical School",
+   "https://internal-umms.icims.com/jobs/intro?hashed=-435804835&mobile=false&width=1434&height=500&bga=true&needsRedirect=false",
+   "icims",
+   "hej"
+  ],
+  [
+   "UNT Health",
+   "https://careers.untsystem.edu",
+   "college_pageup",
+   "hej"
+  ],
+  [
+   "UPMC",
+   "https://careers.upmc.com/job/23778695/clinical-manager-marywood-university-licensed-psychologist-/",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "UWORLD",
+   "https://apply.workable.com/uworld/j/D3934BC9B0",
+   "workable",
+   "hej"
+  ],
+  [
+   "Union College of Union County, NJ",
+   "https://ucc.peopleadmin.com",
+   "college_peopleadmin",
+   "hej"
+  ],
+  [
+   "University Support Services, LLC",
+   "https://sgu.csod.com/ux/ats/careersite/7/home/requisition/1898?c=sgu",
+   "csod",
+   "hej"
+  ],
+  [
+   "University of Colorado System Administration",
+   "https://cu.taleo.net/careersection/2/jobdetail.ftl?applicant_id=A6CD955B-53B2-44A6-BEEE-E261D8E658F5&ad_id=7E03E9B8-73FB-458E-9438-0942CE5E2D32&job=41406&lang=en",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "University of Guelph",
+   "https://careers.uoguelph.ca/job/Guelph-Assistant-Professor%2C-Food-and-Agribusiness-Management%2C-Tenure-Track-ON-N1G-2W1/1291627247/",
+   "college_successfactors",
+   "hej"
+  ],
+  [
+   "University of Hong Kong",
+   "https://secure.dc5.pageuppeople.com",
+   "college_pageup",
+   "hej"
+  ],
+  [
+   "University of Illinois College of Medicine Peoria",
+   "https://uic.csod.com/ux/ats/careersite/1/home/requisition/18601?c=uic",
+   "csod",
+   "hej"
+  ],
+  [
+   "University of Illinois Foundation",
+   "https://recruiting.paylocity.com/recruiting/jobs/All/fde70dc9-a8f3-4155-8a35-ec3538360252/University-of-Illinois-Foundation",
+   "paylocity",
+   "hej"
+  ],
+  [
+   "University of Iowa Center for Advancement",
+   "https://recruiting2.ultipro.com/UNI1081UIF/JobBoard/9d69f772-545d-4ba4-8a32-204884b7afda/OpportunityDetail?opportunityId=1656a6a9-da72-4052-a0c3-4a4997818a70",
+   "ultipro",
+   "hej"
+  ],
+  [
+   "University of Massachusetts - President's Office",
+   "https://careers.umassp.edu",
+   "college_pageup",
+   "hej"
+  ],
+  [
+   "University of Nebraska at Omaha - Scott Residential Management LLC",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=ef8c8ebc-91be-42f4-bb12-08f81cbf7d9f&ccId=2006327475_5744&type=MP&lang=en_US",
+   "adp",
+   "hej"
+  ],
+  [
+   "University of Otago",
+   "https://otago.taleo.net/careersection/2/jobdetail.ftl?job=2601439",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "University of Southern Denmark (SDU)",
+   "https://fa-eosd-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/4286?lastSelectedFacet=CATEGORIES&selectedCategoriesFacet=300000002425892",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "University of Tennessee System Administration",
+   "https://fa-ewlq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/10355",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "University of Toronto",
+   "https://jobs.utoronto.ca/job/Toronto-Assistant-Professor-Emerging-Directions-in-Chemical-Engineering-ON/606471517/",
+   "college_successfactors",
+   "hej"
+  ],
+  [
+   "University of Waikato",
+   "https://elhs.fa.ap1.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1003946/?utm_medium=jobshare",
+   "college_oracle",
+   "hej"
+  ],
+  [
+   "Ventura County Community College District",
+   "https://www.schooljobs.com/careers/vcccd",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Versiti Blood Research Institute",
+   "https://careers-versiti.icims.com/jobs/11294/investigator---transfusion-medicine/job?mobile=false&width=1350&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240",
+   "icims",
+   "hej"
+  ],
+  [
+   "WVU Medicine Center for Nursing Education",
+   "https://wvumedicine.wd1.myworkdayjobs.com/WVUH",
+   "workday",
+   "hej"
+  ],
+  [
+   "WVU Parkersburg",
+   "https://wvup.bamboohr.com/careers",
+   "bamboohr",
+   "hej"
+  ],
+  [
+   "Wallace Community College",
+   "https://www.schooljobs.com/careers/accs",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "West Virginia Higher Education Policy Commission",
+   "https://wvu.taleo.net/careersection/staff/jobdetail.ftl?job=30442&tz=GMT-04%3A00&tzname=America%2FNew_York",
+   "college_taleo",
+   "hej"
+  ],
+  [
+   "Western Interstate Commission for Higher Education (WICHE)",
+   "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=430819b8-e7b9-4a41-bdbc-a5befa4c0c06&ccId=19000101_000001&lang=en_US&jobId=922701",
+   "adp",
+   "hej"
+  ],
+  [
+   "Western Technical College",
+   "https://www.schooljobs.com/careers/westerntech",
+   "college_neogov",
+   "hej"
+  ],
+  [
+   "Wisconsin Foundation and Alumni Association",
+   "https://careers-supportuw.icims.com/jobs/1643/director%2c-constituent-programs/job?mobile=false&width=1244&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240",
+   "icims",
+   "hej"
+  ],
+  [
+   "Xi'an Jiaotong-Liverpool University",
+   "https://career15.sapsf.cn/career?career%5fns=job%5flisting&company=xjtlu&navBarLevel=JOB%5fSEARCH&rcm%5fsite%5flocale=en%5fUS&career_job_req_id=2054&selected_lang=en_US&jobAlertController_jobAlertId=&jobAlertController_jobAlertName=&browserTimeZone=Asia/Shanghai&_s.crb=VknARgiCdeMobtwTdEA2RzATKpGObg%2bRAbY5bScgzKo%3d",
+   "college_successfactors",
+   "hej"
+  ],
+  [
+   "Yale School of Management",
+   "https://apply.interfolio.com/193781",
+   "college_interfolio",
+   "hej"
+  ],
+  [
+   "Yale School of Public Health",
+   "https://apply.interfolio.com/190370",
+   "college_interfolio",
+   "hej"
+  ]
+ ]
+}

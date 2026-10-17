@@ -1,0 +1,468 @@
+{
+ "x_perdoceo-education": {
+  "name": "Perdoceo Education",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "pec",
+    "url": "https://myjobs.adp.com/pec/cx"
+   }
+  ],
+  "notes": "Perdoceo corporate board (ADP myjobs 'pec'); linked from https://www.perdoceoed.com/Jobs-at-Perdoceo-Education; CTU and AIU have their own myjobs domains",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "445027": {
+  "name": "American InterContinental University System",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "aiu",
+    "url": "https://myjobs.adp.com/aiu/cx"
+   }
+  ],
+  "notes": "ADP myjobs 'aiu' linked from https://www.aiuniv.edu/about/careers (Perdoceo chain)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "126827": {
+  "name": "Colorado Technical University-Colorado Springs",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "ctu",
+    "url": "https://myjobs.adp.com/ctu/cx"
+   }
+  ],
+  "notes": "ADP myjobs 'ctu' (Perdoceo chain; coloradotech.edu has no careers page, found via Perdoceo's per-brand ADP domains)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "198978": {
+  "name": "Miller-Motte College-Wilmington",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education corporate ADP WFN board (parent of Miller-Motte); linked from https://www.ancora.com/about-us/careers/",
+  "prev_status": "generic",
+  "prev_url": "https://www.miller-motte.edu/career-training-programs/"
+ },
+ "443650": {
+  "name": "Miller-Motte College-Chattanooga",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education corporate ADP WFN board (parent of Miller-Motte); linked from https://www.ancora.com/about-us/careers/",
+  "prev_status": "generic",
+  "prev_url": "https://www.miller-motte.edu/career-training-programs/"
+ },
+ "448381": {
+  "name": "San Joaquin Valley College-Central Administrative Office",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "UKG Pro job board linked from https://www.sjvc.edu/sjvc-careers/ (same SJVCI tenant hosts Carrington College's board)",
+  "prev_status": "generic",
+  "prev_url": "https://www.sjvc.edu/job-referral-program/"
+ },
+ "122685": {
+  "name": "San Joaquin Valley College-Visalia",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "UKG Pro job board linked from https://www.sjvc.edu/sjvc-careers/ (same SJVCI tenant hosts Carrington College's board)",
+  "prev_status": "generic",
+  "prev_url": "https://www.sjvc.edu/job-referral-program/"
+ },
+ "485467": {
+  "name": "Carrington College-Administrative Office",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "UKG Pro job board linked from https://carrington.edu/carrington-careers/ (SJVCI tenant, Carrington board id)",
+  "prev_status": "generic",
+  "prev_url": "https://carrington.edu/guides/physical-therapist-assistant-career/"
+ },
+ "125532": {
+  "name": "Carrington College-Sacramento",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "UKG Pro job board linked from https://carrington.edu/carrington-careers/ (SJVCI tenant, Carrington board id)",
+  "prev_status": "generic",
+  "prev_url": "https://carrington.edu/guides/physical-therapist-assistant-career/"
+ },
+ "242972": {
+  "name": "NUC University",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "20fa69cd-7a48-410e-9cba-87c44786fb7b",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=20fa69cd-7a48-410e-9cba-87c44786fb7b&ccId=19000101_000001&lang=es_US"
+   },
+   {
+    "ats": "adp",
+    "cid": "20fa69cd-7a48-410e-9cba-87c44786fb7b",
+    "ccId": "9201060899462_2",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=20fa69cd-7a48-410e-9cba-87c44786fb7b&ccId=9201060899462_2&lang=en_US"
+   }
+  ],
+  "notes": "NUC University now operates as Northbridge University (nuc.edu redirects to northbridge.edu); ADP WFN boards from https://northbridge.edu/en/job-openings/ (first = Puerto Rico career center, second = US campuses, ccId 9201060899462_2)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "445692": {
+  "name": "Neumont College of Computer Science",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "cc_slug": "neumontu",
+    "url": "https://neumontu.hrmdirect.com/employment/job-openings.php?search=true"
+   }
+  ],
+  "notes": "ClearCompany legacy board embedded as iframe on https://www.neumont.edu/careers-application",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "384412": {
+  "name": "University of the Potomac-Washington DC Campus",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "http://j.brt.mv/ax.do?portalGK=48601"
+   }
+  ],
+  "notes": "VENDOR: BrightMove ATS (j.brt.mv portalGK=48601, companyGK=56776; no detector). Server-rendered list with PortalViewRequirement.do?reqGK= links; RSS at http://j.brt.mv/JobRSS.do?companyGK=56776&portalGK=48601. Linked from https://potomac.edu/human-resources/careers/. Currently lists Full-Time Lead Faculty - Computer Science and adjunct roles",
+  "prev_status": "generic",
+  "prev_url": "https://www.indeed.com/career-advice/careers/what-does-a-senior-accountant-do"
+ },
+ "442639": {
+  "name": "University of the Potomac-VA Campus",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "http://j.brt.mv/ax.do?portalGK=48601"
+   }
+  ],
+  "notes": "VENDOR: BrightMove ATS (j.brt.mv portalGK=48601, companyGK=56776; no detector). Server-rendered list with PortalViewRequirement.do?reqGK= links; RSS at http://j.brt.mv/JobRSS.do?companyGK=56776&portalGK=48601. Linked from https://potomac.edu/human-resources/careers/. Currently lists Full-Time Lead Faculty - Computer Science and adjunct roles",
+  "prev_status": "generic",
+  "prev_url": "https://www.indeed.com/career-advice/careers/what-does-a-senior-accountant-do"
+ },
+ "242671": {
+  "name": "Inter American University of Puerto Rico-Central Office",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "WP Job Manager feed on the system site (Empleos page https://www.inter.edu/about-us/empleos-3/). NOTE: www.inter.edu serves an incomplete TLS chain, so requests fails SSL verification unless verify=False / certifi chain is added; feed renders fine in Chromium; fetch smoke test returned 0 postings because of the TLS chain issue",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "242060": {
+  "name": "Sistema Universitario Ana G. Mendez",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.uagm.edu/page-jobs-category?lang=en&cat=All"
+   }
+  ],
+  "notes": "VENDOR: in-house ASP.NET board (jobs.uagm.edu; no detector). Listing links page-job-info?lang=en&id=... (faculty, staff, system-wide across UAGM campuses). NOTE: jobs.uagm.edu TLS chain fails requests verification and the page needed Chromium in testing; fetch smoke test returned 0 postings because of the TLS chain issue",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "190035": {
+  "name": "CUNY System Office",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cuny.jobs/job-category/faculty/jobs/"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://cuny.jobs/jobs/"
+   }
+  ],
+  "notes": "VENDOR: Radancy/TMP .jobs site (cuny.jobs, system-wide 'Work at CUNY'; no detector). Requests gets a 6 KB JS shell - needs Chromium; rendered page lists 100+ faculty postings (links /<city>/<slug>/<id>/job/). Campuses already carry rfcuny Workday + CUNYfirst PeopleSoft configs; fetch smoke test with requests returned 0 postings (JS shell) - Chromium needed",
+  "prev_status": "generic",
+  "prev_url": "https://www.cuny.edu/employment/"
+ },
+ "439154": {
+  "name": "Texas Tech University System Administration",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25898&siteid=5637"
+   }
+  ],
+  "notes": "VENDOR: IBM Kenexa BrassRing (partnerid=25898; siteid 5637=TTU faculty, 5283=staff, 5281=TTUHSC faculty, 5625=El Paso; no detector, JS-rendered TGnewUI). Linked from https://www.texastech.edu/careers/index.php. TTU main campus already has ttu.peopleadmin.com in the registry; fetch smoke test with requests returned 0 postings (JS shell) - Chromium needed",
+  "prev_status": "generic",
+  "prev_url": "https://www.texastech.edu/careers/index.php"
+ },
+ "229407": {
+  "name": "University of Houston-System Administration",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://careers.uh.edu"
+   }
+  ],
+  "notes": "System-wide 'UH Central Postings' PageUp (Clinch) site https://careers.uh.edu/jobs/search/uh-postings, linked from https://www.uh.edu/human-resources/careers/; same board as University of Houston (225511)",
+  "prev_status": "generic",
+  "prev_url": "https://www.uh.edu/human-resources/peoplesoft-navigation/"
+ },
+ "449889": {
+  "name": "American College of Education",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_rippling",
+    "rippling_slug": "ace",
+    "url": "https://ats.rippling.com/ace/jobs"
+   }
+  ],
+  "notes": "Rippling ATS linked (via safelinks wrapper) from https://ace.edu/about/careers/; lists Adjunct Faculty incl. STEM",
+  "prev_status": "generic",
+  "prev_url": "https://ace.edu/about/careers/"
+ },
+ "110468": {
+  "name": "Alliant International University-San Diego",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "company": "",
+    "url": "https://jobsearch.createyourowncareer.com/Alliant/go/Alliant_Faculty/9791201/"
+   }
+  ],
+  "notes": "SAP SuccessFactors career site (createyourowncareer.com CSB host, 'Alliant Faculty' category) linked from https://www.alliant.edu/employment; adjunct professor pools incl. Finance/Technology",
+  "prev_status": "generic",
+  "prev_url": "https://www.alliant.edu/employment"
+ },
+ "499732": {
+  "name": "Windsor University",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://windsoruniversity.us/careers/available-jobs/"
+   }
+  ],
+  "notes": "WordPress 'Available Jobs' list (sub-pages per opening) replaces the /careers/ landing page; also has instructor application forms at /careers/instructor/",
+  "prev_status": "generic",
+  "prev_url": "https://windsoruniversity.us/careers/"
+ },
+ "154022": {
+  "name": "Ashford University",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uagc.careers/jobs/"
+   }
+  ],
+  "notes": "VENDOR: Radancy/TalentBrew site (uagc.careers; no detector). Requests gets a 2 KB JS shell - needs Chromium; rendered list links /virtual-usa/<slug>/<id>/job/. UAGC is now part of University of Arizona; staff roles also on https://talent.arizona.edu/; fetch smoke test with requests returned 0 postings (JS shell) - Chromium needed",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_zovio-university-of-arizona-global": {
+  "name": "Zovio / University of Arizona Global",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uagc.careers/jobs/"
+   }
+  ],
+  "notes": "VENDOR: Radancy/TalentBrew site (uagc.careers; no detector). Requests gets a 2 KB JS shell - needs Chromium; rendered list links /virtual-usa/<slug>/<id>/job/. UAGC is now part of University of Arizona; staff roles also on https://talent.arizona.edu/; fetch smoke test with requests returned 0 postings (JS shell) - Chromium needed",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_flatiron-school": {
+  "name": "Flatiron School",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_rippling",
+    "rippling_slug": "flatiron-school",
+    "url": "https://ats.rippling.com/flatiron-school/jobs"
+   }
+  ],
+  "notes": "Rippling ATS linked from https://flatironschool.com/careers; board exists but listed 0 openings on 2026-10-16",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_minerva-project": {
+  "name": "Minerva Project",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_breezy",
+    "breezy_slug": "minerva-project",
+    "url": "https://minerva-project.breezy.hr/"
+   }
+  ],
+  "notes": "Breezy HR linked from https://www.minervaproject.com/careers",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_comptia": {
+  "name": "CompTIA",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "client": "comptiainc",
+    "site": "CANDIDATEPORTAL",
+    "url": "https://jobs.dayforcehcm.com/en-US/comptiainc/CANDIDATEPORTAL"
+   }
+  ],
+  "notes": "Dayforce candidate portal linked from https://www.comptia.org/en-us/about-us/careers/ (corporate roles, occasional instructional design)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_edovo": {
+  "name": "Edovo",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_trinethire",
+    "company": "7658-edovo",
+    "url": "https://app.trinethire.com/companies/7658-edovo/jobs"
+   }
+  ],
+  "notes": "TriNet Hire board linked from https://www.edovo.org/about/careers (low relevance: corrections edtech)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_unitek-learning": {
+  "name": "Unitek Learning",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "UnitekLearning",
+    "url": "https://careers.smartrecruiters.com/UnitekLearning"
+   }
+  ],
+  "notes": "SmartRecruiters (all Unitek brands: Unitek College, Brookline College, Eagle Gate/Provo College) linked from https://www.uniteklearning.com/careers-at-unitek/",
+  "prev_status": "generic",
+  "prev_url": "https://www.uniteklearning.com/careers-at-unitek/"
+ },
+ "x_instructure": {
+  "name": "Instructure",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.instructure.com/about/careers"
+   }
+  ],
+  "notes": "VENDOR: Ashby (jobs.ashbyhq.com/instructure; no detector). The instructure.com careers page itself renders the full Ashby job list server-side with jobs.ashbyhq.com/instructure/<uuid> links, so college_generic works on it",
+  "prev_status": "generic",
+  "prev_url": "https://www.instructure.com/about/careers"
+ },
+ "x_multiverse": {
+  "name": "Multiverse",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.ashbyhq.com/multiverse"
+   }
+  ],
+  "notes": "VENDOR: Ashby (no detector; board is JS-rendered - needs Chromium or the public API https://api.ashbyhq.com/posting-api/job-board/multiverse). UK-centric apprenticeship coach / data instructor roles; fetch smoke test with requests returned 0 postings (JS shell) - Chromium needed",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_skillstorm": {
+  "name": "Skillstorm",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.skillstorm.com/jobs"
+   }
+  ],
+  "notes": "VENDOR: custom careers site (careers.skillstorm.com/jobs/<slug>-<id>; vendor unidentified). Server-rendered list incl. Cyber Security Instructor / AWS Cloud Instructor",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_varsity-tutors-nerdy": {
+  "name": "Varsity Tutors (Nerdy)",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.nerdy.com/jobs"
+   }
+  ],
+  "notes": "Squarespace job list (careers.nerdy.com/job-posts/<slug>); corporate/engineering roles - tutors are contracted separately",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "x_ada-developers-academy": {
+  "name": "Ada Developers Academy",
+  "source": "manual-forprofit-4yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://adadevelopersacademy.rippling-ats.com/"
+   }
+  ],
+  "notes": "VENDOR: HiringThing white-label on rippling-ats.com host (not matched by the prismhr/hiringthing detector's <slug>.hiringthing.com pattern); RSS at https://adadevelopersacademy.rippling-ats.com/api/rss.xml",
+  "prev_status": "none",
+  "prev_url": null
+ }
+}

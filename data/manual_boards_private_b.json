@@ -1,0 +1,806 @@
+{
+ "211981": {
+  "name": "Delaware Valley University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "997c6fde-f713-4be9-b6cf-f4bdbc02cbbb",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=997c6fde-f713-4be9-b6cf-f4bdbc02cbbb&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN, 63 requisitions via public API; linked from https://delval.edu/careers-delval",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "215062": {
+  "name": "University of Pennsylvania",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "upenn",
+    "wd": "wd1",
+    "site": "careers-at-penn",
+    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn"
+   }
+  ],
+  "notes": "Workday (483 postings); homepage 403s to bots, board found at wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "229267": {
+  "name": "Trinity University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "trinity",
+    "wd": "wd1",
+    "site": "Trinity_University",
+    "url": "https://trinity.wd1.myworkdayjobs.com/Trinity_University"
+   }
+  ],
+  "notes": "Workday (31 postings); IPEDS homepage new.trinity.edu has a bad TLS cert, site is https://trinity.edu/hr/careers",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "213668": {
+  "name": "Lycoming College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://lycomingcollege.applytojob.com/apply"
+   }
+  ],
+  "notes": "JazzHR (applytojob.com) board, posting links present; HR page embeds the JazzHR widget",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "199865": {
+  "name": "Warren Wilson College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://warren-wilson.breezy.hr/"
+   }
+  ],
+  "notes": "Breezy HR board with posting links (/p/<id>-slug)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "190725": {
+  "name": "Daemen University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "daemen",
+    "url": "https://daemen.applicantpro.com/jobs/"
+   }
+  ],
+  "notes": "ApplicantPro; linked from https://www.daemen.edu/about/working-daemen/employment-opportunities (found via sitemap)",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "190372": {
+  "name": "The Cooper Union for the Advancement of Science and Art",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cooper.edu/work/employment-opportunities"
+   }
+  ],
+  "notes": "In-house Drupal listing; posting links under /work/employment-opportunities/<slug>",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "215798": {
+  "name": "Saint Vincent College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=saintvincentcollege.appone.com"
+   }
+  ],
+  "notes": "AppOne (Paychex) board; list is rendered by JS/frames (recruiting.myapps.paychex.com/appone/...), needs an AppOne fetcher",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "212911": {
+  "name": "Haverford College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "haverford",
+    "wd": "wd1",
+    "site": "External",
+    "url": "https://haverford.wd1.myworkdayjobs.com/External"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://www.haverford.edu/provost/available-faculty-positions"
+   }
+  ],
+  "notes": "Workday staff board (only 2 postings now) plus provost faculty-positions page",
+  "prev_status": "generic",
+  "prev_url": "https://www.haverford.edu/provost/available-faculty-positions"
+ },
+ "230418": {
+  "name": "Ensign College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "ensigncollege",
+    "wd": "wd501",
+    "site": "EnsignCollege",
+    "url": "https://ensigncollege.wd501.myworkdayjobs.com/EnsignCollege"
+   }
+  ],
+  "notes": "Workday on shard wd501 (detector only tries wd1/3/5/10/12); 14 postings; found via wd501.myworkdaysite.com/recruiting/ensigncollege/EnsignCollege",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "228325": {
+  "name": "Nelson University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://nelsonuniversity.apscareerportal.com/jobs?locale=en-US"
+   }
+  ],
+  "notes": "APS Payroll career portal (apscareerportal.com), server-rendered posting links /jobs/<id>; embedded as iframe at https://www.nelson.edu/employment/",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "217925": {
+  "name": "Columbia International University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ciu.edu/about/employment/"
+   }
+  ],
+  "notes": "In-house WordPress listing, posting links /position/<slug>/; homepage failed in crawl but this page is fine",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "233611": {
+  "name": "Southern Virginia University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://svu.edu/about/careers/"
+   }
+  ],
+  "notes": "In-house listing, posting links /about/careers/<slug>/",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "217961": {
+  "name": "Converse University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://converse.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "isolved Hire; returns 503 to requests and headless Chromium (bot wall) - needs an isolved fetcher or real browser",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "184348": {
+  "name": "Drew University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "drew",
+    "url": "https://drew.bamboohr.com/careers"
+   }
+  ],
+  "notes": "BambooHR (3 postings); drew.edu returns 403 to Chrome UA but 200 to curl UA - the BambooHR API is reachable directly",
+  "prev_status": "generic",
+  "prev_url": "https://drew.edu/about/human-resources/"
+ },
+ "486901": {
+  "name": "Milligan University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://milligan.edu/employment/"
+   }
+  ],
+  "notes": "In-house WP Job Manager listing with /job/<slug>/ links; site is behind Incapsula (requests gets 202), renders in headless Chromium",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "231068": {
+  "name": "SIT Graduate Institute",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "worldlearning",
+    "url": "https://worldlearning.applicantpro.com/jobs/"
+   }
+  ],
+  "notes": "SIT is part of World Learning; their ApplicantPro board is the only job list",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "230038": {
+  "name": "Brigham Young University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "byu",
+    "wd": "wd1",
+    "site": "byu-careers",
+    "url": "https://byu.wd1.myworkdayjobs.com/byu-careers"
+   }
+  ],
+  "notes": "Workday; linked from https://hrs.byu.edu/staff-candidates (crawl errored on an IPv6-looking URL)",
+  "prev_status": "generic",
+  "prev_url": "https://hrs.byu.edu/job-seekers"
+ },
+ "198136": {
+  "name": "Campbell University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phg.tbe.taleo.net/phg01/ats/careers/v2/searchResults?org=CAMPUNIV&cws=37"
+   }
+  ],
+  "notes": "Taleo Business Edition (tbe.taleo.net) - not the careersection product our taleo detector expects; searchResults page has viewRequisition links, 10 per page",
+  "prev_status": "generic",
+  "prev_url": "https://www.campbell.edu/employment/"
+ },
+ "188429": {
+  "name": "Adelphi University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phf.tbe.taleo.net/phf02/ats/careers/v2/searchResults?org=ADELPHI&cws=43"
+   }
+  ],
+  "notes": "Taleo Business Edition; searchResults has viewRequisition links, paginated 10/page",
+  "prev_status": "generic",
+  "prev_url": "https://www.adelphi.edu/hr/careers/"
+ },
+ "200156": {
+  "name": "University of Jamestown",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://universityofjamestown.applytojob.com/apply"
+   }
+  ],
+  "notes": "JazzHR board",
+  "prev_status": "generic",
+  "prev_url": "https://www.uj.edu/about/job-opportunities/"
+ },
+ "182795": {
+  "name": "Franklin Pierce University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://franklinpierceuniversity.applytojob.com/apply"
+   }
+  ],
+  "notes": "JazzHR board",
+  "prev_status": "generic",
+  "prev_url": "https://franklinpierce.edu/employment.html"
+ },
+ "188641": {
+  "name": "Alfred University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://alfreduniversity.applytojob.com/apply"
+   }
+  ],
+  "notes": "JazzHR board",
+  "prev_status": "generic",
+  "prev_url": "https://www.alfred.edu/jobs-at-alfred/"
+ },
+ "191533": {
+  "name": "Hartwick College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hartwickcollege.applytojob.com/apply"
+   }
+  ],
+  "notes": "JazzHR board (adjunct pools listed)",
+  "prev_status": "generic",
+  "prev_url": "https://www.hartwick.edu/about-us/employment/human-resources/"
+ },
+ "209922": {
+  "name": "Reed College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://reed-college.breezy.hr/"
+   }
+  ],
+  "notes": "Breezy HR board; jobs.reed.edu is just the HR landing",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.reed.edu/"
+ },
+ "206525": {
+  "name": "Wittenberg University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_interviewexchange",
+    "company_id": "370",
+    "url": "https://wittenberg.interviewexchange.com/static/clients/370WUM1/index.jsp"
+   }
+  ],
+  "notes": "Interview Exchange; classify() detects it at wittenberg.interviewexchange.com",
+  "prev_status": "generic",
+  "prev_url": "https://www.wittenberg.edu/humanresources/employment-opportunities"
+ },
+ "207582": {
+  "name": "Oral Roberts University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://oru.hrmdirect.com/employment/job-openings.php?search=true"
+   }
+  ],
+  "notes": "ClearCompany (hrmdirect.com legacy host); server-rendered job-opening.php links",
+  "prev_status": "generic",
+  "prev_url": "https://oru.edu/human-resources/index.php"
+ },
+ "199412": {
+  "name": "Queens University of Charlotte",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "c5d58c2c-6169-4d6b-af26-5bdc70dfd129",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c5d58c2c-6169-4d6b-af26-5bdc70dfd129&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN embedded via recwebcomponents on the careers page (cid in page script); 11 reqs. Queens is merging into Elon - jobs.elon.edu (PageUp, already in registry for Elon) also lists Queens-campus jobs",
+  "prev_status": "generic",
+  "prev_url": "https://www.queens.edu/careers/why-work-at-queens/career-opportunities-at-queens/"
+ },
+ "206507": {
+  "name": "Wilmington College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "b304847e-644d-41ca-b0f4-2f402a4a60f4",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b304847e-644d-41ca-b0f4-2f402a4a60f4&ccId=19000101_000001&lang=en_US",
+    "ccId": "9203004009268_3"
+   }
+  ],
+  "notes": "ADP WFN via recwebcomponents; the API returns nothing with the fetcher's hardcoded ccId=19000101_000001 - needs ccId=9203004009268_3 (9 reqs incl. 'Adjunct')",
+  "prev_status": "generic",
+  "prev_url": "https://www.wilmington.edu/about/employment"
+ },
+ "206835": {
+  "name": "Oklahoma Wesleyan University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "47939afb-ed08-4b35-833c-b20f77683162",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=47939afb-ed08-4b35-833c-b20f77683162&ccId=19000101_000001&lang=en_US",
+    "ccId": "19000101_000003"
+   }
+  ],
+  "notes": "ADP WFN via recwebcomponents; ccId=19000101_000003 returns 5 reqs vs 1 with the default ccId",
+  "prev_status": "generic",
+  "prev_url": "https://www.okwu.edu/employment/"
+ },
+ "201061": {
+  "name": "Art Academy of Cincinnati",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "150d0044-7af0-4927-8f81-f24fc4a68331",
+    "url": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=150d0044-7af0-4927-8f81-f24fc4a68331&ccId=19000101_000001&lang=en_US",
+    "host_override": "workforcenow.cloud.adp.com"
+   }
+  ],
+  "notes": "ADP WFN on the workforcenow.cloud.adp.com host (7 reqs); the same cid 404s on workforcenow.adp.com, so fetch_adp needs a host override",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.adp.com/en/jobs/?orderby=0&pagesize=20&page=1&radius=100&rType=0&team=Human%20Resources"
+ },
+ "183910": {
+  "name": "Caldwell University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "7137837f-5f45-46c7-bb9e-ceb9eafaea50",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=7137837f-5f45-46c7-bb9e-ceb9eafaea50&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN (12 reqs incl. adjuncts); linked from caldwell.edu/hr/employment-opportunities/",
+  "prev_status": "generic",
+  "prev_url": "https://www.caldwell.edu/hr/employment-opportunities/"
+ },
+ "231554": {
+  "name": "Bluefield University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "48c5785e-b401-4ac2-b65e-544e4a80214e",
+    "url": "https://workforcenow.cloud.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=48c5785e-b401-4ac2-b65e-544e4a80214e&ccId=19000101_000001&lang=en_US",
+    "host_override": "workforcenow.cloud.adp.com"
+   }
+  ],
+  "notes": "ADP WFN on workforcenow.cloud.adp.com (10 reqs); registry URL was ADP's own corporate jobs site. Needs host override in fetch_adp",
+  "prev_status": "generic",
+  "prev_url": "https://jobs.adp.com/en/jobs/?orderby=0&pagesize=20&page=1&radius=100&rType=0&team=Human%20Resources"
+ },
+ "191621": {
+  "name": "Hilbert College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=hilbertcollege.appone.com"
+   }
+  ],
+  "notes": "AppOne (Paychex) board, JS-rendered; registry URL was ukg.com/privacy. Needs AppOne fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://www.ukg.com/privacy"
+ },
+ "407629": {
+  "name": "Lake Erie College of Osteopathic Medicine",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cta.cadienttalent.com/index.jsp?seq=ca_home&applicationName=LECOMReqExt"
+   }
+  ],
+  "notes": "Cadient Talent ATS (cta.cadienttalent.com); JS app, needs a fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://lecom.edu/jobs/"
+ },
+ "194310": {
+  "name": "Pace University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure6.saashr.com/ta/6000630.careers?CareersSearch"
+   }
+  ],
+  "notes": "UKG Ready (saashr.com) careers page, JS-rendered; needs a UKG Ready fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://www.pace.edu/careers"
+ },
+ "182634": {
+  "name": "Colby-Sawyer College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure.entertimeonline.com/ta/ColbySawyer.careers?CareersSearch&ein_id=85020931&career_portal_id=1130757"
+   }
+  ],
+  "notes": "UKG Ready on entertimeonline.com (same product as saashr.com); JS-rendered",
+  "prev_status": "generic",
+  "prev_url": "https://www.colby-sawyer.edu/offices/human-resources"
+ },
+ "192749": {
+  "name": "Manhattanville University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mville.exacthire.com/All_Open_Jobs_at_All_Locations"
+   }
+  ],
+  "notes": "ExactHire board, JS-rendered; needs a fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://www.mville.edu/offices/human-resources/human-resources.php"
+ },
+ "226471": {
+  "name": "University of Mary Hardin-Baylor",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://umhb.applicantstack.com/x/openings"
+   }
+  ],
+  "notes": "ApplicantStack board; listing is JS-rendered (no anchors in HTML), needs a fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://www.umhb.edu/resources/careers/home"
+ },
+ "233426": {
+  "name": "Roanoke College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.jobscore.com/careers/roanokecollege"
+   }
+  ],
+  "notes": "JobScore board with server-rendered links; Atom feed at https://hire.jobscore.com/jobs/roanokecollege/feed.atom",
+  "prev_status": "generic",
+  "prev_url": "https://www.roanoke.edu/careers"
+ },
+ "238193": {
+  "name": "Alverno College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.alverno.edu/careers"
+   }
+  ],
+  "notes": "In-house list whose titles link to UKG Ready (secure7.saashr.com/ta/6213991.careers?ShowJob=...); registry URL was the student career studio",
+  "prev_status": "generic",
+  "prev_url": "https://www.alverno.edu/career-studio"
+ },
+ "442806": {
+  "name": "Edward Via College of Osteopathic Medicine",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.vcom.edu/employment/job-listings"
+   }
+  ],
+  "notes": "In-house listing, links /employment/job-listings/<id>",
+  "prev_status": "generic",
+  "prev_url": "https://www.vcom.edu/employment"
+ },
+ "204194": {
+  "name": "Mount Vernon Nazarene University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mvnu.edu/staff-job-opportunities/",
+    "pages": [
+     "https://mvnu.edu/employment-opportunities/faculty-job-opportunities/",
+     "https://mvnu.edu/employment-opportunities/adjunct-job-opportunities/"
+    ]
+   }
+  ],
+  "notes": "Postings are PDF links (generic fetcher skips .pdf) - titles are in the anchor text",
+  "prev_status": "generic",
+  "prev_url": "https://mvnu.edu/employment-opportunities/"
+ },
+ "191676": {
+  "name": "Houghton University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.houghton.edu/employment/administrative-staff-openings/",
+    "pages": [
+     "https://www.houghton.edu/employment/faculty-openings/"
+    ]
+   }
+  ],
+  "notes": "Postings are PDF links with the title as anchor text",
+  "prev_status": "generic",
+  "prev_url": "https://www.houghton.edu/employment/"
+ },
+ "203960": {
+  "name": "Mercy College of Ohio",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "easyservice",
+    "wd": "wd5",
+    "site": "MercyCollegeofOhioCareers",
+    "url": "https://easyservice.wd5.myworkdayjobs.com/MercyCollegeofOhioCareers"
+   }
+  ],
+  "notes": "Workday tenant shared with Mercy Health (7 college postings); registry URL was the admissions page",
+  "prev_status": "generic",
+  "prev_url": "https://mercycollege.edu/admissions"
+ },
+ "220613": {
+  "name": "Lee University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.leeuniversity.edu/human-resources/positions/"
+   }
+  ],
+  "notes": "In-house WP Job Manager listing (/job/<slug>/); registry URL was the student career center",
+  "prev_status": "generic",
+  "prev_url": "https://www.leeuniversity.edu/calling-career/"
+ },
+ "222983": {
+  "name": "Austin College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.austincollege.edu/human-resources/careers"
+   }
+  ],
+  "notes": "Finalsite board, links /details/~board/jobs/post/<slug>",
+  "prev_status": "generic",
+  "prev_url": "https://www.austincollege.edu/human-resources"
+ },
+ "237358": {
+  "name": "Davis & Elkins College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.dewv.edu/explore/employment/open-positions/"
+   }
+  ],
+  "notes": "In-house listing, links /career/<slug>/",
+  "prev_status": "generic",
+  "prev_url": "https://www.dewv.edu/explore/employment/"
+ },
+ "225548": {
+  "name": "Howard Payne University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "hputx",
+    "url": "https://hputx.bamboohr.com/careers"
+   }
+  ],
+  "notes": "BambooHR (20 postings incl. evergreen adjunct pools) embedded at hputx.edu/campus-offices/human-resources/open-positions/; site itself is behind reCAPTCHA",
+  "prev_status": "generic",
+  "prev_url": "https://www.hputx.edu/campus-offices/human-resources/"
+ },
+ "213385": {
+  "name": "Lafayette College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hr.lafayette.edu/category/job-opportunity/",
+    "pages": [
+     "https://provost.lafayette.edu/faculty-positions-available/"
+    ]
+   }
+  ],
+  "notes": "Staff postings are WordPress posts on hr.lafayette.edu; faculty postings on the provost site",
+  "prev_status": "generic",
+  "prev_url": "https://www.lafayette.edu/work-at-lafayette/"
+ },
+ "213987": {
+  "name": "Mercyhurst University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mercyhurst.edu/human-resources/jobs"
+   }
+  ],
+  "notes": "Titles are headings with a 'position summary' link each; registry URL was a graduate-support portal page",
+  "prev_status": "generic",
+  "prev_url": "https://go.mercyhurst.edu/portal/gagegs?tab=gradsup"
+ },
+ "219091": {
+  "name": "Dakota Wesleyan University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://dwu.hireclick.com/jobboard/"
+   }
+  ],
+  "notes": "HireClick job board (hireclick.com), JS-rendered (3MB bundle); needs a fetcher",
+  "prev_status": "generic",
+  "prev_url": "https://www.dwu.edu/employment"
+ },
+ "198899": {
+  "name": "Mars Hill University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.appone.com/marshilluniversity"
+   }
+  ],
+  "notes": "AppOne (Paychex) board linked from mhu.edu footer; returns 404 + reCAPTCHA to bots. Registry URL was a summer-camp page",
+  "prev_status": "generic",
+  "prev_url": "https://www.mhu.edu/about/what-to-do-and-see/summer-opportunities-at-mars-hill/"
+ },
+ "183974": {
+  "name": "Centenary University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.higheredjobs.com/InstitutionProfile.cfm?ProfileID=15447"
+   }
+  ],
+  "notes": "HigherEdJobs-only poster (HR page has no listing, only HEJ links); registry URL was a financial-aid page",
+  "prev_status": "generic",
+  "prev_url": "https://www.centenaryuniversity.edu/costs-and-aid/eop/"
+ },
+ "180106": {
+  "name": "Carroll College",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.carroll.edu/faculty-staff-positions"
+   }
+  ],
+  "notes": "Real listing page (16 titles) but titles are accordion headings, not links; apply via PDF",
+  "prev_status": "generic",
+  "prev_url": "https://www.carroll.edu/about/work-carroll"
+ },
+ "217907": {
+  "name": "Coker University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://coker.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "isolved Hire (embedded iframe on coker.edu careers page); 503 to bots",
+  "prev_status": "generic",
+  "prev_url": "https://www.coker.edu/offices-services/careers/"
+ },
+ "196592": {
+  "name": "Touro University",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "tcnycareers-touro",
+    "url": "https://tcnycareers-touro.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "Registry had the internal SSO login portal; public iCIMS board is tcnycareers-touro (50 jobs)",
+  "prev_status": "ok",
+  "prev_url": "https://internal-touro.icims.com/jobs/login?loginOnly=1&sso_connection=hs-10838-saml"
+ },
+ "194073": {
+  "name": "New York College of Podiatric Medicine",
+  "source": "manual-private-b",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "tcnycareers-touro",
+    "url": "https://tcnycareers-touro.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "NYCPM is a Touro University school; same public iCIMS board as Touro (registry had the internal login portal)",
+  "prev_status": "ok",
+  "prev_url": "https://internal-touro.icims.com/jobs/login?loginOnly=1&sso_connection=hs-10838-saml"
+ }
+}

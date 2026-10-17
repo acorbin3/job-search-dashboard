@@ -1,0 +1,1521 @@
+{
+ "103909": {
+  "name": "Carrington College-Mesa",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "103893": {
+  "name": "Carrington College-Phoenix North",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "103927": {
+  "name": "Carrington College-Tucson",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "438258": {
+  "name": "Carrington College-Pleasant Hill Campus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "437936": {
+  "name": "Carrington College-San Jose",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "246974": {
+  "name": "Carrington College-San Leandro Campus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "450696": {
+  "name": "Carrington College-Stockton",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "142054": {
+  "name": "Carrington College-Boise",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "442602": {
+  "name": "Carrington College-Albuquerque",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "457101": {
+  "name": "Carrington College-Las Vegas",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "457110": {
+  "name": "Carrington College-Reno",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "439118": {
+  "name": "Carrington College-Spokane",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "0104dae6-164a-443c-973e-83f676e176f7",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/0104dae6-164a-443c-973e-83f676e176f7/"
+   }
+  ],
+  "notes": "Carrington College chain board (UKG Pro, shared SJVC tenant); linked from carrington.edu/carrington-careers/"
+ },
+ "122694": {
+  "name": "San Joaquin Valley College-Bakersfield",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "262457": {
+  "name": "San Joaquin Valley College-Fresno",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "456852": {
+  "name": "San Joaquin Valley College-Hesperia",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "481775": {
+  "name": "San Joaquin Valley College-Lancaster",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "447351": {
+  "name": "San Joaquin Valley College-Modesto",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "442444": {
+  "name": "San Joaquin Valley College-Ontario",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "448372": {
+  "name": "San Joaquin Valley College-Rancho Cordova",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "495952": {
+  "name": "San Joaquin Valley College-Rancho Mirage",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "495961": {
+  "name": "San Joaquin Valley College-Santa Maria",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "475176": {
+  "name": "San Joaquin Valley College-Temecula",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "422020": {
+  "name": "San Joaquin Valley College-Trades Education Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro); linked from sjvc.edu/sjvc-careers/"
+ },
+ "205179": {
+  "name": "Fortis College-Centerville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "455628": {
+  "name": "Fortis Institute-Birmingham",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "490975": {
+  "name": "Fortis College-Cutler Bay",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "439792": {
+  "name": "Fortis College-Orange Park",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "455479": {
+  "name": "Fortis Institute-Pensacola",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "445744": {
+  "name": "Fortis Institute-Port Saint Lucie",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "372921": {
+  "name": "Fortis College-Smyrna",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "458681": {
+  "name": "Fortis College-Indianapolis",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "439738": {
+  "name": "Fortis College-Baton Rouge",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "494843": {
+  "name": "Fortis College-Landover",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "450067": {
+  "name": "Fortis College-Cincinnati",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "450058": {
+  "name": "Fortis College-Columbus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "487302": {
+  "name": "Fortis College-Cuyahoga Falls",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "385503": {
+  "name": "Fortis Institute-Scranton",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "460020": {
+  "name": "Fortis College-Columbia",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "494436": {
+  "name": "Fortis Institute-Cookeville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "452124": {
+  "name": "Fortis Institute-Nashville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "392415": {
+  "name": "Fortis College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "459958": {
+  "name": "Fortis Institute",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "456454": {
+  "name": "Fortis College-Salt Lake City",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "233329": {
+  "name": "Fortis College-Norfolk",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "382957": {
+  "name": "Fortis College-Richmond",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "domain": "eccfortis",
+    "url": "https://myjobs.adp.com/eccfortis/cx"
+   }
+  ],
+  "notes": "Fortis chain board (Education Affiliates, ADP Recruitment Management). fortis.edu has no careers link; found via parent site edaff.com/careers-listings.php -> recruiting.adp.com/srccar/public/RTI.home?d=ExternalFortis&c=1101541 which redirects to myjobs.adp.com/eccfortis. 50+ reqs incl. adjunct instructors."
+ },
+ "103963": {
+  "name": "Miller-Motte College-Arizona Automotive Institute",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "367112": {
+  "name": "Miller-Motte College-McCann-Monroe",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "460826": {
+  "name": "Miller-Motte College-Augusta",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "458441": {
+  "name": "Miller-Motte College-Columbus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "475060": {
+  "name": "Miller-Motte College-Macon",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "458405": {
+  "name": "Miller-Motte College-Fayetteville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "460817": {
+  "name": "Miller-Motte College-Jacksonville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "456205": {
+  "name": "Miller-Motte College-Raleigh",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "245962": {
+  "name": "Miller-Motte College-Tulsa",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "213534": {
+  "name": "Miller-Motte College-Berks Technical Institute",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "456579": {
+  "name": "Miller-Motte College-Berks Technical Institute-Allentown",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "438221": {
+  "name": "Miller-Motte College-Berks Technical Institute-Lewisburg",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "441025": {
+  "name": "Miller-Motte College-Charleston",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "460835": {
+  "name": "Miller-Motte College-Conway",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "456922": {
+  "name": "South Texas Vocational Technical Institute-Brownsville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "228200": {
+  "name": "South Texas Vocational Technical Institute-Weslaco",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (Miller-Motte, Berks Technical Institute, McCann, STVT, Arizona Automotive Institute): ancoraeducation.com/careers redirects to ADP WorkforceNow. Campus sites have no careers link."
+ },
+ "499662": {
+  "name": "Aviation Institute of Maintenance-Phoenix",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "486558": {
+  "name": "Aviation Institute of Maintenance-Fremont",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "457411": {
+  "name": "Aviation Institute of Maintenance-Orlando",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "440059": {
+  "name": "Aviation Institute of Maintenance-Atlanta",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "497745": {
+  "name": "Aviation Institute of Maintenance-Chicago",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "438735": {
+  "name": "Aviation Institute of Maintenance-Indianapolis",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "441496": {
+  "name": "Aviation Institute of Maintenance-Kansas City",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "494764": {
+  "name": "Aviation Institute of Maintenance-Charlotte",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "187000": {
+  "name": "Aviation Institute of Maintenance-Teterboro",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "482255": {
+  "name": "Aviation Institute of Maintenance-Las Vegas",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "250285": {
+  "name": "Aviation Institute of Maintenance-Philadelphia",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "441788": {
+  "name": "Aviation Institute of Maintenance-Dallas",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "227748": {
+  "name": "Aviation Institute of Maintenance-Houston",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "445762": {
+  "name": "Aviation Institute of Maintenance-Manassas",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "427973": {
+  "name": "Aviation Institute of Maintenance-Norfolk",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "aviationinstituteofmaintenance",
+    "url": "https://job-boards.greenhouse.io/aviationinstituteofmaintenance"
+   }
+  ],
+  "notes": "Aviation Institute of Maintenance chain board (Greenhouse). aviationmaintenance.edu returns 403 to all crawlers; board found via web search."
+ },
+ "441371": {
+  "name": "Ultimate Medical Academy",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "umaeducationinc",
+    "url": "https://job-boards.greenhouse.io/umaeducationinc"
+   }
+  ],
+  "notes": "Ultimate Medical Academy (Greenhouse) via workatuma.com; ultimatemedical.edu/careers is Cloudflare-blocked. Remote adjunct instructor postings (health programs)."
+ },
+ "448600": {
+  "name": "Stautzenberger College-Brecksville",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ahed.com/careers/"
+   }
+  ],
+  "notes": "Stautzenberger College / Rockford Career College: parent American Higher Education Development lists openings at ahed.com/careers (anchor titles are the job titles; campus sites redirect /careers/ there)."
+ },
+ "205887": {
+  "name": "Stautzenberger College-Maumee",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ahed.com/careers/"
+   }
+  ],
+  "notes": "Stautzenberger College / Rockford Career College: parent American Higher Education Development lists openings at ahed.com/careers (anchor titles are the job titles; campus sites redirect /careers/ there)."
+ },
+ "494852": {
+  "name": "Stautzenberger College-Rockford Career College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ahed.com/careers/"
+   }
+  ],
+  "notes": "Stautzenberger College / Rockford Career College: parent American Higher Education Development lists openings at ahed.com/careers (anchor titles are the job titles; campus sites redirect /careers/ there)."
+ },
+ "443261": {
+  "name": "Southeastern College-Charleston",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://sec.isolvedhire.com/jobs/",
+    "isolved_slug": "sec",
+    "host": "sec.isolvedhire.com"
+   }
+  ],
+  "notes": "Southeastern College (isolved Hire; 99 postings incl. adjunct instructors). sec.edu also links a CareerPlug account page (southeastern-college.careerplug.com) which is secondary."
+ },
+ "444866": {
+  "name": "Southeastern College-Columbia",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_isolvedhire",
+    "url": "https://sec.isolvedhire.com/jobs/",
+    "isolved_slug": "sec",
+    "host": "sec.isolvedhire.com"
+   }
+  ],
+  "notes": "Southeastern College (isolved Hire; 99 postings incl. adjunct instructors). sec.edu also links a CareerPlug account page (southeastern-college.careerplug.com) which is secondary."
+ },
+ "441210": {
+  "name": "East Valley Institute of Technology",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/evit/onlineapp/default.aspx?all=1",
+    "district": "evit"
+   }
+  ],
+  "notes": "East Valley Institute of Technology: Frontline AppliTrack (evit.edu/about-evit/work-at-evit); adjunct instructor postings."
+ },
+ "496645": {
+  "name": "Burlington County Institute of Technology-Adult Education",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/bcit/onlineapp/default.aspx?all=1",
+    "district": "bcit"
+   }
+  ],
+  "notes": "Burlington County Institute of Technology: Frontline AppliTrack district board (bcit.cc/page/employment)."
+ },
+ "486150": {
+  "name": "Treasure Coast Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/indianriver/onlineapp/default.aspx?all=1",
+    "district": "indianriver"
+   }
+  ],
+  "notes": "Treasure Coast Technical College: School District of Indian River County Frontline AppliTrack board (district-wide, 70+ postings)."
+ },
+ "417655": {
+  "name": "Warrensburg Area Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/warrensburg/onlineapp/default.aspx?all=1",
+    "district": "warrensburg"
+   }
+  ],
+  "notes": "Warrensburg Area Career Center: Warrensburg R-VI Frontline AppliTrack board (district-wide)."
+ },
+ "481021": {
+  "name": "Berks Career & Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/berkscareer/onlineapp/default.aspx?all=1",
+    "district": "berkscareer"
+   }
+  ],
+  "notes": "Berks Career & Technology Center: Frontline AppliTrack (berkscareer.com/page/employment-opportunities); CTE instructor postings."
+ },
+ "417682": {
+  "name": "Cass Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/harrisonvilleschools/onlineapp/default.aspx?all=1",
+    "district": "harrisonvilleschools"
+   }
+  ],
+  "notes": "Cass Career Center: Harrisonville Schools Frontline AppliTrack board (district-wide)."
+ },
+ "250993": {
+  "name": "Red River Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/rrtc/onlineapp/default.aspx?all=1",
+    "district": "rrtc"
+   }
+  ],
+  "notes": "Red River Technology Center: Frontline AppliTrack (redrivertechok.sites.thrillshare.com/page/rrtc-employment-opportunities)."
+ },
+ "365505": {
+  "name": "Waynesville Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_applitrack",
+    "url": "https://www.applitrack.com/waynesville/onlineapp/default.aspx?all=1",
+    "district": "waynesville"
+   }
+  ],
+  "notes": "Waynesville Career Center: Waynesville R-VI Frontline AppliTrack board (registry had it only as a generic URL); adjunct nursing/ABE instructor postings."
+ },
+ "177436": {
+  "name": "Four Rivers Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://washington.schoolspring.com/",
+    "domain": "washington.schoolspring.com"
+   }
+  ],
+  "notes": "Four Rivers Career Center: Washington (MO) School District SchoolSpring/TalentEd board (district-wide)."
+ },
+ "417628": {
+  "name": "Kirksville Area Technical Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://kirksville.schoolspring.com/",
+    "domain": "kirksville.schoolspring.com"
+   }
+  ],
+  "notes": "Kirksville Area Technical Center: Kirksville R-III SchoolSpring/TalentEd board (district-wide)."
+ },
+ "461087": {
+  "name": "Northeast Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://netech.schoolspring.com/",
+    "domain": "netech.schoolspring.com"
+   }
+  ],
+  "notes": "Northeast Technology Center (OK): SchoolSpring/TalentEd (netech.tedk12.com/hire)."
+ },
+ "201098": {
+  "name": "Ashland County-West Holmes Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://htec.schoolspring.com/",
+    "domain": "htec.schoolspring.com"
+   }
+  ],
+  "notes": "Ashland County-West Holmes Career Center (now Heartland Technical Education Center): SchoolSpring board with adult-ed instructor postings."
+ },
+ "215886": {
+  "name": "Schuylkill Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://iu29.schoolspring.com/",
+    "domain": "iu29.schoolspring.com"
+   }
+  ],
+  "notes": "Schuylkill Technology Center: shares Schuylkill IU29's SchoolSpring/TalentEd board (iu29.tedk12.com/hire)."
+ },
+ "136765": {
+  "name": "Ridge Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://jobs.polkschoolsfl.com/",
+    "company": "theschoo01"
+   }
+  ],
+  "notes": "Ridge / Traviss Technical College: Polk County Public Schools SuccessFactors board (district-wide; techcolleges.polkschoolsfl.com links polkschoolsfl.com/careers/opportunities -> jobs.polkschoolsfl.com)."
+ },
+ "135522": {
+  "name": "Traviss Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_successfactors",
+    "url": "https://jobs.polkschoolsfl.com/",
+    "company": "theschoo01"
+   }
+  ],
+  "notes": "Ridge / Traviss Technical College: Polk County Public Schools SuccessFactors board (district-wide; techcolleges.polkschoolsfl.com links polkschoolsfl.com/careers/opportunities -> jobs.polkschoolsfl.com)."
+ },
+ "215381": {
+  "name": "Pittsburgh Institute of Aeronautics",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_paycor",
+    "url": "https://recruitingbypaycor.com/career/CareerHome.action?clientId=8a7883c686c422980186dbe2398e0cd7",
+    "client_id": "8a7883c686c422980186dbe2398e0cd7"
+   }
+  ],
+  "notes": "Pittsburgh Institute of Aeronautics: Paycor Recruiting iframe on pia.edu/employment/. NOTE: board lists ~11 postings (Aviation Maintenance Instructor etc.) but college_paycor.fetch returned 0 - this tenant's page has JobIntroduction links without the gnewtonCareerGroupRowClass wrappers the fetcher looks for."
+ },
+ "449524": {
+  "name": "Taylor College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_appone",
+    "url": "https://www2.appone.com/Search/Search.aspx?ServerVar=taylorcollegeeellc.appone.com",
+    "server_var": "taylorcollegeeellc.appone.com"
+   }
+  ],
+  "notes": "Taylor College (Ocala FL): AppOne/Paychex board linked from taylorcollege.edu/current-employment-opportunities/ (adjunct postings). Health/nursing programs only."
+ },
+ "213181": {
+  "name": "Great Lakes Institute of Technology",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://glit.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "Great Lakes Institute of Technology: WP Job Manager on glit.edu/careers/ (job_types include adjunct). glit.edu answers 202 (Cloudflare challenge) to plain requests; the feed loads in Chromium."
+ },
+ "118198": {
+  "name": "MTI College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.ashbyhq.com/Campus"
+   }
+  ],
+  "notes": "MTI College is now Campus (campus.edu); careers at campus.edu/careers -> Ashby board jobs.ashbyhq.com/Campus. VENDOR WITHOUT DETECTOR: Ashby (JS app; public JSON at https://api.ashbyhq.com/posting-api/job-board/Campus)."
+ },
+ "487311": {
+  "name": "Jones Technical Institute",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.hireology.com/compassrosefoundation"
+   }
+  ],
+  "notes": "Jones Technical Institute: jtech.org/careers-at-jtech/ embeds a Hireology widget; hosted board careers.hireology.com/compassrosefoundation lists IT Instructor / IT Adjunct Instructor. VENDOR WITHOUT DETECTOR: Hireology."
+ },
+ "206181": {
+  "name": "Tri-Rivers Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.tririvers.com/tri-rivers-job-board"
+   }
+  ],
+  "notes": "Tri-Rivers Career Center: job board page links part-time instructor postings (Robotics, PLC, Electrical) hosted on JobTarget (hosted-apply.jobtarget.com). VENDOR WITHOUT DETECTOR: JobTarget."
+ },
+ "366553": {
+  "name": "Southern Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.southerntech.edu/jobs/"
+   }
+  ],
+  "notes": "Southern Technical College: own WordPress job-postings archive at /jobs/ (southerntech.edu/careers/ redirects there); instructor/adjunct postings with detail pages."
+ },
+ "446552": {
+  "name": "Southern Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.southerntech.edu/jobs/"
+   }
+  ],
+  "notes": "Southern Technical College: own WordPress job-postings archive at /jobs/ (southerntech.edu/careers/ redirects there); instructor/adjunct postings with detail pages."
+ },
+ "237242": {
+  "name": "Cabell County Career Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.cabe.k12.wv.us/index.php?type=all"
+   }
+  ],
+  "notes": "Cabell County Career Technology Center: Cabell County Schools custom employment portal (jobs.cabe.k12.wv.us, descript.php?ID= detail pages); district-wide."
+ },
+ "416458": {
+  "name": "Premiere Career College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.premierecollege.education/jobs"
+   }
+  ],
+  "notes": "Premiere Career College moved to premierecollege.education (premierecollege.edu no longer resolves); /employment -> /jobs lists openings with detail pages."
+ },
+ "427991": {
+  "name": "Osceola Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.osceolaschools.net/jobs"
+   }
+  ],
+  "notes": "Osceola Technical College: School District of Osceola County recruiting site jobs.osceolaschools.net (Radancy-style front end; applications go to Kenexa BrassRing sjobs.brassring.com partnerid=26623 siteid=5686). VENDOR WITHOUT DETECTOR: Kenexa BrassRing."
+ },
+ "225876": {
+  "name": "Jacksonville College-Main Campus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://sites.google.com/jacksonville-college.edu/jchr/openings"
+   }
+  ],
+  "notes": "Jacksonville College (TX): HR Google Site lists openings (currently 'Online Adjunct Instructor - Economics', Google Doc detail)."
+ },
+ "198871": {
+  "name": "Louisburg College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.louisburg.edu/employment/index.php"
+   }
+  ],
+  "notes": "Louisburg College: openings listed as accordion anchors on the employment page (same-page #collapse links)."
+ },
+ "417646": {
+  "name": "Saline County Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://marshallschools.mysmarthire.com/jobs/"
+   }
+  ],
+  "notes": "Saline County Career Center: Marshall Public Schools board on marshallschools.mysmarthire.com (isolved Hire/ApplicantPro-style white label 'mysmarthire.com', same template as isolvedhire.com; could be added to the isolvedhire white-label list). District-wide K-12 postings."
+ },
+ "491783": {
+  "name": "Wilton Simpson Technical College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hcsbjobs.atenterprise.powerschool.com/ats/job_board_frame?refresh=Y&COMPANY_ID=00005595&APPLICANT_TYPE_ID=00000001"
+   }
+  ],
+  "notes": "Wilton Simpson Technical College: Hernando County School Board job board (hernandoschools.org/jobs). VENDOR WITHOUT DETECTOR: PowerSchool Applicant Tracking Enterprise (atenterprise.powerschool.com, JS frame)."
+ },
+ "136491": {
+  "name": "Pinellas Technical College-Clearwater",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.pcsb.org/jobs"
+   }
+  ],
+  "notes": "Pinellas Technical College: Pinellas County Schools jobs page links PowerSchool Applicant Tracking Enterprise (ats3.atenterprise.powerschool.com COMPANY_ID=OA002067). VENDOR WITHOUT DETECTOR: PowerSchool ATS Enterprise."
+ },
+ "137087": {
+  "name": "Pinellas Technical College-St. Petersburg",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.pcsb.org/jobs"
+   }
+  ],
+  "notes": "Pinellas Technical College: Pinellas County Schools jobs page links PowerSchool Applicant Tracking Enterprise (ats3.atenterprise.powerschool.com COMPANY_ID=OA002067). VENDOR WITHOUT DETECTOR: PowerSchool ATS Enterprise."
+ },
+ "418320": {
+  "name": "Mid-America Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.redroverk12.com/org/matc"
+   }
+  ],
+  "notes": "Mid-America Technology Center: Red Rover K12 board (JS-rendered). VENDOR WITHOUT DETECTOR: Red Rover (redroverk12.com)."
+ },
+ "390905": {
+  "name": "Polaris Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://portal.myscview.com/Jobs/POLARIS/listings"
+   }
+  ],
+  "notes": "Polaris Career Center: 'Join Our Team' page links SCView/Strategic Solutions job portal (JS-loaded table; no openings at crawl time). VENDOR WITHOUT DETECTOR: SCView (portal.myscview.com)."
+ },
+ "365240": {
+  "name": "Greene County Career Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://portal.myscview.com/Jobs/GCCC/listings"
+   }
+  ],
+  "notes": "Greene County Career Center (OH): SCView/Strategic Solutions job portal (portal.myscview.com). VENDOR WITHOUT DETECTOR: SCView."
+ },
+ "364627": {
+  "name": "Pioneer Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://pioneertech.ninjagig.com/"
+   }
+  ],
+  "notes": "Pioneer Technology Center: 'Work at PTC' -> NinjaGig board (no openings at crawl time). VENDOR WITHOUT DETECTOR: NinjaGig."
+ },
+ "430908": {
+  "name": "Clearfield County Career and Technology Center",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.willsubplus.com/jobs?districtIds=2688"
+   }
+  ],
+  "notes": "Clearfield County CTC: employment page links ESS WillSub+ board (substitute postings only; cookie wall). VENDOR WITHOUT DETECTOR: ESS WillSub+."
+ },
+ "449092": {
+  "name": "CBT Technology Institute-Hialeah",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.cbt.edu/"
+   }
+  ],
+  "notes": "CBT Technology Institute: own jobs.cbt.edu application page; open positions appear as <select> options, not anchors, so the generic fetcher sees no titles."
+ },
+ "449083": {
+  "name": "CBT Technology Institute-Main Campus",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.cbt.edu/"
+   }
+  ],
+  "notes": "CBT Technology Institute: own jobs.cbt.edu application page; open positions appear as <select> options, not anchors, so the generic fetcher sees no titles."
+ },
+ "243841": {
+  "name": "ICPR Junior College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.icprjc.edu/empleo.html"
+   }
+  ],
+  "notes": "ICPR Junior College: Spanish 'Empleo' page lists openings as accordions with Indeed apply links (indeed.com/cmp/Icpr-Junior-College-1/jobs). Titles in Spanish."
+ },
+ "460677": {
+  "name": "ICPR Junior College",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.icprjc.edu/empleo.html"
+   }
+  ],
+  "notes": "ICPR Junior College: Spanish 'Empleo' page lists openings as accordions with Indeed apply links (indeed.com/cmp/Icpr-Junior-College-1/jobs). Titles in Spanish."
+ },
+ "242130": {
+  "name": "ICPR Junior College-Arecibo",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.icprjc.edu/empleo.html"
+   }
+  ],
+  "notes": "ICPR Junior College: Spanish 'Empleo' page lists openings as accordions with Indeed apply links (indeed.com/cmp/Icpr-Junior-College-1/jobs). Titles in Spanish."
+ },
+ "242149": {
+  "name": "ICPR Junior College-Mayaguez",
+  "source": "manual-forprofit-2yr",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.icprjc.edu/empleo.html"
+   }
+  ],
+  "notes": "ICPR Junior College: Spanish 'Empleo' page lists openings as accordions with Indeed apply links (indeed.com/cmp/Icpr-Junior-College-1/jobs). Titles in Spanish."
+ }
+}

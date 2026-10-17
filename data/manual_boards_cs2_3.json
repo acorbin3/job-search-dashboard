@@ -1,0 +1,503 @@
+{
+ "164988": {
+  "name": "Boston University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_silkroad",
+    "url": "https://jobs.silkroad.com/BU/External",
+    "host": "jobs.silkroad.com",
+    "tenant": "BU",
+    "site": "External"
+   }
+  ],
+  "notes": "classify() now resolves the SilkRoad EmploymentPortal (jobs.silkroad.com/BU/External) to college_silkroad; replaces the two audited college_generic configs. Verified 2026-10-16: 168 job-ish postings."
+ },
+ "233541": {
+  "name": "Shenandoah University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_silkroad",
+    "url": "https://jobs.silkroad.com/ShenandoahUniversity/EmploymentPortal",
+    "host": "jobs.silkroad.com",
+    "tenant": "ShenandoahUniversity",
+    "site": "EmploymentPortal"
+   }
+  ],
+  "notes": "SilkRoad EmploymentPortal now detected as college_silkroad (adjunct pools incl. 'Adjunct Faculty Pool- Graduate Business (online)'); replaces the ?embedded=true college_generic config. Verified 2026-10-16: 33 job-ish postings."
+ },
+ "136491": {
+  "name": "Pinellas Technical College-Clearwater",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_powerschool",
+    "url": "https://ats3.atenterprise.powerschool.com/ats/job_board?COMPANY_ID=OA002067",
+    "host": "ats3.atenterprise.powerschool.com",
+    "company_id": "OA002067"
+   }
+  ],
+  "notes": "Pinellas County Schools PowerSchool Applicant Tracking Enterprise board, now detected as college_powerschool (COMPANY_ID=OA002067); the registry's ats3 URL was college_generic and returned nothing. Verified 2026-10-16: 64 job-ish postings."
+ },
+ "369419": {
+  "name": "Erwin Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_infor",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS+JOB+BOARD&csk.HROrganization=HCPS",
+    "host": "css-sdhc-prd.inforcloudsuite.com",
+    "job_board": "HCPS JOB BOARD",
+    "hr_org": "HCPS"
+   }
+  ],
+  "notes": "Erwin Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM board now detected as college_infor (district-wide, incl. adult/technical instructor postings). Verified 2026-10-16: 116 job-ish postings."
+ },
+ "367875": {
+  "name": "H W Brewster Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_infor",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS+JOB+BOARD&csk.HROrganization=HCPS",
+    "host": "css-sdhc-prd.inforcloudsuite.com",
+    "job_board": "HCPS JOB BOARD",
+    "hr_org": "HCPS"
+   }
+  ],
+  "notes": "Brewster Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM board now detected as college_infor. Verified 2026-10-16: 116 job-ish postings."
+ },
+ "485342": {
+  "name": "Aparicio-Levy Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_infor",
+    "url": "https://css-sdhc-prd.inforcloudsuite.com/hcm/Jobs/page/JobsHomePage?csk.JobBoard=HCPS+JOB+BOARD&csk.HROrganization=HCPS",
+    "host": "css-sdhc-prd.inforcloudsuite.com",
+    "job_board": "HCPS JOB BOARD",
+    "hr_org": "HCPS"
+   }
+  ],
+  "notes": "Aparicio-Levy Technical College = Hillsborough County Public Schools; Infor CloudSuite HCM board now detected as college_infor. Verified 2026-10-16: 116 job-ish postings."
+ },
+ "207661": {
+  "name": "Rogers State University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_jics",
+    "url": "https://my.rsu.edu/ICS/RSU_Jobs/RSU_Employment_Opportunities.jnz"
+   }
+  ],
+  "notes": "Jenzabar JICS Employment Position Application portlet now detected as college_jics (many 'Adjunct Instructor' rows); replaces the HR landing page + .jnz college_generic configs. Verified 2026-10-16: 40 job-ish postings."
+ },
+ "155511": {
+  "name": "McPherson College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_jics",
+    "url": "https://my.mcpherson.edu/ICS/Employment/Employment_Landing_Page.jnz"
+   }
+  ],
+  "notes": "Registry URL was a jenzabarhelp.jenzabar.com documentation page. Real board is the JICS Employment portlet on my.mcpherson.edu (college_jics; 'ADJUNCT' row present). Verified 2026-10-16: 5 job-ish postings."
+ },
+ "217776": {
+  "name": "Southern Wesleyan University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_jics",
+    "url": "https://my.swu.edu/ICS/Employment/"
+   }
+  ],
+  "notes": "Added the JICS Employment portlet (my.swu.edu/ICS/Employment/, college_jics) which lists adjunct instructor postings the swu.edu employment pages only summarise; keep the existing college_generic pages. Verified 2026-10-16: 30 job-ish postings."
+ },
+ "107318": {
+  "name": "Arkansas State University Mid-South",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_taleobe",
+    "url": "https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=ARKASTAT2&cws=4",
+    "org": "ARKASTAT2",
+    "cws": "4"
+   }
+  ],
+  "notes": "Taleo Business Edition board (org=ARKASTAT2) now detected as college_taleobe; replaces the jobSearch college_generic config (which returned 0). Verified 2026-10-16: 31 job-ish postings."
+ },
+ "128771": {
+  "name": "Central Connecticut State University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ccsu.edu/hr/current-openings",
+    "pdf_links": true
+   }
+  ],
+  "notes": "pdf_links variant of /hr/current-openings: adjunct pools are PDF/DOCX links, e.g. 'Department of Computer Science: Adjunct Faculty', 'Department of Engineering: Adjunct Faculty'. Full-time searches remain on jobapscloud.com/CT. Verified 2026-10-16: 22 job-ish postings."
+ },
+ "243647": {
+  "name": "Palau Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://pcc.palau.edu/about/jobs-pcc/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "pdf_links variant: every vacancy is a PDF link (20 today, e.g. Science Laboratory Manager, Dean of Students). Verified 2026-10-16: 20 job-ish postings."
+ },
+ "188261": {
+  "name": "Mesalands Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mesalands.edu/o/mcc/page/professional-employment-opportunities",
+    "browser": true
+   }
+  ],
+  "notes": "Apptegy page renders only in a browser; browser variant returns the postings ('Adjunct Instructor', 'Phlebotomy Instructor', 'CNA Instructor'). Verified 2026-10-16: 8 job-ish postings."
+ },
+ "428019": {
+  "name": "Green Country Technology Center",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.gctcok.edu/page/employment-opportunities",
+    "browser": true
+   }
+  ],
+  "notes": "Apptegy page; browser variant returns the postings ('Adjunct WED Health Instructor', 'HVAC Technician'). Verified 2026-10-16: 2 job-ish postings."
+ },
+ "366340": {
+  "name": "Stone Child College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.stonechild.edu/page/employment-rfps",
+    "browser": true
+   }
+  ],
+  "notes": "Apptegy page; browser variant returns the postings (1 today). Verified 2026-10-16: 1 job-ish postings."
+ },
+ "173142": {
+  "name": "Bethany Lutheran College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://blc.edu/campus-life/campus-services/human-resources/bethany-jobs/",
+    "browser": true
+   }
+  ],
+  "notes": "blc.edu sits behind Cloudflare ('Just a moment', 403 for requests); headless Chromium gets through most of the time and returns the job-opening links (Adjunct Faculty - Nursing, Director of Nursing, ...). Intermittent 403s in the browser too. Verified 2026-10-16: 7 job-ish postings."
+ },
+ "236896": {
+  "name": "Walla Walla University",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wallawalla.edu/human-resources/staff-employment",
+    "pages": [
+     "https://www.wallawalla.edu/human-resources/faculty-employment"
+    ]
+   }
+  ],
+  "notes": "Registry URL /human-resources/employment is a landing page; the staff-employment and faculty-employment pages carry the posting links. Verified 2026-10-16: 6 job-ish postings."
+ },
+ "414911": {
+  "name": "Pennsylvania Highlands Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.pennhighlands.edu/about/hr/employment/",
+    "pages": [
+     "https://www.pennhighlands.edu/about/hr/employment/adjunct-faculty/"
+    ]
+   }
+  ],
+  "notes": "Added the adjunct-faculty sub-page (Adjunct Faculty pool, Police Academy Instructor) to the employment page. Verified 2026-10-16: 9 job-ish postings."
+ },
+ "215585": {
+  "name": "Reading Area Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.racc.edu/about-racc/career-opportunities",
+    "pages": [
+     "https://www.racc.edu/about-racc/current-postings"
+    ]
+   }
+  ],
+  "notes": "Added /about-racc/current-postings, which carries the non-adjunct postings; career-opportunities lists the adjunct ones. Verified 2026-10-16: 46 job-ish postings."
+ },
+ "155618": {
+  "name": "Fort Hays State University-Northwest Kansas Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.fhnw.edu/careers",
+    "pages": [
+     "https://www.fhnw.edu/career-listings"
+    ]
+   }
+  ],
+  "notes": "Added /career-listings (the full posting list behind the 'See Available Job Postings' link). Verified 2026-10-16: 12 job-ish postings."
+ },
+ "107983": {
+  "name": "Southern Arkansas University Main Campus",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.saumag.edu/human-resources/category/employment-opportunities/faculty-positions/",
+    "pages": [
+     "https://www.saumag.edu/human-resources/category/employment-opportunities/staff-positions/",
+     "https://www.saumag.edu/human-resources/category/employment-opportunities/admin/"
+    ]
+   }
+  ],
+  "notes": "Added the administrative-positions category page to the faculty + staff category pages already recorded. Verified 2026-10-16: 19 job-ish postings."
+ },
+ "168528": {
+  "name": "Adrian College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.adrian.edu/about/human-resources/employment-opportunities/faculty",
+    "pages": [
+     "https://www.adrian.edu/about/human-resources/employment-opportunities/staff",
+     "https://www.adrian.edu/about/human-resources/employment-opportunities/athletics"
+    ],
+    "pdf_links": true
+   }
+  ],
+  "notes": "Faculty/staff/athletics employment pages; each posting is a PDF link (Accounting Adjunct, Adjunct Instructor of Biology, Adjunct Professor of Mathematics ...), so pdf_links is required. Verified 2026-10-16: 18 job-ish postings."
+ },
+ "169992": {
+  "name": "Gogebic Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://gogebic.edu/aboutus/HR/index.html",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Registry URL /community/jobopportunities.html is a stub; the HR page lists the postings as PDFs ('Adjunct Instructors Needed', 'Auto Instructor', 'Dean of Students'), so pdf_links is required. Verified 2026-10-16: 9 job-ish postings."
+ },
+ "419226": {
+  "name": "Marion Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.marionschools.net/departments/careers_at_mcps"
+   }
+  ],
+  "notes": "Registry URL was a dual-enrollment page. Marion Technical College = Marion County Public Schools; postings live in Skyward FastTrack (https://skyward.iscorp.com/scripts/wsisa.dll/WService=wsfinmarioncofl/rapplmnu03.w, a JS app our fetchers cannot read). VENDOR MISSING: Skyward FastTrack. Verified 2026-10-16: 2 job-ish postings."
+ },
+ "136659": {
+  "name": "Radford M Locklin Technical College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_schoolspring",
+    "url": "https://santarosa.schoolspring.com/",
+    "domain": "santarosa.schoolspring.com"
+   }
+  ],
+  "notes": "Locklin Technical College = Santa Rosa County District Schools (locklintech.com is a Thrillshare site behind a 'Client Challenge' wall); the district hires through SchoolSpring (santarosa.schoolspring.com), detected as college_schoolspring. Verified 2026-10-16: 41 job-ish postings."
+ },
+ "207740": {
+  "name": "Seminole State College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sscok.edu/about-ssc/hr-employment/employment-opportunities/index.html",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Employment page lists positions as PDF job descriptions, incl. 'Assistant Professor of Computer Science' (FY27) and an 'Adjunct Computer Science Instructor' pool; the link text is always 'Job Description' (the title sits in the preceding <strong>), so the generic fetcher yields 'Job Description' titles until it learns to use the filename/sibling text. Verified 2026-10-16: 2 job-ish postings."
+ },
+ "153320": {
+  "name": "Faith Baptist Bible College and Theological Seminary",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://faith.edu/careers/"
+   }
+  ],
+  "notes": "Careers page with posting links ('Adjunct English Instructor Pool', 'Graphic Designer (Full-Time)'). Verified 2026-10-16: 4 job-ish postings."
+ },
+ "188182": {
+  "name": "University of the Southwest",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usw.edu/faculty-openings",
+    "pages": [
+     "https://www.usw.edu/staff-openings"
+    ]
+   }
+  ],
+  "notes": "Faculty and staff opening pages (Wix); each posting links via 'Learn More' with the title only in the URL slug (e.g. /faculty-openings/adjunct-faculty---general-application-pool), so the generic fetcher sees 'Learn More' titles. Verified 2026-10-16: 5 job-ish postings."
+ },
+ "180328": {
+  "name": "Little Big Horn College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "http://lbhc.edu/Job_opportunities",
+    "pdf_links": true
+   }
+  ],
+  "notes": "HTTPS is refused on lbhc.edu; the http Job opportunities page links each posting as a PDF application ('Math Instructor', 'Web IT specialist', 'Ag Instructor', 'Chief Finance Officer'). Verified 2026-10-16: 4 job-ish postings."
+ },
+ "111799": {
+  "name": "CET-Salinas",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cetweb.edu/careers-at-cet",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Center for Employment Training (all CET campuses) careers page; job descriptions are HubSpot PDF links ('Electrician Instructor', 'Plumbing Technician Instructor', 'Accounting Clerk'). Verified 2026-10-16: 14 job-ish postings.",
+  "homepage": "https://cetweb.edu/",
+  "state": "CA",
+  "sector": 8
+ },
+ "381255": {
+  "name": "CET-Coachella",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cetweb.edu/careers-at-cet",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Center for Employment Training (all CET campuses) careers page; job descriptions are HubSpot PDF links ('Electrician Instructor', 'Plumbing Technician Instructor'). Verified 2026-10-16: 14 job-ish postings.",
+  "homepage": "https://cetweb.edu/",
+  "state": "CA",
+  "sector": 8
+ },
+ "242680": {
+  "name": "Inter American University of Puerto Rico-Fajardo",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.inter.edu/en/meet-us-at/jobs-3/",
+    "browser": true
+   }
+  ],
+  "notes": "Inter American University of PR system board (WP Job Manager on www.inter.edu, lists postings for every campus incl. this one; RSS at https://www.inter.edu/en?feed=job_feed). www.inter.edu serves an incomplete TLS chain so requests/wpjobmanager fail with CERTIFICATE_VERIFY_FAILED; headless Chromium loads it, so recorded as college_generic browser (titles carry a 'Posted N ago' suffix). Verified 2026-10-16: 11 job-ish postings."
+ },
+ "242644": {
+  "name": "Inter American University of Puerto Rico-Barranquitas",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.inter.edu/en/meet-us-at/jobs-3/",
+    "browser": true
+   }
+  ],
+  "notes": "Inter American University of PR system board (WP Job Manager on www.inter.edu, lists postings for every campus incl. this one; RSS at https://www.inter.edu/en?feed=job_feed). www.inter.edu serves an incomplete TLS chain so requests/wpjobmanager fail with CERTIFICATE_VERIFY_FAILED; headless Chromium loads it, so recorded as college_generic browser (titles carry a 'Posted N ago' suffix). The campus's own br.inter.edu/?feed=job_feed (college_wpjobmanager) is live but empty. Verified 2026-10-16: 11 job-ish postings."
+ },
+ "180878": {
+  "name": "Bryan College of Health Sciences",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.bryanhealth.com/search/bryan-college-health-sciences/jobs",
+    "pages": [
+     "https://careers.bryanhealth.com/jobs"
+    ]
+   }
+  ],
+  "notes": "bryanhealthcollege.edu is Akamai-blocked (403 for requests and Chromium) and HigherEdJobs lists 0 jobs. The college hires through the Bryan Health career site (careers.bryanhealth.com, HealthcareTalentSource white label, server-rendered): the Bryan College of Health Sciences category page plus the all-jobs list ('Cyber Security Engineer', 'Student Assistant'). VENDOR: HealthcareTalentSource (generic HTML works). Verified 2026-10-16: 16 job-ish postings."
+ },
+ "375726": {
+  "name": "Kiamichi Technology Center-McAlester",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ktc.edu/105493_3",
+    "browser": true
+   }
+  ],
+  "notes": "Kiamichi Tech 'Full-Time Jobs & Careers' page (Finalsite): postings are inline accordion headings (e.g. 'Health Science Education Instructor - McAlester') with a single Jotform apply link, so the generic fetcher returns 0 until it reads headings; recorded as the real listing page. Verified 2026-10-16: 13 job-ish postings."
+ },
+ "491631": {
+  "name": "Women's Institute of Torah Seminary and College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.wits.edu/employment-opportunities"
+   }
+  ],
+  "notes": "Real employment page ('Part-Time Faculty Positions: There are no open positions at this time' on 2026-10-16); worth watching. Verified 2026-10-16: 1 job-ish postings."
+ },
+ "154129": {
+  "name": "Northwest Iowa Community College",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://nwicc.edu/employment-opportunities/ncc-jobs/",
+    "browser": true
+   },
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://nwicc.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "nwicc.edu is a WP Job Manager site behind a SiteGround captcha: requests get a 202 captcha stub for every URL incl. ?feed=job_feed; headless Chromium renders the listing ('Welding Instructor - Adjunct', 'IT specialist' category, 'Adjunct Instructor - CNA') and the RSS, but the server still answers 202 so generic's status==200 check drops it. Both configs return 0 today; fixable by accepting 202 pages whose HTML is complete (same as Huertas). Verified 2026-10-16: 2, 0 job-ish postings."
+ },
+ "119678": {
+  "name": "Naval Postgraduate School",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search/Results?a=NV22&k=faculty"
+   }
+  ],
+  "notes": "usajobs Verified 2026-10-16: 1 job-ish postings."
+ },
+ "188216": {
+  "name": "Southwestern Indian Polytechnic Institute",
+  "source": "manual-cs2-3",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usajobs.gov/Search/Results?k=Southwestern%20Indian%20Polytechnic%20Institute"
+   }
+  ],
+  "notes": "usajobs Verified 2026-10-16: 1 job-ish postings."
+ }
+}

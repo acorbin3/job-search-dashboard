@@ -1,0 +1,1305 @@
+{
+ "110404": {
+  "name": "California Institute of Technology",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phf.tbe.taleo.net/phf03/ats/careers/v2/searchResults?org=CALTECH&cws=37"
+   }
+  ],
+  "notes": "Taleo Business Edition (tbe.taleo.net, org=CALTECH cws=37) - no TBE detector; linked from https://hr.caltech.edu/careers"
+ },
+ "136330": {
+  "name": "Palm Beach Atlantic University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "85B0677EE5F565F7218786A34C475495",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=85B0677EE5F565F7218786A34C475495"
+   }
+  ],
+  "notes": "Paycom, linked from https://www.pba.edu/offices/human-resources/employment/"
+ },
+ "138868": {
+  "name": "Point University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure7.saashr.com/ta/6208629.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "UKG Ready (saashr.com /ta/<id>.careers) - no detector; linked from https://point.edu/about/offices/human-resources/careers/"
+ },
+ "153001": {
+  "name": "Buena Vista University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure10.saashr.com/ta/6013429.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "UKG Ready (saashr.com) - no detector; 'Work for BVU' link on https://www.bvu.edu/en/undergraduate-on-campus/careers--outcomes/"
+ },
+ "490373": {
+  "name": "Western Michigan University Homer Stryker M.D. School of Medicine",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure6.entertimeonline.com/ta/6096349.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "UKG Ready (entertimeonline.com) - no detector; linked from https://wmed.edu/employment"
+ },
+ "166018": {
+  "name": "Hampshire College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "2723009e-ce54-4ba5-b0ed-f82b1e791964",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=2723009e-ce54-4ba5-b0ed-f82b1e791964&ccId=19000101_000003&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN widget embedded in https://www.hampshire.edu/offices/human-resources/employment-opportunities"
+ },
+ "177746": {
+  "name": "Kansas City Art Institute",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "b8eda22f-d280-4db8-a8b7-bc0ed820ee60",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b8eda22f-d280-4db8-a8b7-bc0ed820ee60&ccId=19000101_000003&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN widget embedded in https://www.kcai.edu/employment/"
+ },
+ "461759": {
+  "name": "Simmons College of Kentucky",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "d0724c6e-9e23-459f-9eaa-157573b1d1d2",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d0724c6e-9e23-459f-9eaa-157573b1d1d2&ccId=9201431963879_3&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN widget embedded in https://simmonscollegeky.edu/careers/"
+ },
+ "167057": {
+  "name": "The New England Conservatory of Music",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "893844b7-6c2c-408f-a271-a61215b811f8",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=893844b7-6c2c-408f-a271-a61215b811f8&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN linked from https://necmusic.edu/the-college/work-at-nec/ (music conservatory)"
+ },
+ "156727": {
+  "name": "Frontier Nursing University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "6402b8ee-59dd-44df-9062-65b5c6f1338c",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=6402b8ee-59dd-44df-9062-65b5c6f1338c&ccId=9200072699685_2&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN linked from https://portal.frontier.edu/web/fnu/faculty-recruitment"
+ },
+ "179159": {
+  "name": "Saint Louis University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "slu",
+    "wd": "wd5",
+    "site": "Careers",
+    "url": "https://slu.wd5.myworkdayjobs.com/Careers"
+   }
+  ],
+  "notes": "Workday (65 postings at verify time), linked from https://www.slu.edu/human-resources/index.php"
+ },
+ "164368": {
+  "name": "Hult International Business School",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "host": "https://fa-evad-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_2001",
+    "url": "https://fa-evad-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/jobs"
+   }
+  ],
+  "notes": "Oracle Recruiting Cloud behind vanity host https://jobs.ef.com/en/sites/hult/jobs (EF Education First tenant; site may include other EF brands)"
+ },
+ "494685": {
+  "name": "Urshan University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "A747E921F8286493E59E394213EC6340",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=A747E921F8286493E59E394213EC6340"
+   }
+  ],
+  "notes": "Paycom link found on urshan.edu (UPCI school)"
+ },
+ "122728": {
+  "name": "William Jessup University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jessup.edu/employment/"
+   }
+  ],
+  "notes": "WordPress job board with ~28 postings (24 adjunct) and Apply links; filters by location/type"
+ },
+ "133809": {
+  "name": "Florida College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://floridacollege.edu/careers/"
+   }
+  ],
+  "notes": "Careers page lists Current Positions with Job Description PDFs (titles are plain text next to PDF links)"
+ },
+ "153278": {
+  "name": "University of Dubuque",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.dbq.edu/AboutUD/Employment/Jobs/"
+   }
+  ],
+  "notes": "Current openings listed as accordion headings (Staff/Faculty/GA), not links"
+ },
+ "106810": {
+  "name": "Crowley's Ridge College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://crc.edu/careers/"
+   }
+  ],
+  "notes": "Openings listed as text headings (tiny college)"
+ },
+ "487649": {
+  "name": "California Institute of Advanced Management",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ciam.edu/employment-opportunities/"
+   }
+  ],
+  "notes": "Openings as links to job-listing PDFs"
+ },
+ "498623": {
+  "name": "Justice University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.justiceuniversity.edu/jobs"
+   }
+  ],
+  "notes": "Staff openings listed as plain text with an application form (Wix); tiny school"
+ },
+ "488387": {
+  "name": "Claremont Lincoln University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://claremontlincoln.edu/careers-at-clu/"
+   }
+  ],
+  "notes": "Careers page with 'Open Positions:' section (empty at check time); apply by email"
+ },
+ "126049": {
+  "name": "Thomas Jefferson School of Law",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.tjsl.edu/about/work-at-tjsl/"
+   }
+  ],
+  "notes": "Job Postings section (empty at check time); apply by email"
+ },
+ "177144": {
+  "name": "Culver-Stockton College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://culver.edu/employment/"
+   }
+  ],
+  "notes": "Openings as accordion headings (pp-accordion-button-label), e.g. Assistant Professor of Communication"
+ },
+ "101435": {
+  "name": "Huntingdon College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.huntingdon.edu/employment/"
+   }
+  ],
+  "notes": "Openings as Elementor toggle headings (elementor-toggle-title anchors without href); adjunct pool section"
+ },
+ "462354": {
+  "name": "John Paul the Great Catholic University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jpcatholic.edu/JPadmin/jpopenings.php"
+   }
+  ],
+  "notes": "Openings as accordion <button> headings (some marked hidden); includes adjunct roles"
+ },
+ "147341": {
+  "name": "Monmouth College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.monmouthcollege.edu/offices/hr/employment-opportunities/"
+   }
+  ],
+  "notes": "Openings as accordion <button> headings (lw_accordion_block_title), faculty + adjunct"
+ },
+ "146490": {
+  "name": "Lake Forest Graduate School of Management",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://lakeforestgraduateschool.hireology.com/"
+   }
+  ],
+  "notes": "Hireology (addJobs widget https://lakeforestgraduateschool.hireology.com/) - no detector; careers.hireology.com/lakeforestgraduateschool 404s; part-time faculty page https://lfgsm.edu/employment-opportunities/faculty/"
+ },
+ "464226": {
+  "name": "Ottawa University-Surprise",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "AB201C499D53A5D603D5BE296513B383",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=AB201C499D53A5D603D5BE296513B383"
+   }
+  ],
+  "notes": "Paycom (shared Ottawa University board), linked from https://www.ottawa.edu/careers (site is a JS redirect for requests)"
+ },
+ "454582": {
+  "name": "Ottawa University-Online",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "AB201C499D53A5D603D5BE296513B383",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=AB201C499D53A5D603D5BE296513B383"
+   }
+  ],
+  "notes": "Paycom (shared Ottawa University board), linked from https://www.ottawa.edu/careers"
+ },
+ "385619": {
+  "name": "Everglades University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://evergladesuniversity.isolvedhire.com/"
+   }
+  ],
+  "notes": "isolved Hire - no detector; linked from https://www.evergladesuniversity.edu/employment-opportunities/; isolvedhire.com answered 503 'Unexpected Downtime' to requests and Chromium from this IP"
+ },
+ "168847": {
+  "name": "Baker College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://learnbaker.isolvedhire.com/"
+   }
+  ],
+  "notes": "isolved Hire - no detector; linked from https://www.baker.edu/about/get-to-know-us/careers/; isolvedhire.com answered 503 to requests and Chromium from this IP"
+ },
+ "106342": {
+  "name": "Lyon College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://lyon.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "isolved Hire - no detector; linked from https://www.lyon.edu/employment (registry had career-planning page); isolvedhire.com answered 503 from this IP"
+ },
+ "107044": {
+  "name": "Harding University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.harding.edu/about/offices-departments/hr/faculty-jobs/",
+    "pages": [
+     "https://www.harding.edu/about/offices-departments/hr/staff-jobs/"
+    ]
+   }
+  ],
+  "notes": "Faculty and staff listings on separate pages; titles are headings with formsite apply links"
+ },
+ "107141": {
+  "name": "John Brown University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.jbu.edu/human-resources/faculty-job-listings/",
+    "pages": [
+     "https://www.jbu.edu/human-resources/staff-job-listings/"
+    ]
+   }
+  ],
+  "notes": "HubSpot CMS listing pages with one link per posting (registry had the HR landing page)"
+ },
+ "120537": {
+  "name": "Hope International University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.hiu.edu/about-hiu/human-resources/hiu-career-opportunities/"
+   }
+  ],
+  "notes": "Institutional job list (jobs-detail.php?id=); registry had the church Ministry Opportunity Network"
+ },
+ "118693": {
+  "name": "Menlo College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.menlo.edu/employment-opportunities/"
+   }
+  ],
+  "notes": "WordPress list with one link per posting incl. adjunct CS/cyber roles; registry had Career Connect Day page"
+ },
+ "122649": {
+  "name": "San Joaquin College of Law",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sjcl.edu/about-sjcl/jobs-sjcl"
+   }
+  ],
+  "notes": "Jobs@SJCL page; registry had the student 'Careers in Law' page"
+ },
+ "120865": {
+  "name": "Pacific Union College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.puc.edu/campus-services/human-resources/faculty-job-postings",
+    "pages": [
+     "https://www.puc.edu/campus-services/human-resources/staff-job-postings"
+    ]
+   }
+  ],
+  "notes": "Faculty/staff posting lists with links (registry had the careers hub)"
+ },
+ "123165": {
+  "name": "Scripps College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "theclaremontcolleges",
+    "wd": "wd1",
+    "site": "SCR_Career_Staff",
+    "url": "https://theclaremontcolleges.wd1.myworkdayjobs.com/SCR_Career_Staff"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://www.scrippscollege.edu/hr/faculty"
+   }
+  ],
+  "notes": "Staff on Claremont Colleges Workday (SCR_Career_Staff); faculty searches listed on /hr/faculty with Interfolio apply links"
+ },
+ "120403": {
+  "name": "Otis College of Art and Design",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "csod",
+    "host": "otis",
+    "site": "4",
+    "url": "https://otis.csod.com/ux/ats/careersite/4/home?c=otis"
+   }
+  ],
+  "notes": "Cornerstone careersite, linked 'Staff and Faculty Jobs at Otis' from https://www.otis.edu/offices/human-resources/index.html (registry had career-services page)"
+ },
+ "117672": {
+  "name": "Southern California University of Health Sciences",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://app.trinethire.com/companies/50340-southern-california-university/jobs"
+   }
+  ],
+  "notes": "TriNet Hire board (server-rendered job links) - no detector; registry had the scuhs.edu careers page which links the same postings"
+ },
+ "120166": {
+  "name": "San Francisco Bay University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://app.trinethire.com/companies/33737-san-francisco-bay-university/jobs"
+   }
+  ],
+  "notes": "TriNet Hire board (already the registry URL; recorded to flag the vendor)"
+ },
+ "105589": {
+  "name": "Prescott College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://info.prescott.edu/job-openings"
+   }
+  ],
+  "notes": "HubSpot job-openings page (no openings at check time; PDF job descriptions); registry had student careers page"
+ },
+ "102270": {
+  "name": "Stillman College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://stillman-college.easy.jobs/"
+   }
+  ],
+  "notes": "easy.jobs board (JS app) - no detector; HR page https://stillman.edu/about-us/administration-finance/human-resources/ links easy.jobs apply pages incl. adjunct cybersecurity"
+ },
+ "497480": {
+  "name": "Reach University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://reachuniversity.careers.hibob.com/"
+   }
+  ],
+  "notes": "HiBob careers (JS app) - no detector; linked from https://reach.edu/job-openings"
+ },
+ "245838": {
+  "name": "Antioch University-Los Angeles",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.antioch.edu/?feed=job_feed&job_types=administration,faculty,staff,temporary"
+   }
+  ],
+  "notes": "WP Job Manager (shared Antioch University board): HTML list at https://www.antioch.edu/employment/ is JS-loaded; the RSS job_feed is static - needs an RSS-capable fetcher"
+ },
+ "245847": {
+  "name": "Antioch University-Santa Barbara",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.antioch.edu/?feed=job_feed&job_types=administration,faculty,staff,temporary"
+   }
+  ],
+  "notes": "WP Job Manager (shared Antioch University board): HTML list is JS-loaded; RSS job_feed is static - needs an RSS-capable fetcher"
+ },
+ "101912": {
+  "name": "Oakwood University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://oakwood.edu/?feed=job_feed"
+   }
+  ],
+  "notes": "WP Job Manager: list on https://oakwood.edu/human-resources/ is AJAX-loaded; RSS job_feed is static - needs an RSS-capable fetcher (registry had Career Connections career-services page)"
+ },
+ "125727": {
+  "name": "Westmont College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.westmont.edu/office-provost/open-positions",
+    "pages": [
+     "https://www.westmont.edu/human-resources/prospective-employees/staff-employment-opportunities"
+    ]
+   }
+  ],
+  "notes": "Faculty open positions as headings on provost page; staff page separate (registry had prospective-employees landing page)"
+ },
+ "125763": {
+  "name": "Whittier College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.whittier.edu/humanresources/faculty",
+    "pages": [
+     "https://www.whittier.edu/humanresources/employment"
+    ]
+   }
+  ],
+  "notes": "Faculty openings as accordion buttons on HR faculty page (registry had the student career center)"
+ },
+ "120838": {
+  "name": "Pacific States University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://psuca.edu/jobs-opportunities/"
+   }
+  ],
+  "notes": "Jobs page behind Cloudflare (requests 403, Chromium OK); openings as text headings; registry had accsc.org accreditor site"
+ },
+ "131113": {
+  "name": "Wilmington University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=WILMU&cws=60",
+    "pages": [
+     "https://phh.tbe.taleo.net/phh02/ats/careers/v2/searchResults?org=WILMU&cws=51"
+    ]
+   }
+  ],
+  "notes": "Taleo Business Edition (tbe.taleo.net org=WILMU): cws=60 adjunct faculty, cws=51 full-time faculty/staff - no TBE detector; linked from https://www.wilmu.edu/careers/index.aspx"
+ },
+ "129941": {
+  "name": "University of New Haven",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://newhaven.hrmdirect.com/employment/job-openings.php?sort=td&search=true&nohd=&dept=-1&city=-1&state=-1"
+   }
+  ],
+  "notes": "ClearCompany / HRM Direct board (server-rendered job-opening.php links) - no detector; iframed in https://www.newhaven.edu/about/employment/job-opportunities/index.php"
+ },
+ "127653": {
+  "name": "Naropa University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://naropa-university.prismhr-hire.com/"
+   }
+  ],
+  "notes": "PrismHR Hire (HiringThing) board, server-rendered /job/<id>/ links incl. adjunct roles - no detector; linked 'SEE JOB OPENINGS' from https://www.naropa.edu/employment/"
+ },
+ "483595": {
+  "name": "Ana G. Mendez University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.agmu.edu/page-jobs-category?lang=en-us&cat=All"
+   }
+  ],
+  "notes": "Custom AGMU jobs site; the all-categories page lists one link per posting (registry had the category landing page)"
+ },
+ "131283": {
+  "name": "The Catholic University of America",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "pt-faculty-cua",
+    "url": "https://pt-faculty-cua.icims.com"
+   },
+   {
+    "ats": "icims",
+    "slug_id": "staff-cua",
+    "url": "https://staff-cua.icims.com"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://provost.cua.edu/positions.cfm"
+   }
+  ],
+  "notes": "iCIMS portals (part-time faculty + staff) linked from https://cardinalstation.catholic.edu/cardinalhire/; full-time faculty searches listed on provost page (registry had the careers hub)"
+ },
+ "133492": {
+  "name": "Eckerd College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://eckerd.exacthire.com/All_Open_Jobs"
+   }
+  ],
+  "notes": "ExactHire board (JS app; 14 openings incl. adjunct instructors) - no detector; linked 'Employment Opportunities' from https://www.eckerd.edu/hr/ (registry had student career center)"
+ },
+ "135081": {
+  "name": "Keiser University-Ft Lauderdale",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://keiseruniversity.isolvedhire.com/"
+   }
+  ],
+  "notes": "isolved Hire - no detector; linked 'View Job Openings' from https://www.keiseruniversity.edu/employment/ (registry had a blog article); isolvedhire.com answered 503 from this IP"
+ },
+ "140571": {
+  "name": "Morris Brown College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://morrisbrown.isolvedhire.com/jobs/"
+   }
+  ],
+  "notes": "isolved Hire - no detector; linked 'View Vacancies' from https://morrisbrown.edu/mbc-employment/; isolvedhire.com answered 503 from this IP"
+ },
+ "139393": {
+  "name": "Covenant College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://covenant.workbrightats.com/jobs/"
+   }
+  ],
+  "notes": "WorkBright ATS (ApplicantPool-style /jobs/<id> links, list is JS-loaded: requests gets an empty shell, Chromium shows 8 openings incl. adjunct faculty) - no detector; linked from https://www.covenant.edu/about/employment/"
+ },
+ "153834": {
+  "name": "Luther College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://go.jobflows.co/LutherCollege"
+   }
+  ],
+  "notes": "JobFlows board (JS app; requests gets empty shell, Chromium lists ~10 postings) - no detector; linked 'Open Positions' from https://www.luther.edu/offices/hr/careers"
+ },
+ "154174": {
+  "name": "Palmer College of Chiropractic",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "8BAFC5797941BD3723C4CD01E59B0139",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=8BAFC5797941BD3723C4CD01E59B0139"
+   }
+  ],
+  "notes": "Paycom, linked from https://www.palmer.edu/work-for-palmer/ (registry had the student outcomes page)"
+ },
+ "154262": {
+  "name": "St Luke's College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.morningside.edu/about/employment"
+   }
+  ],
+  "notes": "St. Luke's College careers page points 'Job Opportunities!' at parent Morningside University's employment list (one link per posting)"
+ },
+ "230047": {
+  "name": "Brigham Young University-Hawaii",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "byuh",
+    "wd": "wd501",
+    "site": "BYU_H",
+    "url": "https://byuh.wd501.myworkdayjobs.com/BYU_H"
+   }
+  ],
+  "notes": "Workday on the wd501 shard (verify_workday returned 28 postings); detect_workday only tries wd1/wd5/wd3/wd12/wd10 for myworkdaysite.com links - linked from https://hr.byuh.edu/ as https://wd501.myworkdaysite.com/recruiting/byuh/BYU_H"
+ },
+ "142522": {
+  "name": "Brigham Young University-Idaho",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_peopleadmin",
+    "url": "https://employment.byui.net"
+   }
+  ],
+  "notes": "PeopleAdmin (employment.byui.net/postings/search), linked 'Apply Now' from https://www.byui.edu/human-resources/employment/faculty-experience (registry had the HR landing page)"
+ },
+ "148511": {
+  "name": "Rush University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://rushprod-lm01.cloud.infor.com:1444/lmghr/CandidateSelfService/lm?dataarea=lmgh&_frommenu=true"
+   }
+  ],
+  "notes": "Infor Lawson Candidate Self Service (JS app) - no detector; 'View All RUSH Job Listings' from https://www.rush.edu/rush-careers/career-areas/faculty-and-providers (medical center board, includes Rush University faculty)"
+ },
+ "150145": {
+  "name": "Bethel University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://secure3.yourpayrollhr.com/ta/TPC0139.careers?CareersSearch=&lang=en-US"
+   }
+  ],
+  "notes": "UKG Ready (yourpayrollhr.com /ta/<id>.careers, JS) - no detector; linked 'View Available Jobs' from https://betheluniversity.edu/about/employment/"
+ },
+ "148131": {
+  "name": "Quincy University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.quincy.edu/about/work-at-qu/job-openings/"
+   }
+  ],
+  "notes": "Job Openings page with faculty / non-faculty / GA sections (registry had the parent Work at QU page)"
+ },
+ "148405": {
+  "name": "Rockford University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.rockford.edu/community/humanresources/faculty/",
+    "pages": [
+     "https://www.rockford.edu/community/humanresources/"
+    ]
+   }
+  ],
+  "notes": "Faculty openings listed with links (e.g. adjunct instructors); staff openings on HR page (registry had HR page only, zero postings)"
+ },
+ "151786": {
+  "name": "Marian University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://marian.rec.pro.ukg.net/MAR1500MNUI/JobBoard/fde73847-46d9-4c8a-924e-a28b5c630bfc/?q=&o=postedDateDesc"
+   }
+  ],
+  "notes": "UKG Pro Recruiting on the rec.pro.ukg.net host (tenant MAR1500MNUI, board fde73847-...); recruiting.ultipro.com/<tenant> 404s so the ultipro fetcher's hardcoded host does not work - linked 'Explore CAREERS at Marian' from https://www.marian.edu/human-resources/"
+ },
+ "497833": {
+  "name": "Marian University-Ancilla",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://marian.rec.pro.ukg.net/MAR1500MNUI/JobBoard/fde73847-46d9-4c8a-924e-a28b5c630bfc/?q=&o=postedDateDesc"
+   }
+  ],
+  "notes": "Marian University-Ancilla shares Marian's UKG Pro board on rec.pro.ukg.net (see 151786)"
+ },
+ "148016": {
+  "name": "Principia College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "dbf755c4-cf9b-489b-ba30-96dc79ad727e",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=dbf755c4-cf9b-489b-ba30-96dc79ad727e&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN board shared by The Principia (College + School), reached via https://www.principia.edu/jobs -> /fs/pages/4479 redirect (registry had a student research program page)"
+ },
+ "145725": {
+  "name": "Illinois Institute of Technology",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://iit.hrmdirect.com/employment/job-openings.php?search=true&nohd=&dept=-1&city=-1&state=-1"
+   }
+  ],
+  "notes": "ClearCompany / HRM Direct board (server-rendered job-opening.php links) - no detector; ClearCompany career-site.js (siteId 6a1ea791-...) embedded in https://www.iit.edu/hr/careers"
+ },
+ "157863": {
+  "name": "Union Commonwealth University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.unionky.edu/about/human-resources/employment-opportunities/faculty-positions",
+    "pages": [
+     "https://www.unionky.edu/about/human-resources/employment-opportunities/staff-positions",
+     "https://www.unionky.edu/about/human-resources/employment-opportunities/part-time-staff-positions"
+    ]
+   }
+  ],
+  "notes": "Faculty / staff / part-time staff listing subpages (registry had the parent page)"
+ },
+ "164988": {
+  "name": "Boston University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.silkroad.com/BU/External"
+   }
+  ],
+  "notes": "SilkRoad Recruiting board with server-rendered /jobs/<id> links - no detector; linked from https://www.bu.edu/hr/careers/ (registry had the HR landing page)"
+ },
+ "164465": {
+  "name": "Amherst College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "amherst",
+    "wd": "wd5",
+    "site": "Amherst_Jobs",
+    "url": "https://amherst.wd5.myworkdayjobs.com/Amherst_Jobs"
+   }
+  ],
+  "notes": "Workday (verify_workday returned 55 postings); registry had the student career-advising page"
+ },
+ "156745": {
+  "name": "Georgetown College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "d789d92f-3d30-464b-8c76-1fe13a4928bb",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d789d92f-3d30-464b-8c76-1fe13a4928bb&ccId=326615217_3&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN widget (workforcenow.cloud.adp.com, host='CP') embedded in https://www.georgetowncollege.edu/about-gc/resources/careers/"
+ },
+ "441982": {
+  "name": "Franklin W Olin College of Engineering",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.keldair.com/Olincollege"
+   }
+  ],
+  "notes": "Keldair Hire board (JS app, empty shell for requests and for a short Chromium wait) - no detector; linked 'View job openings' from https://www.olin.edu/about/employment-opportunities"
+ },
+ "169442": {
+  "name": "College for Creative Studies",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ccsdetroit.edu/jobs-at-ccs/"
+   }
+  ],
+  "notes": "Jobs at CCS list with 'View Job Posting' links incl. adjunct faculty (registry had the student career page)"
+ },
+ "172477": {
+  "name": "Thomas M Cooley Law School",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://cooley.edu/about/jobs"
+   }
+  ],
+  "notes": "HubSpot jobs page with one link per posting (registry had a blog post)"
+ },
+ "166656": {
+  "name": "MCPHS University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://recruiting.adp.com/srccar/public/RTI.home?c=1171851&d=ExternalCareerSite"
+   }
+  ],
+  "notes": "ADP Recruiting legacy career site (srccar RTI.home, c=1171851) - different product from ADP WFN, no detector; linked 'Get started' from https://www.mcphs.edu/human-resources/careers/job-openings"
+ },
+ "164216": {
+  "name": "Washington College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://washcollege.hrmdirect.com/employment/job-openings.php?search=true&nohd=&dept=-1&city=-1&state=-1"
+   }
+  ],
+  "notes": "ClearCompany / HRM Direct board (server-rendered job-opening.php links incl. adjunct; RSS at /employment/rss.php) - no detector; registry had the HR employment page"
+ },
+ "170532": {
+  "name": "Kalamazoo College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://provost.kzoo.edu/faculty-information/facultyjobs/",
+    "pages": [
+     "https://hr.kzoo.edu/careers-at-k/staff-positions/"
+    ]
+   }
+  ],
+  "notes": "Faculty positions on provost site, staff positions on HR site (registry had hr.kzoo.edu landing page)"
+ },
+ "170806": {
+  "name": "Madonna University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "71919c4b-9ac0-4e36-8f03-d1e5235783c0",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=71919c4b-9ac0-4e36-8f03-d1e5235783c0&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN (workforcenow.cloud.adp.com) linked 'View Job Openings' from https://www.madonna.edu/resources/human-resources/"
+ },
+ "166683": {
+  "name": "Massachusetts Institute of Technology",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.peopleclick.com/careerscp/client_mit/external/search.do"
+   }
+  ],
+  "notes": "PeopleFluent / PeopleClick career site (client_mit) - no detector; linked 'External candidate job search' from https://hr.mit.edu/jobs/search"
+ },
+ "168218": {
+  "name": "Wellesley College",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "wellesley",
+    "wd": "wd1",
+    "site": "wellesley-staff",
+    "url": "https://wellesley.wd1.myworkdayjobs.com/wellesley-staff"
+   },
+   {
+    "ats": "workday",
+    "tenant": "wellesley",
+    "wd": "wd1",
+    "site": "wellesley-faculty",
+    "url": "https://wellesley.wd1.myworkdayjobs.com/wellesley-faculty"
+   }
+  ],
+  "notes": "Workday staff (15) and faculty (9) sites linked from https://www.wellesley.edu/about-us/working-at-wellesley (registry had the student career-education site)"
+ },
+ "162210": {
+  "name": "Washington Adventist University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://wau.catsone.com/careers/9207"
+   }
+  ],
+  "notes": "CATS ATS careers portal (server-rendered /jobs/<id> links incl. adjunct faculty) - no detector; linked from https://www.wau.edu/humanresources/ (wau.edu is a JS redirect for requests; registry had a gala page)"
+ },
+ "173160": {
+  "name": "Bethel University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ats.rippling.com/bethel-university-faculty/jobs",
+    "pages": [
+     "https://ats.rippling.com/bethel-university-staff/jobs"
+    ]
+   }
+  ],
+  "notes": "Rippling ATS boards (server-rendered /jobs/<uuid> links incl. adjunct faculty) - no detector; https://www.bethel.edu/employment/openings/faculty and /staff redirect there"
+ },
+ "173045": {
+  "name": "Augsburg University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://careers.smartrecruiters.com/AugsburgUniversity-MinneapolisMN/faculty",
+    "pages": [
+     "https://careers.smartrecruiters.com/AugsburgUniversity-MinneapolisMN/staff"
+    ]
+   }
+  ],
+  "notes": "SmartRecruiters company pages (server-rendered jobs.smartrecruiters.com links) - no college detector; linked from https://www.augsburg.edu/employment/"
+ },
+ "174437": {
+  "name": "North Central University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.northcentral.edu/about/employment/current-job-openings/"
+   }
+  ],
+  "notes": "Current Job Openings page (registry had the employment landing page); no posting links seen in requests HTML - may be JS-rendered"
+ },
+ "445267": {
+  "name": "Central Methodist University-College of Graduate and Extended Studies",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-faculty.html",
+    "pages": [
+     "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-staff.html"
+    ]
+   }
+  ],
+  "notes": "Faculty and staff listing pages with one link per posting (registry had the apply-now page)"
+ },
+ "176947": {
+  "name": "Central Methodist University-College of Liberal Arts and Sciences",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-faculty.html",
+    "pages": [
+     "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-staff.html"
+    ]
+   }
+  ],
+  "notes": "Same Central Methodist board as 445267"
+ },
+ "178059": {
+  "name": "Maryville University of Saint Louis",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://myjobs.adp.com/adjunctmaryvilleuniversityexternalcs"
+   }
+  ],
+  "notes": "ADP 'myjobs' career site (myjobs.adp.com, Angular JS app - empty shell for requests and Chromium) - no detector; linked 'View Opportunities' from https://www.maryville.edu/employment (adjunct board; a student board also exists)"
+ },
+ "176628": {
+  "name": "Avila University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "f2ab6114-2e48-45a8-8ffc-c90819d5d7ff",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=f2ab6114-2e48-45a8-8ffc-c90819d5d7ff&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN (workforcenow.cloud.adp.com) linked 'View Job Openings!' from https://www.avila.edu/about/administrative-offices/human-resources/careers/"
+ },
+ "179894": {
+  "name": "Webster University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://myjobs.adp.com/websteruniversity?c=1180715&d=ExternalCareerSite&sor=adprm"
+   }
+  ],
+  "notes": "ADP 'myjobs' career site (c=1180715, Angular JS app - empty shell for requests) - no detector; linked 'Job Opportunities' from https://www.webster.edu/human-resources/index.php (registry had the HR landing page)"
+ },
+ "179964": {
+  "name": "William Woods University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://portals.williamwoods.edu/employment/current_positions_fs.aspx",
+    "pages": [
+     "https://portals.williamwoods.edu/employment/current_positions_af.aspx"
+    ]
+   }
+  ],
+  "notes": "Portal pages list faculty/staff and adjunct positions with job_details.aspx?id= links (incl. Assistant-Associate Professor Cybersecurity & CIS); registry had the employment landing page"
+ },
+ "162928": {
+  "name": "Johns Hopkins University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hiring.jhu.edu/careers"
+   }
+  ],
+  "notes": "Eightfold career hub on a custom domain (JS app; app.eightfold.ai/api/apply/v2/jobs?domain=jhu.edu answers 'Not authorized for PCSX') - staff jobs; faculty jobs at https://facultyjobs.jhu.edu (JS). careers.jhu.edu hub is behind Cloudflare"
+ },
+ "157535": {
+  "name": "University of Pikeville",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "upike",
+    "url": "https://upike.bamboohr.com/careers"
+   }
+  ],
+  "notes": "BambooHR embed on https://www.upike.edu/offices/human-resources/careers/ (registry had an Aramark food-service posting)"
+ },
+ "144281": {
+  "name": "Columbia College Chicago",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_taleo",
+    "tenant": "colum",
+    "section": "ex",
+    "url": "https://colum.taleo.net/careersection/ex/joblist.ftl"
+   }
+  ],
+  "notes": "Taleo Enterprise external career section linked from https://about.colum.edu/human-resources/employment (registry had that HR page as generic)"
+ },
+ "174914": {
+  "name": "University of St Thomas",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "staffemployment-stthomas",
+    "url": "https://staffemployment-stthomas.icims.com/"
+   }
+  ],
+  "notes": "External staff iCIMS portal from https://www.stthomas.edu/jobs/ (registry had the internal SSO login portal)"
+ },
+ "111391": {
+  "name": "California Western School of Law",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "124a9987-acea-4204-9d54-7c413cc1bb21",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=124a9987-acea-4204-9d54-7c413cc1bb21&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WFN linked from https://www.cwsl.edu/employers_community/index.html (registry had jobs.chronicle.com)"
+ },
+ "163295": {
+  "name": "Maryland Institute College of Art",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "mica",
+    "wd": "wd5",
+    "site": "Faculty",
+    "url": "https://mica.wd5.myworkdayjobs.com/Faculty"
+   },
+   {
+    "ats": "workday",
+    "tenant": "mica",
+    "wd": "wd5",
+    "site": "Staff",
+    "url": "https://mica.wd5.myworkdayjobs.com/Staff"
+   }
+  ],
+  "notes": "Workday Faculty (27) and Staff (16) sites from https://www.mica.edu/about-mica/offices-divisions/human-resources/careers-at-mica/ (registry had the Student site)"
+ },
+ "174817": {
+  "name": "Saint Mary's University of Minnesota",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "faculty-saintmarysuniversity",
+    "url": "https://faculty-saintmarysuniversity.icims.com/jobs/search?ss=1"
+   },
+   {
+    "ats": "icims",
+    "slug_id": "external-saintmarysuniversity",
+    "url": "https://external-saintmarysuniversity.icims.com/jobs/search?ss=1"
+   }
+  ],
+  "notes": "Faculty and external-staff iCIMS portals from https://www.smumn.edu/about/offices-services/human-resources/employment-opportunities/ (registry had the internal portal)"
+ },
+ "150163": {
+  "name": "Butler University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_oracle",
+    "host": "https://fa-exer-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "url": "https://fa-exer-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1"
+   },
+   {
+    "ats": "college_oracle",
+    "host": "https://fa-exer-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1001",
+    "url": "https://fa-exer-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001"
+   }
+  ],
+  "notes": "Oracle Recruiting Cloud sites CX_1 (28 reqs) and CX_1001 (16 reqs) linked from https://www.butler.edu/human-resources/work-at-butler/ (registry had that page as generic)"
+ },
+ "177719": {
+  "name": "Barnes-Jewish College Goldfarb School of Nursing",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.bjccareers.org/jobs?page=1&sortBy=relevance&keywords=goldfarb"
+   }
+  ],
+  "notes": "BJC HealthCare careers site (JS job search, keyword goldfarb) - no detector; registry had Saint Luke's (Kansas City) Workday, which is the wrong health system"
+ },
+ "154156": {
+  "name": "Des Moines University-Osteopathic Medical Center",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_pageup",
+    "url": "https://careers.dmu.edu"
+   }
+  ],
+  "notes": "PageUp at careers.dmu.edu (registry pointed the pageup config at www.dmu.edu)"
+ },
+ "154235": {
+  "name": "Saint Ambrose University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://stambroseuniv.applicantlist.com/jobs/"
+   }
+  ],
+  "notes": "ApplicantPro board served from the applicantlist.com domain (stambroseuniv.applicantpro.com redirects to notset.php; the applicantpro fetcher hardcodes applicantpro.com) - registry had the vendor homepage www.applicantpro.com"
+ },
+ "154013": {
+  "name": "Mount Mercy University",
+  "source": "manual-private-a",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://mtmercy.applicantlist.com/jobs/"
+   }
+  ],
+  "notes": "ApplicantPro board on applicantlist.com domain ('View Open Positions' from https://www.mtmercy.edu/careers/index); registry had the vendor homepage www.applicantpro.com"
+ }
+}

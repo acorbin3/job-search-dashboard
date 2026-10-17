@@ -1,0 +1,456 @@
+{
+ "102298": {
+  "name": "Talladega College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://talladegacollege.applytojob.com/apply",
+    "jazz_slug": "talladegacollege",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "college_jazzhr board found by vendor-side probing (probe:jazzhr); page shows Talladega College.",
+  "prev_status": "generic",
+  "prev_url": "https://talladegacollege.applytojob.com/apply"
+ },
+ "137120": {
+  "name": "Suncoast Technical College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://suncoast.focusschoolsoftware.com/focus/jobs/",
+    "ats": "college_focus"
+   }
+  ],
+  "notes": "Sarasota County Schools Focus board (Suncoast Technical College is the district's technical college).",
+  "prev_status": "none",
+  "prev_url": "https://suncoast.focusschoolsoftware.com/focus/jobs/"
+ },
+ "137856": {
+  "name": "Big Bend Technical College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://bbtc.focusschoolsoftware.com/focus/jobs/",
+    "ats": "college_focus"
+   }
+  ],
+  "notes": "college_focus board found by vendor-side probing (probe:focus); page shows Big Bend Technical College.",
+  "prev_status": "none"
+ },
+ "125718": {
+  "name": "Westminster Theological Seminary in California",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "wscal",
+    "url": "https://wscal.bamboohr.com/careers",
+    "slug": "Westminster Theological Seminary in California"
+   }
+  ],
+  "notes": "wscal.bamboohr.com (school domain wscal.edu), 2 openings listed.",
+  "prev_status": "none"
+ },
+ "141185": {
+  "name": "Toccoa Falls College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "toccoafallscollege",
+    "url": "https://careers.smartrecruiters.com/toccoafallscollege",
+    "slug": "Toccoa Falls College"
+   }
+  ],
+  "notes": "SmartRecruiters company page with live postings (totalFound=1).",
+  "prev_status": "generic",
+  "prev_url": "https://utf.edu/employment/"
+ },
+ "177135": {
+  "name": "Crowder College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "crowder",
+    "url": "https://crowder.bamboohr.com/careers",
+    "slug": "Crowder College"
+   }
+  ],
+  "notes": "bamboohr board found by vendor-side probing (probe:bamboohr); page shows Crowder College.",
+  "prev_status": "generic",
+  "prev_url": "https://www.crowder.edu/employment/"
+ },
+ "154688": {
+  "name": "Baker University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "bakeruniversity",
+    "url": "https://careers.smartrecruiters.com/bakeruniversity",
+    "slug": "Baker University"
+   }
+  ],
+  "notes": "SmartRecruiters postings located in Baldwin City KS.",
+  "prev_status": "generic",
+  "prev_url": "https://www.bakeru.edu/about-baker/careers"
+ },
+ "155715": {
+  "name": "Pratt Community College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "prattcommunitycollege",
+    "url": "https://careers.smartrecruiters.com/prattcommunitycollege",
+    "slug": "Pratt Community College"
+   }
+  ],
+  "notes": "SmartRecruiters, 9 live postings.",
+  "prev_status": "generic",
+  "prev_url": "https://prattcc.edu/equal-employment-opportunity-equal-education-opportunity/"
+ },
+ "155937": {
+  "name": "Sterling College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "sterlingcollege",
+    "url": "https://careers.smartrecruiters.com/sterlingcollege",
+    "slug": "Sterling College"
+   }
+  ],
+  "notes": "SmartRecruiters posting located in Sterling (KS).",
+  "prev_status": "generic",
+  "prev_url": "https://www.sterling.edu/about/employment"
+ },
+ "228981": {
+  "name": "Texas Lutheran University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "tlu",
+    "url": "https://tlu.bamboohr.com/careers",
+    "slug": "Texas Lutheran University"
+   }
+  ],
+  "notes": "bamboohr board found by vendor-side probing (probe:bamboohr); page shows Texas Lutheran University.",
+  "prev_status": "generic",
+  "prev_url": "https://tlu.bamboohr.com/careers"
+ },
+ "447759": {
+  "name": "National Polytechnic College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "npcollege",
+    "url": "https://npcollege.bamboohr.com/careers",
+    "slug": "National Polytechnic College"
+   }
+  ],
+  "notes": "bamboohr board found by vendor-side probing (probe:bamboohr); page shows National Polytechnic College.",
+  "prev_status": "none"
+ },
+ "214290": {
+  "name": "New Castle School of Trades",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "newcastleschooloftrades",
+    "url": "https://careers.smartrecruiters.com/newcastleschooloftrades",
+    "slug": "New Castle School of Trades"
+   }
+  ],
+  "notes": "smartrecruiters board found by vendor-side probing (probe:smartrecruiters); page shows New Castle School of Trades.",
+  "prev_status": "none"
+ },
+ "x_zip-code-wilmington": {
+  "name": "Zip Code Wilmington",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "smartrecruiters",
+    "slug_id": "zipcodewilmington",
+    "url": "https://careers.smartrecruiters.com/zipcodewilmington",
+    "slug": "Zip Code Wilmington"
+   }
+  ],
+  "notes": "smartrecruiters board found by vendor-side probing (probe:smartrecruiters); page shows Zip Code Wilmington.",
+  "prev_status": "none"
+ },
+ "161299": {
+  "name": "Maine Maritime Academy",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://www.schooljobs.com/careers/mma",
+    "agency": "mma",
+    "ats": "college_neogov"
+   }
+  ],
+  "notes": "NeoGov agency 'mma' = Maine Maritime Academy (page title 'Employment at MMA').",
+  "prev_status": "generic",
+  "prev_url": "https://mainemaritime.edu/employment-at-mma/faculty-positions/"
+ },
+ "193821": {
+  "name": "New York Law School",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://www.governmentjobs.com/careers/nyls",
+    "agency": "nyls",
+    "ats": "college_neogov"
+   }
+  ],
+  "notes": "college_neogov board found by vendor-side probing (probe:neogov); page shows New York Law School.",
+  "prev_status": "generic",
+  "prev_url": "https://www.nyls.edu/careers/"
+ },
+ "154396": {
+  "name": "Southwestern Community College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://southwesterncc.exacthire.com/",
+    "site_id": "296",
+    "ats": "college_exacthire"
+   }
+  ],
+  "notes": "college_exacthire board found by vendor-side probing (probe:exacthire); page shows Southwestern Community College.",
+  "prev_status": "generic",
+  "prev_url": "https://www.swcciowa.edu/human-resources/employment-opportunities"
+ },
+ "436429": {
+  "name": "Los Angeles Film School",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://lafilm.exacthire.com/",
+    "site_id": "324",
+    "ats": "college_exacthire"
+   }
+  ],
+  "notes": "college_exacthire board found by vendor-side probing (probe:exacthire); page shows Los Angeles Film School.",
+  "prev_status": "none"
+ },
+ "x_uc-davis-continuing-and-professional-education": {
+  "name": "UC Davis Continuing and Professional Education",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://ucdavis.peopleadmin.com",
+    "ats": "college_peopleadmin"
+   }
+  ],
+  "notes": "UC Davis main PeopleAdmin board (parent of Continuing and Professional Education).",
+  "prev_status": "none"
+ },
+ "180054": {
+  "name": "Blackfeet Community College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://bfcc.isolvedhire.com/jobs/",
+    "isolved_slug": "bfcc",
+    "host": "bfcc.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "college_isolvedhire board found by vendor-side probing (probe:isolvedhire); page shows Blackfeet Community College.",
+  "prev_status": "none"
+ },
+ "216463": {
+  "name": "Trinity Anglican Seminary",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://tas.isolvedhire.com/jobs/",
+    "isolved_slug": "tas",
+    "host": "tas.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "college_isolvedhire board found by vendor-side probing (probe:isolvedhire); page shows Trinity Anglican Seminary.",
+  "prev_status": "generic",
+  "prev_url": "https://tas.edu/careers"
+ },
+ "428170": {
+  "name": "Southeastern College-West Palm Beach",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://sec.isolvedhire.com/jobs/",
+    "isolved_slug": "sec",
+    "host": "sec.isolvedhire.com",
+    "ats": "college_isolvedhire"
+   }
+  ],
+  "notes": "Southeastern College (sec.isolvedhire.com) board covers the campuses.",
+  "prev_status": "none"
+ },
+ "195243": {
+  "name": "St. Thomas Aquinas College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://stac.hire.trakstar.com/",
+    "trakstar_slug": "stac",
+    "client_name": "stac",
+    "ats": "college_trakstar"
+   }
+  ],
+  "notes": "college_trakstar board found by vendor-side probing (probe:trakstar); page shows St. Thomas Aquinas College.",
+  "prev_status": "generic",
+  "prev_url": "https://stac.edu/offices/human-resources/employment-opportunities/"
+ },
+ "x_fullstack-academy": {
+  "name": "Fullstack Academy",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://fullstackacademy.hire.trakstar.com/",
+    "trakstar_slug": "fullstackacademy",
+    "client_name": "fullstackacademy",
+    "ats": "college_trakstar"
+   }
+  ],
+  "notes": "college_trakstar board found by vendor-side probing (probe:trakstar); page shows Fullstack Academy.",
+  "prev_status": "none"
+ },
+ "213358": {
+  "name": "La Roche University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://laroche.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "laroche",
+    "ats": "college_clearcompany"
+   }
+  ],
+  "notes": "college_clearcompany board found by vendor-side probing (probe:hrmdirect); page shows La Roche University.",
+  "prev_status": "generic",
+  "prev_url": "https://laroche.edu/about/employment_opportunities/staff_openings/"
+ },
+ "210429": {
+  "name": "Western Oregon University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://western-oregon-university.breezy.hr/",
+    "breezy_slug": "western-oregon-university",
+    "ats": "college_breezy"
+   }
+  ],
+  "notes": "college_breezy board found by vendor-side probing (probe:breezy); page shows Western Oregon University.",
+  "prev_status": "generic",
+  "prev_url": "https://wou.edu/hr/employment/jobs/"
+ },
+ "225201": {
+  "name": "Hallmark University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://hallmark-university.breezy.hr/",
+    "breezy_slug": "hallmark-university",
+    "ats": "college_breezy"
+   }
+  ],
+  "notes": "college_breezy board found by vendor-side probing (probe:breezy); page shows Hallmark University.",
+  "prev_status": "generic",
+  "prev_url": "https://hallmark-university.breezy.hr/"
+ },
+ "231420": {
+  "name": "Averett University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://averett-university.breezy.hr/",
+    "breezy_slug": "averett-university",
+    "ats": "college_breezy"
+   }
+  ],
+  "notes": "college_breezy board found by vendor-side probing (probe:breezy); page shows Averett University.",
+  "prev_status": "generic",
+  "prev_url": "https://www.averett.edu/about-us/employment-opportunities/traditional-faculty-employment-opportunities/"
+ },
+ "219718": {
+  "name": "Bethel University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "betheluniversity",
+    "url": "https://betheluniversity.applicantpro.com/jobs/",
+    "slug": "Bethel University"
+   }
+  ],
+  "notes": "betheluniversity.applicantpro.com shows 'Bethel University Jobs'; several Bethels exist, confirm campus when postings appear.",
+  "prev_status": "generic",
+  "prev_url": "https://www.bethelu.edu/employees/careers"
+ },
+ "238661": {
+  "name": "Edgewood College",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "slug_id": "edgewoodcollege",
+    "url": "https://edgewoodcollege.applicantpro.com/jobs/",
+    "slug": "Edgewood College"
+   }
+  ],
+  "notes": "applicantpro board found by vendor-side probing (probe:applicantpro); page shows Edgewood College.",
+  "prev_status": "generic",
+  "prev_url": "https://edgewood.applicantpro.com/jobs/"
+ },
+ "130776": {
+  "name": "Western Connecticut State University",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://westernconnecticutstateuniversity.applytojob.com/apply",
+    "jazz_slug": "westernconnecticutstateuniversity",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "college_jazzhr board found by vendor-side probing (probe:jazzhr); page shows Western Connecticut State University.",
+  "prev_status": "generic",
+  "prev_url": "https://www.wcsu.edu/hr/employment/current-opportunities/"
+ },
+ "437635": {
+  "name": "The College of Health Care Professions-Austin",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "url": "https://chcp.applytojob.com/apply",
+    "jazz_slug": "chcp",
+    "ats": "college_jazzhr"
+   }
+  ],
+  "notes": "CHCP (College of Health Care Professions) system-wide JazzHR board.",
+  "prev_status": "generic",
+  "prev_url": "https://www.chcp.edu/careers/"
+ },
+ "121628": {
+  "name": "RAND School of Public Policy",
+  "source": "manual-vendor2",
+  "configs": [
+   {
+    "ats": "workday",
+    "site": "External_Career_Site",
+    "tenant": "rand",
+    "url": "https://rand.wd5.myworkdayjobs.com/External_Career_Site",
+    "wd": "wd5",
+    "slug": "RAND School of Public Policy"
+   }
+  ],
+  "prev_status": "none",
+  "notes": "Workday tenant 'rand' (wd5, site External_Career_Site) found by domain-slug probing; RAND Corporation's board is the employer for the RAND School of Public Policy (24 postings, incl. policy faculty/research roles)."
+ }
+}

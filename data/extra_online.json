@@ -1,0 +1,42 @@
+[
+ {
+  "name": "Ashworth College",
+  "homepage": "https://www.ashworthcollege.edu",
+  "state": "GA",
+  "kind": "online_college",
+  "source": "manual-online",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "url": "https://jobs.dayforcehcm.com/en-US/pennfostercarrus/PENNFOSTERGROUPCAREERSITE",
+    "client": "us232",
+    "site": "pennfostercarrus"
+   }
+  ],
+  "notes": "DEAC-accredited online associate/career college, part of Penn Foster Group; hires through the Penn Foster Group Dayforce board (same as x_penn-foster-college); no own careers page"
+ },
+ {
+  "name": "California Southern University",
+  "homepage": "https://www.calsouthern.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "manual-online",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "url": "https://myjobs.adp.com/csu/cx",
+    "domain": "csu"
+   }
+  ],
+  "notes": "WSCUC-accredited online university (Chandler, AZ; Perdoceo-affiliated); calsouthern.edu/career-opportunities ('Faculty Career Opportunities') -> ADP myjobs board 'csu'"
+ },
+ {
+  "name": "Crestpoint University (formerly National Paralegal College)",
+  "homepage": "https://www.nationalparalegal.edu",
+  "state": "AZ",
+  "kind": "online_college",
+  "source": "manual-online",
+  "configs": [],
+  "notes": "DEAC-accredited online legal/business degrees; renamed Crestpoint University; no job listing page found (site has only student Career Services)"
+ }
+]

@@ -1,0 +1,667 @@
+{
+ "102298": {
+  "name": "Talladega College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_jazzhr",
+    "url": "https://talladegacollege.applytojob.com/apply",
+    "jazz_slug": "talladegacollege"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_jazzhr classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.talladega.edu/careers/"
+ },
+ "107512": {
+  "name": "Ouachita Baptist University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://obu.edu/about/hr/faculty-vacancies.php",
+    "browser": true,
+    "pages": [
+     "https://obu.edu/about/hr/"
+    ]
+   }
+  ],
+  "notes": "obu.edu blocks python requests (403) - needs Chromium. Faculty vacancies are listed on faculty-vacancies.php (text + PDF application links); staff openings on /about/hr/. No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://obu.edu/about/hr/"
+ },
+ "125897": {
+  "name": "Woodbury University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "url": "https://recruiting2.ultipro.com/UNI1089UOR/JobBoard/6af23b67-9dd3-4a6a-bda1-676b92a4fcb4/?q=&o=postedDateDesc&w=&wc=&we=&wpst=",
+    "tenant": "UNI1089UOR",
+    "board": "6af23b67-9dd3-4a6a-bda1-676b92a4fcb4"
+   }
+  ],
+  "notes": "Woodbury is now 'University of Redlands, Los Angeles'; its employment page lists no jobs and points to Redlands HR. Redlands HR page links the UKG/UltiPro board (verify.py classified ultipro). Board is shared with the whole University of Redlands.",
+  "prev_status": "generic",
+  "prev_url": "https://woodbury.edu/about/people/employment-opportunities/"
+ },
+ "139205": {
+  "name": "Brewton-Parker College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://bpc.edu/?post_type=employment",
+    "pages": [
+     "https://bpc.edu/page/2/?post_type=employment",
+     "https://bpc.edu/page/3/?post_type=employment"
+    ]
+   }
+  ],
+  "notes": "Site is a WordPress install with an 'employment' custom post type (found via sitemap employment-sitemap.xml). The HR page bpc.edu/about-bpc/information/employment-2/ lists no postings, but the WP archive ?post_type=employment lists 15 current postings across 3 pages (dates through Oct 2026); detail pages at bpc.edu/employment/<slug>/. Also available as JSON: bpc.edu/wp-json/wp/v2/employment",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "140003": {
+  "name": "Gwinnett College-Lilburn",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.gwinnettcollege.edu/careers-gwinnett/",
+    "pages": [
+     "https://www.gwinnettcollege.edu/careers-gwinnett/2/",
+     "https://www.gwinnettcollege.edu/careers-gwinnett/3/",
+     "https://www.gwinnettcollege.edu/careers-gwinnett/4/"
+    ]
+   }
+  ],
+  "notes": "Same WordPress careers page as before but it is paginated (/2/ /3/ /4/) with job titles as h3 headings (instructor, admissions, etc. across GA/NC/FL campuses). No ATS found.",
+  "prev_status": "generic",
+  "prev_url": "https://www.gwinnettcollege.edu/careers-gwinnett/"
+ },
+ "147396": {
+  "name": "Morrison Institute of Technology",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.morrisontech.edu/employment/",
+    "browser": true
+   }
+  ],
+  "notes": "Same URL; plain requests gets a 202 bot-wall stub (182 bytes). In Chromium it lists 4 instructor postings as accordion items whose hrefs are '#' (details inline on the page). No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://www.morrisontech.edu/employment/"
+ },
+ "148405": {
+  "name": "Rockford University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.rockford.edu/community/humanresources/faculty/",
+    "pages": [
+     "https://www.rockford.edu/community/humanresources/staff/"
+    ]
+   }
+  ],
+  "notes": "Existing faculty page confirmed (posting links like rockford.edu/adjunct-instructors-of-biology/); added staff openings page. No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://www.rockford.edu/community/humanresources/faculty/"
+ },
+ "154004": {
+  "name": "Morningside University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_clearcompany",
+    "url": "https://morningside.hrmdirect.com/employment/job-openings.php?search=true",
+    "cc_slug": "morningside"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_clearcompany classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.morningside.edu/about/employment"
+ },
+ "170532": {
+  "name": "Kalamazoo College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hr.kzoo.edu/careers-at-k/staff-positions/",
+    "pages": [
+     "https://provost.kzoo.edu/faculty-information/facultyjobs/"
+    ]
+   }
+  ],
+  "notes": "Existing url only covered faculty jobs (provost site). hr.kzoo.edu/careers-at-k/staff-positions/ lists staff postings as links to hr.kzoo.edu/<slug>/ (3 real postings seen); faculty page kept as second page. No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://provost.kzoo.edu/faculty-information/facultyjobs/"
+ },
+ "175120": {
+  "name": "Summit Academy Opportunities Industrialization Center",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "adp",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=eb07e0a8-f78b-46b6-96a8-eb27c76ff7a1&ccId=19000101_000001&lang=en_US",
+    "cid": "eb07e0a8-f78b-46b6-96a8-eb27c76ff7a1"
+   }
+  ],
+  "notes": "saoic.org/work-summit 'current openings' links ADP Workforce Now board; classified by verify.py.",
+  "prev_status": "missing",
+  "prev_url": ""
+ },
+ "176318": {
+  "name": "Rust College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://rustcollege.edu/job-listings/",
+    "browser": true,
+    "pdf_links": true
+   }
+  ],
+  "notes": "Found via HR page 'View Careers' link. requests returns 202/thin (bot wall) so Chromium needed. Table of ~28 open positions (faculty incl. CS, math, physics, psych); each row links a PDF job description with anchor text 'Click Here' (title is in the adjacent table cell). Apply by email careers@rustcollege.edu. No ATS.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "176947": {
+  "name": "Central Methodist University-College of Liberal Arts and Sciences",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index.html"
+   }
+  ],
+  "notes": "Same board as 445267: index.html lists all faculty + staff openings; prev url was faculty-only page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-faculty.html"
+ },
+ "178244": {
+  "name": "Missouri Baptist University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://www.mobap.edu/jobs/feed/"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_rss classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.mobap.edu/jobs/"
+ },
+ "181738": {
+  "name": "Union Adventist University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ugroups.ucollege.edu/job_postings",
+    "browser": true
+   }
+  ],
+  "notes": "ugroups.ucollege.edu/job_postings is JS-rendered; in Chromium it lists 11 postings (faculty + staff + adjunct) with /job_posting?uid= links. Current config filters to job_type=13229 and loads 0 links without a browser. generic.fetch with browser:true returned 1 title-filtered job (Business Professor).",
+  "prev_status": "generic",
+  "prev_url": "https://ugroups.ucollege.edu/job_postings?job_type=13229"
+ },
+ "191676": {
+  "name": "Houghton University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.houghton.edu/employment/administrative-staff-openings/",
+    "pages": [
+     "https://www.houghton.edu/employment/faculty-openings/"
+    ],
+    "pdf_links": true
+   }
+  ],
+  "notes": "Adds the separate faculty-openings page (3 faculty PDF postings) to the existing staff page (3 PDF postings). All postings are PDFs. No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://www.houghton.edu/employment/administrative-staff-openings/"
+ },
+ "199209": {
+  "name": "North Carolina Wesleyan University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ncwu.edu/community/careers/current-openings/",
+    "pages": [
+     "https://ncwu.edu/community/careers/current-openings/faculty-teaching-positions/",
+     "https://ncwu.edu/community/careers/current-openings/graduate-assistant/"
+    ]
+   }
+  ],
+  "notes": "Existing generic page confirmed; added faculty-teaching-positions and graduate-assistant sub-pages that the main page links to (faculty/adjunct postings live there). No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://ncwu.edu/community/careers/current-openings/"
+ },
+ "200527": {
+  "name": "Turtle Mountain Community College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.tm.edu/jobs/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Same /jobs/ page as before, but the real postings are 7 'Read More' PDF links (wp-content/uploads/... Instructor PDFs); anchor-text links on the page are catalog programs. Needs pdf_links. No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://www.tm.edu/jobs/"
+ },
+ "203720": {
+  "name": "Ohio Business College-Sheffield",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://obc.edu/jobs/feed/"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_rss classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "203739": {
+  "name": "Ohio Business College-Sandusky",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://obc.edu/jobs/"
+   }
+  ],
+  "notes": "Homepage redirects to obc.edu; /jobs/ is a WordPress 'Jobs Archive' with company-wide postings (1 currently: Computer Technician, Part Time -> obc.edu/jobs/<slug>/).",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "213358": {
+  "name": "La Roche University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://laroche.edu/about/employment_opportunities/staff_openings/",
+    "pages": [
+     "https://laroche.edu/About/Employment_Opportunities/Faculty_Openings/"
+    ]
+   }
+  ],
+  "notes": "Existing staff page is fine; added separate Faculty Openings page (5 open faculty/adjunct postings, links /job/<slug>/). No ATS.",
+  "prev_status": "generic",
+  "prev_url": "https://laroche.edu/about/employment_opportunities/staff_openings/"
+ },
+ "213385": {
+  "name": "Lafayette College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://hr.lafayette.edu/category/job-opportunity/feed/"
+   }
+  ],
+  "notes": "WordPress HR site exposes an RSS feed for the job-opportunity category (10 items, content inline). Prefer over generic HTML category page.",
+  "prev_status": "generic",
+  "prev_url": "https://hr.lafayette.edu/category/job-opportunity/"
+ },
+ "213826": {
+  "name": "Marywood University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.marywood.edu/depts/human-resources/employment-opportunities/professional-positions"
+   }
+  ],
+  "notes": "Current URL is an HR landing page with no postings; the professional-positions subpage lists ~19 openings (faculty, staff, part-time instructors) with per-posting 'Apply for ...' links to the in-house application form. No third-party ATS found.",
+  "prev_status": "generic",
+  "prev_url": "https://www.marywood.edu/depts/human-resources/employment-opportunities/"
+ },
+ "217925": {
+  "name": "Columbia International University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ciu.edu/about/employment/",
+    "browser": true
+   }
+  ],
+  "notes": "Same URL but it returns 403 to verify.py's requests and to verify --browser; loads fine (200, ~35 postings at ciu.edu/position/<slug>/, incl. several adjunct faculty) with a full Chrome UA in requests and in Playwright Chromium with a Chrome UA. UA-sensitive WAF; browser:true recommended. No ATS (apply via CIUjobs@ciu.edu).",
+  "prev_status": "generic",
+  "prev_url": "https://ciu.edu/about/employment/"
+ },
+ "219091": {
+  "name": "Dakota Wesleyan University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://dwu.hireclick.com/jobboard/",
+    "browser": true
+   }
+  ],
+  "notes": "HireClick job board is JS-rendered (0 links via requests); Chromium shows postings with https://dwu.hireclick.com/jb/<slug>/view/<id> links (1 opening + general application at check time). Same URL as before but needs browser:true. No HireClick fetcher exists.",
+  "prev_status": "generic",
+  "prev_url": "https://dwu.hireclick.com/jobboard/"
+ },
+ "219806": {
+  "name": "Carson-Newman University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://www.cn.edu/employment/feed/"
+   }
+  ],
+  "notes": "Previous current_url was a bogus samhsa.gov page. cn.edu/employment/ is a WP 'employment' CPT archive whose HTML lists nothing (JS), but /employment/feed/ is a valid RSS 2.0 feed of the postings (Assistant Professor of Chemistry, Nurse Anesthesiology, etc.; 10 items). curl gets a Cloudflare challenge; discover.get (requests session) gets it fine.",
+  "prev_status": "generic",
+  "prev_url": "https://www.samhsa.gov/about/careers/behavioral-health-workforce/careers-by-state/descriptions"
+ },
+ "221953": {
+  "name": "Tusculum University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://www3.tusculum.edu/hr/feed/"
+   }
+  ],
+  "notes": "www3.tusculum.edu/hr is a WordPress site whose posts are the job postings; /hr/feed/ RSS returns 10 items (Head Coach, Facilities Mgmt IV, Director of Clinical Experiences...). HTML listing page at /hr/employment-opportunities/ has 15 postings.",
+  "prev_status": "generic",
+  "prev_url": "https://www3.tusculum.edu/hr/employment-opportunities/"
+ },
+ "225201": {
+  "name": "Hallmark University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_breezy",
+    "url": "https://hallmark-university.breezy.hr/",
+    "breezy_slug": "hallmark-university"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_breezy classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://careers.hallmarkuniversity.edu/jobs/"
+ },
+ "228468": {
+  "name": "Southwestern Adventist University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.swau.edu/about/human-resources/career-opportunities/",
+    "pdf_links": true
+   }
+  ],
+  "notes": "Same page; 10 postings are 'View Job Description' PDF links under /assets/ (titles in the PDF filenames/headings). Verify found 0 job_links without pdf_links. No ATS; apply via PDF form.",
+  "prev_status": "generic",
+  "prev_url": "https://www.swau.edu/about/human-resources/career-opportunities/"
+ },
+ "228981": {
+  "name": "Texas Lutheran University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "url": "https://tlu.bamboohr.com/careers",
+    "slug_id": "tlu"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; bamboohr classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.tlu.edu/about-tlu/careers-at-tlu/"
+ },
+ "231420": {
+  "name": "Averett University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.averett.edu/about-us/employment-opportunities/traditional-faculty-employment-opportunities/",
+    "pages": [
+     "https://www.averett.edu/about-us/employment-opportunities/gps-faculty-employment-opportunities/",
+     "https://www.averett.edu/about-us/employment-opportunities/staff-employment-opportunities/"
+    ]
+   }
+  ],
+  "notes": "Same traditional-faculty page as before, plus the separate Averett Online (GPS) faculty page (full-time & adjunct online) and staff page as extra listing pages. No third-party ATS found on any of the three.",
+  "prev_status": "generic",
+  "prev_url": "https://www.averett.edu/about-us/employment-opportunities/traditional-faculty-employment-opportunities/"
+ },
+ "237969": {
+  "name": "West Virginia Wesleyan College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://www.wvwc.edu/jobs/feed/"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_rss classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.wvwc.edu/jobs/?faculty"
+ },
+ "238661": {
+  "name": "Edgewood College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "applicantpro",
+    "url": "https://edgewood.applicantpro.com/jobs/",
+    "slug_id": "edgewood"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; applicantpro, applicantpro classified by discover.classify / college_rss feed with job-titled items. (edgewoodcollege.applicantpro.com is a second tenant naming the same school; only edgewood.applicantpro.com kept to avoid duplicate postings.)",
+  "prev_status": "generic",
+  "prev_url": "https://www.edgewood.edu/employment/"
+ },
+ "239071": {
+  "name": "Maranatha Baptist University",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mbu.edu/workhere/",
+    "pages": [
+     "https://www.mbu.edu/workhere/faculty-employment/"
+    ]
+   }
+  ],
+  "notes": "Added faculty-employment subpage (faculty vacancies listed inline; apply links go to Jenzabar portal my.mbu.edu/ICS/Personnel/Human_Resources/Employment.jnz, which is an application form not a listing). Postings are inline text, not anchors, so generic scrape may only see 'Faculty Application' links.",
+  "prev_status": "generic",
+  "prev_url": "https://www.mbu.edu/workhere/"
+ },
+ "241225": {
+  "name": "Universidad Central de Bayamon",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ucb.edu.pr/convocatorias/"
+   }
+  ],
+  "notes": "Convocatorias page lists 4 live job PDFs (Profesor de Ciencias Fisicas, Consejeria, Educacion Fisica, Ingles) + staff convocatorias; apply by email recursoshumanos@ucb.edu.pr. Spanish titles so verify.py job_links=0 but page is the real listing.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242617": {
+  "name": "Inter American University of Puerto Rico-San German",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242626": {
+  "name": "Inter American University of Puerto Rico-Aguadilla",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://www.inter.edu/conocenos/empleos-3/",
+    "browser": true
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host. Also campus listing page kept as college_generic.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242644": {
+  "name": "Inter American University of Puerto Rico-Barranquitas",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "generic",
+  "prev_url": "https://www.inter.edu/en/meet-us-at/jobs-3/"
+ },
+ "242653": {
+  "name": "Inter American University of Puerto Rico-Metro",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242662": {
+  "name": "Inter American University of Puerto Rico-Ponce",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://cit.ponce.inter.edu/ipform/Empleos/"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host. Also campus listing page kept as college_generic.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242680": {
+  "name": "Inter American University of Puerto Rico-Fajardo",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "generic",
+  "prev_url": "https://www.inter.edu/en/meet-us-at/jobs-3/"
+ },
+ "242699": {
+  "name": "Inter American University of Puerto Rico-Guayama",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "242705": {
+  "name": "Inter American University of Puerto Rico-Bayamon",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://www.inter.edu/en/?feed=job_feed"
+   }
+  ],
+  "notes": "Inter American University system-wide WP Job Manager board (www.inter.edu/en/meet-us-at/jobs-3/); the RSS feed classifies as college_wpjobmanager (~40 postings incl. Assistant Professor). NOTE: www.inter.edu omits its Sectigo intermediate cert, so python requests fails SSL verification (curl/Chromium fine); the fetcher returns 0 until verify is relaxed for this host.",
+  "prev_status": "generic",
+  "prev_url": "https://www.inter.edu/conocenos/empleos-3/"
+ },
+ "366553": {
+  "name": "Southern Technical College",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://www.southerntech.edu/jobs/feed/"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_rss classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "generic",
+  "prev_url": "https://www.southerntech.edu/jobs/"
+ },
+ "444945": {
+  "name": "Unitech Training Academy-Lafayette",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_prismhr",
+    "url": "https://unitech-training-academy.hiringthing.com/",
+    "host": "unitech-training-academy.hiringthing.com"
+   }
+  ],
+  "notes": "Found by probing vendor tenant slugs / WordPress job feeds (search engines were exhausted); page verified to name the school; college_prismhr classified by discover.classify / college_rss feed with job-titled items.",
+  "prev_status": "missing",
+  "prev_url": ""
+ },
+ "445054": {
+  "name": "Toyota Technological Institute at Chicago",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://ttic.edu/faculty-hiring/",
+    "pages": [
+     "https://ttic.edu/staff-hiring/",
+     "https://ttic.edu/visiting-senior-hiring"
+    ]
+   }
+  ],
+  "notes": "Own site: faculty-hiring page (tenure-track/research faculty, apply at ttic.edu/facultyapplication) + staff-hiring page; no ATS. ~12 job-ish links.",
+  "prev_status": "none",
+  "prev_url": ""
+ },
+ "445267": {
+  "name": "Central Methodist University-College of Graduate and Extended Studies",
+  "source": "manual-ws-private",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index.html"
+   }
+  ],
+  "notes": "index.html = All Employment Opportunities (faculty + staff, ~20 listings incl. Adjunct-Nursing, CGES/CLAS Academic Support Specialists); prev url was faculty-only page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.centralmethodist.edu/about/offices/human-resources/jobs-fayette/index-faculty.html"
+ }
+}

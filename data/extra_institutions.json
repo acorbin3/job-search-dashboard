@@ -1,0 +1,1992 @@
+[
+ {
+  "name": "Harrison Middleton University",
+  "homepage": "https://www.hmu.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Dallas International University",
+  "homepage": "https://www.diu.edu",
+  "state": "TX",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "AEED6AAC662E7AB91FD4AE1A4719E0CE",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=AEED6AAC662E7AB91FD4AE1A4719E0CE&fromClientSide=true&jpt=287abdfa63a08d6e24aa1e25eabd8d25",
+    "via": "browser"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "National Cryptologic University",
+  "homepage": "https://www.nsa.gov",
+  "state": "MD",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "NSA careers: https://www.intelligencecareers.gov/nsa (search 'instructor'); best listing URL: https://www.nsa.gov/Careers/"
+ },
+ {
+  "name": "DC3 Cyber Training Academy",
+  "homepage": "https://www.dc3.mil/Cyber-Training",
+  "state": "MD",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Cyber%20Crime%20Center\"; no job listing page found"
+ },
+ {
+  "name": "United States Naval Community College",
+  "homepage": "https://www.usncc.edu",
+  "state": "VA",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Naval%20Community%20College\"; no job listing page found"
+ },
+ {
+  "name": "Dunlap-Stone University",
+  "homepage": "https://www.dunlap-stone.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Defense Acquisition University",
+  "homepage": "https://www.dau.edu",
+  "state": "VA",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Defense%20Acquisition%20University\"; no job listing page found"
+ },
+ {
+  "name": "U.S. Army War College",
+  "homepage": "https://www.armywarcollege.edu",
+  "state": "PA",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Army%20War%20College\"; no job listing page found"
+ },
+ {
+  "name": "U.S. Career Institute",
+  "homepage": "https://www.uscareerinstitute.edu",
+  "state": "CO",
+  "kind": "online_college",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "U.S. Army Command and General Staff College",
+  "homepage": "https://armyuniversity.edu",
+  "state": "KS",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Command%20and%20General%20Staff%20College\"; no job listing page found"
+ },
+ {
+  "name": "Elmbridge University",
+  "homepage": "https://www.bridges.edu",
+  "state": "UT",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "best listing URL: https://www.bridges.edu/jobs"
+ },
+ {
+  "name": "California Science and Technology University",
+  "homepage": "https://www.cstu.edu",
+  "state": "CA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "WorldQuant University",
+  "homepage": "https://www.wqu.edu",
+  "state": "DC",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "online MS in financial engineering / data science; no job listing page found"
+ },
+ {
+  "name": "Quantic School of Business and Technology",
+  "homepage": "https://quantic.edu",
+  "state": "DC",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "best listing URL: https://quantic.edu/our-team/#jobs"
+ },
+ {
+  "name": "Air University",
+  "homepage": "https://www.airuniversity.af.edu",
+  "state": "AL",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Air%20University\"%20Maxwell; no job listing page found"
+ },
+ {
+  "name": "University of Fairfax",
+  "homepage": "https://www.ufairfax.edu",
+  "state": "VA",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "cybersecurity-focused online university; no job listing page found"
+ },
+ {
+  "name": "EC-Council University",
+  "homepage": "https://www.eccu.edu",
+  "state": "NM",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "cybersecurity online university; no job listing page found"
+ },
+ {
+  "name": "University of North America",
+  "homepage": "https://www.uona.edu",
+  "state": "VA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Erie County Community College",
+  "homepage": "https://ec3pa.org",
+  "state": "PA",
+  "kind": "community_college",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ec3pa.org/employment-opportunities",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Joint Special Operations University",
+  "homepage": "https://jsou.edu",
+  "state": "FL",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Joint%20Special%20Operations%20University\"; best listing URL: https://www.socom.mil/employment"
+ },
+ {
+  "name": "MIU City University Miami",
+  "homepage": "https://miuniversity.edu",
+  "state": "FL",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "National Geospatial-Intelligence College",
+  "homepage": "https://www.nga.mil",
+  "state": "VA",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [
+   {
+    "url": "https://careers.nga.mil/psc/CAREERS/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant",
+    "site_id": "",
+    "ats": "college_peoplesoft",
+    "via": "requests"
+   }
+  ],
+  "notes": "NGA careers: https://www.intelligencecareers.gov/nga ; USAJobs: https://www.usajobs.gov/search/results/?k=\"National%20Geospatial-Intelligence%20Agency\"%20instructor"
+ },
+ {
+  "name": "Virginia University of Science and Technology",
+  "homepage": "https://www.vust.edu",
+  "state": "VA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://vust.edu/employments/faculty-positions/",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Woodmont College",
+  "homepage": "https://woodmontcollege.edu",
+  "state": "FL",
+  "kind": "online_college",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Penn Foster College",
+  "homepage": "https://www.pennfoster.edu",
+  "state": "AZ",
+  "kind": "online_college",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "client": "us232",
+    "site": "pennfostercarrus",
+    "url": "https://us232.dayforcehcm.com/CandidatePortal/en-US/pennfostercarrus/Site/PENNFOSTERGROUPCAREERSITE",
+    "via": "requests"
+   }
+  ],
+  "notes": "Penn Foster Group careers"
+ },
+ {
+  "name": "TCAT Chattanooga",
+  "homepage": "https://tcatchattanooga.edu",
+  "state": "TN",
+  "kind": "technical_college",
+  "source": "tbr",
+  "configs": [],
+  "notes": "Tennessee College of Applied Technology; TBR board; no job listing page found"
+ },
+ {
+  "name": "Stanton University",
+  "homepage": "https://www.stanton.edu",
+  "state": "CA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "best listing URL: https://stanton.edu/careers/"
+ },
+ {
+  "name": "Northern Pennsylvania Regional College",
+  "homepage": "https://regionalcollegepa.org",
+  "state": "PA",
+  "kind": "community_college",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "nprc",
+    "url": "https://nprc.bamboohr.com/login.php?r=%2Fhome%2F",
+    "via": "requests"
+   }
+  ],
+  "notes": "DAPIP name: Rural Regional College of Northern Pennsylvania"
+ },
+ {
+  "name": "University of Maine System",
+  "homepage": "https://www.maine.edu",
+  "state": "ME",
+  "kind": "system_office",
+  "source": "dapip",
+  "configs": [
+   {
+    "url": "https://www.maine.edu/careers/",
+    "host": "https://fa-ewca-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "ats": "college_oracle",
+    "via": "requests"
+   }
+  ],
+  "notes": "system office; campuses are in IPEDS"
+ },
+ {
+  "name": "National Defense University",
+  "homepage": "https://www.ndu.edu",
+  "state": "DC",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"National%20Defense%20University\"; no job listing page found"
+ },
+ {
+  "name": "Nexford University",
+  "homepage": "https://www.nexford.edu",
+  "state": "DC",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "nexforduniversity",
+    "url": "https://nexforduniversity.bamboohr.com/careers",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Community College of the Air Force",
+  "homepage": "https://www.airuniversity.af.edu/Barnes/CCAF",
+  "state": "AL",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Community%20College%20of%20the%20Air%20Force\"; no job listing page found"
+ },
+ {
+  "name": "Tri County Tech",
+  "homepage": "https://tricountytech.edu",
+  "state": "OK",
+  "kind": "technology_center",
+  "source": "ok_careertech",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "tctc",
+    "url": "https://tctc.bamboohr.com/js/embed.js",
+    "via": "requests"
+   }
+  ],
+  "notes": "Oklahoma CareerTech technology center, Bartlesville"
+ },
+ {
+  "name": "Calbright College",
+  "homepage": "https://www.calbright.org",
+  "state": "CA",
+  "kind": "online_college",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "calbright",
+    "url": "https://calbright.bamboohr.com/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": "California online community college; IT support / cybersecurity programs"
+ },
+ {
+  "name": "Inter-American Defense College",
+  "homepage": "https://www.iadc.edu",
+  "state": "DC",
+  "kind": "military",
+  "source": "dapip",
+  "configs": [],
+  "notes": "best listing URL: https://iadc.edu/about/careers/"
+ },
+ {
+  "name": "Bay Atlantic University",
+  "homepage": "https://bau.edu",
+  "state": "DC",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://bayatlanticuniversity.apscareerportal.com/jobs?locale=en-US",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Marine Corps University",
+  "homepage": "https://www.usmcu.edu",
+  "state": "VA",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Marine%20Corps%20University\"; no job listing page found"
+ },
+ {
+  "name": "National Intelligence University",
+  "homepage": "https://ni-u.edu",
+  "state": "MD",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"National%20Intelligence%20University\"; no job listing page found"
+ },
+ {
+  "name": "International American University",
+  "homepage": "https://www.iaula.edu",
+  "state": "CA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "iaula",
+    "url": "https://iaula.bamboohr.com/careers",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Army University",
+  "homepage": "https://armyuniversity.edu",
+  "state": "KS",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Army%20University\"; no job listing page found"
+ },
+ {
+  "name": "U.S. Army Cyber Center of Excellence / Cyber School",
+  "homepage": "https://cybercoe.army.mil",
+  "state": "GA",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Cyber%20Center%20of%20Excellence\"%20instructor; no job listing page found"
+ },
+ {
+  "name": "United States Military Academy",
+  "homepage": "https://www.westpoint.edu",
+  "state": "NY",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.westpoint.edu/directory/equal-opportunity-office",
+    "via": "requests"
+   }
+  ],
+  "notes": "IPEDS unitid 197036 (registry generic). USAJobs: https://www.usajobs.gov/search/results/?k=\"Military%20Academy\"%20\"West%20Point\"",
+  "ipeds_unitid": "197036"
+ },
+ {
+  "name": "Van Andel Institute Graduate School",
+  "homepage": "https://vaigs.vai.org",
+  "state": "MI",
+  "kind": "graduate_school",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "vai",
+    "wd": "wd1",
+    "site": "VAICareers",
+    "url": "https://vai.wd1.myworkdayjobs.com/VAICareers",
+    "via": "requests"
+   }
+  ],
+  "notes": "biomedical only; low relevance"
+ },
+ {
+  "name": "Uniformed Services University of the Health Sciences",
+  "homepage": "https://www.usuhs.edu",
+  "state": "MD",
+  "kind": "military",
+  "source": "military",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usuhs.edu/ao/civilian-hr/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Uniformed%20Services%20University\""
+ },
+ {
+  "name": "Union University of California",
+  "homepage": "https://www.uuc.edu",
+  "state": "CA",
+  "kind": "university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "United States Merchant Marine Academy",
+  "homepage": "https://www.usmma.edu",
+  "state": "NY",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [],
+  "notes": "IPEDS unitid 197027 (registry none). USAJobs: https://www.usajobs.gov/search/results/?k=\"Merchant%20Marine%20Academy\"; no job listing page found",
+  "ipeds_unitid": "197027"
+ },
+ {
+  "name": "Global University",
+  "homepage": "https://www.globaluniversity.edu",
+  "state": "MO",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "best listing URL: https://globaluniversity.edu/about/employment-opportunities/"
+ },
+ {
+  "name": "Defense Language Institute Foreign Language Center",
+  "homepage": "https://www.dliflc.edu",
+  "state": "CA",
+  "kind": "military",
+  "source": "military",
+  "configs": [],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Defense%20Language%20Institute\"; best listing URL: https://www.dliflc.edu/administration/employment/"
+ },
+ {
+  "name": "Air Force Institute of Technology",
+  "homepage": "https://www.afit.edu",
+  "state": "OH",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.afit.edu/HR/",
+    "via": "requests"
+   }
+  ],
+  "notes": "IPEDS unitid 200697 (registry generic). USAJobs: https://www.usajobs.gov/search/results/?k=\"Air%20Force%20Institute%20of%20Technology\"",
+  "ipeds_unitid": "200697"
+ },
+ {
+  "name": "Stanford Online / Stanford Center for Professional Development",
+  "homepage": "https://online.stanford.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "parent Stanford registry ok (interfolio faculty only); staff/lecturer board = careersearch.stanford.edu; no job listing page found"
+ },
+ {
+  "name": "U.S. Naval War College",
+  "homepage": "https://usnwc.edu",
+  "state": "RI",
+  "kind": "military",
+  "source": "military",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://usnwc.edu/Faculty-and-Departments/Administrative-Departments/Human-Resources",
+    "via": "requests"
+   }
+  ],
+  "notes": "USAJobs: https://www.usajobs.gov/search/results/?k=\"Naval%20War%20College\""
+ },
+ {
+  "name": "Harvard Extension School / Division of Continuing Education",
+  "homepage": "https://extension.harvard.edu",
+  "state": "MA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "parent Harvard University registry status none; DCE hires part-time instructors (dce.harvard.edu/careers; Harvard HR = jobs.harvard.edu); no job listing page found"
+ },
+ {
+  "name": "United States Naval Academy",
+  "homepage": "https://www.usna.edu",
+  "state": "MD",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [],
+  "notes": "IPEDS unitid 164155 (registry generic). USAJobs: https://www.usajobs.gov/search/results/?k=\"Naval%20Academy\"%20Annapolis; best listing URL: https://www.usna.edu/Employment/index.php",
+  "ipeds_unitid": "164155"
+ },
+ {
+  "name": "Georgia Tech Professional Education",
+  "homepage": "https://pe.gatech.edu",
+  "state": "GA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "parent Georgia Tech registry ok (peoplesoft careers.hprod.onehcm.usg.edu); likely same board; best listing URL: https://pe.gatech.edu/search/all?search=jobs"
+ },
+ {
+  "name": "Naval Postgraduate School",
+  "homepage": "https://www.nps.edu",
+  "state": "CA",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [],
+  "notes": "IPEDS unitid 119678 (registry status none). USAJobs: https://www.usajobs.gov/search/results/?k=\"Naval%20Postgraduate%20School\" ; NPS HR: https://nps.edu/web/hro/employment; best listing URL: https://nps.edu/opportunities",
+  "ipeds_unitid": "119678"
+ },
+ {
+  "name": "Acacia University",
+  "homepage": "https://www.acacia.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "UTH Florida University",
+  "homepage": "https://www.uthflorida.us",
+  "state": "FL",
+  "kind": "online_university",
+  "source": "dapip",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "United States Air Force Academy",
+  "homepage": "https://www.usafa.edu",
+  "state": "CO",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.usafa.edu/military/careers/",
+    "via": "requests"
+   }
+  ],
+  "notes": "IPEDS unitid 128328 (registry generic). USAJobs: https://www.usajobs.gov/search/results/?k=\"Air%20Force%20Academy\"",
+  "ipeds_unitid": "128328"
+ },
+ {
+  "name": "Arizona Online",
+  "homepage": "https://online.arizona.edu",
+  "state": "AZ",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "parent University of Arizona registry ok (csod) -> likely same board; no job listing page found"
+ },
+ {
+  "name": "Johns Hopkins Engineering for Professionals",
+  "homepage": "https://ep.jhu.edu",
+  "state": "MD",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "online part-time CS/cyber/data; adjunct instructor postings via jobs.jhu.edu (SuccessFactors); no job listing page found"
+ },
+ {
+  "name": "University of Washington Continuum College",
+  "homepage": "https://www.continuum.uw.edu",
+  "state": "WA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "parent UW registry generic; UW jobs = uwhires; UW board is Workday myworkdaysite (not matched by WD_RE): https://wd5.myworkdaysite.com/recruiting/uw/UWHires; best listing URL: https://www.continuum.uw.edu/about-us/careers"
+ },
+ {
+  "name": "UC Berkeley Extension",
+  "homepage": "https://extension.berkeley.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.berkeley.edu/",
+    "via": "requests"
+   }
+  ],
+  "notes": "parent UC Berkeley registry generic; instructor applications via extension.berkeley.edu/about-us/teach-for-us/"
+ },
+ {
+  "name": "Drexel University Online",
+  "homepage": "https://www.online.drexel.edu",
+  "state": "PA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "UCLA Extension",
+  "homepage": "https://www.uclaextension.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "icims",
+    "slug_id": "careers-ucla",
+    "url": "https://careers-ucla.icims.com/jobs/login?loginOnly=1",
+    "via": "requests"
+   }
+  ],
+  "notes": "parent UCLA registry icims login URL; instructor openings via uclaextension.edu/about-ucla-extension/teach"
+ },
+ {
+  "name": "United States Coast Guard Academy",
+  "homepage": "https://www.uscga.edu",
+  "state": "CT",
+  "kind": "military",
+  "source": "military_ipeds",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "0848936a-affd-4ea4-9ef2-a764d675dc1e",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=0848936a-affd-4ea4-9ef2-a764d675dc1e&ccId=19000101_000001&type=JS%E3%80%88=en_US&jobId=587060",
+    "via": "requests"
+   }
+  ],
+  "notes": "IPEDS unitid 130624 (registry ok: ADP). USAJobs: https://www.usajobs.gov/search/results/?k=\"Coast%20Guard%20Academy\"",
+  "ipeds_unitid": "130624"
+ },
+ {
+  "name": "NYU School of Professional Studies",
+  "homepage": "https://www.sps.nyu.edu",
+  "state": "NY",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sps.nyu.edu/jobs",
+    "via": "requests"
+   }
+  ],
+  "notes": "adjunct-heavy division; NYU board likely interfolio/peoplesync"
+ },
+ {
+  "name": "Colorado Online @ CCCS",
+  "homepage": "https://cccs.edu/colorado-online",
+  "state": "CO",
+  "kind": "consortium",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://hr.cccs.edu",
+    "ats": "college_pageup",
+    "via": "requests"
+   }
+  ],
+  "notes": "Colorado Community College System shared online program; CCCS system board"
+ },
+ {
+  "name": "Gila Community College",
+  "homepage": "https://www.gilaccc.org",
+  "state": "AZ",
+  "kind": "community_college",
+  "source": "dapip",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "6951467d-3c6f-4434-afaf-03d42c95eaca",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=6951467d-3c6f-4434-afaf-03d42c95eaca&#038;ccId=9200724914991_2&#038;lang=en_US",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "CSU Global / Colorado State University Global Campus",
+  "homepage": "https://csuglobal.edu",
+  "state": "CO",
+  "kind": "online_university",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "csuglobalfaculty",
+    "url": "https://job-boards.greenhouse.io/csuglobalfaculty",
+    "via": "requests"
+   }
+  ],
+  "notes": "in IPEDS? check",
+  "ipeds_unitid": "476975"
+ },
+ {
+  "name": "Rice University Glasscock School of Continuing Studies",
+  "homepage": "https://glasscock.rice.edu",
+  "state": "TX",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "best listing URL: https://glasscock.rice.edu/human-resources"
+ },
+ {
+  "name": "Columbia School of Professional Studies",
+  "homepage": "https://sps.columbia.edu",
+  "state": "NY",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://opportunities.columbia.edu",
+    "ats": "college_pageup",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Penn LPS / Penn Engineering Online",
+  "homepage": "https://online.seas.upenn.edu",
+  "state": "PA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "upenn",
+    "wd": "wd1",
+    "site": "careers-at-penn",
+    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn",
+    "via": "browser"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Florida Virtual Campus / FloridaShines",
+  "homepage": "https://www.flvc.org",
+  "state": "FL",
+  "kind": "consortium",
+  "source": "extension",
+  "configs": [],
+  "notes": "statewide services org, not an instructor employer; best listing URL: https://www.flvc.org/careers"
+ },
+ {
+  "name": "Penn State World Campus",
+  "homepage": "https://www.worldcampus.psu.edu",
+  "state": "PA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "psu",
+    "wd": "wd1",
+    "site": "PSU_Staff",
+    "url": "https://psu.wd1.myworkdayjobs.com/PSU_Staff",
+    "via": "requests"
+   }
+  ],
+  "notes": "Penn State in IPEDS (workday)"
+ },
+ {
+  "name": "Boston University Metropolitan College",
+  "homepage": "https://www.bu.edu/met",
+  "state": "MA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.bu.edu/met/careers/",
+    "via": "requests"
+   }
+  ],
+  "notes": "adjunct-heavy division; BU HR"
+ },
+ {
+  "name": "UMass Global",
+  "homepage": "https://www.umassglobal.edu",
+  "state": "CA",
+  "kind": "online_university",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "umassglobal",
+    "wd": "wd5",
+    "site": "UMassGlobalCareers",
+    "url": "https://umassglobal.wd5.myworkdayjobs.com/UMassGlobalCareers",
+    "via": "requests"
+   }
+  ],
+  "notes": "in IPEDS? check"
+ },
+ {
+  "name": "Northwestern School of Professional Studies",
+  "homepage": "https://sps.northwestern.edu",
+  "state": "IL",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://careers.northwestern.edu/psc/hr857prd_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "site_id": "1",
+    "ats": "college_peoplesoft",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "UC Santa Cruz Silicon Valley Extension",
+  "homepage": "https://www.ucsc-extension.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://careerspub.universityofcalifornia.edu/psc/ucsb/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=31",
+    "site_id": "31",
+    "ats": "college_peoplesoft",
+    "via": "browser"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "UC Irvine Division of Continuing Education",
+  "homepage": "https://ce.uci.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "best listing URL: https://ce.uci.edu/about/careers"
+ },
+ {
+  "name": "Study.com",
+  "homepage": "https://study.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Western Governors University Academy",
+  "homepage": "https://academy.wgu.edu",
+  "state": "UT",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "WGU in IPEDS (workday wgu.wd5 External); same board; no job listing page found"
+ },
+ {
+  "name": "University of Denver University College",
+  "homepage": "https://universitycollege.du.edu",
+  "state": "CO",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://jobs.du.edu",
+    "ats": "college_pageup",
+    "via": "requests"
+   }
+  ],
+  "notes": "adjunct-heavy division; DU jobs = jobs.du.edu"
+ },
+ {
+  "name": "UC San Diego Extended Studies",
+  "homepage": "https://extendedstudies.ucsd.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "url": "https://unex-careerhub.ucsd.edu/",
+    "host": "https://ibxwjb.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "ats": "college_oracle",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Outlier.org",
+  "homepage": "https://www.outlier.org",
+  "state": "NY",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "SUNY Online",
+  "homepage": "https://online.suny.edu",
+  "state": "NY",
+  "kind": "consortium",
+  "source": "extension",
+  "configs": [],
+  "notes": "best listing URL: https://www.suny.edu/careers/"
+ },
+ {
+  "name": "StraighterLine",
+  "homepage": "https://www.straighterline.com",
+  "state": "MD",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "lever",
+    "slug_id": "straighterline",
+    "url": "https://jobs.lever.co/straighterline",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Flatiron School",
+  "homepage": "https://flatironschool.com",
+  "state": "NY",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://flatironschool.com/careers"
+ },
+ {
+  "name": "edX / 2U",
+  "homepage": "https://2u.com",
+  "state": "MD",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "2U boot camps (Trilogy) hire part-time instructors/TAs; best listing URL: https://2u.com/careers/jobs/"
+ },
+ {
+  "name": "eLearning / Great Plains IDEA",
+  "homepage": "https://www.gpidea.org",
+  "state": "KS",
+  "kind": "consortium",
+  "source": "extension",
+  "configs": [],
+  "notes": "course sharing consortium, probably no own adjuncts; no job listing page found"
+ },
+ {
+  "name": "Udacity",
+  "homepage": "https://www.udacity.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "udacity",
+    "url": "https://job-boards.greenhouse.io/udacity",
+    "via": "requests"
+   }
+  ],
+  "notes": "session leads / mentors; now part of Accenture"
+ },
+ {
+  "name": "Oregon State Ecampus",
+  "homepage": "https://ecampus.oregonstate.edu",
+  "state": "OR",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "oregonstate",
+    "wd": "wd501",
+    "site": "OSU_Careers_Site",
+    "url": "https://oregonstate.wd501.myworkdayjobs.com/OSU_Careers_Site",
+    "via": "requests"
+   },
+   {
+    "url": "https://jobs.oregonstate.edu",
+    "ats": "college_peopleadmin",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "University of Chicago Professional Education",
+  "homepage": "https://professional.uchicago.edu",
+  "state": "IL",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "best listing URL: https://www.brandwatch.com/company/careers/"
+ },
+ {
+  "name": "UC Davis Continuing and Professional Education",
+  "homepage": "https://cpe.ucdavis.edu",
+  "state": "CA",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Springboard",
+  "homepage": "https://www.springboard.com",
+  "state": "CA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "springboard",
+    "url": "https://job-boards.greenhouse.io/springboard",
+    "via": "api"
+   }
+  ],
+  "notes": "mentors (contract)"
+ },
+ {
+  "name": "BloomTech",
+  "homepage": "https://www.bloomtech.com",
+  "state": "CA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://www.bloomtech.com/careers"
+ },
+ {
+  "name": "Year Up United",
+  "homepage": "https://www.yearup.org",
+  "state": "MA",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "yearup",
+    "wd": "wd503",
+    "site": "YearUp",
+    "url": "https://yearup.wd503.myworkdayjobs.com/YearUp",
+    "via": "requests"
+   }
+  ],
+  "notes": "IT/cyber instructors"
+ },
+ {
+  "name": "Nucamp",
+  "homepage": "https://www.nucamp.co",
+  "state": "WA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "part-time instructors nationwide; best listing URL: https://www.nucamp.co/jobs"
+ },
+ {
+  "name": "General Assembly",
+  "homepage": "https://generalassemb.ly",
+  "state": "NY",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "generalassembly",
+    "url": "https://job-boards.greenhouse.io/generalassembly/jobs/6567316",
+    "via": "requests"
+   }
+  ],
+  "notes": "part-time instructors; owned by Adecco/LHH"
+ },
+ {
+  "name": "Wiley University Services",
+  "homepage": "https://universityservices.wiley.com",
+  "state": "KY",
+  "kind": "opm",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Sophia Learning",
+  "homepage": "https://www.sophia.org",
+  "state": "VA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "strayer",
+    "wd": "wd1",
+    "site": "Sophia",
+    "url": "https://strayer.wd1.myworkdayjobs.com/Sophia",
+    "via": "requests"
+   }
+  ],
+  "notes": "Strategic Education Inc. (Strayer workday strayer.wd1 careers)"
+ },
+ {
+  "name": "Correlation One",
+  "homepage": "https://www.correlation-one.com",
+  "state": "NY",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "correlationone",
+    "url": "https://boards.greenhouse.io/correlationone",
+    "via": "requests"
+   }
+  ],
+  "notes": "data/AI instructors (contract)"
+ },
+ {
+  "name": "Champlain College Online",
+  "homepage": "https://online.champlain.edu",
+  "state": "VT",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [],
+  "notes": "adjunct-heavy online division; Champlain in IPEDS; no job listing page found"
+ },
+ {
+  "name": "Coding Dojo (Colorado Technical University)",
+  "homepage": "https://www.codingdojo.com",
+  "state": "WA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "now part of CTU/Perdoceo; best listing URL: https://myjobs.adp.com/codingdojo"
+ },
+ {
+  "name": "Risepoint (Academic Partnerships)",
+  "homepage": "https://risepoint.com",
+  "state": "TX",
+  "kind": "opm",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "risepoint",
+    "wd": "wd503",
+    "site": "Risepoint",
+    "url": "https://risepoint.wd503.myworkdayjobs.com/Risepoint",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "eCornell",
+  "homepage": "https://ecornell.cornell.edu",
+  "state": "NY",
+  "kind": "extension",
+  "source": "extension",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://hr.cornell.edu/jobs",
+    "via": "browser"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Chegg Skills (Thinkful)",
+  "homepage": "https://www.chegg.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Fullstack Academy",
+  "homepage": "https://www.fullstackacademy.com",
+  "state": "NY",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "university-partnered boot camps; hires instructors; best listing URL: https://www.fullstackacademy.com/careers"
+ },
+ {
+  "name": "Galvanize / Hack Reactor",
+  "homepage": "https://www.galvanize.com",
+  "state": "CO",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "strideinc",
+    "wd": "wd1",
+    "site": "G",
+    "url": "https://strideinc.wd1.myworkdayjobs.com/G",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Coursera",
+  "homepage": "https://www.coursera.org",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "url": "https://careers.coursera.com",
+    "ats": "college_pageup",
+    "via": "requests"
+   },
+   {
+    "ats": "greenhouse",
+    "slug_id": "coursera",
+    "url": "https://job-boards.greenhouse.io/coursera",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Promineo Tech",
+  "homepage": "https://www.promineotech.com",
+  "state": "AZ",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "college-partnered coding boot camps; part-time instructors; no job listing page found"
+ },
+ {
+  "name": "Devmountain",
+  "homepage": "https://devmountain.com",
+  "state": "UT",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "Strayer/Strategic Education; no job listing page found"
+ },
+ {
+  "name": "Turing School of Software & Design",
+  "homepage": "https://turing.edu",
+  "state": "CO",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://www.turing.edu/careers"
+ },
+ {
+  "name": "Instructure",
+  "homepage": "https://www.instructure.com",
+  "state": "UT",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.instructure.com/about/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": "Ashby board (no fetcher yet): https://jobs.ashbyhq.com/instructure"
+ },
+ {
+  "name": "App Academy",
+  "homepage": "https://www.appacademy.io",
+  "state": "CA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Noble Desktop",
+  "homepage": "https://www.nobledesktop.com",
+  "state": "NY",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.nobledesktop.com/jobs",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Code Fellows",
+  "homepage": "https://www.codefellows.org",
+  "state": "WA",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://www.codefellows.org/jobs-at-code-fellows/"
+ },
+ {
+  "name": "Pearson",
+  "homepage": "https://www.pearson.com",
+  "state": "NJ",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "url": "https://pearson.jobs/",
+    "host": "https://hccz.fa.em3.oraclecloud.com",
+    "site": "CX_2",
+    "ats": "college_oracle",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Great Learning",
+  "homepage": "https://www.mygreatlearning.com",
+  "state": "TX",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.mygreatlearning.com/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Infosec Institute (Cengage)",
+  "homepage": "https://www.infosecinstitute.com",
+  "state": "WI",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Per Scholas",
+  "homepage": "https://perscholas.org",
+  "state": "NY",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.perscholas.org/about/careers/",
+    "via": "requests"
+   }
+  ],
+  "notes": "IT/cyber instructors nationwide"
+ },
+ {
+  "name": "Simplilearn",
+  "homepage": "https://www.simplilearn.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.simplilearn.com/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Tech Elevator",
+  "homepage": "https://www.techelevator.com",
+  "state": "OH",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.techelevator.com/jobs-in-tech-the-need-for-creativity-in-software-development/",
+    "via": "requests"
+   }
+  ],
+  "notes": "Stride Inc."
+ },
+ {
+  "name": "Emeritus",
+  "homepage": "https://emeritus.org",
+  "state": "MA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://careers.emeritus.org/"
+ },
+ {
+  "name": "Launch School",
+  "homepage": "https://launchschool.com",
+  "state": "UT",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Codeup",
+  "homepage": "https://codeup.edu",
+  "state": "TX",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Cybrary",
+  "homepage": "https://www.cybrary.it",
+  "state": "MD",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Merit America",
+  "homepage": "https://meritamerica.org",
+  "state": "DC",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "meritamerica",
+    "url": "https://job-boards.greenhouse.io/meritamerica",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Ada Developers Academy",
+  "homepage": "https://adadevelopersacademy.org",
+  "state": "WA",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Grand Circus",
+  "homepage": "https://www.grandcircus.co",
+  "state": "MI",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "Codepath",
+  "homepage": "https://www.codepath.org",
+  "state": "CA",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "codepath",
+    "url": "https://job-boards.greenhouse.io/codepath",
+    "via": "requests"
+   }
+  ],
+  "notes": "university-partnered CS courses; instructors/TAs"
+ },
+ {
+  "name": "Multiverse",
+  "homepage": "https://www.multiverse.io",
+  "state": "NY",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "apprenticeship coaches (data/software); Ashby board (no fetcher yet): https://jobs.ashbyhq.com/multiverse; best listing URL: https://www.multiverse.io/careers/were-hiring"
+ },
+ {
+  "name": "Minerva Project",
+  "homepage": "https://www.minervaproject.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://www.minervaproject.com/careers"
+ },
+ {
+  "name": "Carnegie Learning",
+  "homepage": "https://www.carnegielearning.com",
+  "state": "PA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "CDD5880F7074A7DA04A1A00A3B0CD380",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=CDD5880F7074A7DA04A1A00A3B0CD380&session_nonce=69f2c48eae67d40da912c58ede0323c8",
+    "via": "requests"
+   }
+  ],
+  "notes": "K-12 heavy; low relevance"
+ },
+ {
+  "name": "Pathstream",
+  "homepage": "https://www.pathstream.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "pathstream",
+    "url": "https://job-boards.greenhouse.io/pathstream",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "SANS Institute",
+  "homepage": "https://www.sans.org",
+  "state": "MD",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "sans",
+    "url": "https://sans.bamboohr.com/careers",
+    "via": "requests"
+   }
+  ],
+  "notes": "SANS Technology Institute may be in IPEDS; instructors are contract"
+ },
+ {
+  "name": "Juni Learning",
+  "homepage": "https://junilearning.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "K-12 CS; low relevance; no job listing page found"
+ },
+ {
+  "name": "Skillsoft / Codecademy",
+  "homepage": "https://www.skillsoft.com",
+  "state": "NH",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "skillsoft",
+    "url": "https://job-boards.greenhouse.io/skillsoft",
+    "via": "api"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "NPower",
+  "homepage": "https://www.npower.org",
+  "state": "NY",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "9b326d36-7ba3-462f-97fb-98bf0bdb4a2a",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=9b326d36-7ba3-462f-97fb-98bf0bdb4a2a&ccId=19000101_000001&type=JS&lang=en_US&selectedMenuKey=CareerCenter",
+    "via": "requests"
+   }
+  ],
+  "notes": "IT/cyber instructors"
+ },
+ {
+  "name": "Perdoceo Education",
+  "homepage": "https://www.perdoceoed.com",
+  "state": "IL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "parent of CTU/AIU; CTU registry none; best listing URL: https://www.perdoceoed.com/Jobs-at-Perdoceo-Education"
+ },
+ {
+  "name": "Varsity Tutors (Nerdy)",
+  "homepage": "https://www.varsitytutors.com",
+  "state": "MO",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "contract instructors incl. CS; best listing URL: https://careers.nerdy.com/"
+ },
+ {
+  "name": "Cengage Group",
+  "homepage": "https://www.cengagegroup.com",
+  "state": "MA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "cengage",
+    "wd": "wd5",
+    "site": "CengageNorthAmericaCareers",
+    "url": "https://cengage.wd5.myworkdayjobs.com/CengageNorthAmericaCareers",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Apprenti",
+  "homepage": "https://apprenticareers.org",
+  "state": "WA",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://jobs.apprenticareers.org/"
+ },
+ {
+  "name": "Resilient Coders",
+  "homepage": "https://www.resilientcoders.org",
+  "state": "MA",
+  "kind": "nonprofit_training",
+  "source": "edtech",
+  "configs": [],
+  "notes": "no job listing page found"
+ },
+ {
+  "name": "American Public Education Inc.",
+  "homepage": "https://www.apei.com",
+  "state": "WV",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "tenant": "AME1070",
+    "board": "b66d4325-6be5-4691-ab44-c96532dee1ff",
+    "url": "https://recruiting.ultipro.com/AME1070/JobBoard/b66d4325-6be5-4691-ab44-c96532dee1ff/?q=&o=postedDateDesc",
+    "via": "requests"
+   }
+  ],
+  "notes": "parent of APUS (ultipro AME1070)"
+ },
+ {
+  "name": "edX Boot Camps (Trilogy Education)",
+  "homepage": "https://bootcamp.edx.org",
+  "state": "NY",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "2U; see 2u.com board; no job listing page found"
+ },
+ {
+  "name": "Course Hero / Learneo",
+  "homepage": "https://www.learneo.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "greenhouse",
+    "slug_id": "learneo",
+    "url": "https://job-boards.greenhouse.io/learneo",
+    "via": "api"
+   }
+  ],
+  "notes": "low relevance"
+ },
+ {
+  "name": "ThriveDX",
+  "homepage": "https://thrivedx.com",
+  "state": "FL",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "university-partnered cyber boot camps; instructors; no job listing page found"
+ },
+ {
+  "name": "Revature",
+  "homepage": "https://revature.com",
+  "state": "VA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "revature",
+    "wd": "wd1",
+    "site": "revaturecareers",
+    "url": "https://revature.wd1.myworkdayjobs.com/revaturecareers",
+    "via": "requests"
+   }
+  ],
+  "notes": "tech trainers"
+ },
+ {
+  "name": "Skillstorm",
+  "homepage": "https://www.skillstorm.com",
+  "state": "FL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "tech training; instructors; best listing URL: https://careers.skillstorm.com/jobs"
+ },
+ {
+  "name": "Teaching Lab / Alta (zyBooks)",
+  "homepage": "https://www.zybooks.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.zybooks.com/careers/",
+    "via": "requests"
+   }
+  ],
+  "notes": "content authors, low relevance"
+ },
+ {
+  "name": "Amazon Technical Academy / AWS Training",
+  "homepage": "https://aws.amazon.com/training",
+  "state": "WA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "AWS instructors via amazon.jobs; best listing URL: https://www.amazon.jobs/content/en/teams/amazon-web-services/?nc2=h_dsc_aa_car"
+ },
+ {
+  "name": "ISC2",
+  "homepage": "https://www.isc2.org",
+  "state": "FL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "authorized instructors (contract); no job listing page found"
+ },
+ {
+  "name": "Adtalem Global Education",
+  "homepage": "https://www.adtalem.com",
+  "state": "IL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "parent of Walden/Chamberlain; best listing URL: https://careers.covista.com/"
+ },
+ {
+  "name": "CompTIA",
+  "homepage": "https://www.comptia.org",
+  "state": "IL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://www.comptia.org/en-us/about-us/careers/"
+ },
+ {
+  "name": "Strategic Education Inc.",
+  "homepage": "https://www.strategiceducation.com",
+  "state": "VA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "strayer",
+    "wd": "wd1",
+    "site": "SEI",
+    "url": "https://strayer.wd1.myworkdayjobs.com/SEI",
+    "via": "requests"
+   }
+  ],
+  "notes": "parent of Strayer/Capella/Sophia (strayer.wd1 workday)"
+ },
+ {
+  "name": "Zip Code Wilmington",
+  "homepage": "https://www.zipcodewilmington.com",
+  "state": "DE",
+  "kind": "bootcamp",
+  "source": "edtech",
+  "configs": [],
+  "notes": "best listing URL: https://zipcodewilmington.com/careers-at-zip-code/"
+ },
+ {
+  "name": "Unitek Learning",
+  "homepage": "https://www.uniteklearning.com",
+  "state": "CA",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.uniteklearning.com/careers-at-unitek/",
+    "via": "requests"
+   }
+  ],
+  "notes": "health-heavy; low relevance"
+ },
+ {
+  "name": "Kaplan",
+  "homepage": "https://kaplan.com",
+  "state": "FL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [
+   {
+    "ats": "workday",
+    "tenant": "ghc",
+    "wd": "wd1",
+    "site": "Kaplan_Teach",
+    "url": "https://ghc.wd1.myworkdayjobs.com/Kaplan_Teach",
+    "via": "requests"
+   },
+   {
+    "ats": "workday",
+    "tenant": "ghc",
+    "wd": "wd1",
+    "site": "Kaplan_Careers",
+    "url": "https://ghc.wd1.myworkdayjobs.com/Kaplan_Careers",
+    "via": "requests"
+   }
+  ],
+  "notes": ""
+ },
+ {
+  "name": "Edovo",
+  "homepage": "https://www.edovo.com",
+  "state": "IL",
+  "kind": "edtech",
+  "source": "edtech",
+  "configs": [],
+  "notes": "low relevance; best listing URL: https://www.edovo.org/about/careers"
+ },
+ {
+  "name": "Zovio / University of Arizona Global",
+  "homepage": "https://www.uagc.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "edtech",
+  "configs": [],
+  "notes": "UAGC in IPEDS? check; best listing URL: https://uagc.careers/"
+ },
+ {
+  "name": "Ashworth College",
+  "homepage": "https://www.ashworthcollege.edu",
+  "state": "GA",
+  "kind": "online_college",
+  "source": "manual-online",
+  "configs": [
+   {
+    "ats": "dayforce",
+    "url": "https://jobs.dayforcehcm.com/en-US/pennfostercarrus/PENNFOSTERGROUPCAREERSITE",
+    "client": "us232",
+    "site": "pennfostercarrus"
+   }
+  ],
+  "notes": "DEAC-accredited online associate/career college, part of Penn Foster Group; hires through the Penn Foster Group Dayforce board (same as x_penn-foster-college); no own careers page"
+ },
+ {
+  "name": "California Southern University",
+  "homepage": "https://www.calsouthern.edu",
+  "state": "AZ",
+  "kind": "online_university",
+  "source": "manual-online",
+  "configs": [
+   {
+    "ats": "college_myjobsadp",
+    "url": "https://myjobs.adp.com/csu/cx",
+    "domain": "csu"
+   }
+  ],
+  "notes": "WSCUC-accredited online university (Chandler, AZ; Perdoceo-affiliated); calsouthern.edu/career-opportunities ('Faculty Career Opportunities') -> ADP myjobs board 'csu'"
+ },
+ {
+  "name": "Crestpoint University (formerly National Paralegal College)",
+  "homepage": "https://www.nationalparalegal.edu",
+  "state": "AZ",
+  "kind": "online_college",
+  "source": "manual-online",
+  "configs": [],
+  "notes": "DEAC-accredited online legal/business degrees; renamed Crestpoint University; no job listing page found (site has only student Career Services)"
+ }
+]

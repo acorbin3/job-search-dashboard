@@ -1,0 +1,47 @@
+{
+ "170976": {
+  "name": "University of Michigan-Ann Arbor",
+  "source": "manual-misc",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://careers.umich.edu/search/feed/advanced?career_interest=265",
+    "pages": [
+     "https://careers.umich.edu/search/feed/advanced?career_interest=230",
+     "https://careers.umich.edu/search/feed/advanced?career_interest=210"
+    ]
+   }
+  ],
+  "notes": "careers.umich.edu RSS: LEO lecturers (265), instructional (230), IT (210); all campuses"
+ },
+ "171137": {
+  "name": "University of Michigan-Dearborn",
+  "source": "manual-misc",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://careers.umich.edu/search/feed/advanced?career_interest=265",
+    "pages": [
+     "https://careers.umich.edu/search/feed/advanced?career_interest=230",
+     "https://careers.umich.edu/search/feed/advanced?career_interest=210"
+    ]
+   }
+  ],
+  "notes": "careers.umich.edu RSS: LEO lecturers (265), instructional (230), IT (210); all campuses"
+ },
+ "171146": {
+  "name": "University of Michigan-Flint",
+  "source": "manual-misc",
+  "configs": [
+   {
+    "ats": "college_rss",
+    "url": "https://careers.umich.edu/search/feed/advanced?career_interest=265",
+    "pages": [
+     "https://careers.umich.edu/search/feed/advanced?career_interest=230",
+     "https://careers.umich.edu/search/feed/advanced?career_interest=210"
+    ]
+   }
+  ],
+  "notes": "careers.umich.edu RSS: LEO lecturers (265), instructional (230), IT (210); all campuses"
+ }
+}

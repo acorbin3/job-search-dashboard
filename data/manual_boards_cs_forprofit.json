@@ -1,0 +1,623 @@
+{
+ "484613": {
+  "name": "University of Phoenix-Arizona",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs/?jobOffset=10"
+   }
+  ],
+  "notes": "VENDOR: Avature (no detector). The faculty-filter URL SearchJobs/?3_94_3=2850925 now renders 'No jobs found'; the unfiltered SearchJobs page IS server-rendered (requests gets the rows, 'Displaying 1-10 of 14 results', JobDetail links e.g. 'Associate Faculty - Nursing Research in Graduate Studies - Part Time (Virtual)', 'College Curriculum Manager - IT'), paginated with ?jobOffset=10 so page 2 is a second config. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://uop.avature.net/careers/SearchJobs/?3_94_3=2850925"
+ },
+ "484631": {
+  "name": "University of Phoenix-California",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs/?jobOffset=10"
+   }
+  ],
+  "notes": "VENDOR: Avature (no detector). The faculty-filter URL SearchJobs/?3_94_3=2850925 now renders 'No jobs found'; the unfiltered SearchJobs page IS server-rendered (requests gets the rows, 'Displaying 1-10 of 14 results', JobDetail links e.g. 'Associate Faculty - Nursing Research in Graduate Studies - Part Time (Virtual)', 'College Curriculum Manager - IT'), paginated with ?jobOffset=10 so page 2 is a second config. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://uop.avature.net/careers/SearchJobs/?3_94_3=2850925"
+ },
+ "420042": {
+  "name": "University of Phoenix-Hawaii",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs/?jobOffset=10"
+   }
+  ],
+  "notes": "VENDOR: Avature (no detector). The faculty-filter URL SearchJobs/?3_94_3=2850925 now renders 'No jobs found'; the unfiltered SearchJobs page IS server-rendered (requests gets the rows, 'Displaying 1-10 of 14 results', JobDetail links e.g. 'Associate Faculty - Nursing Research in Graduate Studies - Part Time (Virtual)', 'College Curriculum Manager - IT'), paginated with ?jobOffset=10 so page 2 is a second config. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://uop.avature.net/careers/SearchJobs/?3_94_3=2850925"
+ },
+ "484756": {
+  "name": "University of Phoenix-Texas",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://uop.avature.net/careers/SearchJobs/?jobOffset=10"
+   }
+  ],
+  "notes": "VENDOR: Avature (no detector). The faculty-filter URL SearchJobs/?3_94_3=2850925 now renders 'No jobs found'; the unfiltered SearchJobs page IS server-rendered (requests gets the rows, 'Displaying 1-10 of 14 results', JobDetail links e.g. 'Associate Faculty - Nursing Research in Graduate Studies - Part Time (Virtual)', 'College Curriculum Manager - IT'), paginated with ?jobOffset=10 so page 2 is a second config. Verified 2026-10-16.",
+  "prev_status": "generic",
+  "prev_url": "https://uop.avature.net/careers/SearchJobs/?3_94_3=2850925"
+ },
+ "493895": {
+  "name": "SANS Technology Institute",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "bamboohr",
+    "slug_id": "sans",
+    "url": "https://sans.bamboohr.com/careers"
+   }
+  ],
+  "notes": "SANS Technology Institute is SANS Institute; sans.org/mlp/careers links the BambooHR board sans.bamboohr.com/careers (4 postings on 2026-10-16, none faculty: SANS faculty are SANS-certified instructors recruited separately). Replaces the registry's program page.",
+  "prev_status": "generic",
+  "prev_url": "https://www.sans.edu/undergraduate-cyber-security-certificates"
+ },
+ "130183": {
+  "name": "Post University",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "c5c0e206-fe6c-4bd3-bf04-2bc56cfc5ded",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=c5c0e206-fe6c-4bd3-bf04-2bc56cfc5ded&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "ADP WorkforceNow behind the post.edu career-opportunities listing (each post.edu job page links the ADP apply). API verified 2026-10-16: 19 reqs incl. 'Program Chair - Computer Science (Hybrid)', 'Associate Faculty - Business Intelligence', 'Associate Faculty - Master's in Business Administration'. Keep the post.edu page as a fallback if wanted.",
+  "prev_status": "generic",
+  "prev_url": "https://post.edu/associate-experience/career-opportunities/"
+ },
+ "159197": {
+  "name": "ITI Technical College",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://iticollege.edu/experience-iti/employment-opportunities/"
+   }
+  ],
+  "notes": "ITI Technical College 'Job Listings' page: inline listing (Computer Network Trainer, Instrument Controls Trainer, Process Operations Controls Trainer, A/C Technician Trainer FT/PT); no per-job links, apply by resume. REPLACES the registry's topresume.com URL.",
+  "prev_status": "generic",
+  "prev_url": "https://topresume.com/career-advice/category/job-search"
+ },
+ "110778": {
+  "name": "Sofia University",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.sofia.edu/career/"
+   }
+  ],
+  "notes": "Sofia University careers page with 'Open Positions (Staff)' and 'Open Positions (Faculty)' sections, full descriptions inline, apply by email. REPLACES the registry's computerscience.org URL. Sofia offers CS/AI graduate degrees.",
+  "prev_status": "generic",
+  "prev_url": "https://www.computerscience.org/careers/"
+ },
+ "222886": {
+  "name": "Arlington Career Institute",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.arlingtoncareerinstitute.edu/help-wanted/"
+   }
+  ],
+  "notes": "ACI 'Help Wanted' page lists open positions inline (Vocational Nursing Instructors, Admissions Representative). REPLACES the registry's sites.google.com career-services page.",
+  "prev_status": "generic",
+  "prev_url": "https://sites.google.com/view/acicareerservices/home"
+ },
+ "480781": {
+  "name": "California Miramar University",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.calmu.edu/join-our-team"
+   }
+  ],
+  "notes": "CalMU 'Join Our Team' page (Leadership / Administrative / Faculty sections); actual postings are on Indeed (indeed.com/cmp/California-Miramar-University-4/jobs, not fetchable). REPLACES the registry's news-article URL. Low value.",
+  "prev_status": "generic",
+  "prev_url": "https://www.calmu.edu/news/calmu-partners-with-edcor-to-provide-education-opportunities"
+ },
+ "197151": {
+  "name": "School of Visual Arts",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_breezy",
+    "breezy_slug": "sva",
+    "url": "https://sva.breezy.hr/"
+   }
+  ],
+  "notes": "sva.edu/about/about-sva/working-at-sva links the Breezy board sva.breezy.hr (9 postings 2026-10-16, all staff). Faculty hiring is by department chairs, not posted on the board.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "194499": {
+  "name": "Plaza College",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://plazacollege.edu/join-the-plaza-team/"
+   }
+  ],
+  "notes": "Plaza College 'Join Our Team' page with filterable Open Positions (Faculty/Staff, FT/PT) inline; apply to HR@plazacollege.edu. 2 faculty posts (PA, Nursing) on 2026-10-16.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "213473": {
+  "name": "Lansdale School of Business",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.lsb.edu/about-lsb/employment/"
+   }
+  ],
+  "notes": "Lansdale School of Business employment page: text-only sections (Nursing Instructor Positions, Other Instructor Positions, Administrative Positions); apply by email. Says non-nursing instructor openings are usually part-time evening.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "153427": {
+  "name": "Orion Technical College",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://orion.edu/employment/"
+   }
+  ],
+  "notes": "Orion Technical College employment page: inline postings (e.g. Medical Assisting Program Lead) plus a link to their Indeed page which holds the full list.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "172866": {
+  "name": "Academy College",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.academycollege.edu/about/careers-at-academy-college/"
+   }
+  ],
+  "notes": "Academy College careers page with 'Current Academy College job openings' section (Aircraft Dispatcher Instructor, Program Coordinator on 2026-10-16).",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "242112": {
+  "name": "Huertas College",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://huertas.edu/hc/recursos-humanos/"
+   }
+  ],
+  "notes": "Huertas College 'Recursos Humanos' page lists open Profesor(a)/Coordinador(a) roles inline in Spanish (incl. Profesor de Manejo de Informacion de Salud). huertas.edu redirects to /hc/; server answers 202 but the HTML is complete.",
+  "prev_status": "none",
+  "prev_url": null
+ },
+ "476814": {
+  "name": "Florida Institute of Recording Sound and Technology",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ziprecruiter.com/co/F.I.R.S.T.-Institute"
+   }
+  ],
+  "notes": "VENDOR: ZipRecruiter company page (no detector, bot-protected: expect blocks). first.edu/employment-opportunities/ has no listing, only 'Explore Our Careers!' -> ZipRecruiter.",
+  "homepage": "https://www.first.edu/",
+  "state": "FL",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "492139": {
+  "name": "DSDT",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://dsdt.edu/careers"
+   }
+  ],
+  "notes": "DSDT 'Career Opportunities' page with inline postings (Admissions Representative, Instructors; Detroit). jobportal.dsdtcareerportal.com is a student job portal behind a login, not HR.",
+  "homepage": "https://dsdt.edu/",
+  "state": "MI",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "447607": {
+  "name": "UEI College-Chula Vista",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "384236": {
+  "name": "UEI College-Ontario",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "413893": {
+  "name": "United Education Institute-Morrow",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "GA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "482291": {
+  "name": "UEI College-Bakersfield",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "468909": {
+  "name": "UEI College-Garden Grove",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "470038": {
+  "name": "UEI College-Riverside",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "497949": {
+  "name": "United Education Institute-Stone Mountain",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "GA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "468848": {
+  "name": "UEI College-Oceanside",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "480471": {
+  "name": "UEI College-Stockton",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "124681": {
+  "name": "UEI College-Huntington Park",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "447616": {
+  "name": "UEI College-West Covina",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "384245": {
+  "name": "UEI College-Reseda",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "487481": {
+  "name": "UEI College-Phoenix",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "AZ",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "397942": {
+  "name": "UEI College-Fresno",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "paycom",
+    "clientkey": "EA05E059F9B63417177201C178EC685D",
+    "url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=EA05E059F9B63417177201C178EC685D"
+   }
+  ],
+  "notes": "UEI College chain: uei.edu 'Open Positions at UEI' -> bepartofagreatteam.com (International Education Corporation careers site) -> Paycom portal; API verified 2026-10-16: 203 postings across IEC brands (UEI, US Colleges, SAGE), region us-cent. Brand filter page: bepartofagreatteam.com/brands/uei/. (Florida Career College was IEC too but closed in 2023.)",
+  "homepage": "https://www.uei.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "130174": {
+  "name": "Porter & Chester Institute",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "a9401484-8017-4771-aac5-f519238232c4",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=a9401484-8017-4771-aac5-f519238232c4&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Porter & Chester Institute 'Employment at PCI' footer link -> ADP WorkforceNow; API verified 2026-10-16: 19 reqs (Adjunct Automotive Instructor, Practical Nursing Instructor - Part Time, HVAC Instructor, Medical Assistant Instructor...). Same board likely covers sister school YTI Career Institute.",
+  "homepage": "https://www.porterchester.edu/",
+  "state": "CT",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "449773": {
+  "name": "CCI Training Center-Arlington",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_wpjobmanager",
+    "url": "https://ccitraining.edu/?feed=job_feed"
+   },
+   {
+    "ats": "college_generic",
+    "url": "https://ccitraining.edu/employment/"
+   }
+  ],
+  "notes": "CCI Training Center employment page is a WP Job Manager listing (detected via /?feed=job_feed, which answers 200 but was empty on 2026-10-16). Cloudflare blocks plain curl; the project's requests session gets through. IT-focused career school (Dallas/Arlington).",
+  "homepage": "https://www.ccitraining.edu/",
+  "state": "TX",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "495934": {
+  "name": "San Joaquin Valley College-Delano",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro on sjvci.rec.pro.ukg.net), same config as the other SJVC campuses in manual_boards_forprofit_2yr.json.",
+  "homepage": "https://www.sjvc.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "495998": {
+  "name": "San Joaquin Valley College-Porterville",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "ultipro",
+    "host": "sjvci.rec.pro.ukg.net",
+    "tenant": "SAN1502SJVC",
+    "board": "8561e9c6-1771-49b3-93d2-b77300e2bb59",
+    "url": "https://sjvci.rec.pro.ukg.net/SAN1502SJVC/JobBoard/8561e9c6-1771-49b3-93d2-b77300e2bb59/"
+   }
+  ],
+  "notes": "San Joaquin Valley College chain board (UKG Pro on sjvci.rec.pro.ukg.net), same config as the other SJVC campuses in manual_boards_forprofit_2yr.json.",
+  "homepage": "https://www.sjvc.edu/",
+  "state": "CA",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "491394": {
+  "name": "Miller-Motte College-STVT-Arlington",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "adp",
+    "cid": "1fee27e8-b345-49b9-95f2-58dd60ce03ef",
+    "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=1fee27e8-b345-49b9-95f2-58dd60ce03ef&ccId=19000101_000001&lang=en_US"
+   }
+  ],
+  "notes": "Ancora Education chain board (ADP WorkforceNow cid 1fee27e8...) shared by Miller-Motte / STVT campuses, same config as manual_boards_forprofit_2yr.json.",
+  "homepage": "https://www.stvt.edu/",
+  "state": "TX",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "456977": {
+  "name": "CBT Technology Institute-Cutler Bay",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://jobs.cbt.edu/"
+   }
+  ],
+  "notes": "CBT Technology Institute chain page jobs.cbt.edu, same config/notes as the other CBT campuses in manual_boards_forprofit_2yr.json (positions are <select> options; generic fetcher may see none).",
+  "homepage": "https://www.cbt.edu/",
+  "state": "FL",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ },
+ "496715": {
+  "name": "CTK Healthcare & Career Institute",
+  "source": "manual-cs-forprofit",
+  "configs": [
+   {
+    "ats": "college_generic",
+    "url": "https://www.ctkhealthcare.com/careers"
+   }
+  ],
+  "notes": "CTK Healthcare & Career Institute careers page ('No Current Openings' on 2026-10-16); it is the school's real careers page, worth watching. Offers IT programs.",
+  "homepage": "https://www.ctkhealthcare.com/",
+  "state": "TX",
+  "sector": 9,
+  "prev_status": null,
+  "prev_url": null
+ }
+}
